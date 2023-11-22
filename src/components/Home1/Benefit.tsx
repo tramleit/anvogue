@@ -9,12 +9,12 @@ const Benefit = () => {
                         <div className="benefit-item flex flex-col items-center justify-center">
                             <i className="icon-phone-call lg:text-7xl text-5xl"></i>
                             <div className="heading6 text-center mt-5">24/7 Customer Service</div>
-                            <div className="caption1 text-secondary text-center mt-3">We're here to help you with any questions or concerns you have, 24/7.</div>
+                            <div className="caption1 text-secondary text-center mt-3">We&apos;re here to help you with any questions or concerns you have, 24/7.</div>
                         </div>
                         <div className="benefit-item flex flex-col items-center justify-center">
                             <i className="icon-return lg:text-7xl text-5xl"></i>
                             <div className="heading6 text-center mt-5">14-Day Money Back</div>
-                            <div className="caption1 text-secondary text-center mt-3">If you're not satisfied with your purchase, simply return it within 14 days for a refund.</div>
+                            <div className="caption1 text-secondary text-center mt-3">If you&apos;re not satisfied with your purchase, simply return it within 14 days for a refund.</div>
                         </div>
                         <div className="benefit-item flex flex-col items-center justify-center">
                             <i className="icon-guarantee lg:text-7xl text-5xl"></i>
