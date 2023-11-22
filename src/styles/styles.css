@@ -3,3 +3,4 @@
 @tailwind utilities;
 @import url(icomoon/style.css);
 @import url(globals.css);
+@import url(header.css);

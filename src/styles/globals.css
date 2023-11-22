@@ -37,6 +37,14 @@ select {
   margin: 0 auto;
 }
 
+.text-sub-display {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
 .text-display {
   font-size: 80px;
   font-weight: 500;
@@ -125,7 +133,53 @@ select {
   font-weight: 400;
 }
 
+.button-main {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 16px 40px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+@media (max-width: 1023.99px) {
+  .text-sub-display {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.1px;
+  }
+
+  .text-display {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .heading1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .heading3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .button-main {
+    padding: 12px 24px;
+    border-radius: 10px;
+  }
+}
+
 @media (max-width: 767.99px) {
+  .text-sub-display {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.1px;
+  }
+
   .text-display {
     font-size: 24px;
     line-height: 30px;
@@ -144,5 +198,12 @@ select {
   .text-button-uppercase {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .button-main {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 8px 20px;
+    border-radius: 8px;
   }
 }

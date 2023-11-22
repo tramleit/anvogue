@@ -6,7 +6,7 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 const MenuOne = () => {
     return (
         <>
-            <div className='header-menu style-one bg-transparent md:h-[74px] h-[56px]'>
+            <div className='header-menu style-one absolute top-0 left-0 right-0 w-full bg-transparent md:h-[74px] h-[56px]'>
                 <div className="container mx-auto h-full">
                     <div className="header-main flex justify-between h-full relative">
                         <div className="menu-mobile-icon lg:hidden flex items-center">
@@ -18,37 +18,130 @@ const MenuOne = () => {
                             </Link>
                             <div className="menu-main h-full max-lg:hidden">
                                 <ul className='flex items-center gap-10 h-full'>
-                                    <li className='h-full relative active'>
-                                        <a href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center gap-1'>
+                                    <li className='h-full relative'>
+                                        <a href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center gap-1 active'>
                                             Demo
                                         </a>
-                                        <ul className='absolute sub-menu bg-white duration-300'>
-                                            <li>
-                                                <Link href="/" className='text-button-uppercase duration-300 active'>
-                                                    Home Fashion 1
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/homepages/home2" className='text-button-uppercase duration-300'>
-                                                    Home Fashion 2
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/homepages/home3" className='text-button-uppercase duration-300'>
-                                                    Home Fashion 3
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/homepages/home4" className='text-button-uppercase duration-300'>
-                                                    Home Fashion 4
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/homepages/home5" className='text-button-uppercase duration-300'>
-                                                    Home Fashion 5
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                        <div className="grid grid-cols-4 gap-5 absolute sub-menu bg-white duration-300">
+                                            <ul className=''>
+                                                <li>
+                                                    <Link href="/" className='text-secondary duration-300 active'>
+                                                        Home Fashion 1
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion2" className='text-secondary duration-300'>
+                                                        Home Fashion 2
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion3" className='text-secondary duration-300'>
+                                                        Home Fashion 3
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion4" className='text-secondary duration-300'>
+                                                        Home Fashion 4
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion5" className='text-secondary duration-300'>
+                                                        Home Fashion 5
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion6" className='text-secondary duration-300'>
+                                                        Home Fashion 6
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                            <ul className=''>
+                                                <li>
+                                                    <Link href="/homepages/fashion7" className='text-secondary duration-300'>
+                                                        Home Fashion 7
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion8" className='text-secondary duration-300'>
+                                                        Home Fashion 8
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion9" className='text-secondary duration-300'>
+                                                        Home Fashion 9
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion10" className='text-secondary duration-300'>
+                                                        Home Fashion 10
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/fashion11" className='text-secondary duration-300'>
+                                                        Home Fashion 11
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/underwear" className='text-secondary duration-300'>
+                                                        Home Underwear
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                            <ul className=''>
+                                                <li>
+                                                    <Link href="/homepages/cosmetic1" className='text-secondary duration-300'>
+                                                        Home Cosmetic 1
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/cosmetic2" className='text-secondary duration-300'>
+                                                        Home Cosmetic 2
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/cosmetic3" className='text-secondary duration-300'>
+                                                        Home Cosmetic 3
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/pet" className='text-secondary duration-300'>
+                                                        Home Pet Store
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/jewelry" className='text-secondary duration-300'>
+                                                        Home Jewelry
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/furniture" className='text-secondary duration-300'>
+                                                        Home Furniture
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                            <ul className=''>
+                                                <li>
+                                                    <Link href="/homepages/watch" className='text-secondary duration-300'>
+                                                        Home Watch
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/toys" className='text-secondary duration-300'>
+                                                        Home Toys Kid
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/yoga" className='text-secondary duration-300'>
+                                                        Home Yoga
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/homepages/organic" className='text-secondary duration-300'>
+                                                        Home Organic
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li className='h-full'>
                                         <Link href="/features" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
@@ -59,23 +152,6 @@ const MenuOne = () => {
                                         <a href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center gap-1'>
                                             Shop
                                         </a>
-                                        <ul className='absolute sub-menu bg-white duration-300'>
-                                            <li>
-                                                <Link href="/shop/shop-grid-fullwidth" className='text-button-uppercase duration-300'>
-                                                    Shop Grid Fullwidth
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/shop/shop-grid-sidebar" className='text-button-uppercase duration-300'>
-                                                    Shop Grid Sidebar
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/shop/shop-list-sidebar" className='text-button-uppercase duration-300'>
-                                                    Shop List Sidebar
-                                                </Link>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li className='h-full'>
                                         <Link href="/product" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
