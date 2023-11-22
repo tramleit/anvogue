@@ -1,0 +1,15 @@
+/* tab-features-block */
+.tab-features-block .product-item .list-color {
+    display: none;
+}
+
+.tab-features-block .section-swiper-navigation .swiper-button-prev,
+.tab-features-block .section-swiper-navigation .swiper-button-next {
+    width: 44px;
+    height: 44px;
+}
+
+.section-swiper-navigation .swiper-button-prev::after,
+.section-swiper-navigation .swiper-button-next::after {
+    font-size: 18px;
+}

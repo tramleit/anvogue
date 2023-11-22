@@ -14,6 +14,18 @@
   --line: #E9E9E9;
 }
 
+.bg-red {
+  background-color: var(--red);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
 html,
 body {
   font-size: 16px;
@@ -143,6 +155,7 @@ select {
   padding: 16px 40px;
   border-radius: 12px;
   display: inline-block;
+  cursor: pointer;
 }
 
 @media (max-width: 1023.99px) {
@@ -162,9 +175,24 @@ select {
     line-height: 48px;
   }
 
+  .heading2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   .heading3 {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  .heading5 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .heading6 {
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .button-main {
@@ -187,6 +215,11 @@ select {
 
   .heading1 {
     font-size: 24px;
+    line-height: 32px;
+  }
+
+  .heading2 {
+    font-size: 22px;
     line-height: 30px;
   }
 
@@ -195,9 +228,39 @@ select {
     line-height: 28px;
   }
 
+  .heading5 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .heading6 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .text-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .body1 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .text-button {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   .text-button-uppercase {
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .caption1 {
+    font-size: 13px;
+    line-height: 20px;
   }
 
   .button-main {
