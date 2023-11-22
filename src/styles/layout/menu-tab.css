@@ -1,0 +1,5 @@
+.menu-tab .tab-item.active {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 16px;
+}

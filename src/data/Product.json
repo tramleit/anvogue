@@ -1,0 +1,200 @@
+[
+    {
+        "id": "1",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "mesh shirt",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 35,
+        "originPrice": 45,
+        "brand": "gucci",
+        "quantity": 100,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "variation": [],
+        "thumbImage": [
+            "/images/product/fashion/1-1.png",
+            "/images/product/fashion/1-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/1-1.png",
+            "/images/product/fashion/1-2.png",
+            "/images/product/fashion/1-3.png",
+            "/images/product/fashion/1-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "mesh-shirt"
+    },
+    {
+        "id": "2",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "Raglan Sleeve T-shirt",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 5,
+        "price": 28,
+        "originPrice": 36,
+        "brand": "hermes",
+        "quantity": 200,
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "image": "/images/product/fashion/2-1.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "image": "/images/product/fashion/2-2.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "image": "/images/product/fashion/2-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "image": "/images/product/fashion/2-4.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/2-1.png",
+            "/images/product/fashion/2-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/2-1.png",
+            "/images/product/fashion/2-2.png",
+            "/images/product/fashion/2-3.png",
+            "/images/product/fashion/2-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "shirt"
+    },
+    {
+        "id": "3",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "Off-the-Shoulder Blouse",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 4,
+        "price": 32,
+        "originPrice": 40,
+        "brand": "zara",
+        "quantity": 80,
+        "sizes": [
+            "Freesize"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "image": "/images/product/fashion/3-1.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "image": "/images/product/fashion/3-2.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "image": "/images/product/fashion/3-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "image": "/images/product/fashion/3-4.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/3-1.png",
+            "/images/product/fashion/3-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/3-1.png",
+            "/images/product/fashion/3-2.png",
+            "/images/product/fashion/3-3.png",
+            "/images/product/fashion/3-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "add to cart",
+        "slug": "blouse"
+    },
+    {
+        "id": "4",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "Kimono sleeve top",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 24,
+        "originPrice": 32,
+        "brand": "adidas",
+        "quantity": 100,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "image": "/images/product/fashion/4-1.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "image": "/images/product/fashion/4-2.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "image": "/images/product/fashion/4-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "image": "/images/product/fashion/4-4.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/4-1.png",
+            "/images/product/fashion/4-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/4-1.png",
+            "/images/product/fashion/4-2.png",
+            "/images/product/fashion/4-3.png",
+            "/images/product/fashion/4-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "add to cart",
+        "slug": "kimono"
+    }
+]

@@ -1,0 +1,107 @@
+/* Product Item */
+.product-thumb .list-action-right {
+    transform: translateX(60px);
+    transition: all ease 0.4s;
+    z-index: 1;
+}
+
+.product-item:hover .product-thumb .list-action-right {
+    transform: translateX(0);
+}
+
+.compare-btn:hover,
+.add-wishlist-btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.tag-action {
+    white-space: nowrap;
+    position: absolute;
+    right: calc(100% + 10px);
+    z-index: 0;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: 0.3s;
+    box-shadow: 0px 5px 13px rgb(80 80 80 / 0.5);
+    pointer-events: none;
+}
+
+.tag-action::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--black);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: -3px;
+    z-index: -1;
+}
+
+.compare-btn:hover .tag-action,
+.add-wishlist-btn:hover .tag-action {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.product-thumb .list-action {
+    transform: translateY(60px);
+    transition: all ease 0.4s;
+}
+
+.product-item:hover .product-thumb .list-action {
+    transform: translateX(0);
+}
+
+.product-thumb .product-img img:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+}
+
+.product-item:hover .product-thumb .product-img img {
+    transform: scale(1.05);
+}
+
+.product-item:hover .product-thumb .product-img img:first-child {
+    opacity: 0;
+}
+
+.product-item:hover .product-thumb .product-img img:last-child {
+    opacity: 1;
+    visibility: visible;
+}
+
+.list-color .color-item {
+    border: 2px solid transparent;
+}
+
+.list-color .color-item.active,
+.list-color .color-item:hover {
+    border-color: var(--black);
+}
+
+.color-item .tag-action {
+    right: unset;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.color-item .tag-action::before {
+    top: unset;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -4px;
+}
+
+.color-item:hover .tag-action {
+    opacity: 1;
+}
