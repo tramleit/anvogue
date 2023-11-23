@@ -1,0 +1,7 @@
+.pagination-mt40 .swiper-pagination-fraction,
+.pagination-mt40 .swiper-pagination-custom,
+.pagination-mt40 .swiper-horizontal>.swiper-pagination-bullets,
+.pagination-mt40 .swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+    padding-top: 40px;
+}

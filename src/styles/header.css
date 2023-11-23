@@ -62,15 +62,20 @@
 
 
 /* Swiper Pagination */
+.swiper {
+    cursor: grab;
+    user-select: none;
+}
+
 .swiper-slide {
     height: unset !important;
 }
 
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 24px !important;
+.slider-main .swiper-pagination-fraction,
+.slider-main .swiper-pagination-custom,
+.slider-main .swiper-horizontal>.swiper-pagination-bullets,
+.slider-main .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 24px;
 }
 
 .swiper-pagination .swiper-pagination-bullet {

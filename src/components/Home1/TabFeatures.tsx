@@ -27,7 +27,7 @@ const TabFeatures: React.FC<Props> = ({ data, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product section-swiper-navigation sm:gap-[30px] gap-[20px] mt-10">
+                    <div className="list-product section-swiper-navigation mt-10">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}
@@ -45,7 +45,7 @@ const TabFeatures: React.FC<Props> = ({ data, limit }) => {
                                 },
                                 1200: {
                                     slidesPerView: 4,
-                                    spaceBetween: 20,
+                                    spaceBetween: 30,
                                 },
                             }}
                         >

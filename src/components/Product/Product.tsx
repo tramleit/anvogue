@@ -12,10 +12,8 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
 
-
     return (
         <>
-
             {type === "grid" ? (
                 <div className="product-item grid-type">
                     <Link href={'#!'} className="product-main block">
