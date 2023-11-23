@@ -14,18 +14,6 @@
   --line: #E9E9E9;
 }
 
-.bg-red {
-  background-color: var(--red);
-}
-
-.bg-yellow {
-  background-color: var(--yellow);
-}
-
-.bg-purple {
-  background-color: var(--purple);
-}
-
 
 /* Reset */
 * {
@@ -71,6 +59,22 @@ input:focus {
   padding-right: 16px;
   padding-left: 16px;
   margin: 0 auto;
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+}
+
+.bg-linear {
+  background: linear-gradient(238deg, #FAF8F1 0%, #F6F3EF 99.66%);
 }
 
 .text-sub-display {
@@ -226,6 +230,16 @@ input:focus {
 }
 
 @media (max-width: 767.99px) {
+
+  html,
+  body,
+  div,
+  span,
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   .text-sub-display {
     font-size: 12px;
     line-height: 16px;

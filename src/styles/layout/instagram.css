@@ -19,6 +19,16 @@
     transform: translateZ(0) scale(1.04);
 }
 
+.list-instagram .icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.list-instagram .item:hover .icon {
+    opacity: 1;
+    visibility: visible;
+}
+
 .icon:hover .icon-instagram {
     color: var(--white);
 }

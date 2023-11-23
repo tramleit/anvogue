@@ -28,34 +28,10 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product section-swiper-navigation mt-10">
-                        <Swiper
-                            spaceBetween={12}
-                            slidesPerView={2}
-                            navigation
-                            loop={true}
-                            modules={[Navigation, Autoplay]}
-                            breakpoints={{
-                                576: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 12,
-                                },
-                                768: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 20,
-                                },
-                                1200: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 30,
-                                },
-                            }}
-                        >
-                            {data.slice(start, limit).map((prd, index) => (
-                                <SwiperSlide key={index}>
-                                    <Product data={prd} type='grid' />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                    <div className="list-product grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
+                        {data.slice(start, limit).map((prd, index) => (
+                            <Product key={index} data={prd} type='grid' />
+                        ))}
                     </div>
                 </div>
             </div>

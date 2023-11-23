@@ -5,10 +5,11 @@ import { ProductType } from '@/type/ProductType'
 
 interface Props {
     data: Array<ProductType>;
+    start: number;
     limit: number;
 }
 
-const WhatNewOne: React.FC<Props> = ({ data, limit }) => {
+const WhatNewOne: React.FC<Props> = ({ data, start, limit }) => {
     return (
         <>
             <div className="whate-new-block pt-20">
@@ -25,7 +26,7 @@ const WhatNewOne: React.FC<Props> = ({ data, limit }) => {
                     </div>
 
                     <div className="list-product grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
-                        {data.slice(0, limit).map((prd, index) => (
+                        {data.slice(start, limit).map((prd, index) => (
                             <Product data={prd} type='grid' key={index} />
                         ))}
                     </div>

@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Benefit = () => {
+interface Props {
+    props: string;
+}
+
+const Benefit: React.FC<Props> = ({ props }) => {
     return (
         <>
-            <div className="benefit-block py-20">
-                <div className="container">
+            <div className="container">
+                <div className={`benefit-block ${props}`}>
                     <div className="list-benefit grid items-start lg:grid-cols-4 grid-cols-2 gap-[30px]">
                         <div className="benefit-item flex flex-col items-center justify-center">
                             <i className="icon-phone-call lg:text-7xl text-5xl"></i>

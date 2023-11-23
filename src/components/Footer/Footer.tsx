@@ -9,8 +9,8 @@ const Footer = () => {
             <div id="footer" className='footer'>
                 <div className="footer-main bg-surface">
                     <div className="container">
-                        <div className="content-footer py-[60px] flex justify-between flex-wrap gap-y-6">
-                            <div className="company-infor basis-1/4 pr-7">
+                        <div className="content-footer py-[60px] flex justify-between flex-wrap gap-y-8">
+                            <div className="company-infor basis-1/4 max-lg:basis-full pr-7">
                                 <Link href={'/'} className="logo">
                                     <div className="heading4">Anvogue</div>
                                 </Link>
@@ -27,8 +27,8 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="right-content flex basis-3/4">
-                                <div className="list-nav flex justify-between basis-2/3 gap-4">
+                            <div className="right-content flex flex-wrap gap-y-8 basis-3/4 max-lg:basis-full">
+                                <div className="list-nav flex justify-between basis-2/3 max-md:basis-full gap-4">
                                     <div className="item flex flex-col basis-1/3 ">
                                         <div className="text-button-uppercase pb-3">Infomation</div>
                                         <Link className='caption1 hover:text-green duration-300 w-fit' href={'/contact'}>Contact us</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
                                         <Link className='caption1 hover:text-green duration-300 w-fit pt-2' href={'#!'}>Return & Refund</Link>
                                     </div>
                                 </div>
-                                <div className="newsletter basis-1/3 pl-7">
+                                <div className="newsletter basis-1/3 pl-7 max-md:basis-full max-md:pl-0">
                                     <div className="text-button-uppercase">Newletter</div>
                                     <div className="caption1 mt-3">Sign up for our newsletter and get 10% off your first purchase</div>
                                     <div className="input-block w-full h-[52px] mt-4">
@@ -84,7 +84,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="footer-bottom py-3 flex items-center justify-between border-t border-line">
+                        <div className="footer-bottom py-3 flex items-center justify-between gap-5 max-lg:justify-center max-lg:flex-col border-t border-line">
                             <div className="left flex items-center gap-8">
                                 <div className="copyright caption1 text-secondary">©2023 Anvogue. All Rights Reserved.</div>
                                 <div className="select-block flex items-center gap-5 max-md:hidden">

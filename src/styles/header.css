@@ -1,4 +1,10 @@
-/* Sub menu header */
+/* top nav header */
+.top-nav.style-two select.bg-black {
+    background-color: var(--purple);
+}
+
+
+/* menu header */
 .header-menu {
     position: relative;
     z-index: 2;

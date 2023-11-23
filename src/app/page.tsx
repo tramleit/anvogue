@@ -17,16 +17,16 @@ import Footer from '@/components/Footer/Footer'
 export default function Home() {
   return (
     <>
-      <TopNavOne />
+      <TopNavOne props="style-one bg-black" slogan="New customers save 10% with the code GET10" />
       <div id="header" className='relative w-full'>
         <MenuOne />
         <SliderOne />
       </div>
-      <WhatNewOne data={productData} limit={4} />
+      <WhatNewOne data={productData} start={0} limit={4} />
       <Collection />
-      <TabFeatures data={productData} limit={10} />
+      <TabFeatures data={productData} start={4} limit={10} />
       <Banner />
-      <Benefit />
+      <Benefit props="py-20" />
       <Testimonial data={testimonialData} limit={6} />
       <Instagram />
       <Brand />
