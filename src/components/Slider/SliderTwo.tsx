@@ -8,11 +8,14 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
 
+interface Props {
+    props: string;
+}
 
-const SliderTwo = () => {
+const SliderTwo: React.FC<Props> = ({props}) => {
     return (
         <>
-            <div className="slider-block style-two bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full">
+            <div className={`slider-block style-two xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full ${props}`}>
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}

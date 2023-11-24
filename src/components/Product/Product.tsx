@@ -52,15 +52,15 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             </div>
 
                             <div className="list-action grid grid-cols-2 gap-3 px-5 absolute w-full bottom-5 max-lg:hidden">
-                                <div className="quick-view-btn w-full text-button-uppercase py-2 flex items-center justify-center rounded-full duration-300 bg-white hover:bg-black hover:text-white">
+                                <div className="quick-view-btn w-full text-button-uppercase py-2 text-center rounded-full duration-300 bg-white hover:bg-black hover:text-white">
                                     Quick View
                                 </div>
                                 {data.action === 'add to cart' ? (
-                                    <div className="add-cart-btn w-full text-button-uppercase py-2 flex items-center justify-center rounded-full duration-500 bg-white hover:bg-black hover:text-white">
+                                    <div className="add-cart-btn w-full text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white">
                                         Add To Cart
                                     </div>
                                 ) : (
-                                    <div className="quick-shop-btn text-button-uppercase py-2 flex items-center justify-center rounded-full duration-500 bg-white hover:bg-black hover:text-white">
+                                    <div className="quick-shop-btn text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white">
                                         Quick Shop
                                     </div>
                                 )}
@@ -69,7 +69,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                         <div className="product-infor mt-4">
                             <div className="product-name text-title duration-300">{data.name}</div>
                             {data.variation.length > 0 ? (
-                                <div className="list-color py-2 mb-1 flex items-center gap-3 flex-wrap">
+                                <div className="list-color max-md:hidden py-2 mb-1 flex items-center gap-3 flex-wrap duration-300">
                                     {data.variation.map((item, index) => (
                                         <div className={`color-item bg-${item.color} w-8 h-8 rounded-full duration-300 relative`} key={index}>
                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
@@ -80,7 +80,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 <></>
                             )}
 
-                            <div className="product-price-block flex items-center gap-2 flex-wrap mt-1">
+                            <div className="product-price-block flex items-center gap-2 flex-wrap mt-1 bg-white duration-300 relative z-[1]">
                                 <div className="product-price text-title">${data.price}.00</div>
                                 <div className="product-origin-price caption1 text-secondary2"><del>${data.originPrice}.00</del></div>
                                 {data.originPrice && (

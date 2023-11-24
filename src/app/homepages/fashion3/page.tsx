@@ -20,7 +20,7 @@ export default function Home() {
             <TopNavOne props="style-two bg-purple" slogan='Limited Offer: Free shipping on orders over $50' />
             <div id="header" className='relative w-full'>
                 <MenuTwo />
-                <SliderTwo props="bg-linear" />
+                <SliderTwo props="bg-[#B0A092]" />
             </div>
             <Collection />
             <WhatNewOne data={productData} start={8} limit={12} />

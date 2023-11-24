@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <TopNavOne props="style-one bg-black" slogan="New customers save 10% with the code GET10" />
       <div id="header" className='relative w-full'>
-        <MenuOne />
+        <MenuOne props="bg-transparent" />
         <SliderOne />
       </div>
       <WhatNewOne data={productData} start={0} limit={4} />

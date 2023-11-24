@@ -46,7 +46,7 @@
 }
 
 .product-thumb .list-action {
-    transform: translateY(60px);
+    transform: translateY(80px);
     transition: all ease 0.4s;
 }
 
@@ -78,6 +78,24 @@
     visibility: visible;
 }
 
+/* .product-item:hover .product-name {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product-item .list-color {
+    position: absolute;
+    z-index: -1;
+}
+
+.product-item:hover .list-color {
+    transform: translateY(-30px);
+}
+
+.product-item:hover .product-price-block {
+    transform: translateY(12px);
+} */
+
 .list-color .color-item {
     border: 2px solid transparent;
 }
@@ -105,4 +123,3 @@
 .color-item:hover .tag-action {
     opacity: 1;
 }
-
