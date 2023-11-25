@@ -8,8 +8,6 @@ import Collection from '@/components/Home2/Collection'
 import TabFeatures from '@/components/Home2/TabFeatures'
 import Banner from '@/components/Home1/Banner'
 import Benefit from '@/components/Home1/Benefit'
-import testimonialData from '@/data/Testimonial.json'
-import Testimonial from '@/components/Home1/Testimonial'
 import Instagram from '@/components/Home1/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
@@ -20,9 +18,9 @@ export default function Home() {
             <TopNavOne props="style-two bg-purple" slogan='Limited Offer: Free shipping on orders over $50' />
             <div id="header" className='relative w-full'>
                 <MenuTwo />
-                <SliderTwo props="bg-linear" />
+                <SliderTwo />
             </div>
-            <Collection />
+            <Collection props="pt-5" />
             <WhatNewOne data={productData} start={8} limit={12} />
             <Banner />
             <TabFeatures data={productData} start={12} limit={20} />

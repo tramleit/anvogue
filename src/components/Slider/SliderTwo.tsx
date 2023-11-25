@@ -8,14 +8,10 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import 'swiper/css/effect-fade';
 
-interface Props {
-    props: string;
-}
-
-const SliderTwo: React.FC<Props> = ({props}) => {
+const SliderTwo = () => {
     return (
         <>
-            <div className={`slider-block style-two xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full ${props}`}>
+            <div className={`slider-block style-two bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[360px] w-full`}>
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}
@@ -37,7 +33,7 @@ const SliderTwo: React.FC<Props> = ({props}) => {
                                         <div className="body1 text-center md:mt-4 mt-2">Check out our latest collection of chic and trendy outfits that will keep you looking stylish all year round.</div>
                                         <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
-                                    <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] -right-[16px] bottom-0">
+                                    <div className="sub-img absolute sm:w-1/2 w-[54%] 2xl:-right-[60px] right-0 bottom-0">
                                         <Image
                                             src={'/images/slider/bg2-1.png'}
                                             width={670}
@@ -57,7 +53,7 @@ const SliderTwo: React.FC<Props> = ({props}) => {
                                         <div className="body1 text-center md:mt-4 mt-2">Get ready for the season with our latest collection of women's clothing</div>
                                         <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
-                                    <div className="sub-img absolute w-1/2 2xl:-right-[60px] -right-[0] bottom-0">
+                                    <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] -right-4 bottom-0">
                                         <Image
                                             src={'/images/slider/bg2-2.png'}
                                             width={670}
@@ -77,7 +73,7 @@ const SliderTwo: React.FC<Props> = ({props}) => {
                                         <div className="body1 text-center md:mt-4 mt-2">Check out our curated selection of must-have outfits for any occasion</div>
                                         <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
-                                    <div className="sub-img absolute sm:w-1/2 w-2/3 -right-[36px] sm:bottom-0 -bottom-[30px]">
+                                    <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[36px] right-0 sm:bottom-0 -bottom-[30px]">
                                         <Image
                                             src={'/images/slider/bg2-3.png'}
                                             width={670}

@@ -9,9 +9,6 @@ import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 
-interface Props {
-    props: string;
-}
 
 const MenuTwo = () => {
     const pathname = usePathname()
@@ -33,12 +30,13 @@ const MenuTwo = () => {
                                 <li className='h-full relative'>
                                     <Link
                                         href="#!"
-                                        className={`text-button-uppercase duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}
+                                        className={`text-button-uppercase duration-300 h-full flex items-center justify-center gap-1 
+                                            ${pathname.includes('/homepages/') ? 'active' : ''}`}
                                     >
                                         Demo
                                     </Link>
                                     <div className="sub-menu absolute py-3 px-5 -left-10 w-max grid grid-cols-4 gap-5 bg-white rounded-xl">
-                                        <ul className=''>
+                                        <ul>
                                             <li>
                                                 <Link href="/" className='text-secondary duration-300'>
                                                     Home Fashion 1
@@ -53,7 +51,10 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/fashion3" className={`text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}>
+                                                <Link
+                                                    href="/homepages/fashion3"
+                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}
+                                                >
                                                     Home Fashion 3
                                                 </Link>
                                             </li>
@@ -73,9 +74,12 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                         </ul>
-                                        <ul className=''>
+                                        <ul>
                                             <li>
-                                                <Link href="/homepages/fashion7" className={`text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}>
+                                                <Link
+                                                    href="/homepages/fashion7"
+                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}
+                                                >
                                                     Home Fashion 7
                                                 </Link>
                                             </li>
@@ -105,7 +109,7 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                         </ul>
-                                        <ul className=''>
+                                        <ul>
                                             <li>
                                                 <Link href="/homepages/cosmetic1" className='text-secondary duration-300'>
                                                     Home Cosmetic 1
@@ -137,7 +141,7 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                         </ul>
-                                        <ul className=''>
+                                        <ul>
                                             <li>
                                                 <Link href="/homepages/watch" className='text-secondary duration-300'>
                                                     Home Watch
@@ -149,7 +153,9 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/yoga" className={`text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
+                                                <Link
+                                                    href="/homepages/yoga"
+                                                    className={`text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
                                                     Home Yoga
                                                 </Link>
                                             </li>
@@ -725,7 +731,7 @@ const MenuTwo = () => {
                                     </div>
                                 </li>
                                 <li className='h-full'>
-                                    <Link href="/product" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                    <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                         Product
                                     </Link>
                                     <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen">
@@ -939,33 +945,38 @@ const MenuTwo = () => {
                                     </div>
                                 </li>
                                 <li className='h-full relative'>
-                                    <Link href="/pages" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                    <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                         Pages
                                     </Link>
                                     <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-xl">
                                         <ul className='w-full'>
                                             <li>
-                                                <Link href="/contact" className={`text-secondary duration-300 ${pathname === '/contact' ? 'active' : ''}`}>
+                                                <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                     Contact Us
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/page-not-found" className={`text-secondary duration-300 ${pathname === '/page-not-found' ? 'active' : ''}`}>
+                                                <Link href="/pages/store-list" className={`text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
+                                                    Store List
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/pages/page-not-found" className={`text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
                                                     404
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/faqs" className={`text-secondary duration-300 ${pathname === '/faqs' ? 'active' : ''}`}>
+                                                <Link href="/pages/faqs" className={`text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
                                                     FAQs
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/coming-soon" className={`text-secondary duration-300 ${pathname === '/coming-soon' ? 'active' : ''}`}>
+                                                <Link href="/pages/coming-soon" className={`text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
                                                     Coming Soon
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/customer-feedbacks' ? 'active' : ''}`}>
+                                                <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
                                                     Customer Feedbacks
                                                 </Link>
                                             </li>

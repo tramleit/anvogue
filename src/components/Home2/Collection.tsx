@@ -7,10 +7,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 
-const Collection = () => {
+interface Props {
+    props: string;
+}
+
+const Collection: React.FC<Props> = ({ props }) => {
     return (
         <>
-            <div className="collection-block pt-5">
+            <div className={`collection-block ${props}`}>
                 <div className="list-collection section-swiper-navigation sm:px-5 px-4">
                     <Swiper
                         spaceBetween={12}

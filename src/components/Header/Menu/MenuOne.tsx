@@ -723,7 +723,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         </div>
                                     </li>
                                     <li className='h-full'>
-                                        <Link href="/product" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                        <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                             Product
                                         </Link>
                                         <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen">
@@ -937,33 +937,38 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         </div>
                                     </li>
                                     <li className='h-full relative'>
-                                        <Link href="/pages" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                        <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                             Pages
                                         </Link>
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-xl">
                                             <ul className='w-full'>
                                                 <li>
-                                                    <Link href="/contact" className={`text-secondary duration-300 ${pathname === '/contact' ? 'active' : ''}`}>
+                                                    <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                         Contact Us
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/page-not-found" className={`text-secondary duration-300 ${pathname === '/page-not-found' ? 'active' : ''}`}>
+                                                    <Link href="/pages/store-list" className={`text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
+                                                        Store List
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/pages/page-not-found" className={`text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
                                                         404
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/faqs" className={`text-secondary duration-300 ${pathname === '/faqs' ? 'active' : ''}`}>
+                                                    <Link href="/pages/faqs" className={`text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
                                                         FAQs
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/coming-soon" className={`text-secondary duration-300 ${pathname === '/coming-soon' ? 'active' : ''}`}>
+                                                    <Link href="/pages/coming-soon" className={`text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
                                                         Coming Soon
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/customer-feedbacks' ? 'active' : ''}`}>
+                                                    <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
                                                         Customer Feedbacks
                                                     </Link>
                                                 </li>
