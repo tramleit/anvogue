@@ -21,8 +21,8 @@ export default function Home() {
             </div>
             <TrendingProduct data={productData} start={10} limit={18} />
             <Collection props="pt-20" />
-            <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-3xl" />
             <FlashSale />
+            <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-3xl" />
             <Instagram />
             <Brand />
             <Footer />

@@ -10,7 +10,7 @@ const FlashSale = () => {
                     <div className="bg-img basis-1/3 absolute left-0 top-0 bottom-0">
                         <Image
                             src={'/images/other/bg-flash-sale.png'}
-                            width={800}
+                            width={1000}
                             height={200}
                             alt='bg-img'
                             className='w-full'
