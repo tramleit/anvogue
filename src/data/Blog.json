@@ -1,0 +1,121 @@
+[
+    {
+        "id": "1",
+        "category": "fashion",
+        "tag": "Jean, glasses",
+        "title": "Fashion Trends to Watch Out for in Summer 2023",
+        "date": "Nov 20, 2023",
+        "author": "Chris Evans",
+        "thumbImg": "/images/blog/1.png",
+        "coverImg": "/images/blog/1.png",
+        "subImg": [
+            "/images/blog/1.png",
+            "/images/blog/2.png"
+        ],
+        "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    },
+    {
+        "id": "2",
+        "category": "fashion",
+        "tag": "Jean, shoes",
+        "title": "How to Build a Sustainable and Stylish Wardrobe",
+        "date": "Nov 21, 2023",
+        "author": "Alex Balde",
+        "thumbImg": "/images/blog/2.png",
+        "coverImg": "/images/blog/2.png",
+        "subImg": [
+            "/images/blog/2.png",
+            "/images/blog/3.png"
+        ],
+        "shortDesc": "Build a versatile and timeless wardrobe with our list of must-have fashion staples. From the classic little black dress to the perfect pair of jeans, elevate your style game with these essential pieces",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    },
+    {
+        "id": "3",
+        "category": "fashion",
+        "tag": "Jean, skirt",
+        "title": "Fashion and Beauty Tips for Busy Professionals",
+        "date": "Nov 22, 2023",
+        "author": "Leona Pablo",
+        "thumbImg": "/images/blog/3.png",
+        "coverImg": "/images/blog/3.png",
+        "subImg": [
+            "/images/blog/3.png",
+            "/images/blog/4.png"
+        ],
+        "shortDesc": "Explore the power of accessories and learn how to effortlessly transform your outfits. From statement jewelry to stylish handbags and chic scarves, master the art of accessorizing and add that extra flair to your look.",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    },
+    {
+        "id": "4",
+        "category": "fastfood",
+        "tag": "Jean, glasses",
+        "title": "A Few Words on How to Cook Artichokes",
+        "date": "Nov 24, 2023",
+        "author": "Christina Smith",
+        "thumbImg": "/images/blog/4.png",
+        "coverImg": "/images/blog/4.png",
+        "subImg": [
+            "/images/blog/4.png",
+            "/images/blog/5.png"
+        ],
+        "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    },
+    {
+        "id": "5",
+        "category": "fastfood",
+        "tag": "Jean, shoes",
+        "title": "How to Make a Great Vegetarian poke Bowl",
+        "date": "Nov 26, 2023",
+        "author": "Louis Ancelotti",
+        "thumbImg": "/images/blog/5.png",
+        "coverImg": "/images/blog/5.png",
+        "subImg": [
+            "/images/blog/5.png",
+            "/images/blog/6.png"
+        ],
+        "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    },
+    {
+        "id": "6",
+        "category": "fastfood",
+        "tag": "Jean, skirt",
+        "title": "Mushroom Scallion Tartine with Poblano Yogurt",
+        "date": "Nov 26, 2023",
+        "author": "Davide Alvaro",
+        "thumbImg": "/images/blog/6.png",
+        "coverImg": "/images/blog/6.png",
+        "subImg": [
+            "/images/blog/6.png",
+            "/images/blog/7.png"
+        ],
+        "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    },
+    {
+        "id": "7",
+        "category": "fastfood",
+        "tag": "Jean, shoes",
+        "title": "Bryant Terry’s Amazing Green Rice",
+        "date": "Nov 26, 2023",
+        "author": "Chris Puth",
+        "thumbImg": "/images/blog/7.png",
+        "coverImg": "/images/blog/7.png",
+        "subImg": [
+            "/images/blog/7.png",
+            "/images/blog/8.png"
+        ],
+        "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
+        "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
+        "slug": "fashion-news"
+    }
+]

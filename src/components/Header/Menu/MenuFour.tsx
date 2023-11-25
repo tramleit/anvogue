@@ -9,22 +9,29 @@ import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 
+interface Props {
+    props: string
+}
 
-const MenuTwo = () => {
+const MenuFour: React.FC<Props> = ({ props }) => {
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
 
     return (
         <>
-            <div className='header-menu style-one relative bg-white w-full md:h-[74px] h-[56px]'>
+            <div className={`header-menu style-one relative w-full md:h-[74px] h-[56px] ${props}`}>
                 <div className="container mx-auto h-full">
-                    <div className="header-main flex justify-between h-full">
+                    <div className="header-main flex items-center justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center">
                             <i className="icon-category text-2xl"></i>
                         </div>
-                        <Link href={'/'} className='flex items-center'>
+                        <Link href={'/'} className='flex items-center lg:hidden'>
                             <div className="heading4">Anvogue</div>
                         </Link>
+                        <div className="form-search relative max-lg:hidden">
+                            <Icon.MagnifyingGlass size={16} className='absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer' />
+                            <input type="text" placeholder='What are you looking for?' className=' h-10 rounded-lg border border-line caption2 w-full pl-9 pr-4' />
+                        </div>
                         <div className="menu-main h-full max-lg:hidden">
                             <ul className='flex items-center gap-8 h-full'>
                                 <li className='h-full relative'>
@@ -45,7 +52,7 @@ const MenuTwo = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/fashion2"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}
+                                                    className={`text-secondary duration-300`}
                                                 >
                                                     Home Fashion 2
                                                 </Link>
@@ -53,23 +60,23 @@ const MenuTwo = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/fashion3"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}
+                                                    className={`text-secondary duration-300`}
                                                 >
                                                     Home Fashion 3
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/fashion4" className='text-secondary duration-300'>
+                                                <Link href="/homepages/fashion4" className={`text-secondary duration-300 ${pathname === '/homepages/fashion4' ? 'active' : ''}`}>
                                                     Home Fashion 4
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/fashion5" className='text-secondary duration-300'>
+                                                <Link href="/homepages/fashion5" className={`text-secondary duration-300 ${pathname === '/homepages/fashion5' ? 'active' : ''}`}>
                                                     Home Fashion 5
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/fashion6" className='text-secondary duration-300'>
+                                                <Link href="/homepages/fashion6" className={`text-secondary duration-300 ${pathname === '/homepages/fashion6' ? 'active' : ''}`}>
                                                     Home Fashion 6
                                                 </Link>
                                             </li>
@@ -78,7 +85,7 @@ const MenuTwo = () => {
                                             <li>
                                                 <Link
                                                     href="/homepages/fashion7"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}
+                                                    className={`text-secondary duration-300`}
                                                 >
                                                     Home Fashion 7
                                                 </Link>
@@ -104,24 +111,24 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/underwear" className='text-secondary duration-300'>
+                                                <Link href="/homepages/underwear" className={`text-secondary duration-300 ${pathname === '/homepages/underwear' ? 'active' : ''}`}>
                                                     Home Underwear
                                                 </Link>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <Link href="/homepages/cosmetic1" className='text-secondary duration-300'>
+                                                <Link href="/homepages/cosmetic1" className={`text-secondary duration-300 ${pathname === '/homepages/cosmetic1' ? 'active' : ''}`}>
                                                     Home Cosmetic 1
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/cosmetic2" className='text-secondary duration-300'>
+                                                <Link href="/homepages/cosmetic2" className={`text-secondary duration-300 ${pathname === '/homepages/cosmetic2' ? 'active' : ''}`}>
                                                     Home Cosmetic 2
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/cosmetic3" className={`text-secondary duration-300 ${pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
+                                                <Link href="/homepages/cosmetic3" className={`text-secondary duration-300`}>
                                                     Home Cosmetic 3
                                                 </Link>
                                             </li>
@@ -131,31 +138,31 @@ const MenuTwo = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/jewelry" className='text-secondary duration-300'>
+                                                <Link href="/homepages/jewelry" className={`text-secondary duration-300 ${pathname === '/homepages/jewelry' ? 'active' : ''}`}>
                                                     Home Jewelry
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/furniture" className='text-secondary duration-300'>
+                                                <Link href="/homepages/furniture" className={`text-secondary duration-300 ${pathname === '/homepages/furniture' ? 'active' : ''}`}>
                                                     Home Furniture
                                                 </Link>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li>
-                                                <Link href="/homepages/watch" className='text-secondary duration-300'>
+                                                <Link href="/homepages/watch" className={`text-secondary duration-300 ${pathname === '/homepages/watch' ? 'active' : ''}`}>
                                                     Home Watch
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/homepages/toys" className='text-secondary duration-300'>
+                                                <Link href="/homepages/toys" className={`text-secondary duration-300 ${pathname === '/homepages/toys' ? 'active' : ''}`}>
                                                     Home Toys Kid
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link
                                                     href="/homepages/yoga"
-                                                    className={`text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
+                                                    className={`text-secondary duration-300`}>
                                                     Home Yoga
                                                 </Link>
                                             </li>
@@ -730,6 +737,11 @@ const MenuTwo = () => {
                                         </div>
                                     </div>
                                 </li>
+                                <li className='h-full flex items-center justify-center logo'>
+                                    <Link href={'/'} className='heading4'>
+                                        Anvogue
+                                    </Link>
+                                </li>
                                 <li className='h-full'>
                                     <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                         Product
@@ -986,10 +998,6 @@ const MenuTwo = () => {
                             </ul>
                         </div>
                         <div className="right flex gap-12">
-                            <div className="max-md:hidden search-icon flex items-center cursor-pointer relative">
-                                <Icon.MagnifyingGlass size={24} color='black' />
-                                <div className="line absolute bg-line w-px h-6 -right-6"></div>
-                            </div>
                             <div className="list-action flex items-center gap-4">
                                 <div className="user-icon flex items-center justify-center cursor-pointer">
                                     <Icon.User size={24} color='black' onClick={handleLoginPopup} />
@@ -1021,4 +1029,4 @@ const MenuTwo = () => {
     )
 }
 
-export default MenuTwo
+export default MenuFour

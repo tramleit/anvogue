@@ -1,11 +1,5 @@
-'use client'
 
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import 'swiper/css/bundle';
 import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
 

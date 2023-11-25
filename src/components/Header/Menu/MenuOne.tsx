@@ -30,7 +30,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                 <div className="heading4">Anvogue</div>
                             </Link>
                             <div className="menu-main h-full max-lg:hidden">
-                                <ul className='flex items-center gap-10 h-full'>
+                                <ul className='flex items-center gap-8 h-full'>
                                     <li className='h-full relative'>
                                         <Link
                                             href="#!"

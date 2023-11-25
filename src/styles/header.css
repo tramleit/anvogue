@@ -75,6 +75,10 @@
     background-color: var(--secondary);
 }
 
+.menu-main ul li.logo a::before {
+    display: none;
+}
+
 .menu-main ul li:hover>a.view-all-btn::before {
     background-color: var(--black);
 }
