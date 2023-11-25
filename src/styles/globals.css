@@ -188,6 +188,7 @@ input:focus {
   border-radius: 12px;
   display: inline-block;
   cursor: pointer;
+  transition: all ease 0.4s;
 }
 
 @media (max-width: 1023.99px) {
@@ -213,8 +214,13 @@ input:focus {
   }
 
   .heading3 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .heading4 {
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .heading5 {
@@ -267,6 +273,11 @@ input:focus {
 
   .heading3 {
     font-size: 20px;
+    line-height: 28px;
+  }
+
+  .heading4 {
+    font-size: 18px;
     line-height: 28px;
   }
 

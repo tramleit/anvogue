@@ -12,7 +12,7 @@ import Instagram from '@/components/Home1/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
-export default function Home() {
+export default function HomeTwo() {
     return (
         <>
             <TopNavOne props="style-two bg-purple" slogan='Limited Offer: Free shipping on orders over $50' />

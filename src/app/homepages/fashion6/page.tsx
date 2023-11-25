@@ -1,33 +1,30 @@
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuFour from '@/components/Header/Menu/MenuFour'
-import SliderFour from '@/components/Slider/SliderFour'
-import BestSellers from '@/components/Home4/BestSellers'
+import SliderSix from '@/components/Slider/SliderSix'
+import Banner from '@/components/Home5/Banner'
 import productData from '@/data/Product.json'
-import Collection from '@/components/Home2/Collection'
-import Banner from '@/components/Home1/Banner'
+import TabFeatures from '@/components/Home2/TabFeatures'
+import FlashSale from '@/components/Home5/FlashSale'
 import Benefit from '@/components/Home1/Benefit'
-import testimonialData from '@/data/Testimonial.json'
-import Testimonial from '@/components/Home4/Testimonial'
 import Newsletter from '@/components/Home4/Newsletter'
 import Instagram from '@/components/Home1/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
-export default function HomeFour() {
+export default function HomeSix() {
     return (
         <>
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuFour props="bg-white" />
-                <SliderFour />
+                <SliderSix />
             </div>
-            <Collection props="pt-5" />
-            <BestSellers data={productData} start={12} limit={20} />
             <Banner />
+            <TabFeatures data={productData} start={2} limit={10} />
+            <FlashSale />
             <Benefit props="pt-20" />
-            <Testimonial data={testimonialData} limit={6} />
-            <Newsletter props="bg-black" />
+            <Newsletter props="bg-green" />
             <Instagram />
             <Brand />
             <Footer />

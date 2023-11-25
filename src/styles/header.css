@@ -141,3 +141,12 @@
 .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--black);
 }
+
+.swiper.dots-white .swiper-pagination .swiper-pagination-bullet,
+.swiper.dots-white .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+    border-color: var(--white);
+}
+
+.swiper.dots-white .swiper-pagination-bullet-active {
+    background: var(--white);
+}

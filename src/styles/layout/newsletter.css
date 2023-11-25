@@ -1,0 +1,8 @@
+.newsletter-block.bg-green .text-white {
+    color: var(--black);
+}
+
+.newsletter-block.bg-green .button-main {
+    background-color: var(--black);
+    color: var(--white);
+}

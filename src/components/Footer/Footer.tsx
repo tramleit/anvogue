@@ -57,7 +57,7 @@ const Footer = () => {
                                     <div className="text-button-uppercase">Newletter</div>
                                     <div className="caption1 mt-3">Sign up for our newsletter and get 10% off your first purchase</div>
                                     <div className="input-block w-full h-[52px] mt-4">
-                                        <form className='w-full h-full relative' action="">
+                                        <form className='w-full h-full relative' action="post">
                                             <input type="text" placeholder='Enter your e-mail' className='caption1 w-full h-full pl-4 pr-14 rounded-xl border border-line' />
                                             <button className='w-[44px] h-[44px] bg-black flex items-center justify-center rounded-xl absolute top-1 right-1'>
                                                 <Icon.ArrowRight size={24} color='#fff' />
@@ -89,7 +89,7 @@ const Footer = () => {
                                 <div className="copyright caption1 text-secondary">©2023 Anvogue. All Rights Reserved.</div>
                                 <div className="select-block flex items-center gap-5 max-md:hidden">
                                     <div className="choose-language flex items-center gap-1.5">
-                                        <select name="language" id="chooseLanguage" className='caption2 bg-transparent'>
+                                        <select name="language" id="chooseLanguageFooter" className='caption2 bg-transparent'>
                                             <option value="English">English</option>
                                             <option value="Espana">Espana</option>
                                             <option value="France">France</option>
@@ -97,7 +97,7 @@ const Footer = () => {
                                         <Icon.CaretDown size={12} color='#1F1F1F' />
                                     </div>
                                     <div className="choose-currency flex items-center gap-1.5">
-                                        <select name="currency" id="chooseCurrency" className='caption2 bg-transparent'>
+                                        <select name="currency" id="chooseCurrencyFooter" className='caption2 bg-transparent'>
                                             <option value="USD">USD</option>
                                             <option value="EUR">EUR</option>
                                             <option value="GBP">GBP</option>

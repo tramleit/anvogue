@@ -5,3 +5,36 @@
     position: relative;
     padding-top: 40px;
 }
+
+.list-testimonial.section-swiper-navigation .swiper {
+    padding-bottom: 84px;
+}
+
+@media (max-width: 767.99px) {
+    .list-testimonial.section-swiper-navigation .swiper {
+        padding-bottom: 60px;
+    }
+}
+
+.list-testimonial.section-swiper-navigation .swiper-button-prev,
+.list-testimonial.section-swiper-navigation .swiper-button-next {
+    bottom: 0;
+    top: unset;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+}
+
+.list-testimonial.section-swiper-navigation .swiper-button-prev {
+    left: 0;
+}
+
+.list-testimonial.section-swiper-navigation .swiper-button-next {
+    left: 64px;
+}
+
+.testimonial-block .list-avatar .bg-img:not(:first-child) {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
