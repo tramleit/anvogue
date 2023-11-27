@@ -31,8 +31,10 @@ const TestimonialItem: React.FC<TestimonialProps> = ({ data, type }) => {
                                 <Rate currentRate={data.star}></Rate>
                                 <div className="text-button-uppercase text-secondary mt-4">Customer reviews</div>
                                 <div className="heading4 normal-case desc font-normal mt-2">{data.description}</div>
-                                <div className="text-button name mt-4">{data.name}</div>
-                                <div className="caption2 date text-secondary2 mt-1">{data.date}</div>
+                                <div className="flex items-center gap-3 mt-4">
+                                    <div className="text-button name">{data.name}</div>
+                                    <div className="caption1 date text-secondary2">From {data.address}</div>
+                                </div>
                             </div>
                         </div>
                     ) : (

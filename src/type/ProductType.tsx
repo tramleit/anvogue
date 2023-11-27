@@ -1,6 +1,7 @@
 interface Variation {
     color: string;
     colorCode: string;
+    colorImage: string;
     image: string;
 }
 

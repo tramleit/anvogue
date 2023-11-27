@@ -2,12 +2,14 @@ import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuFour from '@/components/Header/Menu/MenuFour'
 import SliderSix from '@/components/Slider/SliderSix'
-import Banner from '@/components/Home5/Banner'
+import Collection from '@/components/Home6/Collection'
 import productData from '@/data/Product.json'
 import TabFeatures from '@/components/Home2/TabFeatures'
-import FlashSale from '@/components/Home5/FlashSale'
+import FlashSale from '@/components/Home6/FlashSale'
+import testimonialData from '@/data/Testimonial.json'
+import Testimonial from '@/components/Home6/Testimonial'
+import BestSaleProduct from '@/components/Home6/BestSaleProduct'
 import Benefit from '@/components/Home1/Benefit'
-import Newsletter from '@/components/Home4/Newsletter'
 import Instagram from '@/components/Home1/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
@@ -20,11 +22,12 @@ export default function HomeSix() {
                 <MenuFour props="bg-white" />
                 <SliderSix />
             </div>
-            <Banner />
+            <Collection />
             <TabFeatures data={productData} start={2} limit={10} />
             <FlashSale />
+            <Testimonial data={testimonialData} limit={5} />
+            <BestSaleProduct data={productData} />
             <Benefit props="pt-20" />
-            <Newsletter props="bg-green" />
             <Instagram />
             <Brand />
             <Footer />

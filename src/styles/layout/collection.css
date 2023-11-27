@@ -48,3 +48,8 @@
     background-color: var(--black);
     color: var(--white);
 }
+
+
+.collection-block.style-six .list-collection .swiper {
+    overflow: unset;
+}

@@ -22,21 +22,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/1-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/1-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/1-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/1-4.png"
             }
         ],
@@ -79,21 +83,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/2-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/2-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/2-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/2-4.png"
             }
         ],
@@ -131,21 +139,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/3-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/3-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/3-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/3-4.png"
             }
         ],
@@ -186,21 +198,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/4-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/4-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/4-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/4-4.png"
             }
         ],
@@ -241,16 +257,19 @@
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/5-1.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/5-2.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/5-3.png"
             }
         ],
@@ -292,21 +311,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/6-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/6-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/6-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/6-4.png"
             }
         ],
@@ -344,21 +367,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/7-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/7-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/7-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/7-4.png"
             }
         ],
@@ -399,21 +426,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/8-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/8-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/8-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/8-4.png"
             }
         ],
@@ -454,21 +485,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/9-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/9-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/9-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/9-4.png"
             }
         ],
@@ -511,21 +546,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/10-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/10-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/10-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/10-4.png"
             }
         ],
@@ -563,21 +602,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/11-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/11-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/11-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/11-4.png"
             }
         ],
@@ -618,21 +661,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/12-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/12-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/12-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/12-4.png"
             }
         ],
@@ -673,21 +720,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/13-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/13-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/13-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/13-4.png"
             }
         ],
@@ -730,21 +781,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/14-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/14-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/14-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/14-4.png"
             }
         ],
@@ -782,21 +837,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/15-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/15-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/15-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/15-4.png"
             }
         ],
@@ -837,21 +896,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/16-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/16-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/16-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/16-4.png"
             }
         ],
@@ -892,21 +955,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/17-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/17-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/17-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/17-4.png"
             }
         ],
@@ -949,21 +1016,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/18-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/18-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/18-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/18-4.png"
             }
         ],
@@ -1001,21 +1072,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/19-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/19-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/19-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/19-4.png"
             }
         ],
@@ -1056,21 +1131,25 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/20-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/20-2.png"
             },
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/20-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
                 "image": "/images/product/fashion/20-4.png"
             }
         ],

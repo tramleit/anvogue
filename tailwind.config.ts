@@ -33,6 +33,7 @@ const config: Config = {
       'yellow': '#ECB018',
       'pink': '#F4407D',
       'line': '#E9E9E9',
+      'outline': 'rgba(0, 0, 0, 0.15)',
     },
   },
   plugins: [],

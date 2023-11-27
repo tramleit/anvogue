@@ -1,0 +1,9 @@
+/* best-sale-prd */
+.best-sale-prd .product-infor .desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+    max-height: 3em;
+    position: relative;
+}
