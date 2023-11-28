@@ -22,25 +22,21 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
     return (
         <>
             <div className="best-sale-prd bg-surface py-20 mt-20">
-                <div className="container flex justify-between">
-                    <div className="list-img w-2/3">
+                <div className="container flex justify-between gap-y-6 flex-wrap">
+                    <div className="list-img lg:w-2/3 w-full">
                         <Swiper
                             spaceBetween={12}
-                            slidesPerView={1}
+                            slidesPerView={2}
                             scrollbar={{
                                 hide: false,
                             }}
                             modules={[Navigation, Autoplay, Scrollbar]}
                             breakpoints={{
-                                576: {
-                                    slidesPerView: 1,
+                                640: {
+                                    slidesPerView: 3,
                                     spaceBetween: 12,
                                 },
-                                768: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 20,
-                                },
-                                1200: {
+                                1024: {
                                     slidesPerView: 2,
                                     spaceBetween: 20,
                                 },
@@ -53,7 +49,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full rounded-[20px]'
+                                    className='w-full h-full object-cover rounded-[20px]'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -62,7 +58,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full rounded-[20px]'
+                                    className='w-full h-full object-cover rounded-[20px]'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -71,7 +67,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full rounded-[20px]'
+                                    className='w-full h-full object-cover rounded-[20px]'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -80,12 +76,12 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full rounded-[20px]'
+                                    className='w-full h-full object-cover rounded-[20px]'
                                 />
                             </SwiperSlide>
                         </Swiper>
                     </div>
-                    <div className="product-infor w-1/3 pl-20">
+                    <div className="product-infor lg:w-1/3 w-full lg:pl-20">
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">
@@ -136,8 +132,8 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="choose-quantity flex items-center justify-between mt-5">
-                                <div className="quantity-block p-3 flex items-center justify-between rounded-lg border border-line w-[140px]">
+                            <div className="choose-quantity flex items-center lg:justify-between flex-wrap gap-5 gap-y-3 mt-5">
+                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px]">
                                     <Icon.Minus size={20} />
                                     <div className="body1 font-semibold">1</div>
                                     <Icon.Plus size={20} />
@@ -145,7 +141,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                 <div className="button-main bg-white text-black border border-black">Add To Cart</div>
                             </div>
                             <div className="button-block mt-5">
-                                <div className="button-main w-full text-center">Buy It Now</div>
+                                <div className="button-main w-full text-center">Buy It Now</div>    
                             </div>
                         </div>
                     </div>

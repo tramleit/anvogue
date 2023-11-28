@@ -6,14 +6,14 @@ const FlashSale = () => {
     return (
         <>
             <div className="flash-sale-block style-six w-full bg-surface mt-20">
-                <div className="list-product grid grid-cols-3">
+                <div className="list-product grid sm:grid-cols-3">
                     <div className="item relative overflow-hidden">
                         <Image
                             src={'/images/product/fashion/3-1.png'}
                             width={1000}
                             height={1000}
                             alt='product'
-                            className='lg:h-[150%] h-[100%] object-cover -mt-[150px]'
+                            className='lg:h-[150%] sm:h-[130%] object-cover lg:-mt-[150px] sm:-mt-[40px]'
                         />
                         <div className="dots absolute top-[38%] left-[45%] cursor-pointer">
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
@@ -40,7 +40,7 @@ const FlashSale = () => {
                             width={1000}
                             height={1000}
                             alt='product'
-                            className='lg:h-[150%] h-[100%] object-cover -mt-[150px]'
+                            className='lg:h-[150%] sm:h-[130%] object-cover lg:-mt-[150px] sm:-mt-[40px]'
                         />
                         <div className="dots absolute top-[30%] left-[70%] cursor-pointer">
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">

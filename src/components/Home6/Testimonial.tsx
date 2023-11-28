@@ -19,7 +19,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
         <>
             <div className="testimonial-block style-six pt-20">
                 <div className="container relative flex items-center justify-between flex-wrap gap-y-6 max-md:flex-col-reverse">
-                    <div className="md:w-1/2 pr-12 py-16 w-full list-testimonial section-swiper-navigation">
+                    <div className="md:w-1/2 md:pr-12 md:py-16 w-full list-testimonial section-swiper-navigation">
                         <Swiper
                             slidesPerView={1}
                             navigation
@@ -34,7 +34,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                             ))}
                         </Swiper>
                     </div>
-                    <div className="list-avatar md:w-1/2 pl-5 absolute right-4 top-0 bottom-0 h-full text-center">
+                    <div className="list-avatar md:w-1/2 md:pl-5 md:absolute md:right-4 top-0 bottom-0 h-full text-center">
                         {data.slice(0, limit).map((prd, index) => (
                             <div className="bg-img rounded-[32px] overflow-hidden" key={index} data-item={prd.id}>
                                 <Image
