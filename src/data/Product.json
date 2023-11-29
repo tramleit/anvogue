@@ -11,6 +11,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
+       "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -70,6 +71,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
+       "sold": 23,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -131,6 +133,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
+       "sold": 15,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -187,6 +190,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
+       "sold": 14,
         "quantity": 100,
         "sizes": [
             "S",
@@ -246,6 +250,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
+       "sold": 21,
         "quantity": 100,
         "sizes": [
             "S",
@@ -298,6 +303,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
+       "sold": 19,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -359,6 +365,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
+       "sold": 22,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -415,6 +422,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
+       "sold": 13,
         "quantity": 100,
         "sizes": [
             "S",
@@ -474,6 +482,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
+       "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -533,6 +542,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
+       "sold": 12,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -594,6 +604,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
+       "sold": 14,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -650,6 +661,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
+       "sold": 17,
         "quantity": 100,
         "sizes": [
             "S",
@@ -709,6 +721,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
+       "sold": 10,
         "quantity": 100,
         "sizes": [
             "S",
@@ -768,6 +781,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
+       "sold": 9,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -829,6 +843,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
+       "sold": 8,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -885,6 +900,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
+       "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -944,6 +960,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
+       "sold": 22,
         "quantity": 100,
         "sizes": [
             "S",
@@ -1003,6 +1020,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
+       "sold": 11,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -1064,6 +1082,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
+       "sold": 5,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -1120,6 +1139,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
+       "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",

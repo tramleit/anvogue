@@ -17,6 +17,7 @@ export interface ProductType {
     price: number,
     originPrice: number,
     brand: string,
+    sold: number,
     quantity: number,
     sizes: Array<string>,
     variation: Variation[],

@@ -5,6 +5,7 @@ import SliderSix from '@/components/Slider/SliderSix'
 import Collection from '@/components/Home6/Collection'
 import productData from '@/data/Product.json'
 import TabFeatures from '@/components/Home2/TabFeatures'
+import PopularProduct from '@/components/Home6/PopularProduct'
 import FlashSale from '@/components/Home6/FlashSale'
 import testimonialData from '@/data/Testimonial.json'
 import Testimonial from '@/components/Home6/Testimonial'
@@ -24,6 +25,7 @@ export default function HomeSix() {
             </div>
             <Collection />
             <TabFeatures data={productData} start={2} limit={10} />
+            <PopularProduct />
             <FlashSale />
             <Testimonial data={testimonialData} limit={5} />
             <BestSaleProduct data={productData} />

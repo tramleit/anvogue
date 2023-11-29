@@ -19,7 +19,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
         <>
             <div className="testimonial-block style-six pt-20">
                 <div className="container relative flex items-center justify-between flex-wrap gap-y-6 max-md:flex-col-reverse">
-                    <div className="md:w-1/2 md:pr-12 md:py-16 w-full list-testimonial section-swiper-navigation">
+                    <div className="md:w-1/2 md:pr-12 md:py-16 w-full list-testimonial section-swiper-navigation style-small-border">
                         <Swiper
                             slidesPerView={1}
                             navigation

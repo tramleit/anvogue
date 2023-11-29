@@ -9,7 +9,3 @@
 .section-swiper-navigation .swiper-button-next::after {
     font-size: 18px;
 }
-
-.hide-color .product-item .list-color {
-    display: none;
-}

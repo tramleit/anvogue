@@ -39,6 +39,32 @@ const TestimonialItem: React.FC<TestimonialProps> = ({ data, type }) => {
                         </div>
                     ) : (
                         <>
+                            {type === "style-seven" ? (
+                                <div className="testimonial-item style-seven h-full">
+                                    <div className="testimonial-main bg-white py-8 px-7 rounded-[20px] h-full">
+                                        <div className="heading flex items-center gap-4">
+                                            <div className="avatar w-10 h-10 rounded-full overflow-hidden">
+                                                <Image
+                                                    src={data.avatar}
+                                                    width={500}
+                                                    height={500}
+                                                    alt='avatar'
+                                                    className='w-full h-full'
+                                                />
+                                            </div>
+                                            <div className="infor">
+                                                <Rate currentRate={data.star}></Rate>
+                                                <div className="text-title name">{data.name}</div>
+                                            </div>
+                                        </div>
+                                        <div className="body1 desc mt-4">{data.description}</div>
+                                    </div>
+                                </div>
+                            ) : (
+                                <>
+                                </>
+                            )
+                            }
                         </>
                     )
                     }

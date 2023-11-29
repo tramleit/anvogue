@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,6 +13,7 @@ interface ProductProps {
 
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
+    const percentSold = Math.floor((data.sold / data.quantity) * 100)
 
     return (
         <>
@@ -67,6 +70,21 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             </div>
                         </div>
                         <div className="product-infor mt-4">
+                            <div className="product-sold pb-4">
+                                <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
+                                    <div className={`progress-sold bg-red absolute left-0 top-0 h-full w-[${percentSold}%]`}></div>
+                                </div>
+                                <div className="flex items-center justify-between mt-2">
+                                    <div className="text-button-uppercase">
+                                        <span className='text-secondary2'>Sold: </span>
+                                        <span>{data.sold}</span>
+                                    </div>
+                                    <div className="text-button-uppercase">
+                                        <span className='text-secondary2'>Available: </span>
+                                        <span>{data.quantity - data.sold}</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="product-name text-title duration-300">{data.name}</div>
                             {data.variation.length > 0 ? (
                                 <div className="list-color max-md:hidden py-2 mb-1 flex items-center gap-3 flex-wrap duration-300">

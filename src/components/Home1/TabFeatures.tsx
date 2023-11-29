@@ -28,7 +28,7 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product section-swiper-navigation hide-color mt-10">
+                    <div className="list-product hide-product-sold section-swiper-navigation hide-color mt-10">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}
