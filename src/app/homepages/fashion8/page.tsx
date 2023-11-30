@@ -2,16 +2,14 @@ import React from 'react'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuEight from '@/components/Header/Menu/MenuEight'
 import SliderEight from '@/components/Slider/SliderEight'
-import BestSellers from '@/components/Home7/BestSellers'
+import Collection from '@/components/Home1/Collection'
+import Deal from '@/components/Home7/Deal'
+import Banner from '@/components/Home8/Banner'
 import productData from '@/data/Product.json'
-import TrendingNow from '@/components/Home7/TrendingNow'
-import PopularProduct from '@/components/Home6/PopularProduct'
-import TrendingProduct from '@/components/Home3/TrendingProduct'
-import Banner from '@/components/Home7/Banner'
-import testimonialData from '@/data/Testimonial.json'
-import Testimonial from '@/components/Home7/Testimonial'
+import TabFeatures from '@/components/Home1/TabFeatures'
 import Benefit from '@/components/Home1/Benefit'
-import Instagram from '@/components/Home1/Instagram'
+import blogData from '@/data/Blog.json'
+import NewsInsight from '@/components/Home3/NewsInsight'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
@@ -23,14 +21,14 @@ export default function HomeEight() {
                 <MenuEight />
                 <SliderEight />
             </div>
-            <TrendingNow />
-            <BestSellers data={productData} start={4} limit={8} />
-            <PopularProduct />
-            <TrendingProduct data={productData} start={12} limit={20} />
-            <Banner />
-            <Testimonial data={testimonialData} limit={5} />
             <Benefit props="pt-20" />
-            <Instagram />
+            <div className="container">
+                <Collection />
+            </div>
+            <Deal data={productData} start={4} limit={8} />
+            <Banner />
+            <TabFeatures data={productData} start={9} limit={13} />
+            <NewsInsight data={blogData} start={0} limit={3} />
             <Brand />
             <Footer />
         </>

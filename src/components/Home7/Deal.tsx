@@ -10,7 +10,7 @@ interface Props {
     limit: number;
 }
 
-const BestSellers: React.FC<Props> = ({ data, start, limit }) => {
+const Deal: React.FC<Props> = ({ data, start, limit }) => {
     return (
         <>
             <div className="tab-features-block pt-20">
@@ -45,4 +45,4 @@ const BestSellers: React.FC<Props> = ({ data, start, limit }) => {
     )
 }
 
-export default BestSellers
+export default Deal

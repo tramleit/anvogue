@@ -81,8 +81,7 @@ const MenuEight = () => {
                                     <Icon.CaretDown color='#ffffff' className='text-xl max-sm:text-base' />
                                 </div>
                                 <div
-                                    className={`sub-menu-department absolute top-[44px] left-0 right-0 h-max bg-white 
-                                    ${openSubMenuDepartment ? 'open' : ''}`}
+                                    className={`sub-menu-department absolute top-[44px] left-0 right-0 h-max bg-white rounded-b-2xl ${openSubMenuDepartment ? 'open' : ''}`}
                                 >
                                     <div className="item block">
                                         <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Men’s Clothing</Link>
@@ -172,22 +171,22 @@ const MenuEight = () => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion8" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion8" className={`text-secondary duration-300 ${pathname === '/homepages/fashion8' ? 'active' : ''}`}>
                                                         Home Fashion 8
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion9" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion9" className={`text-secondary duration-300 ${pathname === '/homepages/fashion9' ? 'active' : ''}`}>
                                                         Home Fashion 9
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion10" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion10" className={`text-secondary duration-300 ${pathname === '/homepages/fashion10' ? 'active' : ''}`}>
                                                         Home Fashion 10
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion11" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion11" className={`text-secondary duration-300 ${pathname === '/homepages/fashion11' ? 'active' : ''}`}>
                                                         Home Fashion 11
                                                     </Link>
                                                 </li>
@@ -248,7 +247,7 @@ const MenuEight = () => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/organic" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/organic" className={`text-secondary duration-300 ${pathname === '/homepages/organic' ? 'active' : ''}`}>
                                                         Home Organic
                                                     </Link>
                                                 </li>

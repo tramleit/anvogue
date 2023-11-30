@@ -2,7 +2,7 @@ import React from 'react'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuTwo from '@/components/Header/Menu/MenuTwo'
 import SliderSeven from '@/components/Slider/SliderSeven'
-import BestSellers from '@/components/Home7/BestSellers'
+import Deal from '@/components/Home7/Deal'
 import productData from '@/data/Product.json'
 import TrendingNow from '@/components/Home7/TrendingNow'
 import PopularProduct from '@/components/Home6/PopularProduct'
@@ -24,7 +24,7 @@ export default function HomeSeven() {
                 <SliderSeven />
             </div>
             <TrendingNow />
-            <BestSellers data={productData} start={4} limit={8} />
+            <Deal data={productData} start={4} limit={8} />
             <PopularProduct />
             <TrendingProduct data={productData} start={12} limit={20} />
             <Banner />

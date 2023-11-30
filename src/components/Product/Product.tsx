@@ -70,18 +70,18 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             </div>
                         </div>
                         <div className="product-infor mt-4">
-                            <div className="product-sold pb-4">
+                            <div className="product-sold sm:pb-4 pb-2">
                                 <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
                                     <div className={`progress-sold bg-red absolute left-0 top-0 h-full w-[${percentSold}%]`}></div>
                                 </div>
-                                <div className="flex items-center justify-between mt-2">
+                                <div className="flex items-center justify-between gap-3 gap-y-1 flex-wrap mt-2">
                                     <div className="text-button-uppercase">
-                                        <span className='text-secondary2'>Sold: </span>
-                                        <span>{data.sold}</span>
+                                        <span className='text-secondary2 max-sm:text-xs'>Sold: </span>
+                                        <span className='max-sm:text-xs'>{data.sold}</span>
                                     </div>
                                     <div className="text-button-uppercase">
-                                        <span className='text-secondary2'>Available: </span>
-                                        <span>{data.quantity - data.sold}</span>
+                                        <span className='text-secondary2 max-sm:text-xs'>Available: </span>
+                                        <span className='max-sm:text-xs'>{data.quantity - data.sold}</span>
                                     </div>
                                 </div>
                             </div>
