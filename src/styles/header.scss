@@ -1,0 +1,138 @@
+/* top nav header */
+.top-nav.style-two select.bg-black {
+    background-color: var(--purple);
+}
+
+
+/* menu header */
+.header-menu {
+    position: relative;
+    z-index: 101;
+}
+
+.menu-main {
+    ul li {
+        a {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 6px;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--black);
+                transition: all ease 0.3s;
+            }
+
+            &.active {
+                color: var(--black);
+            }
+
+            &.view-all-btn::before {
+                width: 100%;
+                height: 2px;
+                background-color: var(--secondary);
+            }
+        }
+
+        >a.active::before {
+            width: 100%;
+        }
+
+        &.logo a::before {
+            display: none;
+        }
+
+        &:hover {
+            >a.view-all-btn::before {
+                background-color: var(--black);
+            }
+        }
+    }
+
+    .sub-menu,
+    .mega-menu {
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease 0.3s;
+        transform: scaleY(0);
+        transform-origin: top center;
+        box-shadow: 0px 5px 25px 0px rgba(138, 159, 168, 0.25);
+
+        li a {
+            padding: 7px 0;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        li:hover a {
+            color: var(--black);
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    >ul>li {
+        >a::before {
+            bottom: 24px;
+            height: 2px;
+        }
+
+        .sub-menu {
+
+            &:hover {
+                opacity: 1;
+                visibility: visible;
+                transform: scaleY(1);
+            }
+        }
+
+        &:hover {
+
+            .sub-menu,
+            .mega-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: scaleY(1);
+            }
+
+            >a::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &.style-eight {
+        >ul>li>a::before {
+            bottom: 10px;
+        }
+    }
+
+    .product-item .list-action {
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        grid-template-columns: unset;
+        transform: translateY(120px);
+        gap: 8px;
+    }
+}
+
+
+// open, close sub-menu-department
+.menu-department-block {
+    .sub-menu-department {
+        transition: all ease 0.5s;
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        
+        &.open {
+            max-height: 500px;
+            padding: 16px 20px;
+        }
+    }
+}

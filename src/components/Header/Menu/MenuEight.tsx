@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
@@ -8,50 +8,141 @@ import { usePathname } from 'next/navigation';
 import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
+import useSubMenuDepartment from '@/store/useSubMenuDepartment';
 
-interface Props {
-    props: string;
-}
 
-const MenuOne: React.FC<Props> = ({ props }) => {
+const MenuEight = () => {
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
+    const { openSubMenuDepartment, handleSubMenuDepartment } = useSubMenuDepartment()
 
     return (
         <>
-            <div className={`header-menu style-one absolute top-0 left-0 right-0 w-full md:h-[74px] h-[56px] ${props}`}>
+            <div className='header-menu style-eight relative bg-white w-full md:h-[74px] h-[56px]'>
                 <div className="container mx-auto h-full">
-                    <div className="header-main flex justify-between h-full">
+                    <div className="header-main flex items-center justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center">
                             <i className="icon-category text-2xl"></i>
                         </div>
-                        <div className="left flex items-center gap-16">
-                            <Link href={'/'} className='flex items-center'>
-                                <div className="heading4">Anvogue</div>
-                            </Link>
-                            <div className="menu-main h-full max-lg:hidden">
+                        <Link href={'/'} className='flex items-center'>
+                            <div className="heading4">Anvogue</div>
+                        </Link>
+                        <div className="form-search w-2/3 pl-8 flex items-center h-[44px] max-lg:hidden">
+                            <div className="category-block relative h-full">
+                                <div className="category-btn bg-black relative flex items-center gap-6 py-2 px-4 h-full rounded-l w-fit cursor-pointer">
+                                    <div className="text-button text-white whitespace-nowrap">All Categories</div>
+                                    <Icon.CaretDown color='#ffffff' />
+                                </div>
+                            </div>
+                            <form action="/search-result" className='w-full flex items-center h-full'>
+                                <input type="text" className="search-input h-full px-4 w-full border border-line" placeholder="What are you looking for today?" />
+                                <button type="submit" className="search-button button-main bg-black h-full flex items-center px-7 rounded-none rounded-r">Search</button>
+                            </form>
+                        </div>
+                        <div className="right flex gap-12">
+                            <div className="list-action flex items-center gap-4">
+                                <div className="user-icon flex items-center justify-center cursor-pointer">
+                                    <Icon.User size={24} color='black' onClick={handleLoginPopup} />
+                                    <div
+                                        className={`login-popup absolute top-[74px] -left-40px w-[320px] p-7 rounded-xl bg-white box-shadow-small 
+                                            ${openLoginPopup ? 'open' : ''}`}
+                                    >
+                                        <Link href={'/login'} className="button-main w-full text-center">Login</Link>
+                                        <div className="text-secondary text-center mt-3 pb-4">Don’t have an account?
+                                            <Link href={'/register'} className='text-black pl-1 hover:underline'>Register</Link>
+                                        </div>
+                                        <div className="bottom pt-4 border-t border-line"></div>
+                                        <Link href={'#!'} className='body1 hover:underline'>Support</Link>
+                                    </div>
+                                </div>
+                                <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer">
+                                    <Icon.Heart size={24} color='black' />
+                                </div>
+                                <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer">
+                                    <Icon.Handbag size={24} color='black' />
+                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black px-1 rounded-full">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="top-nav-menu relative bg-white border-t border-b border-line h-[44px] max-lg:hidden z-10">
+                <div className="container h-full">
+                    <div className="top-nav-menu-main flex items-center justify-between h-full">
+                        <div className="left flex items-center h-full">
+                            <div className="menu-department-block relative h-full">
+                                <div
+                                    className="menu-department-btn bg-black relative flex items-center sm:gap-16 gap-4 px-4 h-full w-fit cursor-pointer"
+                                    onClick={handleSubMenuDepartment} 
+                                >
+                                    <div className="text-button-uppercase text-white whitespace-nowrap">Department</div>
+                                    <Icon.CaretDown color='#ffffff' className='text-xl max-sm:text-base' />
+                                </div>
+                                <div
+                                    className={`sub-menu-department absolute top-[44px] left-0 right-0 h-max bg-white 
+                                    ${openSubMenuDepartment ? 'open' : ''}`}
+                                >
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Men’s Clothing</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Women’s Clothing</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Accessories</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Bags & Backpacks</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Shoes</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Jewelry</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Watches</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Beauty & Care</Link>
+                                    </div>
+                                    <div className="item block">
+                                        <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Kids & Baby</Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="menu-main style-eight h-full pl-12 max-lg:hidden">
                                 <ul className='flex items-center gap-8 h-full'>
                                     <li className='h-full relative'>
                                         <Link
                                             href="#!"
-                                            className={`text-button-uppercase duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/' ? 'active' : ''}`}
+                                            className={`text-button-uppercase duration-300 h-full flex items-center justify-center gap-1 
+                                            ${pathname.includes('/homepages/') ? 'active' : ''}`}
                                         >
                                             Demo
                                         </Link>
-                                        <div className="sub-menu py-3 px-5 -left-10 w-max absolute grid grid-cols-4 gap-5 bg-white rounded-b-xl">
+                                        <div className="sub-menu absolute py-3 px-5 -left-10 w-max grid grid-cols-4 gap-5 bg-white rounded-b-xl">
                                             <ul>
                                                 <li>
-                                                    <Link href="/" className={`text-secondary duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                                    <Link href="/" className='text-secondary duration-300'>
                                                         Home Fashion 1
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion2" className='text-secondary duration-300'>
+                                                    <Link
+                                                        href="/homepages/fashion2"
+                                                        className={`text-secondary duration-300 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}
+                                                    >
                                                         Home Fashion 2
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion3" className='text-secondary duration-300'>
+                                                    <Link
+                                                        href="/homepages/fashion3"
+                                                        className={`text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}
+                                                    >
                                                         Home Fashion 3
                                                     </Link>
                                                 </li>
@@ -73,7 +164,10 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <Link href="/homepages/fashion7" className='text-secondary duration-300'>
+                                                    <Link
+                                                        href="/homepages/fashion7"
+                                                        className={`text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}
+                                                    >
                                                         Home Fashion 7
                                                     </Link>
                                                 </li>
@@ -115,7 +209,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/cosmetic3" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/cosmetic3" className={`text-secondary duration-300 ${pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
                                                         Home Cosmetic 3
                                                     </Link>
                                                 </li>
@@ -147,7 +241,9 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/yoga" className='text-secondary duration-300'>
+                                                    <Link
+                                                        href="/homepages/yoga"
+                                                        className={`text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
                                                         Home Yoga
                                                     </Link>
                                                 </li>
@@ -163,7 +259,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                             Features
                                         </Link>
-                                        <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen">
+                                        <div className="mega-menu absolute top-[44px] left-0 bg-white w-screen">
                                             <div className="container">
                                                 <div className="flex justify-between py-8">
                                                     <div className="nav-link basis-2/3 grid grid-cols-4 gap-y-8">
@@ -525,7 +621,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                             Shop
                                         </Link>
-                                        <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen">
+                                        <div className="mega-menu absolute top-[44px] left-0 bg-white w-screen">
                                             <div className="container">
                                                 <div className="flex justify-between py-8">
                                                     <div className="nav-link basis-2/3 flex justify-between pr-12">
@@ -726,7 +822,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                             Product
                                         </Link>
-                                        <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen">
+                                        <div className="mega-menu absolute top-[44px] left-0 bg-white w-screen">
                                             <div className="container">
                                                 <div className="flex justify-between py-8">
                                                     <div className="nav-link basis-2/3 flex justify-between xl:pr-14 pr-5">
@@ -978,34 +1074,9 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="right flex gap-12">
-                            <div className="max-md:hidden search-icon flex items-center cursor-pointer relative">
-                                <Icon.MagnifyingGlass size={24} color='black' />
-                                <div className="line absolute bg-line w-px h-6 -right-6"></div>
-                            </div>
-                            <div className="list-action flex items-center gap-4">
-                                <div className="user-icon flex items-center justify-center cursor-pointer">
-                                    <Icon.User size={24} color='black' onClick={handleLoginPopup} />
-                                    <div
-                                        className={`login-popup absolute top-[74px] -left-40px w-[320px] p-7 rounded-xl bg-white box-shadow-small 
-                                            ${openLoginPopup ? 'open' : ''}`}
-                                    >
-                                        <Link href={'/login'} className="button-main w-full text-center">Login</Link>
-                                        <div className="text-secondary text-center mt-3 pb-4">Don’t have an account?
-                                            <Link href={'/register'} className='text-black pl-1 hover:underline'>Register</Link>
-                                        </div>
-                                        <div className="bottom pt-4 border-t border-line"></div>
-                                        <Link href={'#!'} className='body1 hover:underline'>Support</Link>
-                                    </div>
-                                </div>
-                                <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer">
-                                    <Icon.Heart size={24} color='black' />
-                                </div>
-                                <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer">
-                                    <Icon.Handbag size={24} color='black' />
-                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black px-1 rounded-full">0</span>
-                                </div>
-                            </div>
+                        <div className="right flex items-center gap-1">
+                            <div className="caption1">Hotline:</div>
+                            <div className="text-button-uppercase">+01 1234 8888</div>
                         </div>
                     </div>
                 </div>
@@ -1014,4 +1085,4 @@ const MenuOne: React.FC<Props> = ({ props }) => {
     )
 }
 
-export default MenuOne
+export default MenuEight

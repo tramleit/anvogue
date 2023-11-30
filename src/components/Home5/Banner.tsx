@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="banner-block pt-20">
                 <div className="container">
                     <div className="list-banner grid md:grid-cols-3 lg:gap-[30px] gap-[20px]">
-                        <Link href={'#!'} className="banner-item relative block duration-500">
+                        <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500">
                             <div className="banner-img w-full rounded-2xl overflow-hidden">
                                 <Image
                                     src={'/images/banner/3.png'}
@@ -23,7 +23,7 @@ const Banner = () => {
                                 <div className="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">Shop Now</div>
                             </div>
                         </Link>
-                        <Link href={'#!'} className="banner-item relative block duration-500">
+                        <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500">
                             <div className="banner-img w-full rounded-2xl overflow-hidden">
                                 <Image
                                     src={'/images/banner/4.png'}
@@ -38,7 +38,7 @@ const Banner = () => {
                                 <div className="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">Shop Now</div>
                             </div>
                         </Link>
-                        <Link href={'#!'} className="banner-item relative block duration-500">
+                        <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500">
                             <div className="banner-img w-full rounded-2xl overflow-hidden">
                                 <Image
                                     src={'/images/banner/5.png'}

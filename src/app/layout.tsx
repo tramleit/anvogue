@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Instrument_Sans } from 'next/font/google'
-import '@/styles/styles.css'
+import '@/styles/styles.scss'
 
 const instrument = Instrument_Sans({ subsets: ['latin'] })
 

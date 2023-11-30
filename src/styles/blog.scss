@@ -1,0 +1,12 @@
+/* blog-item */
+.blog-item {
+    &:hover {
+        .blog-thumb img {
+            transform: translateZ(0) scale(1.07);
+        }
+
+        .blog-title {
+            color: var(--green);
+        }
+    }
+}

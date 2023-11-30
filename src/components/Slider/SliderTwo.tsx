@@ -31,7 +31,7 @@ const SliderTwo = () => {
                                         <div className="text-sub-display text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-center md:mt-4 mt-2">New season,  wardrobe!</div>
                                         <div className="body1 text-center md:mt-4 mt-2">Check out our latest collection of chic and trendy outfits that will keep you looking stylish all year round.</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-1/2 w-[54%] 2xl:-right-[60px] right-0 bottom-0">
                                         <Image
@@ -51,7 +51,7 @@ const SliderTwo = () => {
                                         <div className="text-sub-display text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-center md:mt-4 mt-2">New Arrivals Daily</div>
                                         <div className="body1 text-center md:mt-4 mt-2">Get ready for the season with our latest collection of women{String.raw`'s`} clothing</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] -right-4 bottom-0">
                                         <Image
@@ -71,7 +71,7 @@ const SliderTwo = () => {
                                         <div className="text-sub-display text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-center md:mt-4 mt-2">Summer Sale</div>
                                         <div className="body1 text-center md:mt-4 mt-2">Check out our curated selection of must-have outfits for any occasion</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[36px] right-0 sm:bottom-0 -bottom-[30px]">
                                         <Image

@@ -1,0 +1,16 @@
+
+.collection-item .collection-name {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.collection-item:hover .collection-name {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
+.collection-block.style-six .list-collection .swiper {
+    overflow: unset;
+}

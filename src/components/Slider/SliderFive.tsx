@@ -31,7 +31,7 @@ const SliderFive = () => {
                                     <div className="text-content w-1/2">
                                         <div className="text-sub-display text-white">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-white md:mt-5 mt-2">Fashion for <br />Every Occasio</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">
                                         <Image
@@ -51,7 +51,7 @@ const SliderFive = () => {
                                     <div className="text-content w-1/2">
                                         <div className="text-sub-display text-white">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-white md:mt-5 mt-2">Elevate Your <br />Wardrobe Today</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">
                                         <Image

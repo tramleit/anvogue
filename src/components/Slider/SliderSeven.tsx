@@ -30,7 +30,7 @@ const SliderSeven = () => {
                                     <div className="text-content basis-1/2 flex flex-col items-center">
                                         <div className="text-sub-display text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-center md:mt-4 mt-2">Summer Sale Collections</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-[48%] w-[54%] 2xl:-right-[60px] right-0 bottom-0">
                                         <Image
@@ -49,7 +49,7 @@ const SliderSeven = () => {
                                     <div className="text-content basis-1/2 flex flex-col items-center">
                                         <div className="text-sub-display text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-center md:mt-4 mt-2">Discover the Latest Trends in Fashion</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] -right-4 bottom-0">
                                         <Image
@@ -68,7 +68,7 @@ const SliderSeven = () => {
                                     <div className="text-content basis-1/2 flex flex-col items-center">
                                         <div className="text-sub-display text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-center md:mt-4 mt-2">New season, new wardrobe!</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-[43%] w-3/5 2xl:-right-[36px] right-0 sm:bottom-0 -bottom-[30px]">
                                         <Image

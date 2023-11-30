@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <>
             <div className="banner-block style-one grid sm:grid-cols-2 gap-5 pt-20">
-                <Link href={'#!'} className="banner-item relative block overflow-hidden duration-500">
+                <Link href={'/shop/breadcrumb-img'} className="banner-item relative block overflow-hidden duration-500">
                     <div className="banner-img">
                         <Image
                             src={'/images/banner/1.png'}
@@ -21,7 +21,7 @@ const Banner = () => {
                         <div className="text-button text-white relative inline-block pb-1 border-b-2 border-white duration-500 mt-2">Shop Now</div>
                     </div>
                 </Link>
-                <Link href={'#!'} className="banner-item relative block overflow-hidden duration-500">
+                <Link href={'/shop/breadcrumb-img'} className="banner-item relative block overflow-hidden duration-500">
                     <div className="banner-img">
                         <Image
                             src={'/images/banner/2.png'}

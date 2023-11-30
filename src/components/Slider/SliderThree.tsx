@@ -30,7 +30,7 @@ const SliderThree = () => {
                                     <div className="text-content basis-1/2">
                                         <div className="text-sub-display text-white">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-white md:mt-4 mt-2">Fashion for Every Occasio</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] right-0 bottom-0">
                                         <Image
@@ -50,7 +50,7 @@ const SliderThree = () => {
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                         <div className="text-display md:mt-4 mt-2">Find Your Style with Us</div>
                                         <div className="body1 md:mt-4 mt-2">Check out our latest collection of chic and trendy outfits</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-1/2 w-3/5 2xl:-right-[60px] -right-4 bottom-0">
                                         <Image
@@ -70,7 +70,7 @@ const SliderThree = () => {
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                         <div className="text-display md:mt-4 mt-2">Get Ready to Turn Heads</div>
                                         <div className="body1 md:mt-4 mt-2">Check out our curated selection of must-have outfits for any occasion</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute sm:w-[52%] w-2/3 2xl:-right-[100px] -right-[40px] bottom-0">
                                         <Image

@@ -13,6 +13,7 @@
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.69.5",
     "swiper": "^11.0.4"
   },
   "devDependencies": {

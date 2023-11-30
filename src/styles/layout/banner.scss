@@ -1,0 +1,14 @@
+.banner-block .banner-item {
+    .banner-content .text-button:hover {
+        color: var(--black);
+        border-color: var(--black);
+    }
+
+    &:hover {
+        opacity: 0.9;
+
+        .banner-img img {
+            transform: scale(1.07);
+        }
+    }
+}

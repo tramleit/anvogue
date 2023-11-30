@@ -1,0 +1,15 @@
+.menu-tab {
+    max-width: max-content;
+    width: 100%;
+    overflow-x: auto;
+
+    .tab-item {
+        white-space: nowrap;
+
+        &.active {
+            background-color: var(--white);
+            color: var(--black);
+            border-radius: 16px;
+        }
+    }
+}

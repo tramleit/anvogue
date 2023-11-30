@@ -30,8 +30,8 @@ const SliderFour = () => {
                                 <div className="container w-full h-full">
                                     <div className="text-content w-full h-full flex flex-col items-center justify-center">
                                         <div className="text-sub-display text-white text-center">Sale! Up To 50% Off!</div>
-                                        <div className="text-display text-white text-center md:mt-5 mt-2">Trendy Women{String.raw`'s`} <br/>Clothing</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
+                                        <div className="text-display text-white text-center md:mt-5 mt-2">Trendy Women{String.raw`'s`} <br />Clothing</div>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">
                                         <Image
@@ -51,7 +51,7 @@ const SliderFour = () => {
                                     <div className="text-content w-full h-full flex flex-col items-center justify-center">
                                         <div className="text-sub-display text-white text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-white text-center md:mt-5 mt-2">Shop the Latest <br />Fashion Trends</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">
                                         <Image
@@ -71,7 +71,7 @@ const SliderFour = () => {
                                     <div className="text-content w-full h-full flex flex-col items-center justify-center">
                                         <div className="text-sub-display text-white text-center">Sale! Up To 50% Off!</div>
                                         <div className="text-display text-white text-center md:mt-5 mt-2">Get Ready to <br />Turn Heads</div>
-                                        <Link href='/shop/shop-grid-fullwidth' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
+                                        <Link href='/shop/breadcrumb-img' className="button-main bg-white text-black hover:bg-black hover:text-white md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">
                                         <Image

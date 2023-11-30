@@ -35,7 +35,7 @@ const MenuTwo = () => {
                                     >
                                         Demo
                                     </Link>
-                                    <div className="sub-menu absolute py-3 px-5 -left-10 w-max grid grid-cols-4 gap-5 bg-white rounded-xl">
+                                    <div className="sub-menu absolute py-3 px-5 -left-10 w-max grid grid-cols-4 gap-5 bg-white rounded-b-xl">
                                         <ul>
                                             <li>
                                                 <Link href="/" className='text-secondary duration-300'>
@@ -720,7 +720,7 @@ const MenuTwo = () => {
                                                 </div>
                                                 <div className="recent-product pl-2.5 basis-1/3">
                                                     <div className="text-button-uppercase pb-2">Recent Products</div>
-                                                    <div className="list-product hide-color grid grid-cols-2 gap-5 mt-3">
+                                                    <div className="list-product hide-product-sold hide-color grid grid-cols-2 gap-5 mt-3">
                                                         {productData.slice(0, 2).map((prd, index) => (
                                                             <Product key={index} data={prd} type='grid' />
                                                         ))}
@@ -900,7 +900,7 @@ const MenuTwo = () => {
                                                 </div>
                                                 <div className="recent-product pl-2.5 basis-1/3">
                                                     <div className="text-button-uppercase pb-2">Recent Products</div>
-                                                    <div className="list-product hide-color grid grid-cols-2 gap-5 mt-3">
+                                                    <div className="list-product hide-product-sold hide-color grid grid-cols-2 gap-5 mt-3">
                                                         {productData.slice(0, 2).map((prd, index) => (
                                                             <Product key={index} data={prd} type='grid' />
                                                         ))}
@@ -914,7 +914,7 @@ const MenuTwo = () => {
                                     <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                         Blog
                                     </Link>
-                                    <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-xl">
+                                    <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                         <ul className='w-full'>
                                             <li>
                                                 <Link href="/blog/default" className={`text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
@@ -948,7 +948,7 @@ const MenuTwo = () => {
                                     <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
                                         Pages
                                     </Link>
-                                    <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-xl">
+                                    <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                         <ul className='w-full'>
                                             <li>
                                                 <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
