@@ -14,7 +14,7 @@ const Collection = () => {
                 <div className="container">
                     <div className="heading text-center">
                     <div className="heading3 text-center">Explore Collections</div>
-                        <div className="heading6 font-normal normal-case text-secondary mt-4">“Highly recommended. The quality of the products is exceptional, and the prices are very reasonable!"</div>
+                        <div className="heading6 font-normal normal-case text-secondary mt-4">Highly recommended. The quality of the products is exceptional, and the prices are very reasonable!</div>
                     </div>
                     <div className="list-collection grid grid-cols-4 gap-8 mt-10">
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">

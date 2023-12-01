@@ -48,7 +48,7 @@ const SliderNine = () => {
                                 <div className="slider-item h-full w-full flex items-center bg-[#F2E9E9] relative">
                                     <div className="text-content md:pl-16 pl-5 basis-1/2">
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
-                                        <div className="heading1 md:mt-5 mt-2">Unveiling Fashion's Finest</div>
+                                        <div className="heading1 md:mt-5 mt-2">Unveiling Fashion{String.raw`'s`} Finest</div>
                                         <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute xl:w-[35%] sm:w-[40%] w-[62%] xl:right-[80px] sm:right-[20px] -right-5 bottom-0">
