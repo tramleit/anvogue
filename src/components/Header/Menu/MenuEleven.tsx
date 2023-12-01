@@ -8,13 +8,13 @@ import { usePathname } from 'next/navigation';
 import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
-import useSubMenuDepartment from '@/store/useSubMenuDepartment';
+import useShopDepartmentPopup from '@/store/useShopDepartmentPopup';
 
 
-const MenuEight = () => {
+const MenuEleven = () => {
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
-    const { openSubMenuDepartment, handleSubMenuDepartment } = useSubMenuDepartment()
+    const { openShopDepartmentPopup, handleShopDepartmentPopup } = useShopDepartmentPopup()
 
     return (
         <>
@@ -74,14 +74,14 @@ const MenuEight = () => {
                         <div className="left flex items-center h-full">
                             <div className="menu-department-block relative h-full">
                                 <div
-                                    className="menu-department-btn bg-black relative flex items-center sm:gap-16 gap-4 px-4 h-full w-fit cursor-pointer"
-                                    onClick={handleSubMenuDepartment} 
+                                    className="menu-department-btn bg-black relative flex items-center sm:gap-5 gap-4 px-4 h-full w-fit cursor-pointer"
+                                    onClick={handleShopDepartmentPopup} 
                                 >
-                                    <div className="text-button-uppercase text-white whitespace-nowrap">Department</div>
+                                    <div className="text-button-uppercase text-white whitespace-nowrap">Shop By Department</div>
                                     <Icon.CaretDown color='#ffffff' className='text-xl max-sm:text-base' />
                                 </div>
                                 <div
-                                    className={`sub-menu-department absolute top-[44px] left-0 right-0 h-max bg-white rounded-b-2xl ${openSubMenuDepartment ? 'open' : ''}`}
+                                    className={`sub-menu-department shop-department-popup box-shadow-small absolute top-[44px] left-0 right-0 h-max bg-white rounded-b-2xl ${openShopDepartmentPopup ? 'open' : ''}`}
                                 >
                                     <div className="item block">
                                         <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Men’s Clothing</Link>
@@ -1087,4 +1087,4 @@ const MenuEight = () => {
     )
 }
 
-export default MenuEight
+export default MenuEleven

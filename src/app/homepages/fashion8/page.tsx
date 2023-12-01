@@ -2,7 +2,7 @@ import React from 'react'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuEight from '@/components/Header/Menu/MenuEight'
 import SliderEight from '@/components/Slider/SliderEight'
-import Collection from '@/components/Home1/Collection'
+import Collection from '@/components/Home8/Collection'
 import Deal from '@/components/Home7/Deal'
 import Banner from '@/components/Home8/Banner'
 import productData from '@/data/Product.json'
@@ -22,9 +22,7 @@ export default function HomeEight() {
                 <SliderEight />
             </div>
             <Benefit props="pt-20" />
-            <div className="container">
-                <Collection />
-            </div>
+            <Collection />
             <Deal data={productData} start={4} limit={8} />
             <Banner />
             <TabFeatures data={productData} start={9} limit={13} />

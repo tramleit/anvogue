@@ -20,11 +20,11 @@ const SliderNine = () => {
                             slidesPerView={1}
                             loop={true}
                             pagination={{ clickable: true }}
-                            modules={[Pagination]}
+                            modules={[Pagination, Autoplay]}
                             className='h-full relative rounded-3xl overflow-hidden'
-                        // autoplay={{
-                        //     delay: 4000,
-                        // }}
+                            autoplay={{
+                                delay: 4000,
+                            }}
                         >
                             <SwiperSlide>
                                 <div className="slider-item h-full w-full flex items-center bg-surface relative">

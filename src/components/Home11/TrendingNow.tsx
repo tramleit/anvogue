@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const TrendingNow = () => {
     return (
         <>
-            <div className="trending-block style-nine pt-20">
+            <div className="trending-block style-six pt-20">
                 <div className="container">
                     <div className="heading3 text-center">Trending Right Now
                     </div>
@@ -43,7 +43,7 @@ const TrendingNow = () => {
                         >
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/1.png'}
                                             width={1000}
@@ -52,14 +52,15 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Clothing</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Clothing</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/2.png'}
                                             width={1000}
@@ -68,14 +69,15 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Tops</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Tops</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/4.png'}
                                             width={1000}
@@ -84,14 +86,15 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Sweaters</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Dresses</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/5.png'}
                                             width={1000}
@@ -100,14 +103,15 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Dresses</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Sweaters</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/6.png'}
                                             width={1000}
@@ -116,14 +120,15 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Bottoms</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Bottoms</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/7.png'}
                                             width={1000}
@@ -132,14 +137,15 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Shoes</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Shoes</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Link href={'#!'} className="trending-item block relative">
-                                    <div className="bg-img rounded-2xl overflow-hidden">
+                                    <div className="bg-img rounded-full overflow-hidden">
                                         <Image
                                             src={'/images/avatar/8.png'}
                                             width={1000}
@@ -148,8 +154,9 @@ const TrendingNow = () => {
                                             className='w-full'
                                         />
                                     </div>
-                                    <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Shirt</span> 
+                                    <div className="trending-name text-center mt-5 duration-500">
+                                        <span className='heading5'>Shirt</span> 
+                                        <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>

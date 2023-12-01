@@ -161,6 +161,11 @@
     }
 }
 
+.section-swiper-navigation.style-outline.style-center .swiper-button-next,
+.section-swiper-navigation.style-outline.style-center .swiper-button-prev {
+    top: 50%;
+}
+
 
 /* Scrollbar */
 .best-sale-prd .swiper,

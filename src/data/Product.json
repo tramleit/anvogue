@@ -11,7 +11,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
-       "sold": 12,
+        "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -71,7 +71,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
-       "sold": 23,
+        "sold": 23,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -133,7 +133,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
-       "sold": 15,
+        "sold": 15,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -190,7 +190,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
-       "sold": 14,
+        "sold": 14,
         "quantity": 100,
         "sizes": [
             "S",
@@ -250,7 +250,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
-       "sold": 21,
+        "sold": 21,
         "quantity": 100,
         "sizes": [
             "S",
@@ -303,7 +303,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
-       "sold": 19,
+        "sold": 19,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -365,7 +365,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
-       "sold": 22,
+        "sold": 22,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -422,7 +422,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
-       "sold": 13,
+        "sold": 13,
         "quantity": 100,
         "sizes": [
             "S",
@@ -482,7 +482,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
-       "sold": 12,
+        "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -542,7 +542,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
-       "sold": 12,
+        "sold": 12,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -604,7 +604,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
-       "sold": 14,
+        "sold": 14,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -661,7 +661,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
-       "sold": 17,
+        "sold": 17,
         "quantity": 100,
         "sizes": [
             "S",
@@ -721,7 +721,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
-       "sold": 10,
+        "sold": 10,
         "quantity": 100,
         "sizes": [
             "S",
@@ -781,7 +781,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
-       "sold": 9,
+        "sold": 9,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -843,7 +843,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
-       "sold": 8,
+        "sold": 8,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -900,7 +900,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
-       "sold": 12,
+        "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -960,7 +960,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
-       "sold": 22,
+        "sold": 22,
         "quantity": 100,
         "sizes": [
             "S",
@@ -995,7 +995,7 @@
             }
         ],
         "thumbImage": [
-            "/images/product/fashion/17-1.png", 
+            "/images/product/fashion/17-1.png",
             "/images/product/fashion/17-2.png"
         ],
         "images": [
@@ -1020,7 +1020,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
-       "sold": 11,
+        "sold": 11,
         "quantity": 200,
         "sizes": [
             "XS",
@@ -1082,7 +1082,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
-       "sold": 5,
+        "sold": 5,
         "quantity": 80,
         "sizes": [
             "Freesize"
@@ -1139,7 +1139,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
-       "sold": 12,
+        "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -1186,5 +1186,249 @@
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
         "action": "add to cart",
         "slug": "kimono"
+    },
+    {
+        "id": "21",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "T-shirt Pockets",
+        "gender": "men",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 19,
+        "originPrice": 27,
+        "brand": "zara",
+        "sold": 12,
+        "quantity": 100,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/21-4.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/fashion/21-3.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/21-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/fashion/21-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-3.png",
+            "/images/product/fashion/21-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "add to cart",
+        "slug": "t-shirt"
+    },
+    {
+        "id": "22",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "T-shirt Pockets",
+        "gender": "men",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 19,
+        "originPrice": 27,
+        "brand": "zara",
+        "sold": 25,
+        "quantity": 100,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/21-4.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/fashion/21-3.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/21-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/fashion/21-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-1.png"
+        ],
+        "images": [
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-3.png",
+            "/images/product/fashion/21-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "add to cart",
+        "slug": "t-shirt"
+    },
+    {
+        "id": "23",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "T-shirt Pockets",
+        "gender": "men",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 19,
+        "originPrice": 27,
+        "brand": "zara",
+        "sold": 15,
+        "quantity": 100,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/21-4.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/fashion/21-3.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/21-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/fashion/21-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/21-3.png",
+            "/images/product/fashion/21-4.png"
+        ],
+        "images": [
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-3.png",
+            "/images/product/fashion/21-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "t-shirt"
+    },
+    {
+        "id": "24",
+        "category": "fashion",
+        "type": "clothing",
+        "name": "T-shirt Pockets",
+        "gender": "men",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 19,
+        "originPrice": 27,
+        "brand": "zara",
+        "sold": 32,
+        "quantity": 100,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "2XL"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/21-4.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/fashion/21-3.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/21-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/fashion/21-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/21-4.png",
+            "/images/product/fashion/21-3.png"
+        ],
+        "images": [
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-3.png",
+            "/images/product/fashion/21-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "t-shirt"
     }
 ]
