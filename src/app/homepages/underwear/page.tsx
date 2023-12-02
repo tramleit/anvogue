@@ -2,16 +2,18 @@ import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuFour from '@/components/Header/Menu/MenuFour'
 import SliderUnderwear from '@/components/Slider/SliderUnderwear'
-import BestSellers from '@/components/Home4/BestSellers'
-import productData from '@/data/Product.json'
 import Collection from '@/components/Underwear/Collection'
-import Banner from '@/components/Home1/Banner'
-import Benefit from '@/components/Home1/Benefit'
+import productData from '@/data/Product.json'
+import TabFeatures from '@/components/Underwear/TabFeatures'
+import FeaturedProduct from '@/components/Underwear/FeaturedProduct'
+import TrendingProduct from '@/components/Underwear/TrendingProduct'
 import testimonialData from '@/data/Testimonial.json'
-import Testimonial from '@/components/Home4/Testimonial'
-import Newsletter from '@/components/Home4/Newsletter'
-import Instagram from '@/components/Home1/Instagram'
-import Brand from '@/components/Home1/Brand'
+import Testimonial from '@/components/Underwear/Testimonial'
+import blogData from '@/data/Blog.json'
+import OurBlog from '@/components/Underwear/OurBlog'
+import Instagram from '@/components/Underwear/Instagram'
+import Brand from '@/components/Underwear/Brand'
+import Benefit from '@/components/Underwear/Benefit'
 import Footer from '@/components/Footer/Footer'
 
 export default function HomeUnderwear() {
@@ -23,13 +25,14 @@ export default function HomeUnderwear() {
                 <SliderUnderwear />
             </div>
             <Collection />
-            <BestSellers data={productData} start={12} limit={20} />
-            <Banner />
-            <Benefit props="pt-20" />
+            <TabFeatures data={productData} start={4} limit={8} />
+            <FeaturedProduct data={productData} />
+            <TrendingProduct data={productData} start={8} limit={16} />
             <Testimonial data={testimonialData} limit={6} />
-            <Newsletter props="bg-black" />
-            <Instagram />
+            <OurBlog data={blogData} start={3} limit={6} />
             <Brand />
+            <Instagram />
+            <Benefit props="py-[60px]" />
             <Footer />
         </>
     )

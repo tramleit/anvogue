@@ -20,10 +20,10 @@ const Collection = () => {
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
                                 <Image
-                                    src={'/images/collection/swimwear.png'}
+                                    src={'/images/collection/underwear1.png'}
                                     width={1000}
                                     height={600}
-                                    alt='swimwear'
+                                    alt='underwear1'
                                 />
                             </div>
                             <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">lingerie</div>
@@ -31,10 +31,10 @@ const Collection = () => {
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
                                 <Image
-                                    src={'/images/collection/clothes.png'}
+                                    src={'/images/collection/underwear2.png'}
                                     width={1000}
                                     height={600}
-                                    alt='clothes'
+                                    alt='underwear2'
                                 />
                             </div>
                             <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">Beach Wear</div>
@@ -42,10 +42,10 @@ const Collection = () => {
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
                                 <Image
-                                    src={'/images/collection/sets.png'}
+                                    src={'/images/collection/underwear3.png'}
                                     width={1000}
                                     height={600}
-                                    alt='sets'
+                                    alt='underwear3'
                                 />
                             </div>
                             <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">Sport Active</div>
@@ -53,10 +53,10 @@ const Collection = () => {
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
                                 <Image
-                                    src={'/images/collection/accessories.png'}
+                                    src={'/images/collection/underwear4.png'}
                                     width={1000}
                                     height={600}
-                                    alt='accessories'
+                                    alt='underwear4'
                                 />
                             </div>
                             <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">Swim wear</div>

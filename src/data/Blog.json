@@ -52,9 +52,9 @@
     },
     {
         "id": "4",
-        "category": "fastfood",
-        "tag": "Jean, glasses",
-        "title": "A Few Words on How to Cook Artichokes",
+        "category": "underwear",
+        "tag": "underwear",
+        "title": "The Art of Makeup: Mastering the Perfect Everyday Look",
         "date": "Nov 24, 2023",
         "author": "Christina Smith",
         "thumbImg": "/images/blog/4.png",
@@ -65,13 +65,13 @@
         ],
         "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
         "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
-        "slug": "fashion-news"
+        "slug": "underwear-blog"
     },
     {
         "id": "5",
-        "category": "fastfood",
-        "tag": "Jean, shoes",
-        "title": "How to Make a Great Vegetarian poke Bowl",
+        "category": "underwear",
+        "tag": "underwear",
+        "title": "Unlocking the Secrets of Anti-Aging: Effective Strategies and Products",
         "date": "Nov 26, 2023",
         "author": "Louis Ancelotti",
         "thumbImg": "/images/blog/5.png",
@@ -82,24 +82,24 @@
         ],
         "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
         "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
-        "slug": "fashion-news"
+        "slug": "underwear-blog"
     },
     {
         "id": "6",
-        "category": "fastfood",
-        "tag": "Jean, skirt",
-        "title": "Mushroom Scallion Tartine with Poblano Yogurt",
+        "category": "underwear",
+        "tag": "underwear",
+        "title": "Exploring the World of Fragrances: How to Find Your Signature Scent",
         "date": "Nov 26, 2023",
         "author": "Davide Alvaro",
         "thumbImg": "/images/blog/6.png",
         "coverImg": "/images/blog/6.png",
         "subImg": [
             "/images/blog/6.png",
-            "/images/blog/7.png"
+            "/images/blog/4.png"
         ],
         "shortDesc": "Discover the latest fashion trends that will dominate the upcoming season. From vibrant colors to unique patterns and innovative styles, stay ahead of the fashion curve with our comprehensive guide.",
         "description": "The poblano yogurt is a key component here, but I totally understand if you want to skip out on it because of time, lack of poblanos, or you're anti-chile. No problem, just about any flavor-forward yogurt slather will do in its place. You could simply crush a clove of garlic into some paste with a pinch of salt, and stir that in your favorite plain yogurt - also delicious. Or, whisk a tablespoon of harissa paste into your yogurt.",
-        "slug": "fashion-news"
+        "slug": "underwear-blog"
     },
     {
         "id": "7",

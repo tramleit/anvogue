@@ -98,7 +98,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 <></>
                             )}
 
-                            <div className="product-price-block flex items-center gap-2 flex-wrap mt-1 bg-white duration-300 relative z-[1]">
+                            <div className="product-price-block flex items-center gap-2 flex-wrap mt-1 duration-300 relative z-[1]">
                                 <div className="product-price text-title">${data.price}.00</div>
                                 <div className="product-origin-price caption1 text-secondary2"><del>${data.originPrice}.00</del></div>
                                 {data.originPrice && (

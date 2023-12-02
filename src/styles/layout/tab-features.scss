@@ -9,3 +9,16 @@
 .section-swiper-navigation .swiper-button-next::after {
     font-size: 18px;
 }
+
+.tab-features-block {
+    &.style-underwear {
+        .menu-tab {
+            .tab-item {
+                &.active {
+                    background-color: var(--black);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

@@ -7,12 +7,12 @@ interface Props {
     start: number;
     limit: number;
 }
-const NewsInsight: React.FC<Props> = ({ data, start, limit }) => {
+const OurBlog: React.FC<Props> = ({ data, start, limit }) => {
     return (
         <>
             <div className="news-block pt-20">
                 <div className="container">
-                    <div className="heading3 text-center">News insight</div>
+                    <div className="heading3 text-center">Our Blog</div>
                     <div className="list-blog grid sm:grid-cols-3 gap-[30px] mt-10">
                         {data.slice(start, limit).map((prd, index) => (
                             <BlogItem key={index} data={prd} type='style-one' />
@@ -24,4 +24,4 @@ const NewsInsight: React.FC<Props> = ({ data, start, limit }) => {
     )
 }
 
-export default NewsInsight
+export default OurBlog
