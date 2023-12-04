@@ -1,8 +1,22 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { countdownTime } from '@/store/countdownTime'
 
 const FlashSale = () => {
+    const [timeLeft, setTimeLeft] = useState(countdownTime());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(countdownTime());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+
     return (
         <>
             <div className="container pt-20">
@@ -21,22 +35,22 @@ const FlashSale = () => {
                         <div className="body1 mt-3">Get 20% off if you spend 120$ or more!</div>
                         <div className="countdown-time flex items-center gap-5 max-sm:gap-[18px] lg:mt-9 md:mt-6 mt-4">
                             <div className="item flex flex-col items-center">
-                                <div className="day heading1">02</div>
+                                <div className="day time heading1">{timeLeft.days}</div>
                                 <div className='text-xs font-medium uppercase'>Days</div>
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day heading1">06</div>
+                                <div className="day time heading1">{timeLeft.hours}</div>
                                 <div className='text-xs font-medium uppercase'>Hours</div>
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day heading1">35</div>
+                                <div className="day time heading1">{timeLeft.minutes}</div>
                                 <div className='text-xs font-medium uppercase'>Minutes</div>
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day heading1">48</div>
+                                <div className="day time heading1">{timeLeft.seconds}</div>
                                 <div className='text-xs font-medium uppercase'>Seconds</div>
                             </div>
                         </div>

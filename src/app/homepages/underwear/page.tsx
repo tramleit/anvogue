@@ -26,7 +26,7 @@ export default function HomeUnderwear() {
                 <SliderUnderwear />
             </div>
             <Collection />
-            <TabFeatures data={productData} start={27} limit={31} />
+            <TabFeatures data={productData} start={0} limit={4} />
             <FeaturedProduct data={productData} />
             <LookBook data={productData} />
             <TrendingProduct data={productData} start={31} limit={40} />

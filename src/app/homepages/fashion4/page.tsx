@@ -23,7 +23,7 @@ export default function HomeFour() {
                 <SliderFour />
             </div>
             <Collection props="pt-5" />
-            <BestSellers data={productData} start={12} limit={20} />
+            <BestSellers data={productData} start={0} limit={4} />
             <Banner />
             <Benefit props="pt-20" />
             <Testimonial data={testimonialData} limit={6} />

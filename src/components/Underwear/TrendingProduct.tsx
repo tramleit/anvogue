@@ -1,8 +1,6 @@
 'use client'
 
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { useState } from 'react'
 import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
 
@@ -13,6 +11,14 @@ interface Props {
 }
 
 const TrendingProduct: React.FC<Props> = ({ data, start, limit }) => {
+    const [activeTab, setActiveTab] = useState<string>('swimwear');
+
+    const handleTabClick = (type: string) => {
+        setActiveTab(type);
+    };
+
+    const filteredProducts = data.filter((product) => product.type === activeTab);
+
     return (
         <>
             <div className="tab-features-block style-underwear pt-20 ">
@@ -20,11 +26,16 @@ const TrendingProduct: React.FC<Props> = ({ data, start, limit }) => {
                     <div className="heading flex flex-col items-center text-center">
                         <div className="heading3 text-center">Trending Products</div>
                         <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl mt-6">
-                            <div className="tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black">Tops</div>
-                            <div className="tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black active">Accessories</div>
-                            <div className="tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black">Dress</div>
-                            <div className="tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black">Short</div>
-                            <div className="tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black">Shirt</div>
+                            {['top', 'swimwear', 'underwear', 'set', 'shirt'].map((type) => (
+                                <div
+                                    key={type}
+                                    className={`tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black 
+                                        ${activeTab === type ? 'active' : ''}`}
+                                    onClick={() => handleTabClick(type)}
+                                >
+                                    {type}
+                                </div>
+                            ))}
                         </div>
                     </div>
 

@@ -1,8 +1,10 @@
+'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
+import { countdownTime } from '@/store/countdownTime'
 
 interface Props {
     data: Array<ProductType>;
@@ -11,6 +13,15 @@ interface Props {
 }
 
 const Deal: React.FC<Props> = ({ data, start, limit }) => {
+    const [timeLeft, setTimeLeft] = useState(countdownTime());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(countdownTime());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
     return (
         <>
             <div className="tab-features-block pt-20">
@@ -20,13 +31,13 @@ const Deal: React.FC<Props> = ({ data, start, limit }) => {
                             <div className="heading3">Deals of the day</div>
                             <div className="deal-time bg-red py-1 px-5 rounded-lg">
                                 <div className="heading6 text-white">
-                                    <span className='day'>05</span>
+                                    <span className='day'>{timeLeft.days}</span>
                                     <span>D : </span>
-                                    <span className='hour'>22</span>
+                                    <span className='hour'>{timeLeft.hours}</span>
                                     <span>H : </span>
-                                    <span className='minute'>34</span>
+                                    <span className='minute'>{timeLeft.minutes}</span>
                                     <span>M : </span>
-                                    <span className='second'>43</span>
+                                    <span className='second'>{timeLeft.seconds}</span>
                                     <span>S</span>
                                 </div>
                             </div>

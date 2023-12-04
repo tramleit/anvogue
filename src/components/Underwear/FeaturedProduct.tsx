@@ -5,16 +5,24 @@ import Image from 'next/image'
 import { ProductType } from '@/type/ProductType'
 import Rate from '../Other/Rate'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Scrollbar, Thumbs } from 'swiper/modules';
+import { Navigation, Thumbs } from 'swiper/modules';
 import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import SwiperCore from 'swiper/core';
+
+SwiperCore.use([Navigation, Thumbs]);
 
 interface Props {
     data: Array<ProductType>;
 }
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
+
+    const handleSwiper = (swiper: SwiperCore) => {
+        // Do something with the thumbsSwiper instance
+        setThumbsSwiper(swiper);
+    };
 
     // Truy cập thông tin của sản phẩm thứ 38 trong mảng data
     const productMain = data[38];
@@ -68,7 +76,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             </SwiperSlide>
                         </Swiper>
                         <Swiper
-                            onSwiper={setThumbsSwiper}
+                            onSwiper={handleSwiper}
                             spaceBetween={0}
                             slidesPerView={4}
                             freeMode={true}
@@ -137,20 +145,18 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 <div className="text-title">Colors: <span className='text-title color'>Blue</span></div>
                                 <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.variation.map((item, index) => (
-                                        <>
-                                            <div className='color-item w-12 h-12 rounded-xl duration-300 relative' key={index}>
-                                                <Image
-                                                    src={item.colorImage}
-                                                    width={100}
-                                                    height={100}
-                                                    alt='color'
-                                                    className='rounded-xl'
-                                                />
-                                                <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">
-                                                    {item.color}
-                                                </div>
+                                        <div className='color-item w-12 h-12 rounded-xl duration-300 relative' key={index}>
+                                            <Image
+                                                src={item.colorImage}
+                                                width={100}
+                                                height={100}
+                                                alt='color'
+                                                className='rounded-xl'
+                                            />
+                                            <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">
+                                                {item.color}
                                             </div>
-                                        </>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
@@ -174,7 +180,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 <div className="button-main w-full text-center bg-white text-black border border-black">Add To Cart</div>
                             </div>
                             <div className="button-block mt-5">
-                                <div className="button-main w-full text-center">Buy It Now</div>    
+                                <div className="button-main w-full text-center">Buy It Now</div>
                             </div>
                         </div>
                     </div>

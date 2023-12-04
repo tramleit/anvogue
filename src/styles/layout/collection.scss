@@ -1,15 +1,25 @@
+.collection-item {
+    .bg-img img {
+        transition: all ease 0.8s;
+    }
 
-.collection-item .collection-name {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    &:hover {
+        .bg-img img {
+            transform: scale(1.08);
+        }
+    }
+
+    .collection-name {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+
+        &:hover {
+            background-color: var(--black);
+            color: var(--white);
+        }
+    }
 }
-
-.collection-item:hover .collection-name {
-    background-color: var(--black);
-    color: var(--white);
-}
-
 
 .collection-block.style-six .list-collection .swiper {
     overflow: unset;

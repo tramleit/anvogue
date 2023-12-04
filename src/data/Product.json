@@ -2,7 +2,7 @@
     {
         "id": "1",
         "category": "fashion",
-        "type": "clothing",
+        "type": "top",
         "name": "mesh shirt",
         "gender": "women",
         "new": true,
@@ -62,7 +62,7 @@
     {
         "id": "2",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -124,7 +124,7 @@
     {
         "id": "3",
         "category": "fashion",
-        "type": "clothing",
+        "type": "dress",
         "name": "Off-the-Shoulder Blouse",
         "gender": "women",
         "new": false,
@@ -181,7 +181,7 @@
     {
         "id": "4",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -241,7 +241,7 @@
     {
         "id": "5",
         "category": "fashion",
-        "type": "clothing",
+        "type": "dress",
         "name": "mesh shirt",
         "gender": "women",
         "new": true,
@@ -294,7 +294,7 @@
     {
         "id": "6",
         "category": "fashion",
-        "type": "clothing",
+        "type": "set",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -356,7 +356,7 @@
     {
         "id": "7",
         "category": "fashion",
-        "type": "clothing",
+        "type": "shirt",
         "name": "Off-the-Shoulder Blouse",
         "gender": "women",
         "new": false,
@@ -413,7 +413,7 @@
     {
         "id": "8",
         "category": "fashion",
-        "type": "clothing",
+        "type": "set",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -473,7 +473,7 @@
     {
         "id": "9",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "mesh shirt",
         "gender": "women",
         "new": true,
@@ -533,7 +533,7 @@
     {
         "id": "10",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -595,7 +595,7 @@
     {
         "id": "11",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "Off-the-Shoulder Blouse",
         "gender": "women",
         "new": false,
@@ -652,7 +652,7 @@
     {
         "id": "12",
         "category": "fashion",
-        "type": "clothing",
+        "type": "set",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -712,7 +712,7 @@
     {
         "id": "13",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "mesh shirt",
         "gender": "women",
         "new": true,
@@ -772,7 +772,7 @@
     {
         "id": "14",
         "category": "fashion",
-        "type": "clothing",
+        "type": "set",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -834,7 +834,7 @@
     {
         "id": "15",
         "category": "fashion",
-        "type": "clothing",
+        "type": "top",
         "name": "Off-the-Shoulder Blouse",
         "gender": "women",
         "new": false,
@@ -891,7 +891,7 @@
     {
         "id": "16",
         "category": "fashion",
-        "type": "clothing",
+        "type": "top",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -951,7 +951,7 @@
     {
         "id": "17",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "mesh shirt",
         "gender": "women",
         "new": true,
@@ -1011,7 +1011,7 @@
     {
         "id": "18",
         "category": "fashion",
-        "type": "clothing",
+        "type": "shirt",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -1073,7 +1073,7 @@
     {
         "id": "19",
         "category": "fashion",
-        "type": "clothing",
+        "type": "dress",
         "name": "Off-the-Shoulder Blouse",
         "gender": "women",
         "new": false,
@@ -1130,7 +1130,7 @@
     {
         "id": "20",
         "category": "fashion",
-        "type": "clothing",
+        "type": "top",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -1190,7 +1190,7 @@
     {
         "id": "21",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "T-shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1251,7 +1251,7 @@
     {
         "id": "22",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "T-shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1312,7 +1312,7 @@
     {
         "id": "23",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "T-shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1373,7 +1373,7 @@
     {
         "id": "24",
         "category": "fashion",
-        "type": "clothing",
+        "type": "t-shirt",
         "name": "T-shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1434,7 +1434,7 @@
     {
         "id": "25",
         "category": "fashion",
-        "type": "clothing",
+        "type": "shirt",
         "name": "Shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1443,7 +1443,7 @@
         "price": 19,
         "originPrice": 27,
         "brand": "gucci",
-        "sold": 25,
+        "sold": 22,
         "quantity": 100,
         "sizes": [
             "S",
@@ -1495,7 +1495,7 @@
     {
         "id": "26",
         "category": "fashion",
-        "type": "clothing",
+        "type": "shirt",
         "name": "T-shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1556,7 +1556,7 @@
     {
         "id": "27",
         "category": "fashion",
-        "type": "clothing",
+        "type": "shirt",
         "name": "T-shirt Pockets",
         "gender": "men",
         "new": false,
@@ -1565,7 +1565,7 @@
         "price": 19,
         "originPrice": 27,
         "brand": "nike",
-        "sold": 32,
+        "sold": 36,
         "quantity": 100,
         "sizes": [
             "S",
@@ -1677,7 +1677,7 @@
     {
         "id": "29",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "mesh shirt",
         "gender": "women",
         "new": true,
@@ -1737,7 +1737,7 @@
     {
         "id": "30",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -1856,7 +1856,7 @@
     {
         "id": "32",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -1986,7 +1986,7 @@
         "price": 19,
         "originPrice": 27,
         "brand": "zara",
-        "sold": 25,
+        "sold": 21,
         "quantity": 100,
         "sizes": [
             "S",
@@ -2031,7 +2031,7 @@
     {
         "id": "35",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "T-shirt Pockets",
         "gender": "women",
         "new": true,
@@ -2092,7 +2092,7 @@
     {
         "id": "36",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "T-shirt Pockets",
         "gender": "women",
         "new": false,
@@ -2101,7 +2101,7 @@
         "price": 19,
         "originPrice": 27,
         "brand": "adidas",
-        "sold": 32,
+        "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",
@@ -2153,7 +2153,7 @@
     {
         "id": "37",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "Shirt Pockets",
         "gender": "women",
         "new": true,
@@ -2162,7 +2162,7 @@
         "price": 19,
         "originPrice": 27,
         "brand": "gucci",
-        "sold": 25,
+        "sold": 20,
         "quantity": 100,
         "sizes": [
             "S",
@@ -2275,7 +2275,7 @@
     {
         "id": "39",
         "category": "fashion",
-        "type": "underwear",
+        "type": "swimwear",
         "name": "T-shirt Pockets",
         "gender": "women",
         "new": false,
@@ -2284,7 +2284,7 @@
         "price": 19,
         "originPrice": 27,
         "brand": "nike",
-        "sold": 32,
+        "sold": 12,
         "quantity": 100,
         "sizes": [
             "S",

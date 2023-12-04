@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <WhatNewOne data={productData} start={0} limit={4} />
       <Collection />
-      <TabFeatures data={productData} start={4} limit={10} />
+      <TabFeatures data={productData} start={0} limit={6} />
       <Banner />
       <Benefit props="py-20" />
       <Testimonial data={testimonialData} limit={6} />
