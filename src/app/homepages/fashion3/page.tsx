@@ -2,6 +2,7 @@ import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuTwo from '@/components/Header/Menu/MenuTwo'
 import SliderThree from '@/components/Slider/SliderThree'
+import BannerTop from '@/components/Home3/BannerTop'
 import TrendingProduct from '@/components/Home3/TrendingProduct'
 import productData from '@/data/Product.json'
 import Collection from '@/components/Home2/Collection'
@@ -19,6 +20,7 @@ export default function HomeThree() {
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuTwo />
+                <BannerTop props="bg-black py-3" />
                 <SliderThree />
             </div>
             <TrendingProduct data={productData} start={10} limit={18} />

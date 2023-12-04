@@ -2,6 +2,7 @@ import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuFour from '@/components/Header/Menu/MenuFour'
 import SliderUnderwear from '@/components/Slider/SliderUnderwear'
+import BannerTop from '@/components/Home3/BannerTop'
 import Collection from '@/components/Underwear/Collection'
 import productData from '@/data/Product.json'
 import TabFeatures from '@/components/Underwear/TabFeatures'
@@ -23,13 +24,14 @@ export default function HomeUnderwear() {
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuFour props="bg-white" />
+                <BannerTop props="bg-black py-3" />
                 <SliderUnderwear />
             </div>
             <Collection />
             <TabFeatures data={productData} start={0} limit={4} />
             <FeaturedProduct data={productData} />
             <LookBook data={productData} />
-            <TrendingProduct data={productData} start={31} limit={40} />
+            <TrendingProduct data={productData} start={0} limit={8} />
             <Testimonial data={testimonialData} limit={6} />
             <OurBlog data={blogData} start={3} limit={6} />
             <Brand />

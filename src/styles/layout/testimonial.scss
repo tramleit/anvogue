@@ -1,8 +1,15 @@
 
-.testimonial-block .list-avatar .bg-img:not(:first-child) {
+.testimonial-block .list-avatar .bg-img {
     opacity: 0;
     visibility: hidden;
-    display: none;
+    height: 0;
+    transition: all ease 1s;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
 }
 
 .testimonial-block.style-six .list-avatar .bg-img {
