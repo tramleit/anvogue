@@ -6,6 +6,7 @@ import Collection from '@/components/Underwear/Collection'
 import productData from '@/data/Product.json'
 import TabFeatures from '@/components/Underwear/TabFeatures'
 import FeaturedProduct from '@/components/Underwear/FeaturedProduct'
+import LookBook from '@/components/Underwear/LookBook'
 import TrendingProduct from '@/components/Underwear/TrendingProduct'
 import testimonialData from '@/data/Testimonial.json'
 import Testimonial from '@/components/Underwear/Testimonial'
@@ -25,9 +26,10 @@ export default function HomeUnderwear() {
                 <SliderUnderwear />
             </div>
             <Collection />
-            <TabFeatures data={productData} start={4} limit={8} />
+            <TabFeatures data={productData} start={27} limit={31} />
             <FeaturedProduct data={productData} />
-            <TrendingProduct data={productData} start={8} limit={16} />
+            <LookBook data={productData} />
+            <TrendingProduct data={productData} start={31} limit={40} />
             <Testimonial data={testimonialData} limit={6} />
             <OurBlog data={blogData} start={3} limit={6} />
             <Brand />

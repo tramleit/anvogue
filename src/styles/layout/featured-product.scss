@@ -10,12 +10,13 @@
 
 
 /* Popular product */
-.popular-product {
+.popular-product,
+.lookbook {
     .dots:hover span {
         background-color: var(--green);
     }
 
-    .list-product .item {
+    .item {
         .product-infor {
             position: absolute;
             width: max-content;

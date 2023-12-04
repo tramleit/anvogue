@@ -25,7 +25,7 @@ export default function HomeEleven() {
             <TrendingNow />
             <MenFashion data={productData} start={20} limit={23} />
             <Banner />
-            <WomenFashion data={productData} start={20} limit={23} />
+            <WomenFashion data={productData} start={10} limit={13} />
             <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-[32px]" />
             <NewsInsight data={blogData} start={0} limit={3} />
             <Brand />

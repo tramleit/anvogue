@@ -16,8 +16,8 @@ interface Props {
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    // Truy cập thông tin của sản phẩm thứ 13 trong mảng data
-    const productMain = data[12];
+    // Truy cập thông tin của sản phẩm thứ 38 trong mảng data
+    const productMain = data[38];
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
 
     return (

@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
 
@@ -27,16 +28,16 @@ const MenFashion: React.FC<Props> = ({ data, start, limit }) => {
                     </div>
 
                     <div className="list-product hide-product-sold hide-color grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
-                        <div className="banner rounded-[20px] overflow-hidden relative flex items-center justify-center">
+                        <Link href={"/shop/breadcrumb1"} className="banner rounded-[20px] overflow-hidden relative flex items-center justify-center">
                             <div className="heading4 text-white text-center">Fashion For <br />Men</div>
                             <Image
                                 src={'/images/banner/13.png'}
                                 width={1000}
                                 height={1000}
                                 alt='banner13'
-                                className='absolute top-0 left-0 w-full h-full object-cover z-[-1]'
+                                className='absolute top-0 left-0 w-full h-full object-cover z-[-1] duration-500'
                             />
-                        </div>
+                        </Link>
                         {data.slice(start, limit).map((prd, index) => (
                             <Product key={index} data={prd} type='grid' />
                         ))}

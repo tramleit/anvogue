@@ -7,3 +7,15 @@
         }
     }
 }
+
+.tab-features-block .banner {
+    &:hover {
+        .heading4 {
+            text-decoration: underline;
+        }
+
+        img {
+            transform: scale(1.05);
+        }
+    }
+}
