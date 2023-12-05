@@ -8,7 +8,7 @@ const Newsletter: React.FC<Props> = ({ props }) => {
     return (
         <>
             <div className="container">
-                <div className={`newsletter-block mt-20 md:py-20 sm:py-14 py-10 sm:px-8 px-6 sm:rounded-[32px] rounded-3xl flex flex-col items-center ${props}`}>
+                <div className={`newsletter-block md:py-20 sm:py-14 py-10 sm:px-8 px-6 sm:rounded-[32px] rounded-3xl flex flex-col items-center ${props}`}>
                     <div className="heading3 text-white text-center">Sign up and get 10% off</div>
                     <div className='text-white text-center mt-3'>Sign up for early sale access, new in, promotions and more</div>
                     <div className="input-block lg:w-1/2 sm:w-3/5 w-full h-[52px] sm:mt-10 mt-7">

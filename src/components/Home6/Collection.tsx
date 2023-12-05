@@ -14,7 +14,7 @@ const Collection = () => {
                 <div className="container">
                     <div className="heading flex items-center justify-between gap-4 gap-y-2 flex-wrap">
                         <div className="heading3">Explore Collections</div>
-                        <Link href={'#!'} className='text-button pb-1 border-b-2 border-black'>View All Collection</Link>
+                        <Link href={'/shop/breadcrumb1'} className='text-button pb-1 border-b-2 border-black'>View All Collection</Link>
                     </div>
                     <div className="list-collection mt-10">
                         <Swiper
@@ -41,7 +41,7 @@ const Collection = () => {
                             className='h-full pb-6'
                         >
                             <SwiperSlide>
-                                <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                                <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                     <div className="bg-img">
                                         <Image
                                             src={'/images/collection/outerwear.png'}
@@ -54,7 +54,7 @@ const Collection = () => {
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                                <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                     <div className="bg-img">
                                         <Image
                                             src={'/images/collection/swimwear.png'}
@@ -67,7 +67,7 @@ const Collection = () => {
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                                <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                     <div className="bg-img">
                                         <Image
                                             src={'/images/collection/clothes.png'}
@@ -80,7 +80,7 @@ const Collection = () => {
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                                <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                     <div className="bg-img">
                                         <Image
                                             src={'/images/collection/sets.png'}
@@ -93,7 +93,7 @@ const Collection = () => {
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                                <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                     <div className="bg-img">
                                         <Image
                                             src={'/images/collection/accessories.png'}
@@ -106,7 +106,7 @@ const Collection = () => {
                                 </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                                <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                     <div className="bg-img">
                                         <Image
                                             src={'/images/collection/lingerie.png'}

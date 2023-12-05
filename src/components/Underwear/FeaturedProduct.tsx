@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { ProductType } from '@/type/ProductType'
 import Rate from '../Other/Rate'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs } from 'swiper/modules';
+import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
 import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
@@ -34,8 +34,11 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                 <div className="container flex items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img lg:w-1/2 lg:pr-4 w-full">
                         <Swiper
+                            slidesPerView={1}
+                            spaceBetween={0}
+                            freeMode={true}
                             thumbs={{ swiper: thumbsSwiper }}
-                            modules={[Thumbs]}
+                            modules={[Thumbs, FreeMode]}
                             className="mySwiper2 h-full rounded-2xl overflow-hidden"
                         >
                             <SwiperSlide>
@@ -81,7 +84,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             slidesPerView={4}
                             freeMode={true}
                             watchSlidesProgress={true}
-                            modules={[Navigation, Thumbs]}
+                            modules={[Navigation, Thumbs, FreeMode]}
                             className="mySwiper"
                         >
                             <SwiperSlide>

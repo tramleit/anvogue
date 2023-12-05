@@ -24,7 +24,7 @@ export default function HomeFive() {
             <TabFeatures data={productData} start={0} limit={8} />
             <FlashSale />
             <Benefit props="pt-20" />
-            <Newsletter props="bg-green" />
+            <Newsletter props="bg-green mt-20" />
             <Instagram />
             <Brand />
             <Footer />

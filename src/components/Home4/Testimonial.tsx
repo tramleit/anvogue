@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 import TestimonialItem from '../Testimonial/TestimonialItem';
 import { TestimonialType } from '@/type/TestimonialType'
@@ -40,9 +40,13 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                             ))}
                         </Swiper>
                     </div>
-                    <div className="list-avatar lg:w-5/12 md:w-1/2 md:pl-9 text-center">
+                    <div className="list-avatar lg:w-5/12 md:w-1/2 md:pl-9 text-center overflow-hidden">
                         {data.slice(0, limit).map((prd, index) => (
-                            <div className={`bg-img rounded-[32px] overflow-hidden ${index === activeIndex ? 'active' : ''}`} key={index} data-item={prd.id}>
+                            <div
+                                className={`bg-img rounded-[32px] overflow-hidden ${index === activeIndex ? 'active' : ''}`}
+                                key={index}
+                                data-item={prd.id}
+                            >
                                 <Image
                                     src={prd.avatar}
                                     width={1000}

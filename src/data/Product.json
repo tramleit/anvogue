@@ -2332,5 +2332,674 @@
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
         "action": "quick shop",
         "slug": "t-shirt"
+    },
+    {
+        "id": "40",
+        "category": "cosmetic",
+        "type": "hair",
+        "name": "Hair Treatment",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 10,
+        "originPrice": 14,
+        "brand": "glurmarket",
+        "sold": 15,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/1-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/1-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-3.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-2.png",
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "41",
+        "category": "cosmetic",
+        "type": "hair",
+        "name": "After Sun - tan Booster",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 15,
+        "originPrice": 20,
+        "brand": "glurmarket",
+        "sold": 12,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/1-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/1-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/1-2.png",
+            "/images/product/cosmetic/1-3.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/1-2.png",
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "42",
+        "category": "cosmetic",
+        "type": "hair",
+        "name": "Tinted Moisturiser",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "glurmarket",
+        "sold": 24,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/1-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/1-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png",
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "43",
+        "category": "cosmetic",
+        "type": "face",
+        "name": "Face Treatment",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 14,
+        "originPrice": 19,
+        "brand": "rangana",
+        "sold": 18,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/cosmetic/2-1.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/2-2.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/2-1.png",
+            "/images/product/cosmetic/2-3.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/2-1.png",
+            "/images/product/cosmetic/2-2.png",
+            "/images/product/cosmetic/2-3.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "add to cart",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "44",
+        "category": "cosmetic",
+        "type": "face",
+        "name": "Face Tan Booster",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 15,
+        "originPrice": 20,
+        "brand": "rangana",
+        "sold": 12,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/3-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/3-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/3-1.png",
+            "/images/product/cosmetic/3-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/3-2.png",
+            "/images/product/cosmetic/3-1.png",
+            "/images/product/cosmetic/3-3.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "45",
+        "category": "cosmetic",
+        "type": "eye",
+        "name": "Tinted Eye Balm",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "eyeoil",
+        "sold": 24,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/4-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/4-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/4-1.png",
+            "/images/product/cosmetic/4-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/4-1.png",
+            "/images/product/cosmetic/4-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "46",
+        "category": "cosmetic",
+        "type": "eye",
+        "name": "Tinted Eye Balm",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "eyeoil",
+        "sold": 24,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/5-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/5-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/5-1.png",
+            "/images/product/cosmetic/5-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/5-1.png",
+            "/images/product/cosmetic/5-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "47",
+        "category": "cosmetic",
+        "type": "nail",
+        "name": "Nail Treatment",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 10,
+        "originPrice": 14,
+        "brand": "chi",
+        "sold": 15,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/9-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/9-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/9-1.png",
+            "/images/product/cosmetic/9-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/9-1.png",
+            "/images/product/cosmetic/9-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "48",
+        "category": "cosmetic",
+        "type": "nail",
+        "name": "Nail After Moon",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 15,
+        "originPrice": 20,
+        "brand": "chi",
+        "sold": 12,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/10-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/10-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/10-1.png",
+            "/images/product/cosmetic/10-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/10-2.png",
+            "/images/product/cosmetic/10-1.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "49",
+        "category": "cosmetic",
+        "type": "eye",
+        "name": "Tinted Moisturiser",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "eyeoil",
+        "sold": 24,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/cosmetic/7-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/7-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/7-1.png",
+            "/images/product/cosmetic/7-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/7-3.png",
+            "/images/product/cosmetic/7-1.png",
+            "/images/product/cosmetic/7-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "50",
+        "category": "cosmetic",
+        "type": "lip",
+        "name": "Lip Top Treatment",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 14,
+        "originPrice": 19,
+        "brand": "persona",
+        "sold": 18,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/cosmetic/12-1.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/12-2.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/12-1.png",
+            "/images/product/cosmetic/12-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/12-1.png",
+            "/images/product/cosmetic/12-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "add to cart",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "51",
+        "category": "cosmetic",
+        "type": "Lip",
+        "name": "Lip Tan Booster",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 15,
+        "originPrice": 20,
+        "brand": "persona",
+        "sold": 12,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/11-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/11-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/11-1.png",
+            "/images/product/cosmetic/11-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/11-2.png",
+            "/images/product/cosmetic/11-1.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "52",
+        "category": "cosmetic",
+        "type": "lip",
+        "name": "Tinted lip Balm",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "persona",
+        "sold": 24,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/6-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/6-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/6-1.png",
+            "/images/product/cosmetic/6-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/6-1.png",
+            "/images/product/cosmetic/6-2.png",
+            "/images/product/cosmetic/6-3.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "53",
+        "category": "cosmetic",
+        "type": "eye",
+        "name": "Tinted eye Balm",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 4,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "bodycare",
+        "sold": 24,
+        "quantity": 100,
+        "sizes": [
+            "50",
+            "100",
+            "150",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/8-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/8-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/8-1.png",
+            "/images/product/cosmetic/8-2.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/8-1.png",
+            "/images/product/cosmetic/8-2.png",
+            "/images/product/cosmetic/8-3.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!",
+        "action": "quick shop",
+        "slug": "cosmetic"
     }
 ]

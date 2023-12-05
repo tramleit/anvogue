@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,6 +15,12 @@ interface Props {
 }
 
 const Testimonial: React.FC<Props> = ({ data, limit }) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleSlideChange = (swiper: any) => {
+        setActiveIndex(swiper.activeIndex);
+    };
+
     return (
         <>
             <div className="testimonial-block style-six pt-20">
@@ -23,9 +29,9 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                         <Swiper
                             slidesPerView={1}
                             navigation
-                            loop={true}
                             modules={[Navigation, Autoplay]}
                             className='h-full'
+                            onSlideChange={handleSlideChange}
                         >
                             {data.slice(0, limit).map((prd, index) => (
                                 <SwiperSlide key={index} data-item={prd.id}>
@@ -36,7 +42,11 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                     </div>
                     <div className="list-avatar md:w-1/2 md:pl-5 md:absolute md:right-4 top-0 bottom-0 h-full text-center">
                         {data.slice(0, limit).map((prd, index) => (
-                            <div className="bg-img rounded-[32px] overflow-hidden" key={index} data-item={prd.id}>
+                            <div
+                                className={`bg-img rounded-[32px] overflow-hidden ${index === activeIndex ? 'active' : ''}`} 
+                                key={index} 
+                                data-item={prd.id}
+                            >
                                 <Image
                                     src={prd.avatar}
                                     width={1000}

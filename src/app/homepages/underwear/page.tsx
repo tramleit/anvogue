@@ -24,7 +24,7 @@ export default function HomeUnderwear() {
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuFour props="bg-white" />
-                <BannerTop props="bg-black py-3" />
+                <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white' />
                 <SliderUnderwear />
             </div>
             <Collection />

@@ -35,6 +35,7 @@ const config: Config = {
       'pink': '#F4407D',
       'line': '#E9E9E9',
       'outline': 'rgba(0, 0, 0, 0.15)',
+      'surface2': 'rgba(255, 255, 255, 0.2)',
     },
   },
   plugins: [],

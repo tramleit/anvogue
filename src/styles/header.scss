@@ -129,7 +129,7 @@
         padding: 0 20px;
         max-height: 0;
         overflow: hidden;
-        
+
         &.open {
             max-height: 500px;
             padding: 16px 20px;
@@ -170,5 +170,33 @@
         .slider-main {
             width: calc(100% - 212px);
         }
+    }
+}
+
+.swiper-slide {
+    .sub-img {
+        img {
+            transition: all ease 0.5s;
+        }
+    }
+
+    &.swiper-slide-active {
+        .sub-img {
+                img {
+                    animation: ScaleImg .8s ease;
+                }
+            }
+    }
+}
+
+@keyframes ScaleImg {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }

@@ -2,16 +2,27 @@
 .testimonial-block .list-avatar .bg-img {
     opacity: 0;
     visibility: hidden;
-    height: 0;
-    transition: all ease 1s;
+    overflow: hidden;
+    transition: opacity ease 1s;
+    
+    img {
+        position: absolute;
+    }
 
     &.active {
         opacity: 1;
         visibility: visible;
-        height: auto;
+        
+        img {
+            position: relative;
+        }
     }
 }
 
 .testimonial-block.style-six .list-avatar .bg-img {
-    height: calc(100% - 40px);
+    height: 0;
+
+    &.active {
+        height: calc(100% - 40px);
+    }
 }

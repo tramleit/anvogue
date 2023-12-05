@@ -20,7 +20,7 @@ export default function HomeThree() {
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuTwo />
-                <BannerTop props="bg-black py-3" />
+                <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white'/>
                 <SliderThree />
             </div>
             <TrendingProduct data={productData} start={10} limit={18} />

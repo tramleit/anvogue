@@ -39,7 +39,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                         className='h-full'
                     >
                         <SwiperSlide>
-                            <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/swimwear.png'}
@@ -52,7 +52,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/clothes.png'}
@@ -65,7 +65,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/sets.png'}
@@ -78,7 +78,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/accessories.png'}
@@ -91,7 +91,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/lingerie.png'}
@@ -104,7 +104,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'#!'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/outerwear.png'}
