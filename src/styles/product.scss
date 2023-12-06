@@ -49,7 +49,7 @@
 
     .product-thumb {
         .list-action {
-            transform: translateY(80px);
+            transform: translateY(100px);
             transition: all ease 0.4s;
         }
 
@@ -143,6 +143,22 @@
 
         &:hover .tag-action {
             opacity: 1;
+        }
+    }
+}
+
+.list-size {
+    .size-item {
+        transition: all ease 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            border-color: var(--black);
+        }
+
+        &.active {
+            background-color: var(--black);
+            color: var(--white);
         }
     }
 }

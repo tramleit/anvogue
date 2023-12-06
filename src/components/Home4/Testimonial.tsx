@@ -17,8 +17,8 @@ interface Props {
 const Testimonial: React.FC<Props> = ({ data, limit }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleSlideChange = (swiper: any) => {
-        setActiveIndex(swiper.activeIndex);
+    const handleSlideChange = (item: any) => {
+        setActiveIndex(item.activeIndex);
     };
 
     return (

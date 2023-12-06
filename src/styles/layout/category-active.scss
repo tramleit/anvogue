@@ -13,3 +13,21 @@
         }
     }
 }
+
+
+// video-tutorial-block
+.video-tutorial-block {
+    .list-category {
+        overflow: hidden;
+
+        .item {
+            position: relative;
+            transform: translateX(-36px);
+            transition: all ease 0.4s;
+
+            &.active {
+                transform: translateX(0);
+            }
+        }
+    }
+}

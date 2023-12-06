@@ -63,13 +63,15 @@
 }
 
 // Featured Product Home Underwear
-.featured-product-underwear {
+.featured-product.underwear,
+.featured-product.cosmetic {
     .list-img {
         position: relative;
     }
 
     .mySwiper {
         position: unset;
+        cursor: pointer;
 
         .swiper-wrapper {
             position: absolute;
@@ -77,6 +79,7 @@
             left: 20px;
             flex-direction: column;
             gap: 12px;
+            width: fit-content;
 
             .swiper-slide {
                 width: 100px !important;

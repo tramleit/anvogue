@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { ProductType } from '@/type/ProductType'
 import Rate from '../Other/Rate'
@@ -18,6 +18,16 @@ interface Props {
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
+    const [activeColor, setActiveColor] = useState<string | null>()
+    const [activeSize, setActiveSize] = useState<string | null>()
+
+    const handleActiveColor = (item: string) => {
+        setActiveColor(item)
+    }
+
+    const handleActiveSize = (item: string) => {
+        setActiveSize(item)
+    }
 
     const handleSwiper = (swiper: SwiperCore) => {
         // Do something with the thumbsSwiper instance
@@ -30,15 +40,14 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
 
     return (
         <>
-            <div className="featured-product-underwear py-20">
+            <div className="featured-product underwear py-20">
                 <div className="container flex items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img lg:w-1/2 lg:pr-4 w-full">
                         <Swiper
                             slidesPerView={1}
                             spaceBetween={0}
-                            freeMode={true}
                             thumbs={{ swiper: thumbsSwiper }}
-                            modules={[Thumbs, FreeMode]}
+                            modules={[Thumbs]}
                             className="mySwiper2 h-full rounded-2xl overflow-hidden"
                         >
                             <SwiperSlide>
@@ -145,10 +154,14 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                         </div>
                         <div className="list-action mt-6">
                             <div className="choose-color">
-                                <div className="text-title">Colors: <span className='text-title color'>Blue</span></div>
+                                <div className="text-title">Colors: <span className='text-title color'>{activeColor}</span></div>
                                 <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.variation.map((item, index) => (
-                                        <div className='color-item w-12 h-12 rounded-xl duration-300 relative' key={index}>
+                                        <div
+                                            className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
+                                            key={index}
+                                            onClick={() => handleActiveColor(item.color)}
+                                        >
                                             <Image
                                                 src={item.colorImage}
                                                 width={100}
@@ -165,12 +178,18 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             </div>
                             <div className="choose-size mt-5">
                                 <div className="heading flex items-center justify-between">
-                                    <div className="text-title">Size: <span className='text-title size'>L</span></div>
+                                    <div className="text-title">Size: <span className='text-title size'>{activeSize}</span></div>
                                     <div className="caption1 size-guide text-red underline">Size Guide</div>
                                 </div>
                                 <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.sizes.map((item, index) => (
-                                        <div className="size-item w-12 h-12 flex items-center justify-center text-button rounded-full bg-white border border-line" key={index}>{item}</div>
+                                        <div
+                                            className={`size-item w-12 h-12 flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                            key={index}
+                                            onClick={() => handleActiveSize(item)}
+                                        >
+                                            {item}
+                                        </div>
                                     ))}
                                 </div>
                             </div>
