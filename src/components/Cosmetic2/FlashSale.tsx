@@ -8,15 +8,13 @@ import { countdownTime } from '@/store/countdownTime'
 const FlashSale = () => {
     const [timeLeft, setTimeLeft] = useState(countdownTime());
 
-    if (typeof window !== 'undefined') {
-        useEffect(() => {
-            const timer = setInterval(() => {
-                setTimeLeft(countdownTime());
-            }, 1000);
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(countdownTime());
+        }, 1000);
 
-            return () => clearInterval(timer);
-        }, []);
-    }
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <>
