@@ -10,14 +10,14 @@ import 'swiper/css/bundle';
 const VideoTutorial = () => {
     return (
         <>
-            <div className="video-tutorial-block relative">
-                <div className="bg-img">
+            <div className="video-tutorial-block relative max-sm:h-[240px]">
+                <div className="bg-img w-full h-full">
                     <Image
                         src={'/images/banner/video-cos3.png'}
                         width={3000}
                         height={2000}
                         alt='bg-img'
-                        className='w-full'
+                        className='w-full h-full object-cover'
                     />
                 </div>
                 <div className="container w-full h-full">
@@ -32,10 +32,10 @@ const VideoTutorial = () => {
                     </div>
                 </div>
             </div>
-            <div className="testimonial-block -mt-[100px] relative z-[1]">
+            <div className="testimonial-block cosmetic3 lg:-mt-[100px] md:-mt-8 -mt-6 relative z-[1]">
                 <div className="container">
-                    <div className="content bg-white py-20 rounded-[20px] box-shadow-small flex items-center justify-center">
-                        <div className="main w-5/6">
+                    <div className="content bg-white lg:py-20 md:py-16 py-8 md:rounded-[20px] rounded-xl box-shadow-small flex items-center justify-center">
+                        <div className="main xl:w-5/6 max-xl:px-10 max-lg:px-8 max-sm:px-4 w-full">
                             <div className="list-testi w-full section-swiper-navigation style-center style-small-border">
                                 <Swiper
                                     spaceBetween={0}
@@ -72,51 +72,89 @@ const VideoTutorial = () => {
                                 </Swiper>
                             </div>
                             <div className="list-brand flex items-center justify-between mt-[60px]">
-                                <div className="brand-item h-[44px] relative flex items-center justify-center">
-                                    <Image
-                                        src={'/images/brand/1.png'}
-                                        width={300}
-                                        height={300}
-                                        alt='1'
-                                        className='h-full w-auto duration-500 relative'
-                                    />
-                                </div>
-                                <div className="brand-item h-[44px] relative flex items-center justify-center">
-                                    <Image
-                                        src={'/images/brand/2.png'}
-                                        width={300}
-                                        height={300}
-                                        alt='2'
-                                        className='h-full w-auto duration-500 relative'
-                                    />
-                                </div>
-                                <div className="brand-item h-[44px] relative flex items-center justify-center">
-                                    <Image
-                                        src={'/images/brand/3.png'}
-                                        width={300}
-                                        height={300}
-                                        alt='3'
-                                        className='h-full w-auto duration-500 relative'
-                                    />
-                                </div>
-                                <div className="brand-item h-[44px] relative flex items-center justify-center">
-                                    <Image
-                                        src={'/images/brand/4.png'}
-                                        width={300}
-                                        height={300}
-                                        alt='4'
-                                        className='h-full w-auto duration-500 relative'
-                                    />
-                                </div>
-                                <div className="brand-item h-[44px] relative flex items-center justify-center">
-                                    <Image
-                                        src={'/images/brand/6.png'}
-                                        width={300}
-                                        height={300}
-                                        alt='6'
-                                        className='h-full w-auto duration-500 relative'
-                                    />
-                                </div>
+                                <Swiper
+                                    spaceBetween={24}
+                                    slidesPerView={2}
+                                    loop={true}
+                                    modules={[Autoplay]}
+                                    autoplay={{
+                                        delay: 4000,
+                                    }}
+                                    breakpoints={{
+                                        576: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 16,
+                                        },
+                                        768: {
+                                            slidesPerView: 4,
+                                            spaceBetween: 16,
+                                        },
+                                        1024: {
+                                            slidesPerView: 5,
+                                            spaceBetween: 16,
+                                        },
+                                        1200: {
+                                            slidesPerView: 5,
+                                            spaceBetween: 24,
+                                        },
+                                    }}
+                                >
+                                    <SwiperSlide>
+                                        <div className="brand-item md:h-[44px] w-full relative flex items-center justify-center">
+                                            <Image
+                                                src={'/images/brand/1.png'}
+                                                width={300}
+                                                height={300}
+                                                alt='1'
+                                                className='md:h-full w-auto duration-500 relative'
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="brand-item md:h-[44px] w-full relative flex items-center justify-center">
+                                            <Image
+                                                src={'/images/brand/2.png'}
+                                                width={300}
+                                                height={300}
+                                                alt='2'
+                                                className='md:h-full w-auto duration-500 relative'
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="brand-item md:h-[44px] w-full relative flex items-center justify-center">
+                                            <Image
+                                                src={'/images/brand/3.png'}
+                                                width={300}
+                                                height={300}
+                                                alt='3'
+                                                className='md:h-full w-auto duration-500 relative'
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="brand-item md:h-[44px] w-full relative flex items-center justify-center">
+                                            <Image
+                                                src={'/images/brand/4.png'}
+                                                width={300}
+                                                height={300}
+                                                alt='4'
+                                                className='md:h-full w-auto duration-500 relative'
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="brand-item md:h-[44px] w-full relative flex items-center justify-center">
+                                            <Image
+                                                src={'/images/brand/6.png'}
+                                                width={300}
+                                                height={300}
+                                                alt='6'
+                                                className='md:h-full w-auto duration-500 relative'
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                         </div>
                     </div>

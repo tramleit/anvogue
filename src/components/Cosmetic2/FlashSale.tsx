@@ -20,7 +20,7 @@ const FlashSale = () => {
 
     return (
         <>
-            <div className="flash-sale-block bg-surface mt-20 py-20">
+            <div className="flash-sale-block bg-surface md:mt-20 mt-14 md:py-20 py-4">
                 <div className="container flex items-center max-sm:justify-center relative overflow-hidden rounded-[32px] w-full">
                     <div className="text-content basis-1/2 flex flex-col items-center text-center px-8 py-10">
                         <div className="heading2">Flash Sale!</div>

@@ -40,7 +40,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
 
     return (
         <>
-            <div className="featured-product underwear py-20">
+            <div className="featured-product underwear md:py-20 py-14">
                 <div className="container flex lg:items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img md:w-1/2 md:pr-4 w-full">
                         <Swiper

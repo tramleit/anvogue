@@ -95,20 +95,6 @@
     padding-left: 4px;
 }
 
-@media (max-width: 640px) {
-
-    .section-swiper-navigation .swiper-button-prev,
-    .section-swiper-navigation .swiper-button-next {
-        width: 36px;
-        height: 36px;
-    }
-
-    .section-swiper-navigation .swiper-button-prev::after,
-    .section-swiper-navigation .swiper-button-next::after {
-        font-size: 14px;
-    }
-}
-
 .section-swiper-navigation .swiper-button-prev:hover,
 .section-swiper-navigation .swiper-button-next:hover {
     background-color: var(--black);
@@ -164,6 +150,36 @@
 .section-swiper-navigation.style-outline.style-center .swiper-button-next,
 .section-swiper-navigation.style-outline.style-center .swiper-button-prev {
     top: 50%;
+}
+
+@media (max-width: 640px) {
+
+    .section-swiper-navigation {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 36px !important;
+            height: 36px !important;
+
+        }
+    }
+
+    .section-swiper-navigation .swiper-button-prev::after,
+    .section-swiper-navigation .swiper-button-next::after {
+        font-size: 14px !important;
+    }
+}
+
+.testimonial-block.cosmetic3 {
+    @media (max-width: 576px) {
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    }
 }
 
 

@@ -41,14 +41,14 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
 
     return (
         <>
-            <div className="tab-features-block style-underwear relative pt-20 mt-20">
+            <div className="tab-features-block style-underwear relative md:pt-20 pt-10 md:mt-20 mt-10">
                 <div className="bg-img">
                     <Image
                         src={'/images/banner/bg-feature-pet1.png'}
                         width={3000}
                         height={2000}
                         alt='bg'
-                        className='w-full absolute top-0 left-0 right-0 z-[-1]'
+                        className='w-full max-lg:h-[400px] max-sm:h-[200px] object-cover absolute top-0 left-0 right-0 z-[-1]'
                     />
                 </div>
                 <div className="container">

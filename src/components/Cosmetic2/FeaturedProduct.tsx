@@ -36,14 +36,14 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
     return (
         <>
             <div className="featured-product cosmetic md:pt-20 pt-10">
-                <div className="container flex items-center justify-between gap-y-6 flex-wrap">
-                    <div className="list-img lg:w-1/2 lg:pr-4 w-full">
+                <div className="container flex ld:items-center justify-between gap-y-6 flex-wrap">
+                    <div className="list-img md:w-1/2 md:pr-4 w-full">
                         <Swiper
                             slidesPerView={1}
                             spaceBetween={0}
                             thumbs={{ swiper: thumbsSwiper }}
                             modules={[Thumbs]}
-                            className="mySwiper2 h-full rounded-2xl overflow-hidden"
+                            className="mySwiper2 rounded-2xl overflow-hidden"
                         >
                             {productMain.images.map((item, index) => (
                                 <SwiperSlide key={index}>
@@ -52,7 +52,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                         width={1000}
                                         height={1000}
                                         alt='prd-img'
-                                        className='w-full h-full object-cover'
+                                        className='w-full object-cover'
                                     />
                                 </SwiperSlide>
                             ))}
@@ -73,13 +73,13 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                         width={1000}
                                         height={1000}
                                         alt='prd-img'
-                                        className='w-full h-full object-cover rounded-xl'
+                                        className='w-full object-cover rounded-xl'
                                     />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     </div>
-                    <div className="product-infor lg:w-1/2 w-full lg:pl-16">
+                    <div className="product-infor md:w-1/2 w-full lg:pl-16 md:pl-6">
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">

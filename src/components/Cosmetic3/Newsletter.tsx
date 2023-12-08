@@ -19,13 +19,13 @@ const Newsletter: React.FC<Props> = ({ props }) => {
                         </form>
                     </div>
                 </div>
-                <div className="help flex items-center justify-between mt-10 py-4 border-t border-b border-line w-full">
+                <div className="help flex items-center justify-between gap-6 gap-y-3 max-sm:grid max-sm:grid-cols-1 mt-10 py-4 border-t border-b border-line w-full">
                     <div>Need help?</div>
-                    <div className="line bg-line w-px h-[26px]"></div>
+                    <div className="line bg-line w-px h-[26px] max-sm:hidden"></div>
                     <div>Working hours : 8:00am - 6:00pm, Mon to Sun</div>
-                    <div className="line bg-line w-px h-[26px]"></div>
+                    <div className="line bg-line w-px h-[26px] max-sm:hidden"></div>
                     <div>Email: hi.avitex@gmail.com</div>
-                    <div className="line bg-line w-px h-[26px]"></div>
+                    <div className="line bg-line w-px h-[26px] max-sm:hidden"></div>
                     <div>Phone: +84-123-234-3456</div>
                 </div>
             </div>
