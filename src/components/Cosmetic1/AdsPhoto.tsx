@@ -4,8 +4,8 @@ import Image from 'next/image'
 const AdsPhoto = () => {
     return (
         <>
-            <div className="ads-photo-block pt-[60px]">
-                <div className="main-content grid grid-cols-2 h-[440px]">
+            <div className="ads-photo-block md:pt-[60px] pt-8">
+                <div className="main-content grid md:grid-cols-2 xl:h-[440px] md:h-[260px]">
                     <div className="before relative h-full">
                         <Image
                             src={'/images/banner/before.png'}

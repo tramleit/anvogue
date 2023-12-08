@@ -5,7 +5,7 @@ import Link from 'next/link'
 const PopularProduct = () => {
     return (
         <>
-            <div className="popular-product pt-20">
+            <div className="popular-product md:pt-20 pt-10">
                 <div className="list-product grid sm:grid-cols-3">
                     <div className="item relative overflow-hidden">
                         <Image

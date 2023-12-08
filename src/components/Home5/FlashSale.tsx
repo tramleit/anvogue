@@ -18,7 +18,7 @@ const FlashSale = () => {
 
     return (
         <>
-            <div className="container pt-20">
+            <div className="container md:pt-20 pt-10">
                 <div className="flash-sale-block bg-surface flex items-center max-sm:justify-center relative overflow-hidden rounded-[32px] w-full">
                     <div className="text-content basis-1/2 flex flex-col items-center text-center px-8 lg:py-24 md:py-16 py-10">
                         <div className="heading2">Flash Sale!</div>

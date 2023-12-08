@@ -24,11 +24,11 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
         if (activeTab === 'sale') {
             return data.filter((product) => product.sale && (product.category === 'fashion'))
         }
-    
+
         if (activeTab === 'new') {
             return data.filter((product) => product.new && (product.category === 'fashion'))
         }
-    
+
         if (activeTab === 'best-seller') {
             return data
                 .filter((product) => product.category === 'fashion')
@@ -43,7 +43,7 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
 
     return (
         <>
-            <div className="tab-features-block pt-20">
+            <div className="tab-features-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading flex flex-col items-center text-center">
                         <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl">

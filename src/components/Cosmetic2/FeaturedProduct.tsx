@@ -35,7 +35,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
 
     return (
         <>
-            <div className="featured-product cosmetic pt-20">
+            <div className="featured-product cosmetic md:pt-20 pt-10">
                 <div className="container flex items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img lg:w-1/2 lg:pr-4 w-full">
                         <Swiper

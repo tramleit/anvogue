@@ -24,7 +24,7 @@ const NewArrival: React.FC<Props> = ({ data, start, limit }) => {
 
     return (
         <>
-            <div className="tab-features-block pt-20">
+            <div className="tab-features-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading flex items-center justify-between gap-5 gap-y-3 flex-wrap">
                         <div className="heading3">New Arrival</div>

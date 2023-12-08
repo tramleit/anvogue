@@ -21,7 +21,7 @@ const WhatNewOne: React.FC<Props> = ({ data, start, limit }) => {
 
     return (
         <>
-            <div className="whate-new-block pt-20">
+            <div className="whate-new-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading flex flex-col items-center text-center">
                         <div className="heading3">What{String.raw`'s`} new</div>

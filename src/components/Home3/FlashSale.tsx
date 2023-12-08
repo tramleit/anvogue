@@ -19,7 +19,7 @@ const FlashSale = () => {
 
     return (
         <>
-            <div className="container pt-20">
+            <div className="container md:pt-20 pt-10">
                 <div className="flash-sale-block bg-surface flex items-center justify-end max-sm:justify-center relative overflow-hidden rounded-[32px] w-full">
                     <div className="bg-img w-1/2 absolute left-0 lg:-top-28 sm:-top-14 max-sm:hidden">
                         <Image

@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const TrendingNow = () => {
     return (
         <>
-            <div className="trending-block style-nine pt-20">
+            <div className="trending-block style-nine md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading3 text-center">Trending Right Now
                     </div>
@@ -53,7 +53,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Clothing</span> 
+                                        <span className='heading6'>Clothing</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
@@ -69,7 +69,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Tops</span> 
+                                        <span className='heading6'>Tops</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
@@ -85,7 +85,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Sweaters</span> 
+                                        <span className='heading6'>Sweaters</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
@@ -101,7 +101,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Dresses</span> 
+                                        <span className='heading6'>Dresses</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
@@ -117,7 +117,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Bottoms</span> 
+                                        <span className='heading6'>Bottoms</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
@@ -133,7 +133,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Shoes</span> 
+                                        <span className='heading6'>Shoes</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>
@@ -149,7 +149,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Shirt</span> 
+                                        <span className='heading6'>Shirt</span>
                                     </div>
                                 </Link>
                             </SwiperSlide>

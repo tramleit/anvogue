@@ -163,6 +163,36 @@
     height: 480px;
 }
 
+#header.style-pet .menu-department-block .sub-menu-department {
+    padding: 0;
+
+    &.open {
+        padding: 0;
+        max-height: 600px;
+    }
+
+    .item {
+        a {
+            transition: all ease 0.3s;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                background-color: var(--line);
+            }
+        }
+    }
+}
+
+// Banner top
+.banner-top {
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
 
 // slider
 @media (min-width: 1024px) {
@@ -182,10 +212,10 @@
 
     &.swiper-slide-active {
         .sub-img {
-                img {
-                    animation: ScaleImg .8s ease;
-                }
+            img {
+                animation: ScaleImg .8s ease;
             }
+        }
     }
 }
 

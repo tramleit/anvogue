@@ -5,15 +5,28 @@
 
     .tab-item {
         white-space: nowrap;
+        border-radius: 16px;
 
         &.active {
             background-color: var(--white);
             color: var(--black);
-            border-radius: 16px;
+            box-shadow: 0px 2px 2px 0px rgba(28, 36, 51, 0.10);
         }
     }
 }
 
+.tab-features-block {
+    &.style-underwear {
+        .menu-tab {
+            .tab-item {
+                &.active {
+                    background-color: var(--black);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
 
 // video-tutorial-block
 .video-tutorial-block {

@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Banner = () => {
     return (
         <>
-            <div className="banner-block pt-20">
+            <div className="banner-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="list-banner grid md:grid-cols-3 lg:gap-[30px] gap-[20px]">
                         <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500">
@@ -34,7 +34,7 @@ const Banner = () => {
                                 />
                             </div>
                             <div className="banner-content absolute left-[30px] bottom-[30px]">
-                                <div className="heading4">Summer Sale <br/>collection</div>
+                                <div className="heading4">Summer Sale <br />collection</div>
                                 <div className="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">Shop Now</div>
                             </div>
                         </Link>
@@ -49,7 +49,7 @@ const Banner = () => {
                                 />
                             </div>
                             <div className="banner-content absolute left-[30px] bottom-[30px]">
-                                <div className="heading4">20% off <br/>accessories</div>
+                                <div className="heading4">20% off <br />accessories</div>
                                 <div className="text-button text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">Shop Now</div>
                             </div>
                         </Link>

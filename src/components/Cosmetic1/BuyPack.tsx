@@ -5,9 +5,9 @@ import Image from 'next/image'
 const BuyPack = () => {
     return (
         <>
-            <div className="buy-pack-block pt-20">
-                <div className="container grid grid-cols-2 items-center">
-                    <div className="main-content">
+            <div className="buy-pack-block md:pt-20 pt-10">
+                <div className="container grid sm:grid-cols-2 max-sm:flex max-sm:w-full flex-col max-sm:flex-col-reverse items-center">
+                    <div className="main-content w-full">
                         <div className="heading3">Cosmetic Cream packs</div>
                         <div className="block mt-3">Sign up for early sale access, new in, promotions and more</div>
                         <div className="list-product mt-8">
@@ -73,7 +73,7 @@ const BuyPack = () => {
                             <div className="button-main w-full text-center">add set to cart</div>
                         </div>
                     </div>
-                    <div className="popular-product pl-20">
+                    <div className="popular-product sm:pl-20 max-sm:pb-6 max-sm:px-8">
                         <div className="item relative">
                             <Image
                                 src={'/images/product/cosmetic/1-4.png'}

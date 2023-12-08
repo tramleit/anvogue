@@ -23,7 +23,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
 
     return (
         <>
-            <div className="testimonial-block style-four pt-20">
+            <div className="testimonial-block style-four md:pt-20 pt-10">
                 <div className="container flex items-center justify-between flex-wrap gap-y-6 max-md:flex-col-reverse">
                     <div className="md:w-1/2 w-full list-testimonial section-swiper-navigation style-small-border">
                         <Swiper

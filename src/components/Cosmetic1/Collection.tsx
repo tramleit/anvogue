@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Collection = () => {
     return (
         <>
-            <div className="collection-block cosmetic pt-20">
+            <div className="collection-block cosmetic md:pt-20 pt-10">
                 <div className="container">
                     <div className='grid sm:grid-cols-2 md:gap-[30px] gap-[16px]'>
                         <div className="left">

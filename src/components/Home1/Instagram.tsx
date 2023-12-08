@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const Instagram = () => {
     return (
         <>
-            <div className="instagram-block pt-20">
+            <div className="instagram-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading">
                         <div className="heading3 text-center">Anvogue On Instagram</div>

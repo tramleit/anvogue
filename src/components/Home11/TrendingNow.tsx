@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const TrendingNow = () => {
     return (
         <>
-            <div className="trending-block style-six pt-20">
+            <div className="trending-block style-six md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading3 text-center">Trending Right Now
                     </div>
@@ -53,7 +53,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Clothing</span> 
+                                        <span className='heading5'>Clothing</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
@@ -70,7 +70,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Tops</span> 
+                                        <span className='heading5'>Tops</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
@@ -87,7 +87,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Dresses</span> 
+                                        <span className='heading5'>Dresses</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
@@ -104,7 +104,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Sweaters</span> 
+                                        <span className='heading5'>Sweaters</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
@@ -121,7 +121,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Bottoms</span> 
+                                        <span className='heading5'>Bottoms</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
@@ -138,7 +138,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Shoes</span> 
+                                        <span className='heading5'>Shoes</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>
@@ -155,7 +155,7 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name text-center mt-5 duration-500">
-                                        <span className='heading5'>Shirt</span> 
+                                        <span className='heading5'>Shirt</span>
                                         <span className='text-secondar2'> (12)</span>
                                     </div>
                                 </Link>

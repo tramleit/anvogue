@@ -9,7 +9,7 @@ const Benefit: React.FC<Props> = ({ props }) => {
         <>
             <div className="container">
                 <div className={`benefit-block ${props}`}>
-                    <div className="list-benefit grid items-start md:grid-cols-3 grid-cols-1 gap-[160px]">
+                    <div className="list-benefit grid items-start md:grid-cols-3 grid-cols-1 xl:gap-[160px] lg:gap-20 gap-10 gap-y-6">
                         <div className="benefit-item flex flex-col items-center justify-center">
                             <i className="icon-double-leaves lg:text-7xl text-5xl"></i>
                             <div className="body1 font-semibold uppercase text-center mt-5">100% ORGANIC</div>

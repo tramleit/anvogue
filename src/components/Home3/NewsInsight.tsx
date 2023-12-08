@@ -10,7 +10,7 @@ interface Props {
 const NewsInsight: React.FC<Props> = ({ data, start, limit }) => {
     return (
         <>
-            <div className="news-block pt-20">
+            <div className="news-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading3 text-center">News insight</div>
                     <div className="list-blog grid md:grid-cols-3 gap-[30px] mt-10">

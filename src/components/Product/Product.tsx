@@ -20,7 +20,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
             {type === "grid" ? (
                 <div className="product-item grid-type">
                     <Link href={'#!'} className="product-main block">
-                        <div className="product-thumb relative overflow-hidden rounded-2xl">
+                        <div className="product-thumb bg-white relative overflow-hidden rounded-2xl">
                             {data.new && (
                                 <div className="product-tag text-button-uppercase bg-green px-3 py-0.5 inline-block rounded-full absolute top-3 left-3 z-[1]">
                                     New

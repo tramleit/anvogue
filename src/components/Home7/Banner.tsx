@@ -5,7 +5,7 @@ import React from 'react'
 const Banner = () => {
     return (
         <>
-            <div className="banner-block style-one grid sm:grid-cols-2 gap-5 pt-20">
+            <div className="banner-block style-one grid sm:grid-cols-2 gap-5 md:pt-20 pt-10">
                 <Link href={'/shop/breadcrumb-img'} className="banner-item relative block overflow-hidden duration-500">
                     <div className="banner-img">
                         <Image

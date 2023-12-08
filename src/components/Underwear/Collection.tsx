@@ -3,20 +3,17 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import 'swiper/css/bundle';
 
 const Collection = () => {
     return (
         <>
-            <div className="collection-block pt-20">
+            <div className="collection-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading text-center">
                     <div className="heading3 text-center">Explore Collections</div>
-                        <div className="heading6 font-normal normal-case text-secondary mt-4">Highly recommended. The quality of the products is exceptional, and the prices are very reasonable!</div>
+                        <div className="heading6 font-normal normal-case text-secondary md:mt-4 mt-2">Highly recommended. The quality of the products is exceptional, and the prices are very reasonable!</div>
                     </div>
-                    <div className="list-collection grid grid-cols-4 gap-8 mt-10">
+                    <div className="list-collection grid lg:grid-cols-4 grid-cols-2 gap-8 mt-10">
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
                                 <Image
@@ -26,7 +23,7 @@ const Collection = () => {
                                     alt='underwear1'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">lingerie</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">lingerie</div>
                         </Link>
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
@@ -37,7 +34,7 @@ const Collection = () => {
                                     alt='underwear2'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">Beach Wear</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">Beach Wear</div>
                         </Link>
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
@@ -48,7 +45,7 @@ const Collection = () => {
                                     alt='underwear3'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">Sport Active</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">Sport Active</div>
                         </Link>
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
@@ -59,7 +56,7 @@ const Collection = () => {
                                     alt='underwear4'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 lg:w-[200px] md:w-[120px] w-[100px] md:py-1.5 py-1 bg-white rounded-xl duration-500">Swim wear</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">Swim wear</div>
                         </Link>
                     </div>
                 </div>

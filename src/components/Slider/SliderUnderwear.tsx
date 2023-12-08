@@ -7,9 +7,9 @@ import Link from 'next/link'
 const SliderUnderwear = () => {
     return (
         <>
-            <div className="slider-block style-one bg-linear py-[100px] w-full">
+            <div className="slider-block style-one bg-linear xl:py-[100px] px-4 md:py-20 py-14 w-full">
                 <div className="slider-main h-full w-full flex items-center justify-center gap-10">
-                    <div className="sub-img rounded-b-full overflow-hidden">
+                    <div className="sub-img rounded-b-full overflow-hidden max-md:hidden">
                         <Image
                             src={'/images/slider/bg-underwear1.png'}
                             width={2000}

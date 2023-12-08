@@ -10,7 +10,7 @@ const Testimonial = () => {
         <>
             <div className="testimonial-block style-four relative">
                 <div className="container relative w-full h-full">
-                    <div className="content w-1/2 py-[110px]">
+                    <div className="content md:w-1/2 lg:py-[110px] py-16">
                         <div className="heading4 font-normal normal-case">I absolutely love this shop! The products are high-quality and the customer service is excellent. I always leave with exactly what I need and a smile on my face.</div>
                         <div className="flex items-center gap-5 mt-8">
                             <div className="avatar">
@@ -19,7 +19,7 @@ const Testimonial = () => {
                                     width={80}
                                     height={80}
                                     alt='avatar'
-                                    className='w-20 h-20 rounded-full'
+                                    className='sm:w-20 w-14 sm:h-20 h-14 rounded-full'
                                 />
                             </div>
                             <div className="infor">

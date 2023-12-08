@@ -92,6 +92,14 @@
                     opacity: 1;
                     border-color: var(--black);
                 }
+
+                @media (max-width: 1024px) {
+                    width: 60px !important;
+                }
+
+                @media (max-width: 576px) {
+                    width: 50px !important;
+                }
             }
         }
     }

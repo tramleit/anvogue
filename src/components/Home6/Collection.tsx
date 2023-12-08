@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const Collection = () => {
     return (
         <>
-            <div className="collection-block style-six pt-20">
+            <div className="collection-block style-six md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading flex items-center justify-between gap-4 gap-y-2 flex-wrap">
                         <div className="heading3">Explore Collections</div>
