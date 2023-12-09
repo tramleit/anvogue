@@ -10,7 +10,7 @@ import Benefit from '@/components/Home1/Benefit'
 import FlashSale from '@/components/Home3/FlashSale'
 import blogData from '@/data/Blog.json'
 import NewsInsight from '@/components/Home3/NewsInsight'
-import Instagram from '@/components/Home1/Instagram'
+import Instagram from '@/components/Home3/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
@@ -20,11 +20,11 @@ export default function HomeThree() {
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuTwo />
-                <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white'/>
+                <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white' />
                 <SliderThree />
             </div>
             <TrendingProduct data={productData} start={10} limit={18} />
-            <Collection props="pt-20" />
+            <Collection props="md:pt-20 pt-10" />
             <FlashSale />
             <NewsInsight data={blogData} start={0} limit={3} />
             <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-3xl" />

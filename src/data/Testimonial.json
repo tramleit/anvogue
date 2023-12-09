@@ -40,7 +40,7 @@
         "avatar": "/images/avatar/4.png",
         "date": "November 15, 2023",
         "address": "California, USA",
-        "description": "I can't get enough of Anvouge's high-quality clothing. It{String.raw`'s`} comfortable, stylish, and always on-trend. The products are high-quality and the customer service is excellent.",
+        "description": "I can't get enough of Anvouge's high-quality clothing. It's comfortable, stylish, and always on-trend. The products are high-quality and the customer service is excellent.",
         "star": 5
     },
     {
@@ -62,7 +62,7 @@
         "avatar": "/images/avatar/6.png",
         "date": "November 19, 2023",
         "address": "London, UK",
-        "description": "Anvouge's fashion collection is a game-changer! Their unique and trendy pieces have completely transformed my style. It{String.raw`'s`} comfortable, stylish, and always on-trend.",
+        "description": "Anvouge's fashion collection is a game-changer! Their unique and trendy pieces have completely transformed my style. It's comfortable, stylish, and always on-trend.",
         "star": 5
     }
 ]

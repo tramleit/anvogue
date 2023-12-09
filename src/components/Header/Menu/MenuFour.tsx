@@ -32,7 +32,7 @@ const MenuFour: React.FC<Props> = ({ props }) => {
                             <Icon.MagnifyingGlass size={16} className='absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer' />
                             <input type="text" placeholder='What are you looking for?' className=' h-10 rounded-lg border border-line caption2 w-full pl-9 pr-4' />
                         </div>
-                        <div className="menu-main h-full max-lg:hidden">
+                        <div className="menu-main h-full xl:w-full flex items-center justify-center max-lg:hidden xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
                             <ul className='flex items-center gap-8 h-full'>
                                 <li className='h-full relative'>
                                     <Link

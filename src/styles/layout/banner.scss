@@ -1,8 +1,7 @@
 .banner-block .banner-item {
     &:hover {
-        opacity: 0.9;
-
         .banner-img img {
+            opacity: 0.9;
             transform: scale(1.07);
         }
     }

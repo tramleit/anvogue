@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { TestimonialType } from '@/type/TestimonialType'
 import Rate from '../Other/Rate'
-import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 interface TestimonialProps {
     data: TestimonialType

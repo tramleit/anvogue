@@ -5,14 +5,14 @@ import Image from 'next/image'
 const Lookbook = () => {
     return (
         <>
-            <div className="look-book-block mt-20 py-20 bg-linear">
+            <div className="look-book-block md:mt-20 mt-10 lg:py-20 md:py-14 py-10 bg-linear">
                 <div className="container">
-                    <div className="main-content relative flex items-center justify-end">
-                        <div className="heading bg-white py-20 px-10 rounded-2xl w-[30%] absolute top-1/2 -translate-y-1/2 left-0 z-[1]">
+                    <div className="main-content relative flex max-lg:flex-wrap gap-y-5 items-center lg:justify-end justify-center">
+                        <div className="heading bg-white xl:py-20 py-10 xl:px-10 px-8 rounded-2xl lg:w-[30%] lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-0 z-[1] max-lg:text-center">
                             <div className="heading3">Discover the latest collection</div>
-                            <Link href={'/shop/breadcrumb-img'} className="button-main bg-green w-full text-center mt-8 text-black">Shop Collection</Link>
+                            <Link href={'/shop/collection'} className="button-main bg-green lg:w-full text-center lg:mt-8 mt-5 text-black">Shop Collection</Link>
                         </div>
-                        <div className="list popular-product w-3/4 grid grid-cols-2 gap-4">
+                        <div className="list popular-product w-3/4 grid sm:grid-cols-2 gap-4 max-lg:w-full">
                             <div className="item relative rounded-xl overflow-hidden">
                                 <Image
                                     src={'/images/banner/lookbook-jewelry1.png'}

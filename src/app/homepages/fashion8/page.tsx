@@ -21,7 +21,7 @@ export default function HomeEight() {
                 <MenuEight />
                 <SliderEight />
             </div>
-            <Benefit props="pt-20" />
+            <Benefit props="md:pt-20 pt-10" />
             <Collection />
             <Deal data={productData} start={0} limit={4} />
             <Banner />

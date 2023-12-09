@@ -10,7 +10,7 @@ import Benefit from '@/components/Home1/Benefit'
 import testimonialData from '@/data/Testimonial.json'
 import Testimonial from '@/components/Home4/Testimonial'
 import Newsletter from '@/components/Home4/Newsletter'
-import Instagram from '@/components/Home1/Instagram'
+import Instagram from '@/components/Home3/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
@@ -25,7 +25,7 @@ export default function HomeFour() {
             <Collection props="pt-5" />
             <BestSellers data={productData} start={0} limit={4} />
             <Banner />
-            <Benefit props="pt-20" />
+            <Benefit props="md:pt-20 pt-10" />
             <Testimonial data={testimonialData} limit={6} />
             <Newsletter props="bg-black mt-20" />
             <Instagram />

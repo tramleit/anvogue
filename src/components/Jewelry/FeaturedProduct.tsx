@@ -23,9 +23,9 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
 
     return (
         <>
-            <div className="featured-product cosmetic mt-20 py-20 bg-surface">
-                <div className="container flex items-center justify-between gap-y-6 flex-wrap">
-                    <div className="list-img lg:w-1/2 lg:pr-4 w-full">
+            <div className="featured-product cosmetic md:mt-20 mt-10 lg:py-20 md:py-14 py-10 bg-surface">
+                <div className="container flex lg:items-center justify-between gap-y-6 flex-wrap">
+                    <div className="list-img md:w-1/2 md:pr-4 w-full">
                         <Image
                             src={productMain.images[2]}
                             width={1000}
@@ -34,7 +34,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             className='w-full h-full aspect-square object-cover rounded-[20px]'
                         />
                     </div>
-                    <div className="product-infor lg:w-1/2 w-full lg:pl-16">
+                    <div className="product-infor md:w-1/2 w-full lg:pl-16 md:pl-6">
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">

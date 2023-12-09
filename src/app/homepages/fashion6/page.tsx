@@ -11,7 +11,7 @@ import testimonialData from '@/data/Testimonial.json'
 import Testimonial from '@/components/Home6/Testimonial'
 import BestSaleProduct from '@/components/Home6/BestSaleProduct'
 import Benefit from '@/components/Home1/Benefit'
-import Instagram from '@/components/Home1/Instagram'
+import Instagram from '@/components/Home3/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
@@ -29,7 +29,7 @@ export default function HomeSix() {
             <FlashSale />
             <Testimonial data={testimonialData} limit={5} />
             <BestSaleProduct data={productData} />
-            <Benefit props="pt-20" />
+            <Benefit props="md:pt-20 pt-10" />
             <Instagram />
             <Brand />
             <Footer />

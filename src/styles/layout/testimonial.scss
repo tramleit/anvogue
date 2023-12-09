@@ -7,6 +7,7 @@
     
     img {
         position: absolute;
+        height: 0;
     }
 
     &.active {
@@ -15,6 +16,7 @@
         
         img {
             position: relative;
+            height: auto;
         }
     }
 }
@@ -22,7 +24,15 @@
 .testimonial-block.style-six .list-avatar .bg-img {
     height: 0;
 
+    img {
+        height: 0;
+    }
+
     &.active {
         height: calc(100% - 40px);
+
+        img {
+            height: 100%;
+        }
     }
 }
