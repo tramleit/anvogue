@@ -11,7 +11,7 @@ interface Props {
 }
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
-    const [activeColor, setActiveColor] = useState<string | null>()
+    const [activeColor, setActiveColor] = useState<string | null>('')
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -55,7 +55,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                         <div className="list-action mt-6">
                             <div className="choose-size">
                                 <div className="heading flex items-center justify-between">
-                                    <div className="text-title">Volume: <span className='text-title size'>{`${activeColor}`}</span></div>
+                                    <div className="text-title">Color: <span className='text-title size'>{`${activeColor}`}</span></div>
                                     <div className="caption1 size-guide text-red underline">Size Guide</div>
                                 </div>
                                 <div className="list-color flex items-center gap-2 flex-wrap mt-3">
