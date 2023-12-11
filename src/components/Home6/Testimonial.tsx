@@ -34,7 +34,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                             onSlideChange={handleSlideChange}
                         >
                             {data.slice(0, limit).map((prd, index) => (
-                                <SwiperSlide key={index} data-item={prd.id}>
+                                <SwiperSlide key={prd.id} data-item={prd.id}>
                                     <TestimonialItem data={prd} type='style-six' />
                                 </SwiperSlide>
                             ))}
@@ -44,7 +44,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                         {data.slice(0, limit).map((prd, index) => (
                             <div
                                 className={`bg-img rounded-[32px] overflow-hidden ${index === activeIndex ? 'active' : ''}`}
-                                key={index}
+                                key={prd.id}
                                 data-item={prd.id}
                             >
                                 <Image

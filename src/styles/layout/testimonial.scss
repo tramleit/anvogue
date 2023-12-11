@@ -1,10 +1,9 @@
-
 .testimonial-block .list-avatar .bg-img {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
     transition: opacity ease 1s;
-    
+
     img {
         position: absolute;
         height: 0;
@@ -13,7 +12,7 @@
     &.active {
         opacity: 1;
         visibility: visible;
-        
+
         img {
             position: relative;
             height: auto;
@@ -30,6 +29,22 @@
 
     &.active {
         height: calc(100% - 40px);
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.featured-product.toys-kid .left .bg-img {
+    height: 0;
+
+    img {
+        height: 0;
+    }
+
+    &.active {
+        height: 100%;
 
         img {
             height: 100%;

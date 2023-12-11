@@ -1,3 +1,7 @@
+.swiper.overflow-unset {
+    overflow: unset;
+}
+
 /* Slider - Swiper Pagination */
 .swiper {
     cursor: grab;
@@ -54,7 +58,6 @@
 .swiper.dots-white .swiper-pagination-bullet-active {
     background: var(--white);
 }
-
 
 .pagination-mt40 .swiper-pagination-fraction,
 .pagination-mt40 .swiper-pagination-custom,

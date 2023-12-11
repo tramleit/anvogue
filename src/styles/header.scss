@@ -230,3 +230,22 @@
         opacity: 1;
     }
 }
+
+
+.slider-toys-kid {
+    .slick-list {
+        overflow: unset;
+        padding: 0 !important;
+        margin-left: -15px;
+        height: 100%;
+        cursor: grab;
+    }
+
+    .slick-slide {
+        padding: 0 15px;
+    }
+
+    .slider-item {
+        display: flex !important;
+    }
+}
