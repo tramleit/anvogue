@@ -51,3 +51,76 @@
         }
     }
 }
+
+.list-testimonial {
+    &.dots-mt40 {
+        .slick-dots {
+            bottom: -60px;
+
+            @media (max-width: 767.98px) {
+                bottom: -50px;
+            }
+        }
+    }
+
+    &.yoga {
+        .slick-list {
+            margin-left: -16px;
+            margin-right: -16px;
+
+            .slick-track {
+                display: flex !important;
+                cursor: grab;
+
+                .slick-slide {
+                    height: inherit !important;
+                    padding-left: 16px;
+                    padding-right: 16px;
+
+                    >div {
+                        height: 100% !important;
+                    }
+                }
+            }
+        }
+
+        .slick-dots li {
+            transition: all ease 0.5s;
+
+            button {
+                border-radius: 50%;
+                border: 1px solid transparent;
+                padding: 4px;
+                transition: all ease 0.5s;
+                width: 16px;
+                height: 16px;
+                position: relative;
+
+                &::before {
+                    font-size: 8px;
+                    line-height: 16px;
+                    width: 8px;
+                    height: 8px;
+                    opacity: 1;
+                    color: transparent;
+                    border: 1px solid var(--black);
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all ease 0.5s;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    border-color: var(--black);
+
+                    &::before {
+                        background-color: var(--black);
+                    }
+                }
+            }
+        }
+    }
+}

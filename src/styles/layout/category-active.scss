@@ -26,6 +26,17 @@
             }
         }
     }
+
+    &.style-watch {
+        .menu-tab {
+                .tab-item {
+                    &.active {
+                        background: var(--surface1);
+                        color: var(--white);
+                    }
+                }
+            }
+    }
 }
 
 // video-tutorial-block

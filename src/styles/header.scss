@@ -236,16 +236,74 @@
     .slick-list {
         overflow: unset;
         padding: 0 !important;
-        margin-left: -15px;
+        margin-left: -16px;
+        margin-right: -16px;
         height: 100%;
         cursor: grab;
+
+        .slick-track {
+            display: flex !important;
+            height: 100%;
+
+            .slick-slide {
+                height: inherit !important;
+                padding: 0 16px;
+                outline: none !important;
+                border: none !important;
+
+                >div {
+                    height: 100%;
+
+                    .slider-item {
+                        display: flex !important;
+                        outline: none !important;
+                        border: none !important;
+                    }
+                }
+            }
+        }
     }
 
-    .slick-slide {
-        padding: 0 15px;
-    }
+    .slick-dots {
+        bottom: 15px;
 
-    .slider-item {
-        display: flex !important;
+        li {
+            transition: all ease 0.5s;
+
+            button {
+                border-radius: 50%;
+                border: 1px solid transparent;
+                padding: 4px;
+                transition: all ease 0.5s;
+                width: 16px;
+                height: 16px;
+                position: relative;
+
+                &::before {
+                    font-size: 8px;
+                    line-height: 16px;
+                    width: 8px;
+                    height: 8px;
+                    opacity: 1 !important;
+                    color: transparent !important;
+                    border: 1px solid var(--black);
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all ease 0.5s;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    border-color: var(--black);
+
+                    &::before {
+                        background-color: var(--black);
+                    }
+                }
+            }
+        }
     }
 }

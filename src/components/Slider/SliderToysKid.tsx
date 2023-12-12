@@ -4,10 +4,6 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import Image from 'next/image'
 import Link from 'next/link'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css/bundle';
-import 'swiper/css/effect-fade';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,9 +13,9 @@ const SliderToysKid = () => {
         dots: true,
         arrows: false,
         infinite: true,
-        speed: 500,
+        speed: 300,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         slidesToShow: 1,
         slidesToScroll: 1,
         touchThreshold: 100,
@@ -29,7 +25,7 @@ const SliderToysKid = () => {
 
     return (
         <>
-            <div className="slider-block 2xl:h-[760px] xl:h-[680px] lg:h-[580px] md:h-[460px] sm:h-[400px] h-[400px] w-full mt-[30px]">
+            <div className="slider-block toys-kid 2xl:h-[760px] xl:h-[680px] lg:h-[580px] md:h-[460px] sm:h-[400px] h-[400px] w-full mt-[30px]">
                 <div className="container h-full">
                     <div className="slider-main h-full w-full">
                         <Slider {...settings} className="slider-toys-kid h-full">
@@ -39,9 +35,9 @@ const SliderToysKid = () => {
                                     width={2000}
                                     height={2000}
                                     alt='bg'
-                                    className='absolute top-0 left-0 w-full h-full'
+                                    className='absolute top-0 left-0 w-full h-full object-cover'
                                 />
-                                <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-20 flex flex-col items-center justify-center">
+                                <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-[70px] flex flex-col items-center justify-center">
                                     <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                     <div className="heading1 text-center md:mt-4 mt-2">Kids Toys & Clothing</div>
                                     <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
@@ -62,9 +58,9 @@ const SliderToysKid = () => {
                                     width={2000}
                                     height={2000}
                                     alt='bg'
-                                    className='absolute top-0 left-0 w-full h-full'
+                                    className='absolute top-0 left-0 w-full h-full object-cover'
                                 />
-                                <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-20 flex flex-col items-center justify-center">
+                                <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-[70px] flex flex-col items-center justify-center">
                                     <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                     <div className="heading1 text-center md:mt-4 mt-2">Kids Toys & Clothing</div>
                                     <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
@@ -85,9 +81,9 @@ const SliderToysKid = () => {
                                     width={2000}
                                     height={2000}
                                     alt='bg'
-                                    className='absolute top-0 left-0 w-full h-full'
+                                    className='absolute top-0 left-0 w-full h-full object-cover'
                                 />
-                                <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-20 flex flex-col items-center justify-center">
+                                <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-[70px] flex flex-col items-center justify-center">
                                     <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                     <div className="heading1 text-center md:mt-4 mt-2">Kids Toys & Clothing</div>
                                     <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>

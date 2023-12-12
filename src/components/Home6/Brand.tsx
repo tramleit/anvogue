@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const Brand = () => {
     return (
         <>
-            <div className="brand-block py-[60px]">
+            <div className="brand-block py-10 bg-black">
                 <div className="container">
                     <div className="list-brand">
                         <Swiper
@@ -43,7 +43,7 @@ const Brand = () => {
                             <SwiperSlide>
                                 <div className="brand-item relative flex items-center justify-center">
                                     <Image
-                                        src={'/images/brand/1.png'}
+                                        src={'/images/brand/1-1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
@@ -54,7 +54,7 @@ const Brand = () => {
                             <SwiperSlide>
                                 <div className="brand-item relative flex items-center justify-center">
                                     <Image
-                                        src={'/images/brand/2.png'}
+                                        src={'/images/brand/2-1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
@@ -65,7 +65,7 @@ const Brand = () => {
                             <SwiperSlide>
                                 <div className="brand-item relative flex items-center justify-center">
                                     <Image
-                                        src={'/images/brand/3.png'}
+                                        src={'/images/brand/3-1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
@@ -76,7 +76,7 @@ const Brand = () => {
                             <SwiperSlide>
                                 <div className="brand-item relative flex items-center justify-center">
                                     <Image
-                                        src={'/images/brand/4.png'}
+                                        src={'/images/brand/4-1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
@@ -87,7 +87,7 @@ const Brand = () => {
                             <SwiperSlide>
                                 <div className="brand-item relative flex items-center justify-center">
                                     <Image
-                                        src={'/images/brand/5.png'}
+                                        src={'/images/brand/5-1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
@@ -98,7 +98,7 @@ const Brand = () => {
                             <SwiperSlide>
                                 <div className="brand-item relative flex items-center justify-center">
                                     <Image
-                                        src={'/images/brand/6.png'}
+                                        src={'/images/brand/6-1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'

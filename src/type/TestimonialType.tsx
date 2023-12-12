@@ -8,5 +8,6 @@ export interface TestimonialType {
     date: string,
     address: string,
     description: string,
+    images: Array<string>,
     star: number,
 }
