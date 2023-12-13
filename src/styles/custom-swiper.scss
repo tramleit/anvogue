@@ -123,36 +123,50 @@
     top: unset;
 }
 
-.section-swiper-navigation.style-outline .swiper {
+.section-swiper-navigation.style-outline {
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
     padding-right: 20px;
-}
+    overflow: hidden;
 
-.section-swiper-navigation.style-outline .swiper-button-prev {
-    left: 0;
-    top: calc(50% - 25px);
-}
+    .swiper {
+        overflow: unset;
 
-.section-swiper-navigation.style-outline .swiper-button-next {
-    right: 0;
-    top: calc(50% - 25px);
+        .swiper-button-prev {
+            left: -20px;
+            top: calc(50% - 25px);
+        }
+
+        .swiper-button-next {
+            right: -20px;
+            top: calc(50% - 25px);
+        }
+    }
 }
 
 @media (max-width: 1290px) {
-    .section-swiper-navigation.style-outline .swiper-button-prev {
-        left: 8px;
-    }
+    .section-swiper-navigation.style-outline {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+        padding-right: 10px;
 
-    .section-swiper-navigation.style-outline .swiper-button-next {
-        right: 8px;
+        .swiper {
+            .swiper-button-prev {
+                left: -10px;
+            }
+
+            .swiper-button-next {
+                right: -10px;
+            }
+        }
     }
 }
 
 .section-swiper-navigation.style-outline.style-center .swiper-button-next,
 .section-swiper-navigation.style-outline.style-center .swiper-button-prev {
-    top: 50%;
+    top: calc(50% - 25px);
 }
 
 @media (max-width: 640px) {
@@ -182,13 +196,6 @@
         .swiper-button-next {
             right: 0;
         }
-    }
-
-    .section-swiper-navigation.style-outline .swiper {
-        margin-left: -12px;
-        margin-right: -12px;
-        padding-left: 12px;
-        padding-right: 12px;
     }
 }
 

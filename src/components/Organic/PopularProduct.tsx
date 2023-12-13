@@ -10,22 +10,23 @@ interface Props {
     limit: number;
 }
 
-const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
-    const [activeTab, setActiveTab] = useState<string>('drinks');
+const PopularProduct: React.FC<Props> = ({ data, start, limit }) => {
+    const [activeTab, setActiveTab] = useState<string>('vegetables');
 
     const handleTabClick = (type: string) => {
         setActiveTab(type);
     };
 
-    const filteredProducts = data.filter((product) => product.type === activeTab && (product.category === 'yoga'));
+    const filteredProducts = data.filter((product) => product.type === activeTab && (product.category === 'organic'));
 
     return (
         <>
             <div className="whate-new-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading flex flex-col items-center text-center">
-                        <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl mt-6">
-                            {['kits', 'drinks', 'mats', 'clothing', 'candle'].map((type) => (
+                        <div className="heading3">Popular Product</div>
+                        <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl md:mt-8 mt-6">
+                            {['meat', 'vegetables', 'fruit'].map((type) => (
                                 <div
                                     key={type}
                                     className={`tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black 
@@ -49,4 +50,4 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
     )
 }
 
-export default TabFeatures
+export default PopularProduct

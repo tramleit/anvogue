@@ -6,59 +6,61 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 const PopularProduct = () => {
     return (
         <>
-            <div className="popular-product text-white md:mt-20 mt-10">
+            <div className="popular-product watch text-white md:mt-20 mt-10">
                 <div className="container">
-                    <div className="content bg-surface1 p-[60px] rounded-3xl flex items-center justify-between gap-6">
-                        <div className="product-infor w-[30%]">
-                            <div className="heading3 mt-1">Apple g5 watch</div>
-                            <div className="flex items-center mt-3">
-                                <Rate currentRate={5}></Rate>
-                                <span className='caption1 text-secondary2'>(1.234 reviews)</span>
+                    <div className="content bg-surface1 lg:p-[60px] sm:p-12 p-8 rounded-3xl flex max-lg:flex-wrap items-center justify-between gap-6">
+                        <div className="left flex max-lg:flex-col-reverse gap-y-8 items-center justify-between lg:w-[70%] w-full">
+                            <div className="product-infor lg:w-[45%] w-full">
+                                <div className="heading3 mt-1">Apple g5 watch</div>
+                                <div className="flex items-center mt-3">
+                                    <Rate currentRate={5}></Rate>
+                                    <span className='caption1 text-secondary2'>(1.234 reviews)</span>
+                                </div>
+                                <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
+                                    <div className="product-price heading5">$269.00</div>
+                                    <div className='w-px h-4 bg-line'></div>
+                                    <div className="product-origin-price font-normal text-secondary2"><del>$299.00</del></div>
+                                    <div className="product-sale caption2 font-semibold bg-green text-black px-3 py-0.5 inline-block rounded-full">
+                                        -12%
+                                    </div>
+                                    <div className='desc text-secondary2 mt-3'>The garments labelled as Committed are products that have been produced using sustainable fibres or processes.</div>
+                                </div>
+                                <div className="list-feature pt-5">
+                                    <div className="item flex items-center gap-3">
+                                        <Icon.CheckCircle size={20} weight='fill' className='text-green' />
+                                        <div className="text-button">Heart rate monitoring</div>
+                                    </div>
+                                    <div className="item flex items-center gap-3 mt-3">
+                                        <Icon.CheckCircle size={20} weight='fill' className='text-green' />
+                                        <div className="text-button">Direct phone calls and messaging</div>
+                                    </div>
+                                    <div className="item flex items-center gap-3 mt-3">
+                                        <Icon.CheckCircle size={20} weight='fill' className='text-green' />
+                                        <div className="text-button">Activity tracking and analysis</div>
+                                    </div>
+                                    <div className="item flex items-center gap-3 mt-3">
+                                        <Icon.CheckCircle size={20} weight='fill' className='text-green' />
+                                        <div className="text-button">ECG feature for monitoring heart health</div>
+                                    </div>
+                                    <div className="item flex items-center gap-3 mt-3">
+                                        <Icon.CheckCircle size={20} weight='fill' className='text-green' />
+                                        <div className="text-button">Interact and control smart devices.</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-                                <div className="product-price heading5">$269.00</div>
-                                <div className='w-px h-4 bg-line'></div>
-                                <div className="product-origin-price font-normal text-secondary2"><del>$299.00</del></div>
-                                <div className="product-sale caption2 font-semibold bg-green text-black px-3 py-0.5 inline-block rounded-full">
-                                    -12%
-                                </div>
-                                <div className='desc text-secondary2 mt-3'>The garments labelled as Committed are products that have been produced using sustainable fibres or processes.</div>
-                            </div>
-                            <div className="list-feature mt-5 pt-5 border-t border-t-surface1">
-                                <div className="item flex items-center gap-3">
-                                    <Icon.CheckCircle size={20} weight='fill' className='text-green' />
-                                    <div className="text-button">Heart rate monitoring</div>
-                                </div>
-                                <div className="item flex items-center gap-3 mt-3">
-                                    <Icon.CheckCircle size={20} weight='fill' className='text-green' />
-                                    <div className="text-button">Direct phone calls and messaging</div>
-                                </div>
-                                <div className="item flex items-center gap-3 mt-3">
-                                    <Icon.CheckCircle size={20} weight='fill' className='text-green' />
-                                    <div className="text-button">Activity tracking and analysis</div>
-                                </div>
-                                <div className="item flex items-center gap-3 mt-3">
-                                    <Icon.CheckCircle size={20} weight='fill' className='text-green' />
-                                    <div className="text-button">ECG feature for monitoring heart health</div>
-                                </div>
-                                <div className="item flex items-center gap-3 mt-3">
-                                    <Icon.CheckCircle size={20} weight='fill' className='text-green' />
-                                    <div className="text-button">Interact and control smart devices.</div>
-                                </div>
+                            <div className="product-img sm:w-[55%] w-[90%]">
+                                <Image
+                                    src={'/images/banner/popular-watch.png'}
+                                    width={1000}
+                                    height={1000}
+                                    alt='bg-img'
+                                    className=''
+                                />
                             </div>
                         </div>
-                        <div className="product-img w-[40%]">
-                            <Image
-                                src={'/images/banner/popular-watch.png'}
-                                width={1000}
-                                height={1000}
-                                alt='bg-img'
-                                className=''
-                            />
-                        </div>
-                        <div className="list-feature-right w-[30%]">
-                            <div className="item flex items-center gap-5">
-                                <div className="icon aspect-square h-[60px] bg-surface1 rounded-full flex items-center justify-center">
+                        <div className="list-feature-right lg:w-[30%] w-full">
+                            <div className="item flex items-center sm:gap-5 gap-3">
+                                <div className="icon aspect-square sm:h-[60px] h-10 bg-surface1 rounded-full flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                         <g clipPath="url(#clip0_6717_32257)">
                                             <path d="M25.6667 25.3335H3.66667C2.69453 25.3324 1.76251 24.9458 1.07511 24.2584C0.387707 23.571 0.00105878 22.639 0 21.6668V9.00016C0.00105878 8.02803 0.387707 7.09601 1.07511 6.40861C1.76251 5.7212 2.69453 5.33455 3.66667 5.3335H25.6667C26.6388 5.33455 27.5708 5.7212 28.2582 6.40861C28.9456 7.09601 29.3323 8.02803 29.3333 9.00016V9.3335H29.6547C30.9413 9.3335 31.988 10.3802 31.988 11.6668V19.0002C31.988 20.2868 30.9413 21.3335 29.6547 21.3335H29.3333V21.6668C29.3323 22.639 28.9456 23.571 28.2582 24.2584C27.5708 24.9458 26.6388 25.3324 25.6667 25.3335Z" fill="#607D8B" />
@@ -77,8 +79,8 @@ const PopularProduct = () => {
                                 </div>
                                 <div className="heading6">Battery onscreen 7 days</div>
                             </div>
-                            <div className="item flex items-center gap-5 mt-7">
-                                <div className="icon aspect-square h-[60px] bg-surface1 rounded-full flex items-center justify-center">
+                            <div className="item flex items-center sm:gap-5 gap-3 sm:mt-7 mt-5">
+                                <div className="icon aspect-square sm:h-[60px] h-10 bg-surface1 rounded-full flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                         <path d="M7.5625 6.15625H2.8125C2.29431 6.15625 1.875 5.73694 1.875 5.21875C1.875 4.70056 2.29431 4.28125 2.8125 4.28125H7.5625C8.08069 4.28125 8.5 4.70056 8.5 5.21875C8.5 5.73694 8.08069 6.15625 7.5625 6.15625ZM7.5625 13.6562H2.8125C2.29431 13.6562 1.875 13.2369 1.875 12.7188C1.875 12.2006 2.29431 11.7812 2.8125 11.7812H7.5625C8.08069 11.7812 8.5 12.2006 8.5 12.7188C8.5 13.2369 8.08069 13.6562 7.5625 13.6562ZM5.6875 9.90625H0.9375C0.419312 9.90625 0 9.48694 0 8.96875C0 8.45056 0.419312 8.03125 0.9375 8.03125H5.6875C6.20569 8.03125 6.625 8.45056 6.625 8.96875C6.625 9.48694 6.20569 9.90625 5.6875 9.90625Z" fill="#19CFFC" />
                                         <path d="M17.5088 3.19009C16.7636 2.69478 15.7748 2.79278 15.1431 3.42447L9.98683 8.58072C9.25439 9.31315 9.25439 10.4997 9.98683 11.2321C10.7193 11.9645 11.9058 11.9645 12.6382 11.2321L16.7077 7.16259L19.6198 9.26028L23.6025 7.40884L17.5088 3.19009ZM13.7368 15.1432L1.54933 27.3307C0.816891 28.0632 0.816891 29.2497 1.54933 29.9821C2.2817 30.7145 3.46827 30.7145 4.2007 29.9821L15.0625 19.1203L13.7368 15.1432Z" fill="#2864F0" />
@@ -88,8 +90,8 @@ const PopularProduct = () => {
                                 </div>
                                 <div className="heading6">53 Built - in Sport Models</div>
                             </div>
-                            <div className="item flex items-center gap-5 mt-7">
-                                <div className="icon aspect-square h-[60px] bg-surface1 rounded-full flex items-center justify-center">
+                            <div className="item flex items-center sm:gap-5 gap-3 sm:mt-7 mt-5">
+                                <div className="icon aspect-square sm:h-[60px] h-10 bg-surface1 rounded-full flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                         <path fillRule="evenodd" clipRule="evenodd" d="M21.5148 27.0345L19.7449 31.0168C19.6149 31.3095 19.4027 31.5582 19.1342 31.7327C18.8657 31.9072 18.5523 32 18.2321 32H11.5562C11.2359 32 10.9226 31.9072 10.654 31.7327C10.3855 31.5582 10.1734 31.3095 10.0434 31.0168L8.27344 27.0345L14.8941 25.931L21.5148 27.0345ZM21.5148 4.96552L19.7449 0.983172C19.6149 0.690507 19.4027 0.441845 19.1342 0.267334C18.8657 0.0928237 18.5523 -4.06325e-05 18.2321 1.3337e-08H11.5562C11.2359 -4.06325e-05 10.9226 0.0928237 10.654 0.267334C10.3855 0.441845 10.1734 0.690507 10.0434 0.983172L8.27344 4.96552L14.8941 6.62069L21.5148 4.96552Z" fill="#3B97D3" />
                                         <path fillRule="evenodd" clipRule="evenodd" d="M24 13H26.2069C26.4995 13 26.7802 13.1163 26.9872 13.3232C27.1941 13.5301 27.3103 13.8108 27.3103 14.1034V16.8621C27.3103 17.1547 27.1941 17.4354 26.9872 17.6423C26.7802 17.8493 26.4995 17.9655 26.2069 17.9655H24V13Z" fill="#1F1F1F" />
@@ -101,8 +103,8 @@ const PopularProduct = () => {
                                 </div>
                                 <div className="heading6">AMOLED Display</div>
                             </div>
-                            <div className="item flex items-center gap-5 mt-7">
-                                <div className="icon aspect-square h-[60px] bg-surface1 rounded-full flex items-center justify-center">
+                            <div className="item flex items-center sm:gap-5 gap-3 sm:mt-7 mt-5">
+                                <div className="icon aspect-square sm:h-[60px] h-10 bg-surface1 rounded-full flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                         <path d="M14.2917 5.51172C11.9542 5.51172 9.70831 6.2156 7.79688 7.54728C6.01006 8.7921 4.63156 10.4984 3.79612 12.495C1.41344 14.2084 0 16.9535 0 19.8971C0 24.9229 4.08875 29.0117 9.11456 29.0117H16.5341V5.73153C15.7957 5.58483 15.0446 5.51121 14.2917 5.51172Z" fill="#8ECDFD" />
                                         <path d="M23.1754 15.0189C20.5543 15.0189 18.4219 12.8865 18.4219 10.2653C18.4219 7.64416 20.5543 5.51172 23.1754 5.51172C25.7966 5.51172 27.929 7.64416 27.929 10.2653C27.929 12.8865 25.7966 15.0189 23.1754 15.0189Z" fill="#8ECDFD" />
@@ -114,8 +116,8 @@ const PopularProduct = () => {
                                 </div>
                                 <div className="heading6">Blood Oxygen monitor</div>
                             </div>
-                            <div className="item flex items-center gap-5 mt-7">
-                                <div className="icon aspect-square h-[60px] bg-surface1 rounded-full flex items-center justify-center">
+                            <div className="item flex items-center sm:gap-5 gap-3 sm:mt-7 mt-5">
+                                <div className="icon aspect-square sm:h-[60px] h-10 bg-surface1 rounded-full flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                         <g clipPath="url(#clip0_6717_32300)">
                                             <path d="M31.6656 9.20506C31.1326 7.115 29.9966 5.313 28.3804 3.99344C26.806 2.708 24.8769 2 22.9494 2C21.4714 2 20.0618 2.39794 18.7593 3.18263C17.7307 3.80225 16.8054 4.6455 15.9973 5.6975C14.159 3.30175 11.7325 2 9.04839 2C7.12139 2 5.19339 2.708 3.6192 3.99344C2.00351 5.313 0.867762 7.115 0.334825 9.20481C-0.2448 11.4776 -0.356863 15.1096 2.4002 19.5066C4.9522 23.5762 9.37582 27.3467 15.5484 30.7139C15.6883 30.7903 15.8426 30.8284 15.9971 30.8284C16.1517 30.8284 16.3062 30.7902 16.4461 30.7139C22.6202 27.3467 27.0455 23.5759 29.5984 19.5066C32.3566 15.1096 32.2449 11.4778 31.6656 9.20506Z" fill="#FF5B5B" />

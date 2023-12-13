@@ -105,4 +105,15 @@
     }
 }
 
-// Home Watch
+
+.popular-product.watch {
+    @media (max-width: 640px) {
+        .list-feature-right {
+            .icon {
+                svg {
+                    width: 18px;
+                }
+            }
+        }
+    }
+}
