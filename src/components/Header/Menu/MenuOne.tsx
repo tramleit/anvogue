@@ -16,13 +16,18 @@ interface Props {
 const MenuOne: React.FC<Props> = ({ props }) => {
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
+    const [openMenuMobile, setOpenMenuMobile] = useState(false)
+
+    const handleOpenMenuMobile = () => {
+        setOpenMenuMobile((toggleOpen) => !toggleOpen)
+    }
 
     return (
         <>
             <div className={`header-menu style-one absolute top-0 left-0 right-0 w-full md:h-[74px] h-[56px] ${props}`}>
                 <div className="container mx-auto h-full">
                     <div className="header-main flex justify-between h-full">
-                        <div className="menu-mobile-icon lg:hidden flex items-center">
+                        <div className="menu-mobile-icon lg:hidden flex items-center" onClick={() => handleOpenMenuMobile}>
                             <i className="icon-category text-2xl"></i>
                         </div>
                         <div className="left flex items-center gap-16">

@@ -10,3 +10,16 @@
         transform: translateY(0);
     }
 }
+
+#menu-mobile {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    height: 0;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: unset;
+    }
+}

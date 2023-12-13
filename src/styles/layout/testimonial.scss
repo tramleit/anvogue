@@ -20,6 +20,30 @@
     }
 }
 
+.video-tutorial-block .list-video .bg-video {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity ease 1s;
+    position: absolute;
+    top: 0;
+
+    .bg-img {
+        position: absolute;
+        height: 0;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+
+        .bg-img {
+            position: relative;
+            height: 100%;
+        }
+    }
+}
+
 .testimonial-block.style-six .list-avatar .bg-img {
     height: 0;
 
