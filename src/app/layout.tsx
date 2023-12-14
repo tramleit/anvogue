@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Instrument_Sans } from 'next/font/google'
 import '@/styles/styles.scss'
-import MenuMobile from '@/components/Modal/MenuMobile'
 
 const instrument = Instrument_Sans({ subsets: ['latin'] })
 
@@ -18,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={instrument.className}>
-        <MenuMobile />
         {children}
       </body>
     </html>

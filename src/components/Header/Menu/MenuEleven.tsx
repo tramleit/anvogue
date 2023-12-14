@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
@@ -9,19 +9,25 @@ import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 import useShopDepartmentPopup from '@/store/useShopDepartmentPopup';
-
+import useMenuMobile from '@/store/useMenuMobile';
 
 const MenuEleven = () => {
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
     const { openShopDepartmentPopup, handleShopDepartmentPopup } = useShopDepartmentPopup()
+    const { openMenuMobile, handleMenuMobile } = useMenuMobile()
+    const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
+
+    const handleOpenSubNavMobile = (index: number) => {
+        setOpenSubNavMobile(openSubNavMobile === index ? null : index)
+    }
 
     return (
         <>
             <div className='header-menu style-eight relative bg-white w-full md:h-[74px] h-[56px]'>
                 <div className="container mx-auto h-full">
                     <div className="header-main flex items-center justify-between h-full">
-                        <div className="menu-mobile-icon lg:hidden flex items-center">
+                        <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
                             <i className="icon-category text-2xl"></i>
                         </div>
                         <Link href={'/'} className='flex items-center'>

@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const Brand = () => {
     return (
         <>
-            <div className="brand-block py-[60px]">
+            <div className="brand-block md:py-[60px] py-[32px]">
                 <div className="container">
                     <div className="list-brand">
                         <Swiper
@@ -41,7 +41,7 @@ const Brand = () => {
                             }}
                         >
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center">
+                                <div className="brand-item relative flex items-center justify-center h-[40px]">
                                     <Image
                                         src={'/images/brand/1.png'}
                                         width={300}
@@ -52,7 +52,7 @@ const Brand = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center">
+                                <div className="brand-item relative flex items-center justify-center h-[40px]">
                                     <Image
                                         src={'/images/brand/2.png'}
                                         width={300}
@@ -63,7 +63,7 @@ const Brand = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center">
+                                <div className="brand-item relative flex items-center justify-center h-[40px]">
                                     <Image
                                         src={'/images/brand/3.png'}
                                         width={300}
@@ -74,7 +74,7 @@ const Brand = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center">
+                                <div className="brand-item relative flex items-center justify-center h-[40px]">
                                     <Image
                                         src={'/images/brand/4.png'}
                                         width={300}
@@ -85,7 +85,7 @@ const Brand = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center">
+                                <div className="brand-item relative flex items-center justify-center h-[40px]">
                                     <Image
                                         src={'/images/brand/5.png'}
                                         width={300}
@@ -96,7 +96,7 @@ const Brand = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center">
+                                <div className="brand-item relative flex items-center justify-center h-[40px]">
                                     <Image
                                         src={'/images/brand/6.png'}
                                         width={300}

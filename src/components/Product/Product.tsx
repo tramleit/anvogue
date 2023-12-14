@@ -31,7 +31,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     Sale
                                 </div>
                             )}
-                            <div className="list-action-right absolute top-3 right-3">
+                            <div className="list-action-right absolute top-3 right-3 max-lg:hidden">
                                 <div className="add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative">
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Add To Wishlist</div>
                                     <Icon.Heart size={18} />
@@ -41,7 +41,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     <Icon.ArrowsCounterClockwise size={18} />
                                 </div>
                             </div>
-                            <div className="product-img">
+                            <div className="product-img w-full h-full aspect-[3/4]">
                                 {data.thumbImage.map((img, index) => (
                                     <Image
                                         key={index}

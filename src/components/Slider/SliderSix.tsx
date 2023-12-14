@@ -26,7 +26,7 @@ const SliderSix = () => {
                         }}
                     >
                         <SwiperSlide>
-                            <div className="slider-item h-full w-full relative">
+                            <div className="slider-item h-full w-full relative overflow-hidden">
                                 <div className="container w-full h-full flex items-center relative">
                                     <div className="text-content basis-1/2">
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
@@ -46,7 +46,7 @@ const SliderSix = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="slider-item h-full w-full relative">
+                            <div className="slider-item h-full w-full relative overflow-hidden">
                                 <div className="container w-full h-full flex items-center relative">
                                     <div className="text-content basis-1/2">
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
@@ -66,7 +66,7 @@ const SliderSix = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="slider-item h-full w-full relative">
+                            <div className="slider-item h-full w-full relative overflow-hidden">
                                 <div className="container w-full h-full flex items-center relative">
                                     <div className="text-content basis-1/2">
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>

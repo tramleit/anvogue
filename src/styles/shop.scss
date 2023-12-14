@@ -1,0 +1,30 @@
+.check-sale {
+    input {
+        display: none;
+    }
+
+    label {
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--line);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    input[type="checkbox"]:checked+label::before {
+        content: "✔";
+        border-color: var(--black);
+    }
+}

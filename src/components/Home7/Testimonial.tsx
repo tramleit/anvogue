@@ -15,7 +15,7 @@ interface Props {
 const Testimonial: React.FC<Props> = ({ data, limit }) => {
     return (
         <>
-            <div className="testimonial-block mt-5 py-20 bg-surface">
+            <div className="testimonial-block mt-5 md:py-20 py-14 bg-surface">
                 <div className="container">
                     <div className="heading3 text-center">
                         The Ultimate Guide to Guest Reviews
