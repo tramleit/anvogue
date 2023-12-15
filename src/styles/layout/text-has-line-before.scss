@@ -33,3 +33,13 @@
         }
     }
 }
+
+.active {
+    >.has-line-before {
+        color: var(--black);
+
+        &::before {
+            width: 100%;
+        }
+    }
+}

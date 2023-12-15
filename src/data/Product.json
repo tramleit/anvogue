@@ -118,7 +118,7 @@
         "sold": 15,
         "quantity": 80,
         "sizes": [
-            "Freesize"
+            "freesize"
         ],
         "variation": [
             {
@@ -264,7 +264,7 @@
     {
         "id": "6",
         "category": "fashion",
-        "type": "set",
+        "type": "sets",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -332,7 +332,7 @@
         "sold": 22,
         "quantity": 80,
         "sizes": [
-            "Freesize"
+            "freesize"
         ],
         "variation": [
             {
@@ -377,7 +377,7 @@
     {
         "id": "8",
         "category": "fashion",
-        "type": "set",
+        "type": "sets",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -565,7 +565,7 @@
         "sold": 14,
         "quantity": 80,
         "sizes": [
-            "Freesize"
+            "freesize"
         ],
         "variation": [
             {
@@ -604,7 +604,7 @@
     {
         "id": "12",
         "category": "fashion",
-        "type": "set",
+        "type": "sets",
         "name": "Kimono sleeve top",
         "gender": "women",
         "new": false,
@@ -724,7 +724,7 @@
     {
         "id": "14",
         "category": "fashion",
-        "type": "set",
+        "type": "sets",
         "name": "Raglan Sleeve T-shirt",
         "gender": "women",
         "new": true,
@@ -798,7 +798,7 @@
         "sold": 8,
         "quantity": 80,
         "sizes": [
-            "Freesize"
+            "freesize"
         ],
         "variation": [
             {
@@ -1037,7 +1037,7 @@
         "sold": 5,
         "quantity": 80,
         "sizes": [
-            "Freesize"
+            "freesize"
         ],
         "variation": [
             {
@@ -1810,7 +1810,7 @@
         "sold": 5,
         "quantity": 80,
         "sizes": [
-            "Freesize"
+            "freesize"
         ],
         "variation": [
             {

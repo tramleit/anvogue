@@ -6,12 +6,19 @@ import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { useRouter } from 'next/navigation';
 
 interface Props {
     props: string;
 }
 
 const Collection: React.FC<Props> = ({ props }) => {
+    const router = useRouter()
+
+    const handleTypeClick = (type: string) => {
+        router.push(`/shop/breadcrumb1?type=${type}`);
+    };
+
     return (
         <>
             <div className={`collection-block ${props}`}>
@@ -39,7 +46,7 @@ const Collection: React.FC<Props> = ({ props }) => {
                         className='h-full'
                     >
                         <SwiperSlide>
-                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('swimwear')}>
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/swimwear.png'}
@@ -49,23 +56,23 @@ const Collection: React.FC<Props> = ({ props }) => {
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Swimwear</div>
-                            </Link>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('top')}>
                                 <div className="bg-img">
                                     <Image
-                                        src={'/images/collection/clothes.png'}
+                                        src={'/images/collection/top.png'}
                                         width={1000}
                                         height={600}
                                         alt='clothes'
                                     />
                                 </div>
-                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Clothes</div>
-                            </Link>
+                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">top</div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('sets')}>
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/sets.png'}
@@ -74,47 +81,47 @@ const Collection: React.FC<Props> = ({ props }) => {
                                         alt='sets'
                                     />
                                 </div>
-                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Sets</div>
-                            </Link>
+                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">sets</div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/accessories.png'}
-                                        width={1000}
-                                        height={600}
-                                        alt='accessories'
-                                    />
-                                </div>
-                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Accessories</div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/lingerie.png'}
-                                        width={1000}
-                                        height={600}
-                                        alt='lingerie'
-                                    />
-                                </div>
-                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Lingerie</div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link href={'/shop/breadcrumb1'} className="collection-item block relative rounded-2xl overflow-hidden">
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('outerwear')}>
                                 <div className="bg-img">
                                     <Image
                                         src={'/images/collection/outerwear.png'}
                                         width={1000}
                                         height={600}
+                                        alt='accessories'
+                                    />
+                                </div>
+                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">outerwear</div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('underwear')}>
+                                <div className="bg-img">
+                                    <Image
+                                        src={'/images/collection/underwear.png'}
+                                        width={1000}
+                                        height={600}
+                                        alt='lingerie'
+                                    />
+                                </div>
+                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">underwear</div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('t-shirt')}>
+                                <div className="bg-img">
+                                    <Image
+                                        src={'/images/collection/t-shirt.png'}
+                                        width={1000}
+                                        height={600}
                                         alt='outerwear'
                                     />
                                 </div>
-                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Outerwear</div>
-                            </Link>
+                                <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">t-shirt</div>
+                            </div>
                         </SwiperSlide>
                     </Swiper>
                 </div>

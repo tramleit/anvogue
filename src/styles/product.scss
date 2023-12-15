@@ -111,6 +111,15 @@
     .color-item {
         border: 2px solid transparent;
         cursor: pointer;
+        transition: all ease 0.3s;
+
+        &.border {
+            border-width: 1px;
+        }
+
+        &.border-line {
+            border-color: var(--line);
+        }
 
         &.active,
         &:hover {
