@@ -363,31 +363,39 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                             <div className="list flex items-center gap-3">
                                                 <div className='w-px h-4 bg-line'></div>
                                                 {selectedType && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize">
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setType(null) }}>
                                                         <Icon.X className='cursor-pointer' />
                                                         <span>{selectedType}</span>
                                                     </div>
                                                 )}
                                                 {selectedSize && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize">
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setSize(null) }}>
                                                         <Icon.X className='cursor-pointer' />
                                                         <span>{selectedSize}</span>
                                                     </div>
                                                 )}
                                                 {selectedColor && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize">
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setColor(null) }}>
                                                         <Icon.X className='cursor-pointer' />
                                                         <span>{selectedColor}</span>
                                                     </div>
                                                 )}
                                                 {selectedBrand && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize">
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setBrand(null) }}>
                                                         <Icon.X className='cursor-pointer' />
                                                         <span>{selectedBrand}</span>
                                                     </div>
                                                 )}
                                             </div>
-                                            <div className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer">
+                                            <div
+                                                className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
+                                                onClick={() => {
+                                                    setBrand(null); 
+                                                    setType(null); 
+                                                    setSize(null); 
+                                                    setColor(null);
+                                                }}
+                                            >
                                                 <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
                                                 <span className='text-button-uppercase text-red'>Clear All</span>
                                             </div>
@@ -414,7 +422,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
