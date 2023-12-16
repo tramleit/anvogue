@@ -4,11 +4,11 @@ import React, { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuOne from '@/components/Header/Menu/MenuOne'
-import ShopBreadcrumbImg from '@/components/Shop/ShopBreadcrumbImg'
+import ShopFilterOptions from '@/components/Shop/ShopFilterOptions'
 import productData from '@/data/Product.json'
 import Footer from '@/components/Footer/Footer'
 
-export default function BreadCrumbImg() {
+export default function FilterOptions() {
     const searchParams = useSearchParams()
     const type = searchParams.get('type')
     const category = searchParams.get('category')
@@ -19,7 +19,7 @@ export default function BreadCrumbImg() {
             <div id="header" className='relative w-full'>
                 <MenuOne props="bg-transparent" />
             </div>
-            <ShopBreadcrumbImg data={productData} productPerPage={12} dataType={type} />
+            <ShopFilterOptions data={productData} productPerPage={9} />
             <Footer />
         </>
     )

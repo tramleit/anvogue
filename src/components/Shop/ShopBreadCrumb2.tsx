@@ -15,7 +15,7 @@ interface Props {
     dataType: string | null
 }
 
-const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) => {
+const ShopBreadCrumb2: React.FC<Props> = ({ data, productPerPage, dataType }) => {
     const [type, setType] = useState<string | null>(dataType)
     const [size, setSize] = useState<string | null>()
     const [color, setColor] = useState<string | null>()
@@ -141,37 +141,126 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
     return (
         <>
             <div className="breadcrumb-block style-img">
-                <div className="breadcrumb-main bg-linear overflow-hidden">
-                    <div className="container lg:pt-[134px] pt-24 pb-10 relative">
+                <div className="breadcrumb-main bg-white overflow-hidden">
+                    <div className="container lg:pt-[134px] pt-24 relative">
                         <div className="main-content w-full h-full flex flex-col items-center justify-center relative z-[1]">
                             <div className="text-content">
                                 <div className="heading2 text-center">{dataType === null ? 'Shop' : dataType}</div>
-                                <div className="link flex items-center justify-center gap-1 caption1 mt-3">
-                                    <Link href={'/'}>Homepage</Link>
-                                    <Icon.CaretRight size={14} className='text-secondary2' />
-                                    <div className='text-secondary2 capitalize'>{dataType === null ? 'Shop' : dataType}</div>
-                                </div>
-                            </div>
-                            <div className="list-tab flex flex-wrap items-center justify-center gap-y-5 gap-8 lg:mt-[70px] mt-12 overflow-hidden">
-                                {['t-shirt', 'dress', 'top', 'swimwear', 'shirt'].map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className={`tab-item text-button-uppercase cursor-pointer has-line-before line-2px ${dataType === item ? 'active' : ''}`}
-                                        onClick={() => handleType(item)}
-                                    >
-                                        {item}
-                                    </div>
-                                ))}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="shop-product breadcrumb1 lg:py-20 md:py-14 py-10">
+            <div className="shop-product breadcrumb2 lg:py-20 md:py-14 py-10">
                 <div className="container">
-                    <div className="flex max-md:flex-wrap max-md:flex-col-reverse gap-y-8">
-                        <div className="sidebar lg:w-1/4 md:w-1/3 w-full md:pr-12">
+                    <div className="flex max-md:flex-wrap gap-y-8">
+                        <div className="list-product-block lg:w-3/4 md:w-2/3 w-full md:pr-3">
+                            <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
+                                <div className="left flex has-line items-center flex-wrap gap-5">
+                                    <div className="choose-layout flex items-center gap-2">
+                                        <div className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
+                                            <div className='flex items-center gap-0.5'>
+                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            </div>
+                                        </div>
+                                        <div className="item row w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
+                                            <div className='flex flex-col items-center gap-0.5'>
+                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
+                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
+                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="check-sale flex items-center gap-2">
+                                        <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
+                                        <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
+                                    </div>
+                                </div>
+                                <div className="right flex items-center gap-3">
+                                    <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
+                                    <div className="select-block relative">
+                                        <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
+                                            <option value="Best Selling">Best Selling</option>
+                                            <option value="Best Reviews">Best Reviews</option>
+                                            <option value="Best Discount">Best Discount</option>
+                                        </select>
+                                        <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="list-filtered flex items-center flex-wrap gap-3 mt-4">
+                                <div className="total-product">
+                                    {totalProducts}
+                                    <span className='text-secondary pl-1'>Products Found</span>
+                                </div>
+                                {
+                                    (selectedType || selectedSize || selectedColor || selectedBrand) && (
+                                        <>
+                                            <div className="list flex items-center gap-3">
+                                                <div className='w-px h-4 bg-line'></div>
+                                                {selectedType && (
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setType(null) }}>
+                                                        <Icon.X className='cursor-pointer' />
+                                                        <span>{selectedType}</span>
+                                                    </div>
+                                                )}
+                                                {selectedSize && (
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setSize(null) }}>
+                                                        <Icon.X className='cursor-pointer' />
+                                                        <span>{selectedSize}</span>
+                                                    </div>
+                                                )}
+                                                {selectedColor && (
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setColor(null) }}>
+                                                        <Icon.X className='cursor-pointer' />
+                                                        <span>{selectedColor}</span>
+                                                    </div>
+                                                )}
+                                                {selectedBrand && (
+                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setBrand(null) }}>
+                                                        <Icon.X className='cursor-pointer' />
+                                                        <span>{selectedBrand}</span>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div
+                                                className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
+                                                onClick={() => {
+                                                    setBrand(null);
+                                                    setType(null);
+                                                    setSize(null);
+                                                    setColor(null);
+                                                }}
+                                            >
+                                                <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
+                                                <span className='text-button-uppercase text-red'>Clear All</span>
+                                            </div>
+                                        </>
+                                    )
+                                }
+                            </div>
+
+                            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                                {currentProducts.map((item) => (
+                                    item.id === 'no-data' ? (
+                                        <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
+                                    ) : (
+                                        <Product key={item.id} data={item} type='grid' />
+                                    )
+                                ))}
+                            </div>
+
+                            {pageCount > 1 && (
+                                <div className="list-pagination flex items-center md:mt-10 mt-7">
+                                    <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
+                                </div>
+                            )}
+                        </div>
+                        <div className="sidebar lg:w-1/4 md:w-1/3 w-full md:pl-12">
                             <div className="filter-type pb-8 border-b border-line">
                                 <div className="heading6">Products Type</div>
                                 <div className="list-type mt-4">
@@ -315,111 +404,6 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                 </div>
                             </div>
                         </div>
-                        <div className="list-product-block lg:w-3/4 md:w-2/3 w-full md:pl-3">
-                            <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
-                                <div className="left flex has-line items-center flex-wrap gap-5">
-                                    <div className="choose-layout flex items-center gap-2">
-                                        <div className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
-                                            <div className='flex items-center gap-0.5'>
-                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
-                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
-                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
-                                            </div>
-                                        </div>
-                                        <div className="item row w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
-                                            <div className='flex flex-col items-center gap-0.5'>
-                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
-                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
-                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="check-sale flex items-center gap-2">
-                                        <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
-                                        <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
-                                    </div>
-                                </div>
-                                <div className="right flex items-center gap-3">
-                                    <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
-                                    <div className="select-block relative">
-                                        <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
-                                            <option value="Best Selling">Best Selling</option>
-                                            <option value="Best Reviews">Best Reviews</option>
-                                            <option value="Best Discount">Best Discount</option>
-                                        </select>
-                                        <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="list-filtered flex items-center gap-3 mt-4">
-                                <div className="total-product">
-                                    {totalProducts}
-                                    <span className='text-secondary pl-1'>Products Found</span>
-                                </div>
-                                {
-                                    (selectedType || selectedSize || selectedColor || selectedBrand) && (
-                                        <>
-                                            <div className="list flex items-center gap-3">
-                                                <div className='w-px h-4 bg-line'></div>
-                                                {selectedType && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setType(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedType}</span>
-                                                    </div>
-                                                )}
-                                                {selectedSize && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setSize(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedSize}</span>
-                                                    </div>
-                                                )}
-                                                {selectedColor && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setColor(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedColor}</span>
-                                                    </div>
-                                                )}
-                                                {selectedBrand && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setBrand(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedBrand}</span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                            <div
-                                                className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                                                onClick={() => {
-                                                    setBrand(null); 
-                                                    setType(null); 
-                                                    setSize(null); 
-                                                    setColor(null);
-                                                }}
-                                            >
-                                                <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
-                                                <span className='text-button-uppercase text-red'>Clear All</span>
-                                            </div>
-                                        </>
-                                    )
-                                }
-                            </div>
-
-                            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
-                                {currentProducts.map((item) => (
-                                    item.id === 'no-data' ? (
-                                        <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
-                                    ) : (
-                                        <Product key={item.id} data={item} type='grid' />
-                                    )
-                                ))}
-                            </div>
-
-                            {pageCount > 1 && (
-                                <div className="list-pagination flex items-center md:mt-10 mt-7">
-                                    <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
-                                </div>
-                            )}
-                        </div>
                     </div>
                 </div>
             </div >
@@ -427,4 +411,4 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
     )
 }
 
-export default ShopBreadCrumb1
+export default ShopBreadCrumb2

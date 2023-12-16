@@ -1,25 +1,23 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation';
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuOne from '@/components/Header/Menu/MenuOne'
-import ShopBreadcrumbImg from '@/components/Shop/ShopBreadcrumbImg'
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
 import productData from '@/data/Product.json'
+import ShopCollection from '@/components/Shop/ShopCollection'
 import Footer from '@/components/Footer/Footer'
 
-export default function BreadCrumbImg() {
-    const searchParams = useSearchParams()
-    const type = searchParams.get('type')
-    const category = searchParams.get('category')
+export default function Collection() {
 
     return (
         <>
             <TopNavOne props="style-one bg-black" slogan="New customers save 10% with the code GET10" />
             <div id="header" className='relative w-full'>
                 <MenuOne props="bg-transparent" />
+                <Breadcrumb heading='Shop Collection' subHeading='Collection' />
             </div>
-            <ShopBreadcrumbImg data={productData} productPerPage={12} dataType={type} />
+            <ShopCollection data={productData} />
             <Footer />
         </>
     )

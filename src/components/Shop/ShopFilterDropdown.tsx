@@ -15,7 +15,8 @@ interface Props {
     dataType: string | null
 }
 
-const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) => {
+const ShopFilterDropdown: React.FC<Props> = ({ data, productPerPage, dataType }) => {
+    const [openSidebar, setOpenSidebar] = useState(false)
     const [type, setType] = useState<string | null>(dataType)
     const [size, setSize] = useState<string | null>()
     const [color, setColor] = useState<string | null>()
@@ -24,6 +25,10 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
     const [currentPage, setCurrentPage] = useState(0);
     const productsPerPage = productPerPage;
     const offset = currentPage * productsPerPage;
+
+    const handleOpenSidebar = () => {
+        setOpenSidebar(toggleOpen => !toggleOpen)
+    }
 
     const handleType = (type: string) => {
         setType((prevType) => (prevType === type ? null : type))
@@ -170,9 +175,74 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
             <div className="shop-product breadcrumb1 lg:py-20 md:py-14 py-10">
                 <div className="container">
-                    <div className="flex max-md:flex-wrap max-md:flex-col-reverse gap-y-8">
-                        <div className="sidebar lg:w-1/4 md:w-1/3 w-full md:pr-12">
-                            <div className="filter-type pb-8 border-b border-line">
+                    <div className="list-product-block relative">
+                        <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
+                            <div className="left flex has-line items-center flex-wrap gap-5">
+                                <div
+                                    className="filter-sidebar-btn flex items-center gap-2 cursor-pointer"
+                                    onClick={handleOpenSidebar}
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M4 21V14" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M4 10V3" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M12 21V12" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M12 8V3" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M20 21V16" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M20 12V3" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M1 14H7" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M9 8H15" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M17 16H23" stroke="#1F1F1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>Filters</span>
+                                </div>
+                                <div className="choose-layout flex items-center gap-2">
+                                    <div className="item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                        <div className='flex items-center gap-0.5'>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                        </div>
+                                    </div>
+                                    <div className="item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                        <div className='flex items-center gap-0.5'>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                        </div>
+                                    </div>
+                                    <div className="item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                        <div className='flex items-center gap-0.5'>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                            <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="check-sale flex items-center gap-2">
+                                    <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
+                                    <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
+                                </div>
+                            </div>
+                            <div className="right flex items-center gap-3">
+                                <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
+                                <div className="select-block relative">
+                                    <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
+                                        <option value="Best Selling">Best Selling</option>
+                                        <option value="Best Reviews">Best Reviews</option>
+                                        <option value="Best Discount">Best Discount</option>
+                                    </select>
+                                    <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            className={`sidebar style-dropdown bg-white grid grid-cols-4 gap-[30px] ${openSidebar ? 'open' : ''}`}
+                        >
+                            <div className="filter-type">
                                 <div className="heading6">Products Type</div>
                                 <div className="list-type mt-4">
                                     {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'accessories'].map((item, index) => (
@@ -189,54 +259,56 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                     ))}
                                 </div>
                             </div>
-                            <div className="filter-size pb-8 border-b border-line mt-8">
-                                <div className="heading6">Size</div>
-                                <div className="list-size flex items-center flex-wrap gap-3 gap-y-4 mt-4">
-                                    {
-                                        ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'].map((item, index) => (
-                                            <div
-                                                key={index}
-                                                className={`size-item text-button w-[44px] h-[44px] flex items-center justify-center rounded-full border border-line ${size === item ? 'active' : ''}`}
-                                                onClick={() => handleSize(item)}
-                                            >
-                                                {item}
+                            <div>
+                                <div className="filter-size">
+                                    <div className="heading6">Size</div>
+                                    <div className="list-size flex items-center flex-wrap gap-3 gap-y-4 mt-4">
+                                        {
+                                            ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'].map((item, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`size-item text-button w-[44px] h-[44px] flex items-center justify-center rounded-full border border-line ${size === item ? 'active' : ''}`}
+                                                    onClick={() => handleSize(item)}
+                                                >
+                                                    {item}
+                                                </div>
+                                            ))
+                                        }
+                                        <div
+                                            className={`size-item text-button px-4 py-2 flex items-center justify-center rounded-full border border-line ${size === 'freesize' ? 'active' : ''}`}
+                                            onClick={() => handleSize('freesize')}
+                                        >
+                                            Freesize
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="filter-price mt-8">
+                                    <div className="heading6">Price Range</div>
+                                    <Slider
+                                        range
+                                        defaultValue={[0, 100]}
+                                        min={0}
+                                        max={100}
+                                        onChange={handlePriceChange}
+                                        className='mt-5'
+                                    />
+                                    <div className="price-block flex items-center justify-between flex-wrap mt-4">
+                                        <div className="min flex items-center gap-1">
+                                            <div>Min price:</div>
+                                            <div className='price-min'>$
+                                                <span>{priceRange.min}</span>
                                             </div>
-                                        ))
-                                    }
-                                    <div
-                                        className={`size-item text-button px-4 py-2 flex items-center justify-center rounded-full border border-line ${size === 'freesize' ? 'active' : ''}`}
-                                        onClick={() => handleSize('freesize')}
-                                    >
-                                        Freesize
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="filter-price pb-8 border-b border-line mt-8">
-                                <div className="heading6">Price Range</div>
-                                <Slider
-                                    range
-                                    defaultValue={[0, 100]}
-                                    min={0}
-                                    max={100}
-                                    onChange={handlePriceChange}
-                                    className='mt-5'
-                                />
-                                <div className="price-block flex items-center justify-between flex-wrap mt-4">
-                                    <div className="min flex items-center gap-1">
-                                        <div>Min price:</div>
-                                        <div className='price-min'>$
-                                            <span>{priceRange.min}</span>
                                         </div>
-                                    </div>
-                                    <div className="min flex items-center gap-1">
-                                        <div>Max price:</div>
-                                        <div className='price-max'>$
-                                            <span>{priceRange.max}</span>
+                                        <div className="min flex items-center gap-1">
+                                            <div>Max price:</div>
+                                            <div className='price-max'>$
+                                                <span>{priceRange.max}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="filter-color pb-8 border-b border-line mt-8">
+                            <div className="filter-color">
                                 <div className="heading6">colors</div>
                                 <div className="list-color flex items-center flex-wrap gap-3 gap-y-4 mt-4">
                                     <div
@@ -290,7 +362,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                     </div>
                                 </div>
                             </div>
-                            <div className="filter-brand mt-8">
+                            <div className="filter-brand">
                                 <div className="heading6">Brands</div>
                                 <div className="list-brand mt-4">
                                     {['adidas', 'hermes', 'zara', 'nike', 'gucci'].map((item, index) => (
@@ -315,111 +387,74 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                 </div>
                             </div>
                         </div>
-                        <div className="list-product-block lg:w-3/4 md:w-2/3 w-full md:pl-3">
-                            <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
-                                <div className="left flex has-line items-center flex-wrap gap-5">
-                                    <div className="choose-layout flex items-center gap-2">
-                                        <div className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
-                                            <div className='flex items-center gap-0.5'>
-                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
-                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
-                                                <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
-                                            </div>
+
+                        <div className="list-filtered flex items-center gap-3 mt-4">
+                            <div className="total-product">
+                                {totalProducts}
+                                <span className='text-secondary pl-1'>Products Found</span>
+                            </div>
+                            {
+                                (selectedType || selectedSize || selectedColor || selectedBrand) && (
+                                    <>
+                                        <div className="list flex items-center gap-3">
+                                            <div className='w-px h-4 bg-line'></div>
+                                            {selectedType && (
+                                                <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setType(null) }}>
+                                                    <Icon.X className='cursor-pointer' />
+                                                    <span>{selectedType}</span>
+                                                </div>
+                                            )}
+                                            {selectedSize && (
+                                                <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setSize(null) }}>
+                                                    <Icon.X className='cursor-pointer' />
+                                                    <span>{selectedSize}</span>
+                                                </div>
+                                            )}
+                                            {selectedColor && (
+                                                <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setColor(null) }}>
+                                                    <Icon.X className='cursor-pointer' />
+                                                    <span>{selectedColor}</span>
+                                                </div>
+                                            )}
+                                            {selectedBrand && (
+                                                <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setBrand(null) }}>
+                                                    <Icon.X className='cursor-pointer' />
+                                                    <span>{selectedBrand}</span>
+                                                </div>
+                                            )}
                                         </div>
-                                        <div className="item row w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
-                                            <div className='flex flex-col items-center gap-0.5'>
-                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
-                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
-                                                <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
-                                            </div>
+                                        <div
+                                            className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
+                                            onClick={() => {
+                                                setBrand(null);
+                                                setType(null);
+                                                setSize(null);
+                                                setColor(null);
+                                            }}
+                                        >
+                                            <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
+                                            <span className='text-button-uppercase text-red'>Clear All</span>
                                         </div>
-                                    </div>
-                                    <div className="check-sale flex items-center gap-2">
-                                        <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
-                                        <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
-                                    </div>
-                                </div>
-                                <div className="right flex items-center gap-3">
-                                    <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
-                                    <div className="select-block relative">
-                                        <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
-                                            <option value="Best Selling">Best Selling</option>
-                                            <option value="Best Reviews">Best Reviews</option>
-                                            <option value="Best Discount">Best Discount</option>
-                                        </select>
-                                        <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="list-filtered flex items-center gap-3 mt-4">
-                                <div className="total-product">
-                                    {totalProducts}
-                                    <span className='text-secondary pl-1'>Products Found</span>
-                                </div>
-                                {
-                                    (selectedType || selectedSize || selectedColor || selectedBrand) && (
-                                        <>
-                                            <div className="list flex items-center gap-3">
-                                                <div className='w-px h-4 bg-line'></div>
-                                                {selectedType && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setType(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedType}</span>
-                                                    </div>
-                                                )}
-                                                {selectedSize && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setSize(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedSize}</span>
-                                                    </div>
-                                                )}
-                                                {selectedColor && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setColor(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedColor}</span>
-                                                    </div>
-                                                )}
-                                                {selectedBrand && (
-                                                    <div className="item flex items-center px-2 py-1 gap-1 bg-linear rounded-full capitalize" onClick={() => { setBrand(null) }}>
-                                                        <Icon.X className='cursor-pointer' />
-                                                        <span>{selectedBrand}</span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                            <div
-                                                className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                                                onClick={() => {
-                                                    setBrand(null); 
-                                                    setType(null); 
-                                                    setSize(null); 
-                                                    setColor(null);
-                                                }}
-                                            >
-                                                <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
-                                                <span className='text-button-uppercase text-red'>Clear All</span>
-                                            </div>
-                                        </>
-                                    )
-                                }
-                            </div>
-
-                            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
-                                {currentProducts.map((item) => (
-                                    item.id === 'no-data' ? (
-                                        <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
-                                    ) : (
-                                        <Product key={item.id} data={item} type='grid' />
-                                    )
-                                ))}
-                            </div>
-
-                            {pageCount > 1 && (
-                                <div className="list-pagination flex items-center md:mt-10 mt-7">
-                                    <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
-                                </div>
-                            )}
+                                    </>
+                                )
+                            }
                         </div>
+
+                        <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                            {currentProducts.map((item) => (
+                                item.id === 'no-data' ? (
+                                    <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
+                                ) : (
+                                    <Product key={item.id} data={item} type='grid' />
+                                )
+                            ))}
+                        </div>
+
+                        {pageCount > 1 && (
+                            <div className="list-pagination flex items-center justify-center md:mt-10 mt-7">
+                                <HandlePagination pageCount={pageCount} onPageChange={handlePageChange} />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div >
@@ -427,4 +462,4 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
     )
 }
 
-export default ShopBreadCrumb1
+export default ShopFilterDropdown
