@@ -15,7 +15,7 @@ interface Props {
 }
 
 const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
-    // const [openOption, setOpenOption] = useState<string | null>(null)
+    const [layoutCol, setLayoutCol] = useState<number | null>(4)
     const [type, setType] = useState<string | undefined>()
     const [size, setSize] = useState<string | undefined>()
     const [color, setColor] = useState<string | undefined>()
@@ -25,9 +25,9 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
     const productsPerPage = productPerPage;
     const offset = currentPage * productsPerPage;
 
-    // const handleOpenOption = (select: string) => {
-    //     setOpenOption(openOption === select ? null : select)
-    // }
+    const handleLayoutCol = (col: number) => {
+        setLayoutCol(col)
+    }
 
     const handleType = (type: string) => {
         setType((prevType) => (prevType === type ? undefined : type))
@@ -172,14 +172,20 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                         <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
                             <div className="left flex items-center flex-wrap gap-5">
                                 <div className="choose-layout flex items-center gap-2">
-                                    <div className="item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                    <div
+                                        className={`item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
+                                        onClick={() => handleLayoutCol(3)}
+                                    >
                                         <div className='flex items-center gap-0.5'>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                         </div>
                                     </div>
-                                    <div className="item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                    <div
+                                        className={`item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
+                                        onClick={() => handleLayoutCol(4)}
+                                    >
                                         <div className='flex items-center gap-0.5'>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
@@ -187,7 +193,10 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                         </div>
                                     </div>
-                                    <div className="item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                    <div
+                                        className={`item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
+                                        onClick={() => handleLayoutCol(5)}
+                                    >
                                         <div className='flex items-center gap-0.5'>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
@@ -205,8 +214,8 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                             <div className="right flex items-center flex-wrap gap-y-3 gap-5">
                                 <div className="select-block filter-type relative">
                                     <select
-                                        className='caption1 py-2 pl-3 md:pr-12 pr-8 rounded-lg border border-line capitalize' 
-                                        name="select-type" 
+                                        className='caption1 py-2 pl-3 md:pr-12 pr-8 rounded-lg border border-line capitalize'
+                                        name="select-type"
                                         id="select-type"
                                         onChange={(e) => handleType(e.target.value)}
                                         value={type === undefined ? 'Type' : type}
@@ -347,7 +356,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                             }
                         </div>
 
-                        <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                        <div className={`list-product hide-product-sold grid lg:grid-cols-${layoutCol} sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7`}>
                             {currentProducts.map((item) => (
                                 item.id === 'no-data' ? (
                                     <div key={item.id} className="no-data-product">No products match the selected criteria.</div>

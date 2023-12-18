@@ -4,11 +4,11 @@ import React, { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuOne from '@/components/Header/Menu/MenuOne'
-import ShopFilterOptions from '@/components/Shop/ShopFilterOptions'
+import ShopFilterCanvas from '@/components/Shop/ShopFilterCanvas'
 import productData from '@/data/Product.json'
 import Footer from '@/components/Footer/Footer'
 
-export default function FilterOptions() {
+export default function FilterCanvas() {
     const searchParams = useSearchParams()
     const type = searchParams.get('type')
     const category = searchParams.get('category')
@@ -19,7 +19,7 @@ export default function FilterOptions() {
             <div id="header" className='relative w-full'>
                 <MenuOne props="bg-transparent" />
             </div>
-            <ShopFilterOptions data={productData} productPerPage={12} />
+            <ShopFilterCanvas data={productData} productPerPage={12} dataType={type} />
             <Footer />
         </>
     )

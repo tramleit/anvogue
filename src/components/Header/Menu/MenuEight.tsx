@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
@@ -81,7 +81,7 @@ const MenuEight = () => {
                             <div className="menu-department-block relative h-full">
                                 <div
                                     className="menu-department-btn bg-black relative flex items-center sm:gap-16 gap-4 px-4 h-full w-fit cursor-pointer"
-                                    onClick={handleSubMenuDepartment} 
+                                    onClick={handleSubMenuDepartment}
                                 >
                                     <div className="text-button-uppercase text-white whitespace-nowrap">Department</div>
                                     <Icon.CaretDown color='#ffffff' className='text-xl max-sm:text-base' />
@@ -1678,7 +1678,7 @@ const MenuEight = () => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/breadcrumb1'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Default Grid
@@ -1694,7 +1694,7 @@ const MenuEight = () => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/filter-canvas'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Full Width

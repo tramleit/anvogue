@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
@@ -1674,7 +1674,7 @@ const MenuPet = () => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/breadcrumb1'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Default Grid
@@ -1690,7 +1690,7 @@ const MenuPet = () => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/filter-canvas'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Full Width

@@ -626,7 +626,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/breadcrumb1'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Default Grid
@@ -642,7 +642,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/filter-canvas'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Full Width
@@ -1609,7 +1609,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/breadcrumb1'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Default Grid
@@ -1625,7 +1625,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
+                                                                        href={'/shop/filter-canvas'}
                                                                         className={`text-secondary duration-300`}
                                                                     >
                                                                         Shop Full Width

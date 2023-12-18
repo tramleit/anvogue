@@ -15,9 +15,7 @@ interface Props {
     dataType: string | null
 }
 
-const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) => {
-    const [showOnlySale, setShowOnlySale] = useState(false)
-    const [sortOption, setSortOption] = useState('');
+const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) => {
     const [type, setType] = useState<string | null>(dataType)
     const [size, setSize] = useState<string | null>()
     const [color, setColor] = useState<string | null>()
@@ -26,16 +24,6 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
     const [currentPage, setCurrentPage] = useState(0);
     const productsPerPage = productPerPage;
     const offset = currentPage * productsPerPage;
-
-    const handleShowOnlySale = () => {
-        setShowOnlySale(toggleSelect => !toggleSelect)
-    }
-
-    const handleSortChange = (option: string) => {
-        setSortOption(option);
-        console.log(sortOption);
-        
-    };
 
     const handleType = (type: string) => {
         setType((prevType) => (prevType === type ? null : type))
@@ -62,11 +50,6 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
     // Filter product data by dataType
     let filteredData = data.filter(product => {
-        let isShowOnlySaleMatched = true;
-        if (showOnlySale) {
-            isShowOnlySaleMatched = product.sale
-        }
-
         let isDataTypeMatched = true;
         if (dataType) {
             isDataTypeMatched = product.type === dataType
@@ -98,31 +81,8 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
             isBrandMatched = product.brand === brand;
         }
 
-        return isShowOnlySaleMatched && isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
+        return isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
     })
-
-    // Tạo một bản sao của mảng đã lọc để sắp xếp
-    let sortedData = [...filteredData];
-
-    if (sortOption === 'soldQuantityHighToLow') {
-        filteredData = sortedData.sort((a, b) => b.sold - a.sold)
-    }
-
-    if (sortOption === 'discountHighToLow') {
-        filteredData = sortedData
-            .sort((a, b) => (
-                (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
-            ))
-            
-    }
-
-    if (sortOption === 'priceHighToLow') {
-        filteredData = sortedData.sort((a, b) => b.price - a.price)
-    }
-
-    if (sortOption === 'priceLowToHigh') {
-        filteredData = sortedData.sort((a, b) => a.price - b.price)
-    }
 
     const totalProducts = filteredData.length
     const selectedType = type
@@ -359,46 +319,33 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                             <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
                                 <div className="left flex has-line items-center flex-wrap gap-5">
                                     <div className="choose-layout flex items-center gap-2">
-                                        <div className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer active">
+                                        <Link href={'/shop/breadcrumb1'} className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
                                             <div className='flex items-center gap-0.5'>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             </div>
-                                        </div>
-                                        <Link href={'/shop/sidebar-list'} className="item row w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
+                                        </Link>
+                                        <div className="item row w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer active">
                                             <div className='flex flex-col items-center gap-0.5'>
                                                 <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
                                                 <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
                                                 <span className='w-4 h-[3px] bg-secondary2 rounded-sm'></span>
                                             </div>
-                                        </Link>
+                                        </div>
                                     </div>
                                     <div className="check-sale flex items-center gap-2">
-                                        <input
-                                            type="checkbox"
-                                            name="filterSale"
-                                            id="filter-sale"
-                                            className='border-line'
-                                            onChange={handleShowOnlySale}
-                                        />
+                                        <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
                                         <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
                                     </div>
                                 </div>
                                 <div className="right flex items-center gap-3">
+                                    <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
                                     <div className="select-block relative">
-                                        <select
-                                            id="select-filter"
-                                            name="select-filter"
-                                            className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line'
-                                            onChange={(e) => { handleSortChange(e.target.value) }}
-                                            defaultValue={'Sorting'}
-                                        >
-                                            <option value="Sorting" disabled>Sorting</option>
-                                            <option value="soldQuantityHighToLow">Best Selling</option>
-                                            <option value="discountHighToLow">Best Discount</option>
-                                            <option value="priceHighToLow">Price High To Low</option>
-                                            <option value="priceLowToHigh">Price Low To High</option>
+                                        <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
+                                            <option value="Best Selling">Best Selling</option>
+                                            <option value="Best Reviews">Best Reviews</option>
+                                            <option value="Best Discount">Best Discount</option>
                                         </select>
                                         <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                                     </div>
@@ -443,9 +390,9 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                             <div
                                                 className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
                                                 onClick={() => {
-                                                    setBrand(null);
-                                                    setType(null);
-                                                    setSize(null);
+                                                    setBrand(null); 
+                                                    setType(null); 
+                                                    setSize(null); 
                                                     setColor(null);
                                                 }}
                                             >
@@ -457,12 +404,12 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                 }
                             </div>
 
-                            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                            <div className="list-product hide-product-sold flex flex-col gap-8 mt-7">
                                 {currentProducts.map((item) => (
                                     item.id === 'no-data' ? (
                                         <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
                                     ) : (
-                                        <Product key={item.id} data={item} type='grid' />
+                                        <Product key={item.id} data={item} type='list' />
                                     )
                                 ))}
                             </div>
@@ -480,4 +427,4 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
     )
 }
 
-export default ShopBreadCrumb1
+export default ShopSidebarList

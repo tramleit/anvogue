@@ -17,6 +17,7 @@ interface Props {
 }
 
 const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) => {
+    const [layoutCol, setLayoutCol] = useState<number | null>(4)
     const [openSidebar, setOpenSidebar] = useState(false)
     const [type, setType] = useState<string | null>(dataType)
     const [size, setSize] = useState<string | null>()
@@ -26,6 +27,10 @@ const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
     const [currentPage, setCurrentPage] = useState(0);
     const productsPerPage = productPerPage;
     const offset = currentPage * productsPerPage;
+
+    const handleLayoutCol = (col: number) => {
+        setLayoutCol(col)
+    }
 
     const handleOpenSidebar = () => {
         setOpenSidebar(toggleOpen => !toggleOpen)
@@ -206,14 +211,20 @@ const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                     <span>Filters</span>
                                 </div>
                                 <div className="choose-layout flex items-center gap-2">
-                                    <div className="item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                    <div
+                                        className={`item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
+                                        onClick={() => handleLayoutCol(3)}
+                                    >
                                         <div className='flex items-center gap-0.5'>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                         </div>
                                     </div>
-                                    <div className="item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                    <div
+                                        className={`item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
+                                        onClick={() => handleLayoutCol(4)}
+                                    >
                                         <div className='flex items-center gap-0.5'>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
@@ -221,7 +232,10 @@ const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                         </div>
                                     </div>
-                                    <div className="item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer">
+                                    <div
+                                        className={`item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
+                                        onClick={() => handleLayoutCol(5)}
+                                    >
                                         <div className='flex items-center gap-0.5'>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                             <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
@@ -450,7 +464,7 @@ const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                             }
                         </div>
 
-                        <div className="list-product hide-product-sold grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                        <div className={`list-product hide-product-sold grid lg:grid-cols-${layoutCol} sm:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7`}>
                             {currentProducts.map((item) => (
                                 item.id === 'no-data' ? (
                                     <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
