@@ -33,8 +33,6 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
     const handleSortChange = (option: string) => {
         setSortOption(option);
-        console.log(sortOption);
-        
     };
 
     const handleType = (type: string) => {

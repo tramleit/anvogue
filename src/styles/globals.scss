@@ -47,6 +47,17 @@ select {
   outline: none;
 }
 
+.select-block {
+  position: relative;
+
+  >.arrow-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+  }
+}
+
 input {
   outline: none;
   border: 1px solid transparent;

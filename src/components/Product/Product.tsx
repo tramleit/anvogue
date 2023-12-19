@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { useCart } from '@/context/CartContext'
+import { useWishlist } from '@/context/WishlistContext'
 
 interface ProductProps {
     data: ProductType
@@ -15,10 +17,20 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
     const percentSold = Math.floor((data.sold / data.quantity) * 100)
     const [activeColor, setActiveColor] = useState<string | null>()
+    const { addToCart } = useCart();
+    const { addToWishlist } = useWishlist();
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
     }
+
+    const handleAddToCart = () => {
+        addToCart(data); // Truyền dữ liệu sản phẩm vào hàm addToCart
+    };
+
+    const handleAddToWishlist = () => {
+        addToWishlist(data); // Truyền dữ liệu sản phẩm vào hàm addToWishlist
+    };
 
     return (
         <>
@@ -37,7 +49,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 </div>
                             )}
                             <div className="list-action-right absolute top-3 right-3 max-lg:hidden">
-                                <div className="add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative">
+                                <div
+                                    className="add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative"
+                                    onClick={handleAddToWishlist}
+                                >
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Add To Wishlist</div>
                                     <Icon.Heart size={18} />
                                 </div>
@@ -64,7 +79,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     Quick View
                                 </div>
                                 {data.action === 'add to cart' ? (
-                                    <div className="add-cart-btn w-full text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white">
+                                    <div
+                                        className="add-cart-btn w-full text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white"
+                                        onClick={handleAddToCart}
+                                    >
                                         Add To Cart
                                     </div>
                                 ) : (
