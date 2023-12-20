@@ -33,6 +33,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 div,
@@ -58,12 +59,14 @@ select {
   }
 }
 
-input {
+input,
+textarea {
   outline: none;
   border: 1px solid transparent;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   border-color: var(--black);
 }
 

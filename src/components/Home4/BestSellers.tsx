@@ -26,7 +26,7 @@ const BestSellers: React.FC<Props> = ({ data, start, limit }) => {
                     <div className="heading flex items-center justify-between gap-5 flex-wrap">
                         <div className="heading3">Best Sellers</div>
                         <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl mt-6">
-                            {['top', 't-shirt', 'dress', 'set', 'shirt'].map((type) => (
+                            {['top', 't-shirt', 'dress', 'sets', 'shirt'].map((type) => (
                                 <div
                                     key={type}
                                     className={`tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black 

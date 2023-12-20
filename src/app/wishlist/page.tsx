@@ -113,7 +113,7 @@ const Wishlist = () => {
     const handlePageChange = (selected: number) => {
         setCurrentPage(selected);
     };
-    
+
 
     return (
         <>
@@ -173,7 +173,7 @@ const Wishlist = () => {
                                         value={type === undefined ? 'Type' : type}
                                     >
                                         <option value="Type" disabled>Type</option>
-                                        {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'accessories'].map((item, index) => (
+                                        {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'sets', 'accessories'].map((item, index) => (
                                             <option
                                                 key={index}
                                                 className={`item cursor-pointer ${type === item ? 'active' : ''}`}

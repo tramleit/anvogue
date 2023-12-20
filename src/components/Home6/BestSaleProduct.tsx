@@ -85,7 +85,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">
-                            <Rate currentRate={productMain.rate}></Rate>
+                            <Rate currentRate={productMain.rate} size={14} />
                             <span className='caption1 text-secondary'>(1.234 reviews)</span>
                         </div>
                         <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
@@ -141,7 +141,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                 <div className="button-main bg-white text-black border border-black">Add To Cart</div>
                             </div>
                             <div className="button-block mt-5">
-                                <div className="button-main w-full text-center">Buy It Now</div>    
+                                <div className="button-main w-full text-center">Buy It Now</div>
                             </div>
                         </div>
                     </div>

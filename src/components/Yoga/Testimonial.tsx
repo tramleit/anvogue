@@ -110,7 +110,7 @@ const Testimonial: React.FC<Props> = ({ data, start, limit }) => {
                                             />
                                         </div>
                                         <div className="right">
-                                            <Rate currentRate={product.star} />
+                                            <Rate currentRate={product.star} size={14} />
                                             <div className="name text-title">{product.name}</div>
                                         </div>
                                     </div>

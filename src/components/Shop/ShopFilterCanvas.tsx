@@ -182,7 +182,7 @@ const ShopFilterCanvas: React.FC<Props> = ({ data, productPerPage, dataType }) =
                 className={`sidebar style-canvas ${openSidebar ? 'open' : ''}`}
                 onClick={handleOpenSidebar}
             >
-                <div className="sidebar-main" onClick={(e) => {e.stopPropagation()}}>
+                <div className="sidebar-main" onClick={(e) => { e.stopPropagation() }}>
                     <div className="heading flex items-center justify-between">
                         <div className="heading5">Filters</div>
                         <Icon.X size={20} weight='bold' onClick={handleOpenSidebar} className='cursor-pointer' />
@@ -190,7 +190,7 @@ const ShopFilterCanvas: React.FC<Props> = ({ data, productPerPage, dataType }) =
                     <div className="filter-type pb-8 border-b border-line mt-7">
                         <div className="heading6">Products Type</div>
                         <div className="list-type mt-4">
-                            {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'accessories'].map((item, index) => (
+                            {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'sets', 'accessories'].map((item, index) => (
                                 <div
                                     key={index}
                                     className={`item flex items-center justify-between cursor-pointer ${dataType === item ? 'active' : ''}`}

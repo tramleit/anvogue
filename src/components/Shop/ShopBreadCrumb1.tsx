@@ -111,7 +111,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
             .sort((a, b) => (
                 (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
             ))
-            
+
     }
 
     if (sortOption === 'priceHighToLow') {
@@ -213,7 +213,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                             <div className="filter-type pb-8 border-b border-line">
                                 <div className="heading6">Products Type</div>
                                 <div className="list-type mt-4">
-                                    {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'accessories'].map((item, index) => (
+                                    {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'sets', 'accessories'].map((item, index) => (
                                         <div
                                             key={index}
                                             className={`item flex items-center justify-between cursor-pointer ${dataType === item ? 'active' : ''}`}

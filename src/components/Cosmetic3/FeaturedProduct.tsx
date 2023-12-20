@@ -27,19 +27,19 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
             <div className="featured-product cosmetic py-20 bg-surface">
                 <div className="container flex lg:items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img md:w-1/2 md:pr-4 w-full">
-                            <Image
-                                src={productMain.images[1]}
-                                width={1000}
-                                height={1000}
-                                alt='prd-img'
-                                className='w-full lg:aspect-square object-cover rounded-[20px]'
-                            />
+                        <Image
+                            src={productMain.images[1]}
+                            width={1000}
+                            height={1000}
+                            alt='prd-img'
+                            className='w-full lg:aspect-square object-cover rounded-[20px]'
+                        />
                     </div>
                     <div className="product-infor md:w-1/2 w-full lg:pl-16 md:pl-6">
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">
-                            <Rate currentRate={productMain.rate}></Rate>
+                            <Rate currentRate={productMain.rate} size={14} />
                             <span className='caption1 text-secondary'>(1.234 reviews)</span>
                         </div>
                         <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">

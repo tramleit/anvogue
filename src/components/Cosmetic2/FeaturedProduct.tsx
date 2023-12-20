@@ -83,7 +83,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">
-                            <Rate currentRate={productMain.rate}></Rate>
+                            <Rate currentRate={productMain.rate} size={14} />
                             <span className='caption1 text-secondary'>(1.234 reviews)</span>
                         </div>
                         <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">

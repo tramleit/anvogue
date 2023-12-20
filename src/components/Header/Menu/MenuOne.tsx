@@ -733,7 +733,10 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         </div>
                                     </li>
                                     <li className='h-full'>
-                                        <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                        <Link
+                                            href="#!"
+                                            className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/product/') ? 'active' : ''}`}
+                                        >
                                             Product
                                         </Link>
                                         <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen">
@@ -852,7 +855,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/default'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300`}
                                                                     >
                                                                         Products Thumbnails Left
                                                                     </Link>
@@ -860,7 +863,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300`}
                                                                     >
                                                                         Products Thumbnails Bottom
                                                                     </Link>
@@ -868,7 +871,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300`}
                                                                     >
                                                                         Products Grid 1 Scrolling
                                                                     </Link>
@@ -876,7 +879,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300`}
                                                                     >
                                                                         Products Grid 2 Scrolling
                                                                     </Link>
@@ -884,7 +887,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/variable'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300`}
                                                                     >
                                                                         Products Combined 1
                                                                     </Link>
@@ -892,7 +895,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/external'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                        className={`text-secondary duration-300`}
                                                                     >
                                                                         Products Combined 2
                                                                     </Link>

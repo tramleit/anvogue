@@ -221,7 +221,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         value={type === undefined ? 'Type' : type}
                                     >
                                         <option value="Type" disabled>Type</option>
-                                        {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'accessories'].map((item, index) => (
+                                        {['t-shirt', 'dress', 'top', 'swimwear', 'shirt', 'underwear', 'sets', 'accessories'].map((item, index) => (
                                             <option
                                                 key={index}
                                                 className={`item cursor-pointer ${type === item ? 'active' : ''}`}

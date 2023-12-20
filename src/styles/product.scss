@@ -96,11 +96,11 @@
             &:hover {
                 .product-img img {
                     transform: scale(1.05);
-    
+
                     &:first-child {
                         opacity: 0;
                     }
-    
+
                     &:last-child {
                         opacity: 1;
                         visibility: visible;
@@ -109,28 +109,46 @@
             }
         }
     }
+
+    .product-main {
+        .product-infor {
+            position: relative;
+
+            .list-color,
+            .list-color-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                z-index: 0;
+            }
+        }
+    }
+
+    &:hover {
+        .product-main {
+            .product-infor {
+                .product-name {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                .list-color,
+                .list-color-image {
+                    opacity: 1;
+                }
+
+                .product-price-block {
+                    transform: translateY(28px);
+                }
+            }
+        }
+    }
 }
 
 
-/* .product-item:hover .product-name {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.product-item .list-color {
-    position: absolute;
-    z-index: -1;
-}
-
-.product-item:hover .list-color {
-    transform: translateY(-30px);
-}
-
-.product-item:hover .product-price-block {
-    transform: translateY(12px);
-} */
-
-.list-color {
+.list-color,
+.list-color-image {
     .color-item {
         border: 2px solid transparent;
         cursor: pointer;
@@ -197,8 +215,27 @@
 }
 
 
-.hide-color .product-item .list-color {
-    display: none;
+.hide-color .product-item {
+    .product-main {
+        .product-infor {
+
+            .list-color,
+            .list-color-image {
+                display: none;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .product-name {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .product-price-block {
+                transform: none;
+            }
+        }
+    }
 }
 
 .hide-product-sold .product-item .product-sold {

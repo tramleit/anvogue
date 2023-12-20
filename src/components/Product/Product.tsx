@@ -7,6 +7,7 @@ import { ProductType } from '@/type/ProductType'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 import { useWishlist } from '@/context/WishlistContext'
+import { useRouter } from 'next/navigation'
 
 interface ProductProps {
     data: ProductType
@@ -19,6 +20,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     const [activeColor, setActiveColor] = useState<string | null>()
     const { addToCart } = useCart();
     const { addToWishlist } = useWishlist();
+    const router = useRouter()
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -32,11 +34,16 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
         addToWishlist(data); // Truyền dữ liệu sản phẩm vào hàm addToWishlist
     };
 
+    const handleDetailProduct = (productId: string) => {
+        // Chuyển hướng đến trang shop với category được chọn
+        router.push(`/product/default?id=${productId}`);
+    };
+
     return (
         <>
             {type === "grid" ? (
                 <div className="product-item grid-type">
-                    <Link href={'#!'} className="product-main block">
+                    <div onClick={() => handleDetailProduct(data.id)} className="product-main cursor-pointer block">
                         <div className="product-thumb bg-white relative overflow-hidden rounded-2xl">
                             {data.new && (
                                 <div className="product-tag text-button-uppercase bg-green px-3 py-0.5 inline-block rounded-full absolute top-3 left-3 z-[1]">
@@ -109,16 +116,30 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 </div>
                             </div>
                             <div className="product-name text-title duration-300">{data.name}</div>
-                            {data.variation.length > 0 ? (
-                                <div className="list-color max-md:hidden py-2 mb-1 flex items-center gap-3 flex-wrap duration-300">
+                            {data.variation.length > 0 && data.action === 'add to cart' && (
+                                <div className="list-color py-2 max-md:hidden flex items-center gap-3 flex-wrap duration-500">
                                     {data.variation.map((item, index) => (
-                                        <div className={`color-item bg-${item.color} w-8 h-8 rounded-full duration-300 relative`} key={index}>
+                                        <div className={`color-item bg-${item.color} w-8 h-8 rounded-full duration-300 relative`} key={index} onClick={(e) => { e.stopPropagation() }}>
                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
                                         </div>
                                     ))}
                                 </div>
-                            ) : (
-                                <></>
+                            )}
+                            {data.variation.length > 0 && data.action === 'quick shop' && (
+                                <div className="list-color-image max-md:hidden flex items-center gap-3 flex-wrap duration-500">
+                                    {data.variation.map((item, index) => (
+                                        <div className={`color-item w-12 h-12 rounded-xl duration-300 relative`} key={index} onClick={(e) => { e.stopPropagation() }}>
+                                            <Image
+                                                src={item.colorImage}
+                                                width={100}
+                                                height={100}
+                                                alt='color'
+                                                className='rounded-xl'
+                                            />
+                                            <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
+                                        </div>
+                                    ))}
+                                </div>
                             )}
 
                             <div className="product-price-block flex items-center gap-2 flex-wrap mt-1 duration-300 relative z-[1]">
@@ -133,15 +154,15 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 )}
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 </div>
             ) : (
                 <>
                     {type === "list" ? (
                         <>
                             <div className="product-item list-type">
-                                <div className="product-main flex lg:items-center sm:justify-between gap-7 max-lg:gap-5">
-                                    <Link href={'#!'} className="product-thumb bg-white relative overflow-hidden block max-sm:w-1/2">
+                                <div className="product-main cursor-pointer flex lg:items-center sm:justify-between gap-7 max-lg:gap-5">
+                                    <div onClick={() => handleDetailProduct(data.id)} className="product-thumb bg-white relative overflow-hidden block max-sm:w-1/2">
                                         {data.new && (
                                             <div className="product-tag text-button-uppercase bg-green px-3 py-0.5 inline-block rounded-full absolute top-3 left-3 z-[1]">
                                                 New
@@ -164,10 +185,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                 />
                                             ))}
                                         </div>
-                                    </Link>
+                                    </div>
                                     <div className='flex sm:items-center gap-7 max-lg:gap-4 max-lg:flex-wrap max-lg:w-full max-sm:flex-col max-sm:w-1/2'>
                                         <div className="product-infor max-sm:w-full">
-                                            <Link href={'#!'} className="product-name heading6 inline-block duration-300">{data.name}</Link>
+                                            <div onClick={() => handleDetailProduct(data.id)} className="product-name heading6 inline-block duration-300">{data.name}</div>
                                             <div className="product-price-block flex items-center gap-2 flex-wrap mt-2 duration-300 relative z-[1]">
                                                 <div className="product-price text-title">${data.price}.00</div>
                                                 <div className="product-origin-price caption1 text-secondary2"><del>${data.originPrice}.00</del></div>

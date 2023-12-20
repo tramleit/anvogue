@@ -96,11 +96,21 @@
                 @media (max-width: 1024px) {
                     width: 60px !important;
                 }
-
-                @media (max-width: 576px) {
-                    width: 50px !important;
-                }
             }
+        }
+    }
+}
+
+.product-detail.sale {
+    .mySwiper {
+        position: unset;
+        overflow: unset;
+
+        .swiper-wrapper {
+            position: relative;
+            flex-direction: row;
+            left: 0;
+            gap: 16px;
         }
     }
 }

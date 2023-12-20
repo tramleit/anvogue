@@ -56,7 +56,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full object-cover'
+                                    className='w-full aspect-[3/4] object-cover'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -65,7 +65,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full object-cover'
+                                    className='w-full aspect-[3/4] object-cover'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -74,7 +74,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full object-cover'
+                                    className='w-full aspect-[3/4] object-cover'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -83,7 +83,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full object-cover'
+                                    className='w-full aspect-[3/4] object-cover'
                                 />
                             </SwiperSlide>
                         </Swiper>
@@ -102,7 +102,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full h-full object-cover rounded-xl'
+                                    className='w-full aspect-[3/4] object-cover rounded-xl'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -111,7 +111,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full h-full object-cover rounded-xl'
+                                    className='w-full aspect-[3/4] object-cover rounded-xl'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -120,7 +120,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full h-full object-cover rounded-xl'
+                                    className='w-full aspect-[3/4] object-cover rounded-xl'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
@@ -129,7 +129,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full h-full object-cover rounded-xl'
+                                    className='w-full aspect-[3/4] object-cover rounded-xl'
                                 />
                             </SwiperSlide>
                         </Swiper>
@@ -138,7 +138,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                         <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                         <div className="heading4 mt-1">{productMain.name}</div>
                         <div className="flex items-center mt-3">
-                            <Rate currentRate={productMain.rate}></Rate>
+                            <Rate currentRate={productMain.rate} size={14} />
                             <span className='caption1 text-secondary'>(1.234 reviews)</span>
                         </div>
                         <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">

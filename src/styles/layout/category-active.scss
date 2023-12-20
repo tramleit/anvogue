@@ -6,6 +6,7 @@
     .tab-item {
         white-space: nowrap;
         border-radius: 16px;
+        cursor: pointer;
 
         &.active {
             background-color: var(--white);

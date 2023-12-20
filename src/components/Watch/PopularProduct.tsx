@@ -13,7 +13,7 @@ const PopularProduct = () => {
                             <div className="product-infor lg:w-[45%] w-full">
                                 <div className="heading3 mt-1">Apple g5 watch</div>
                                 <div className="flex items-center mt-3">
-                                    <Rate currentRate={5}></Rate>
+                                    <Rate currentRate={5} size={14} />
                                     <span className='caption1 text-secondary2'>(1.234 reviews)</span>
                                 </div>
                                 <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
