@@ -16,7 +16,7 @@ interface Props {
     dataType: string | null
 }
 
-const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) => {
+const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) => {
     const [layoutCol, setLayoutCol] = useState<number | null>(4)
     const [openSidebar, setOpenSidebar] = useState(false)
     const [type, setType] = useState<string | null>(dataType)
@@ -486,4 +486,4 @@ const ShopBreadcrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
     )
 }
 
-export default ShopBreadcrumbImg
+export default ShopBreadCrumbImg
