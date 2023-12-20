@@ -103,7 +103,7 @@ const Checkout = () => {
                                                         <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
-                                                                <div className="bg-img"><img src="assets/images/component/payment.png" alt="" /></div>
+                                                                {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberCredit">Card Numbers</label>
                                                                 <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberCredit" placeholder="ex.1234567290" />
                                                             </div>
@@ -129,7 +129,7 @@ const Checkout = () => {
                                                         <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
-                                                                <div className="bg-img"><img src="assets/images/component/payment.png" alt="" /></div>
+                                                                {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberDelivery">Card Numbers</label>
                                                                 <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberDelivery" placeholder="ex.1234567290" />
                                                             </div>
@@ -155,7 +155,7 @@ const Checkout = () => {
                                                         <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
-                                                                <div className="bg-img"><img src="assets/images/component/payment.png" alt="" /></div>
+                                                                {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberApple">Card Numbers</label>
                                                                 <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberApple" placeholder="ex.1234567290" />
                                                             </div>
@@ -176,12 +176,12 @@ const Checkout = () => {
                                                 </div>
                                                 <div className="type bg-surface p-5 border border-line rounded-lg mt-5">
                                                     <input className="pointer" type="radio" id="paypal" name="payment" />
-                                                    <label className="pl-2 pointer" htmlFor="paypal"> <img src="assets/images/component/paypal.svg" alt="" /></label>
+                                                    {/* <label className="pl-2 pointer" htmlFor="paypal"> <Image src="assets/images/component/paypal.svg" alt="" /></label> */}
                                                     <div className="infor">
                                                         <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
-                                                                <div className="bg-img"><img src="assets/images/component/payment.png" alt="" /></div>
+                                                                {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberPaypal">Card Numbers</label>
                                                                 <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberPaypal" placeholder="ex.1234567290" />
                                                             </div>

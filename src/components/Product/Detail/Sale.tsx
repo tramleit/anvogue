@@ -475,7 +475,7 @@ const Sale: React.FC<Props> = ({ data, productId }) => {
                                 <div className="right lg:w-3/4 w-full lg:pl-[15px]">
                                     <Rate currentRate={5} size={16} />
                                     <div className="heading5 mt-3">Unbeatable Style and Quality: A Fashion Brand That Delivers</div>
-                                    <div className="body1 mt-3">I can't get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
+                                    <div className="body1 mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
                                     <div className="action flex justify-between mt-3">
                                         <div className="left flex items-center gap-4">
                                             <div className="like-btn flex items-center gap-1 cursor-pointer">
@@ -530,7 +530,7 @@ const Sale: React.FC<Props> = ({ data, productId }) => {
                                 <div className="right lg:w-3/4 w-full lg:pl-[15px]">
                                     <Rate currentRate={5} size={16} />
                                     <div className="heading5 mt-3">Exceptional Fashion: The Perfect Blend of Style and Durability</div>
-                                    <div className="body1 mt-3">The fashion brand's online shopping experience is seamless. The website is user-friendly, the product images are clear, and the checkout process is quick.</div>
+                                    <div className="body1 mt-3">The fashion brand{String.raw`'s`} online shopping experience is seamless. The website is user-friendly, the product images are clear, and the checkout process is quick.</div>
                                     <div className="action flex justify-between mt-3">
                                         <div className="left flex items-center gap-4">
                                             <div className="like-btn flex items-center gap-1 cursor-pointer">
