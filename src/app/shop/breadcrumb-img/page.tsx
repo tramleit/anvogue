@@ -8,7 +8,7 @@ import ShopBreadcrumbImg from '@/components/Shop/ShopBreadcrumbImg';
 import productData from '@/data/Product.json'
 import Footer from '@/components/Footer/Footer'
 
-export default function BreadCrumbImg() {
+export default function BreadcrumbImg() {
     const searchParams = useSearchParams()
     const type = searchParams.get('type')
     const category = searchParams.get('category')

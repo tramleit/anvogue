@@ -8,7 +8,7 @@ import ShopSidebarList from '@/components/Shop/ShopSidebarList'
 import productData from '@/data/Product.json'
 import Footer from '@/components/Footer/Footer'
 
-export default function BreadCrumb1() {
+export default function SidebarList() {
     const searchParams = useSearchParams()
     const type = searchParams.get('type')
     const category = searchParams.get('category')
