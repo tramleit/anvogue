@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation';
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuOne from '@/components/Header/Menu/MenuOne'
-import ShopBreadcrumbImg from '@/components/Shop/ShopBreadcrumbImg'
+import ShopBreadcrumbImg from '@/components/Shop/ShopBreadcrumbImg';
 import productData from '@/data/Product.json'
 import Footer from '@/components/Footer/Footer'
 
