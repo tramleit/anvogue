@@ -58,7 +58,7 @@ const Footer = () => {
                                     <div className="caption1 mt-3">Sign up for our newsletter and get 10% off your first purchase</div>
                                     <div className="input-block w-full h-[52px] mt-4">
                                         <form className='w-full h-full relative' action="post">
-                                            <input type="text" placeholder='Enter your e-mail' className='caption1 w-full h-full pl-4 pr-14 rounded-xl border border-line' />
+                                            <input type="email" placeholder='Enter your e-mail' className='caption1 w-full h-full pl-4 pr-14 rounded-xl border border-line' required />
                                             <button className='w-[44px] h-[44px] bg-black flex items-center justify-center rounded-xl absolute top-1 right-1'>
                                                 <Icon.ArrowRight size={24} color='#fff' />
                                             </button>

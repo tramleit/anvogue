@@ -5,7 +5,9 @@ import React, { createContext, useContext, useState, useReducer, useEffect } fro
 import { ProductType } from '@/type/ProductType';
 
 interface CartItem extends ProductType {
-    quantity: number
+    quantityPurchase: number
+    selectedSize: string
+    selectedColor: string
 }
 
 interface CartState {
@@ -28,7 +30,7 @@ const CartContext = createContext<CartContextProps | undefined>(undefined);
 const cartReducer = (state: CartState, action: CartAction): CartState => {
     switch (action.type) {
         case 'ADD_TO_CART':
-            const newItem: CartItem = { ...action.payload, quantity: 1 };
+            const newItem: CartItem = { ...action.payload, quantityPurchase: 1, selectedSize: '', selectedColor: '' };
             return {
                 ...state,
                 cartArray: [...state.cartArray, newItem],

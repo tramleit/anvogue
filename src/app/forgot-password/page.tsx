@@ -24,7 +24,7 @@ const ForgotPassword = () => {
                             <div className="body1 mt-2">We will send you an email to reset your password</div>
                             <form className="md:mt-7 mt-4">
                                 <div className="email ">
-                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email address *" />
+                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email address *" required  />
                                 </div>
                                 <div className="block-button md:mt-7 mt-4">
                                     <button className="button-main">Submit</button>

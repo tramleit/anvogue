@@ -61,16 +61,16 @@ const MyAccount = () => {
                                     <div className="heading5 pb-4">Information</div>
                                     <div className='grid sm:grid-cols-2 gap-4 gap-y-5'>
                                         <div className="first-name ">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="firstName" type="text" defaultValue={'Tony'} placeholder='First name' />
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="firstName" type="text" defaultValue={'Tony'} placeholder='First name' required />
                                         </div>
                                         <div className="last-name">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="lastName" type="text" defaultValue={'Nguyen'} placeholder='Last name' />
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="lastName" type="text" defaultValue={'Nguyen'} placeholder='Last name' required />
                                         </div>
                                         <div className="email ">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="email" type="email" defaultValue={'hi.avitex@gmail.com'} placeholder="Email address" />
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="email" type="email" defaultValue={'hi.avitex@gmail.com'} placeholder="Email address" required />
                                         </div>
                                         <div className="phone-number">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="phoneNumber" type="text" defaultValue={'(+12) 345 678 910'} placeholder="Phone number" />
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="phoneNumber" type="text" defaultValue={'(+12) 345 678 910'} placeholder="Phone number" required />
                                         </div>
                                         <div className="col-span-full select-block">
                                             <select className="border border-line px-4 py-3 w-full rounded-lg" id="region" name="region" defaultValue={'default'}>
@@ -84,13 +84,13 @@ const MyAccount = () => {
                                     </div>
                                     <div className="heading5 pb-4 lg:mt-10 mt-6">Change Password</div>
                                     <div className="pass">
-                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="password" type="password" placeholder="Password *" />
+                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="password" type="password" placeholder="Password *" required />
                                     </div>
                                     <div className="new-pass mt-5">
-                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="newPassword" type="password" placeholder="New Password *" />
+                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="newPassword" type="password" placeholder="New Password *" required />
                                     </div>
                                     <div className="confirm-pass mt-5">
-                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="confirmPassword" type="password" placeholder="Confirm Password *" />
+                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="confirmPassword" type="password" placeholder="Confirm Password *" required />
                                     </div>
                                     <div className="block-button lg:mt-10 mt-6">
                                         <button className="button-main">Update Account</button>

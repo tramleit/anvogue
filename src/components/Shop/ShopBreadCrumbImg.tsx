@@ -18,6 +18,7 @@ interface Props {
 
 const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) => {
     const [layoutCol, setLayoutCol] = useState<number | null>(4)
+    const [sortOption, setSortOption] = useState('');
     const [openSidebar, setOpenSidebar] = useState(false)
     const [type, setType] = useState<string | null>(dataType)
     const [size, setSize] = useState<string | null>()
@@ -31,6 +32,10 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
     const handleLayoutCol = (col: number) => {
         setLayoutCol(col)
     }
+
+    const handleSortChange = (option: string) => {
+        setSortOption(option);
+    };
 
     const handleOpenSidebar = () => {
         setOpenSidebar(toggleOpen => !toggleOpen)
@@ -94,6 +99,29 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
 
         return isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
     })
+
+    // Tạo một bản sao của mảng đã lọc để sắp xếp
+    let sortedData = [...filteredData];
+
+    if (sortOption === 'soldQuantityHighToLow') {
+        filteredData = sortedData.sort((a, b) => b.sold - a.sold)
+    }
+
+    if (sortOption === 'discountHighToLow') {
+        filteredData = sortedData
+            .sort((a, b) => (
+                (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
+            ))
+
+    }
+
+    if (sortOption === 'priceHighToLow') {
+        filteredData = sortedData.sort((a, b) => b.price - a.price)
+    }
+
+    if (sortOption === 'priceLowToHigh') {
+        filteredData = sortedData.sort((a, b) => a.price - b.price)
+    }
 
     const totalProducts = filteredData.length
     const selectedType = type
@@ -253,10 +281,18 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                             <div className="right flex items-center gap-3">
                                 <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
                                 <div className="select-block relative">
-                                    <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
-                                        <option value="Best Selling">Best Selling</option>
-                                        <option value="Best Reviews">Best Reviews</option>
-                                        <option value="Best Discount">Best Discount</option>
+                                    <select
+                                        id="select-filter"
+                                        name="select-filter"
+                                        className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line'
+                                        onChange={(e) => { handleSortChange(e.target.value) }}
+                                        defaultValue={'Sorting'}
+                                    >
+                                        <option value="Sorting" disabled>Sorting</option>
+                                        <option value="soldQuantityHighToLow">Best Selling</option>
+                                        <option value="discountHighToLow">Best Discount</option>
+                                        <option value="priceHighToLow">Price High To Low</option>
+                                        <option value="priceLowToHigh">Price Low To High</option>
                                     </select>
                                     <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                                 </div>

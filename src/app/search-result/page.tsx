@@ -77,7 +77,7 @@ const SearchResult = () => {
                         <div className="heading4 text-center">Found 8 results for {String.raw`"`}Black Pant{String.raw`"`}</div>
                         <div className="input-block lg:w-1/2 sm:w-3/5 w-full md:h-[52px] h-[44px] sm:mt-8 mt-5">
                             <form className='w-full h-full relative' action="post">
-                                <input type="text" placeholder='Black Pant' className='caption1 w-full h-full pl-4 md:pr-[150px] pr-32 rounded-xl border border-line' />
+                                <input type="text" placeholder='Black Pant' className='caption1 w-full h-full pl-4 md:pr-[150px] pr-32 rounded-xl border border-line' required />
                                 <button className='button-main absolute top-1 bottom-1 right-1 flex items-center justify-center'>search
                                 </button>
                             </form>

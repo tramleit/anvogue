@@ -101,20 +101,6 @@
     }
 }
 
-.product-detail.sale {
-    .mySwiper {
-        position: unset;
-        overflow: unset;
-
-        .swiper-wrapper {
-            position: relative;
-            flex-direction: row;
-            left: 0;
-            gap: 16px;
-        }
-    }
-}
-
 
 .popular-product.watch {
     @media (max-width: 640px) {

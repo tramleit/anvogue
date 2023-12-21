@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Instrument_Sans } from 'next/font/google'
 import '@/styles/styles.scss'
 import GlobalProvider from './GlobalProvider'
+import ModalCart from '@/components/Modal/ModalCart'
 
 const instrument = Instrument_Sans({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={instrument.className}>
           {children}
+          <ModalCart />
         </body>
       </html>
     </GlobalProvider>

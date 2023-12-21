@@ -23,13 +23,13 @@ const Register = () => {
                             <div className="heading4">Register</div>
                             <form className="md:mt-7 mt-4">
                                 <div className="email ">
-                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email address *" />
+                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email address *" required />
                                 </div>
                                 <div className="pass mt-5">
-                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="password" type="password" placeholder="Password *" />
+                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="password" type="password" placeholder="Password *" required />
                                 </div>
                                 <div className="confirm-pass mt-5">
-                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="confirmPassword" type="password" placeholder="Confirm Password *" />
+                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="confirmPassword" type="password" placeholder="Confirm Password *" required />
                                 </div>
                                 <div className='flex items-center mt-5'>
                                     <div className="block-input">

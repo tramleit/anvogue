@@ -24,10 +24,10 @@ const OrderTracking = () => {
                             <div className="mt-2">To track your order please enter your Order ID in the box below and press the {String.raw`"`}Track{String.raw`"`} button. This was given to you on your receipt and in the confirmation email you should have received.</div>
                             <form className="md:mt-7 mt-4">
                                 <div className="email ">
-                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email address *" />
+                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email address *" required />
                                 </div>
                                 <div className="billing mt-5">
-                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="billing" type="text" placeholder="Billing Email *" />
+                                    <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="billing" type="email" placeholder="Billing Email *" required />
                                 </div>
                                 <div className="block-button md:mt-7 mt-4">
                                     <button className="button-main">Tracking Orders</button>

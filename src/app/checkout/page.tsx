@@ -34,14 +34,14 @@ const Checkout = () => {
                                 <form className="p-5 border border-line rounded-lg">
                                     <div className="grid sm:grid-cols-2 gap-5">
                                         <div className="email ">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email" />
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="username" type="email" placeholder="Username or email" required />
                                         </div>
                                         <div className="pass ">
-                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="password" type="password" placeholder="Password" />
+                                            <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="password" type="password" placeholder="Password" required />
                                         </div>
                                     </div>
                                     <div className="block-button mt-3">
-                                        <Link href={'/login'} className="button-main button-blue-hover">Login</Link>
+                                        <button className="button-main button-blue-hover">Login</button>
                                     </div>
                                 </form>
                             </div>
@@ -51,16 +51,16 @@ const Checkout = () => {
                                     <form>
                                         <div className="grid sm:grid-cols-2 gap-4 gap-y-5 flex-wrap">
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="firstName" type="text" placeholder="First Name *" />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="firstName" type="text" placeholder="First Name *" required />
                                             </div>
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="lastName" type="text" placeholder="Last Name *" />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="lastName" type="text" placeholder="Last Name *" required />
                                             </div>
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="email" type="email" placeholder="Email Address *" />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="email" type="email" placeholder="Email Address *" required />
                                             </div>
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="phoneNumber" type="number" placeholder="Phone Numbers *" />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="phoneNumber" type="number" placeholder="Phone Numbers *" required />
                                             </div>
                                             <div className="col-span-full select-block">
                                                 <select className="border border-line px-4 py-3 w-full rounded-lg" id="region" name="region" defaultValue={'default'}>
@@ -72,10 +72,10 @@ const Checkout = () => {
                                                 <Icon.CaretDown className='arrow-down' />
                                             </div>
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="city" type="text" placeholder="Town/City *" />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="city" type="text" placeholder="Town/City *" required />
                                             </div>
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="apartment" type="text" placeholder="Street,..." />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="apartment" type="text" placeholder="Street,..." required />
                                             </div>
                                             <div className="select-block">
                                                 <select className="border border-line px-4 py-3 w-full rounded-lg" id="country" name="country" defaultValue={'default'}>
@@ -87,7 +87,7 @@ const Checkout = () => {
                                                 <Icon.CaretDown className='arrow-down' />
                                             </div>
                                             <div className="">
-                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="postal" type="text" placeholder="Postal Code *" />
+                                                <input className="border-line px-4 py-3 w-full rounded-lg" id="postal" type="text" placeholder="Postal Code *" required />
                                             </div>
                                             <div className="col-span-full">
                                                 <textarea className="border border-line px-4 py-3 w-full rounded-lg" id="note" name="note" placeholder="Write note..."></textarea>
