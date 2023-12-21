@@ -289,7 +289,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                 <div className="desc-tab md:pb-20 pb-10">
                     <div className="container">
                         <div className="flex items-center justify-center w-full">
-                            <div className="menu-tab flex items-center gap-[60px]">
+                            <div className="menu-tab flex items-center md:gap-[60px] gap-8">
                                 <div
                                     className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'description' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('description')}

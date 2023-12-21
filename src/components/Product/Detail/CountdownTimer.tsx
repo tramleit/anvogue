@@ -219,7 +219,7 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                 <div className="desc-tab">
                     <div className="container">
                         <div className="flex items-center justify-center w-full">
-                            <div className="menu-tab flex items-center gap-[60px]">
+                            <div className="menu-tab flex items-center md:gap-[60px] gap-8">
                                 <div
                                     className={`tab-item heading5 has-line-before text-secondary2 hover:text-black duration-300 ${activeTab === 'description' ? 'active' : ''}`}
                                     onClick={() => handleActiveTab('description')}
@@ -241,34 +241,58 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                             </div>
                         </div>
                         <div className="desc-block mt-8">
-                            <div className={`desc-item description grid md:grid-cols-2 gap-8 gap-y-5 ${activeTab === 'description' ? 'open' : ''}`}>
-                                <div className="left">
-                                    <div className="heading6">Description</div>
-                                    <div className="text-secondary mt-2">Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!</div>
+                            <div className={`desc-item description ${activeTab === 'description' ? 'open' : ''}`}>
+                                <div className='grid md:grid-cols-2 gap-8 gap-y-5'>
+                                    <div className="left">
+                                        <div className="heading6">Description</div>
+                                        <div className="text-secondary mt-2">Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. These cabinets not only make a great storage units, but also bring a great decorative accent to your decor. Traditionally designed, they are perfect to be used in the hallway, living room, bedroom, office or any place where you need to store or display things. Made of high quality materials, they are sturdy and durable for years. Bring one-of-a-kind look to your interior with furniture from Onita Furniture!</div>
+                                    </div>
+                                    <div className="right">
+                                        <div className="heading6">About This Products</div>
+                                        <div className="list-feature">
+                                            <div className="item flex gap-1 text-secondary mt-1">
+                                                <Icon.Dot size={28} />
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            </div>
+                                            <div className="item flex gap-1 text-secondary mt-1">
+                                                <Icon.Dot size={28} />
+                                                <p>Nulla luctus libero quis mauris vestibulum dapibus.</p>
+                                            </div>
+                                            <div className="item flex gap-1 text-secondary mt-1">
+                                                <Icon.Dot size={28} />
+                                                <p>Maecenas ullamcorper erat mi, vel consequat enim suscipit at.</p>
+                                            </div>
+                                            <div className="item flex gap-1 text-secondary mt-1">
+                                                <Icon.Dot size={28} />
+                                                <p>Quisque consectetur nibh ac urna molestie scelerisque.</p>
+                                            </div>
+                                            <div className="item flex gap-1 text-secondary mt-1">
+                                                <Icon.Dot size={28} />
+                                                <p>Mauris in nisl scelerisque massa consectetur pretium sed et mauris.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="right">
-                                    <div className="heading6">About This Products</div>
-                                    <div className="list-feature">
-                                        <div className="item flex gap-1 text-secondary mt-1">
-                                            <Icon.Dot size={28} />
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div>
-                                        <div className="item flex gap-1 text-secondary mt-1">
-                                            <Icon.Dot size={28} />
-                                            <p>Nulla luctus libero quis mauris vestibulum dapibus.</p>
-                                        </div>
-                                        <div className="item flex gap-1 text-secondary mt-1">
-                                            <Icon.Dot size={28} />
-                                            <p>Maecenas ullamcorper erat mi, vel consequat enim suscipit at.</p>
-                                        </div>
-                                        <div className="item flex gap-1 text-secondary mt-1">
-                                            <Icon.Dot size={28} />
-                                            <p>Quisque consectetur nibh ac urna molestie scelerisque.</p>
-                                        </div>
-                                        <div className="item flex gap-1 text-secondary mt-1">
-                                            <Icon.Dot size={28} />
-                                            <p>Mauris in nisl scelerisque massa consectetur pretium sed et mauris.</p>
-                                        </div>
+                                <div className="grid lg:grid-cols-4 grid-cols-2 gap-[30px] md:mt-10 mt-6">
+                                    <div className="item">
+                                        <div className="icon-delivery-truck text-4xl"></div>
+                                        <div className="heading6 mt-4">Shipping Faster</div>
+                                        <div className="text-secondary mt-2">Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="icon-cotton text-4xl"></div>
+                                        <div className="heading6 mt-4">Cotton Material</div>
+                                        <div className="text-secondary mt-2">Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="icon-guarantee text-4xl"></div>
+                                        <div className="heading6 mt-4">High Quality</div>
+                                        <div className="text-secondary mt-2">Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</div>
+                                    </div>
+                                    <div className="item">
+                                        <div className="icon-leaves-compatible text-4xl"></div>
+                                        <div className="heading6 mt-4">highly compatible</div>
+                                        <div className="text-secondary mt-2">Use on walls, furniture, doors and many more surfaces. The possibilities are endless.</div>
                                     </div>
                                 </div>
                             </div>
