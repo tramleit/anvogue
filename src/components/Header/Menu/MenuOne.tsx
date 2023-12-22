@@ -9,6 +9,7 @@ import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 import useMenuMobile from '@/store/useMenuMobile';
+import { useModalCartContext } from '@/context/ModalCartContext';
 
 interface Props {
     props: string;
@@ -19,6 +20,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
     const { openMenuMobile, handleMenuMobile } = useMenuMobile()
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
+    const { openModalCart } = useModalCartContext()
 
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
@@ -1014,7 +1016,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                 <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer">
                                     <Icon.Heart size={24} color='black' />
                                 </div>
-                                <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer">
+                                <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
                                     <Icon.Handbag size={24} color='black' />
                                     <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black px-1 rounded-full">0</span>
                                 </div>

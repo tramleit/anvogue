@@ -38,17 +38,15 @@ const BoughtTogether: React.FC<Props> = ({ data, productId }) => {
     };
 
     const handleAddToCart = () => {
-        if (activeColor && activeSize) {
-            const selectedProduct = {
-                ...productMain,
-                quantityPurchase: quantity,
-                selectedColor: activeColor,
-                selectedSize: activeSize,
-            };
+        const selectedProduct = {
+            ...productMain,
+            quantityPurchase: quantity,
+            selectedColor: activeColor,
+            selectedSize: activeSize,
+        };
 
-            addToCart(selectedProduct);
-            openModalCart()
-        }
+        addToCart(selectedProduct);
+        openModalCart()
     };
 
     const handleActiveTab = (tab: string) => {
@@ -164,14 +162,14 @@ const BoughtTogether: React.FC<Props> = ({ data, productId }) => {
                                 </div>
                                 <div className="flex items-center lg:gap-20 gap-8 mt-5 pb-6 border-b border-line">
                                     <div className="compare flex items-center gap-3 cursor-pointer">
-                                        <div className="compare-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                            <Icon.ArrowsCounterClockwise size={20} />
+                                        <div className="compare-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
+                                            <Icon.ArrowsCounterClockwise className='heading6' />
                                         </div>
                                         <span>Compare</span>
                                     </div>
                                     <div className="share flex items-center gap-3 cursor-pointer">
-                                        <div className="share-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                            <Icon.ShareNetwork weight='fill' size={20} />
+                                        <div className="share-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
+                                            <Icon.ShareNetwork weight='fill' className='heading6' />
                                         </div>
                                         <span>Share Products</span>
                                     </div>

@@ -25,7 +25,7 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
     const [activeColor, setActiveColor] = useState<string | null>()
     const [activeSize, setActiveSize] = useState<string | null>()
-    const [quantity, setQuantity] = useState<number>(1)
+    const [quantity, setQuantity] = useState<{ [productId: string]: number }>({})
     const [activeTab, setActiveTab] = useState<string | undefined>()
     const productMain = data[Number(productId) - 1]
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
@@ -45,22 +45,23 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
         setActiveSize(item)
     }
 
-    const handleQuantityChange = (newQuantity: number) => {
-        setQuantity(newQuantity);
+    const handleQuantityChange = (newQuantity: number, productId: string) => {
+        setQuantity(prevQuantity => ({
+            ...prevQuantity,
+            [productId]: newQuantity,
+        }));
     };
 
     const handleAddToCart = () => {
-        if (activeColor && activeSize) {
-            const selectedProduct = {
-                ...productMain,
-                quantityPurchase: quantity,
-                selectedColor: activeColor,
-                selectedSize: activeSize,
-            };
+        const selectedProduct = {
+            ...productMain,
+            quantityPurchase: quantity,
+            selectedColor: activeColor,
+            selectedSize: activeSize,
+        };
 
-            addToCart(selectedProduct);
-            openModalCart()
-        }
+        addToCart(selectedProduct);
+        openModalCart()
     };
 
     const handleActiveTab = (tab: string) => {
@@ -145,56 +146,58 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
                                 )}
                                 <div className='desc text-secondary mt-3'>{productMain.description}</div>
                             </div>
-                            <div className="list-group mt-6">
-                                <div className="item flex items-center justify-between pb-6 border-b border-line">
-                                    <div className="left flex items-center gap-5">
-                                        <div className="bg-img">
-                                            <Image
-                                                src={'/images/product/fashion/3-1.png'}
-                                                width={300}
-                                                height={400}
-                                                alt='img'
-                                                className='w-[95px] object-cover rounded-lg aspect-[3/4] flex-shrink-0'
-                                            />
-                                        </div>
-                                        <div className="infor">
-                                            <div className="text-title">Black Canvas Stripe Sole Trainer</div>
-                                            <div className="select-block relative w-fit mt-2">
-                                                <select
-                                                    className='text-button py-2 pl-3 pr-8 rounded-lg bg-white border border-line'
-                                                >
-                                                    <option value="XS, Green">XS, Green</option>
-                                                    <option value="XL - Blue">XL - Blue</option>
-                                                    <option value="2XL - Blue">2XL - Blue</option>
-                                                    <option value="L - White">L - White</option>
-                                                    <option value="XL - White">XL - White</option>
-                                                    <option value="2XL - White">2XL - White</option>
-                                                </select>
-                                                <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
+                            <div className="list-group mt-1">
+                                {data.slice(Number(productId), Number(productId) + 3).map(item => (
+                                    <div key={item.id} className="item flex items-center justify-between mt-6 pb-6 border-b border-line">
+                                        <div className="left flex items-center gap-5">
+                                            <div className="bg-img">
+                                                <Image
+                                                    src={item.images[0]}
+                                                    width={300}
+                                                    height={400}
+                                                    alt='img'
+                                                    className='w-[95px] object-cover rounded-lg aspect-[3/4] flex-shrink-0'
+                                                />
                                             </div>
-                                            <div className="text-title mt-2">$50,000</div>
+                                            <div className="infor">
+                                                <div className="text-title">{item.name}</div>
+                                                <div className="select-block relative w-fit mt-2">
+                                                    <select
+                                                        className='text-button py-2 pl-3 pr-8 rounded-lg bg-white border border-line'
+                                                    >
+                                                        <option value="XS, Green">XS, Green</option>
+                                                        <option value="XL - Blue">XL - Blue</option>
+                                                        <option value="2XL - Blue">2XL - Blue</option>
+                                                        <option value="L - White">L - White</option>
+                                                        <option value="XL - White">XL - White</option>
+                                                        <option value="2XL - White">2XL - White</option>
+                                                    </select>
+                                                    <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
+                                                </div>
+                                                <div className="text-title mt-2">${item.price},000</div>
+                                            </div>
+                                        </div>
+                                        <div className="right">
+                                            <div className="quantity-block md:p-3 max-md:py-1.5 max-md:px-3 flex items-center justify-between rounded-lg border border-line sm:w-[140px] w-[120px] flex-shrink-0">
+                                                <Icon.Minus
+                                                    size={20}
+                                                    onClick={() => {
+                                                        if (quantity[item.id] > 1) {
+                                                            handleQuantityChange(quantity[item.id] - 1, item.id)
+                                                        }
+                                                    }}
+                                                    className={`${quantity[item.id] === 1 ? 'disabled' : ''} cursor-pointer`}
+                                                />
+                                                <div className="body1 font-semibold">{quantity[item.id] || 1}</div>
+                                                <Icon.Plus
+                                                    size={20}
+                                                    onClick={() => handleQuantityChange((quantity[item.id] || 1) + 1, item.id)}
+                                                    className='cursor-pointer'
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="right">
-                                        <div className="quantity-block md:p-3 max-md:py-1.5 max-md:px-3 flex items-center justify-between rounded-lg border border-line sm:w-[140px] w-[120px] flex-shrink-0">
-                                            <Icon.Minus
-                                                size={20}
-                                                onClick={() => {
-                                                    if (quantity > 1) {
-                                                        handleQuantityChange(quantity - 1)
-                                                    }
-                                                }}
-                                                className={`${quantity === 1 ? 'disabled' : ''} cursor-pointer`}
-                                            />
-                                            <div className="body1 font-semibold">{quantity}</div>
-                                            <Icon.Plus
-                                                size={20}
-                                                onClick={() => handleQuantityChange(quantity + 1)}
-                                                className='cursor-pointer'
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                             <div className="total-price flex items-center gap-3 mt-6">
                                 <div className="text-title">Total Price:</div>
@@ -212,14 +215,14 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
                                 </div>
                                 <div className="flex items-center lg:gap-20 gap-8 mt-5 pb-6 border-b border-line">
                                     <div className="compare flex items-center gap-3 cursor-pointer">
-                                        <div className="compare-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                            <Icon.ArrowsCounterClockwise size={20} />
+                                        <div className="compare-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
+                                            <Icon.ArrowsCounterClockwise className='heading6' />
                                         </div>
                                         <span>Compare</span>
                                     </div>
                                     <div className="share flex items-center gap-3 cursor-pointer">
-                                        <div className="share-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                            <Icon.ShareNetwork weight='fill' size={20} />
+                                        <div className="share-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
+                                            <Icon.ShareNetwork weight='fill' className='heading6' />
                                         </div>
                                         <span>Share Products</span>
                                     </div>
