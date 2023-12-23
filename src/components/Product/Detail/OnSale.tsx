@@ -23,19 +23,13 @@ interface Props {
 
 const OnSale: React.FC<Props> = ({ data, productId }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
-    const [activeColor, setActiveColor] = useState<string | null>()
-    const [activeSize, setActiveSize] = useState<string | null>()
-    const [quantity, setQuantity] = useState<number>(1)
+    const [activeColor, setActiveColor] = useState<string>('')
+    const [activeSize, setActiveSize] = useState<string>('')
     const [activeTab, setActiveTab] = useState<string | undefined>('description')
+    const { addToCart, updateCart, cartState } = useCart()
+    const { openModalCart } = useModalCartContext()
     const productMain = data[Number(productId) - 1]
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
-    const { addToCart } = useCart()
-    const { openModalCart } = useModalCartContext()
-
-    const handleSwiper = (swiper: SwiperCore) => {
-        // Do something with the thumbsSwiper instance
-        setThumbsSwiper(swiper);
-    };
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -45,19 +39,25 @@ const OnSale: React.FC<Props> = ({ data, productId }) => {
         setActiveSize(item)
     }
 
-    const handleQuantityChange = (newQuantity: number) => {
-        setQuantity(newQuantity);
+    const handleIncreaseQuantity = () => {
+        productMain.quantityPurchase += 1
+        updateCart(productMain.id, productMain.quantityPurchase + 1, activeSize, activeColor);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (productMain.quantityPurchase > 1) {
+            productMain.quantityPurchase -= 1
+            updateCart(productMain.id, productMain.quantityPurchase - 1, activeSize, activeColor);
+        }
     };
 
     const handleAddToCart = () => {
-        const selectedProduct = {
-            ...productMain,
-            quantityPurchase: quantity,
-            selectedColor: activeColor,
-            selectedSize: activeSize,
-        };
-
-        addToCart(selectedProduct);
+        if (!cartState.cartArray.find(item => item.id === productMain.id)) {
+            addToCart({ ...productMain });
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        } else {
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        }
         openModalCart()
     };
 
@@ -610,17 +610,13 @@ const OnSale: React.FC<Props> = ({ data, productId }) => {
                                     <div className="quantity-block md:p-3 max-md:py-1.5 max-md:px-3 flex items-center justify-between rounded-lg border border-line sm:w-[180px] w-[120px] flex-shrink-0">
                                         <Icon.Minus
                                             size={20}
-                                            onClick={() => {
-                                                if (quantity > 1) {
-                                                    handleQuantityChange(quantity - 1)
-                                                }
-                                            }}
-                                            className={`${quantity === 1 ? 'disabled' : ''} cursor-pointer`}
+                                            onClick={handleDecreaseQuantity}
+                                            className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
                                         />
-                                        <div className="body1 font-semibold">{quantity}</div>
+                                        <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
                                         <Icon.Plus
                                             size={20}
-                                            onClick={() => handleQuantityChange(quantity + 1)}
+                                            onClick={handleIncreaseQuantity}
                                             className='cursor-pointer'
                                         />
                                     </div>

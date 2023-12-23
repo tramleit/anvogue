@@ -46,7 +46,7 @@ const ModalCart = () => {
                                             <div className="product-price text-title">${product.price}.0</div>
                                             <div className="product-origin-price text-title text-grey"><del>${product.originPrice}.0</del></div>
                                         </div>
-                                        <div className="quantity text-title">Quantity: {product.quantityPurchase}</div>
+                                        <div className="quantity text-title">Quantity: {product.quantity}</div>
                                         <div className="size text-title">size: {product.selectedSize}</div>
                                         <div className="color text-title">color: {product.selectedColor}</div>
 

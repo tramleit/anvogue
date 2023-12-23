@@ -19,6 +19,7 @@ export interface ProductType {
     brand: string,
     sold: number,
     quantity: number,
+    quantityPurchase: number,
     sizes: Array<string>,
     variation: Variation[],
     thumbImage: Array<string>,

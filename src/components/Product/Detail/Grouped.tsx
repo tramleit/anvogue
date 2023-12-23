@@ -23,13 +23,13 @@ interface Props {
 
 const Grouped: React.FC<Props> = ({ data, productId }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
-    const [activeColor, setActiveColor] = useState<string | null>()
-    const [activeSize, setActiveSize] = useState<string | null>()
+    const [activeColor, setActiveColor] = useState<string>('')
+    const [activeSize, setActiveSize] = useState<string>('')
     const [quantity, setQuantity] = useState<{ [productId: string]: number }>({})
     const [activeTab, setActiveTab] = useState<string | undefined>()
     const productMain = data[Number(productId) - 1]
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
-    const { addToCart } = useCart()
+    const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
 
     const handleSwiper = (swiper: SwiperCore) => {
@@ -53,14 +53,18 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
     };
 
     const handleAddToCart = () => {
-        const selectedProduct = {
-            ...productMain,
-            quantityPurchase: quantity,
-            selectedColor: activeColor,
-            selectedSize: activeSize,
-        };
-
-        addToCart(selectedProduct);
+        if (!cartState.cartArray
+            .find(item => item.id === productMain.id || item.id === data[Number(productId)].id || item.id === data[Number(productId) + 1].id || item.id === data[Number(productId) + 2].id))
+        {
+            addToCart(productMain);
+            addToCart(data[Number(productId)]);
+            addToCart(data[Number(productId) + 1]);
+            addToCart(data[Number(productId) + 2]);
+            updateCart(productMain.id, quantity.id, activeSize, activeColor)
+            updateCart(data[Number(productId)].id, quantity.id, activeSize, activeColor)
+            updateCart(data[Number(productId) + 1].id, quantity.id, activeSize, activeColor)
+            updateCart(data[Number(productId) + 2].id, quantity.id, activeSize, activeColor)
+        }
         openModalCart()
     };
 

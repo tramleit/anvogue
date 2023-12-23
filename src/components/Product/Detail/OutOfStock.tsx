@@ -23,14 +23,13 @@ interface Props {
 
 const OutOfStock: React.FC<Props> = ({ data, productId }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
-    const [activeColor, setActiveColor] = useState<string | null>()
-    const [activeSize, setActiveSize] = useState<string | null>()
-    const [quantity, setQuantity] = useState<number>(1)
+    const [activeColor, setActiveColor] = useState<string>('')
+    const [activeSize, setActiveSize] = useState<string>('')
     const [activeTab, setActiveTab] = useState<string | undefined>('description')
+    const { addToCart, updateCart, cartState } = useCart()
+    const { openModalCart } = useModalCartContext()
     const productMain = data[Number(productId) - 1]
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
-    const { addToCart } = useCart()
-    const { openModalCart } = useModalCartContext()
 
     const handleSwiper = (swiper: SwiperCore) => {
         // Do something with the thumbsSwiper instance
@@ -45,19 +44,25 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
         setActiveSize(item)
     }
 
-    const handleQuantityChange = (newQuantity: number) => {
-        setQuantity(newQuantity);
+    const handleIncreaseQuantity = () => {
+        productMain.quantityPurchase += 1
+        updateCart(productMain.id, productMain.quantityPurchase + 1, activeSize, activeColor);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (productMain.quantityPurchase > 1) {
+            productMain.quantityPurchase -= 1
+            updateCart(productMain.id, productMain.quantityPurchase - 1, activeSize, activeColor);
+        }
     };
 
     const handleAddToCart = () => {
-        const selectedProduct = {
-            ...productMain,
-            quantityPurchase: quantity,
-            selectedColor: activeColor,
-            selectedSize: activeSize,
-        };
-
-        addToCart(selectedProduct);
+        if (!cartState.cartArray.find(item => item.id === productMain.id)) {
+            addToCart({ ...productMain });
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        } else {
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        }
         openModalCart()
     };
 
@@ -189,7 +194,7 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                             size={20}
                                             className='disabled'
                                         />
-                                        <div className="body1 font-semibold">{quantity}</div>
+                                        <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
                                         <Icon.Plus
                                             size={20}
                                             className='disabled'

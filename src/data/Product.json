@@ -13,6 +13,7 @@
         "brand": "gucci",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -61,6 +62,7 @@
         "brand": "hermes",
         "sold": 23,
         "quantity": 200,
+        "quantityPurchase": 1,
         "sizes": [
             "XS",
             "S",
@@ -117,6 +119,7 @@
         "brand": "zara",
         "sold": 15,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "freesize"
         ],
@@ -168,6 +171,7 @@
         "brand": "adidas",
         "sold": 14,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -222,6 +226,7 @@
         "brand": "gucci",
         "sold": 21,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -275,6 +280,7 @@
         "brand": "hermes",
         "sold": 19,
         "quantity": 200,
+        "quantityPurchase": 1,
         "sizes": [
             "XS",
             "S",
@@ -331,6 +337,7 @@
         "brand": "zara",
         "sold": 22,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "freesize"
         ],
@@ -388,6 +395,7 @@
         "brand": "adidas",
         "sold": 13,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -448,6 +456,7 @@
         "brand": "gucci",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -502,6 +511,7 @@
         "brand": "hermes",
         "sold": 12,
         "quantity": 200,
+        "quantityPurchase": 1,
         "sizes": [
             "XS",
             "S",
@@ -564,6 +574,7 @@
         "brand": "zara",
         "sold": 14,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "freesize"
         ],
@@ -615,6 +626,7 @@
         "brand": "adidas",
         "sold": 17,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -675,6 +687,7 @@
         "brand": "gucci",
         "sold": 10,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -735,6 +748,7 @@
         "brand": "hermes",
         "sold": 9,
         "quantity": 200,
+        "quantityPurchase": 1,
         "sizes": [
             "XS",
             "S",
@@ -797,6 +811,7 @@
         "brand": "zara",
         "sold": 8,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "freesize"
         ],
@@ -854,6 +869,7 @@
         "brand": "adidas",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -914,6 +930,7 @@
         "brand": "zara",
         "sold": 25,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -975,6 +992,7 @@
         "brand": "nike",
         "sold": 15,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1036,6 +1054,7 @@
         "brand": "gucci",
         "sold": 22,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1096,6 +1115,7 @@
         "brand": "hermes",
         "sold": 11,
         "quantity": 200,
+        "quantityPurchase": 1,
         "sizes": [
             "XS",
             "S",
@@ -1158,6 +1178,7 @@
         "brand": "zara",
         "sold": 5,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "freesize"
         ],
@@ -1215,6 +1236,7 @@
         "brand": "adidas",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1275,6 +1297,7 @@
         "brand": "zara",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1336,6 +1359,7 @@
         "brand": "adidas",
         "sold": 32,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1397,6 +1421,7 @@
         "brand": "zara",
         "sold": 32,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1444,6 +1469,7 @@
         "brand": "gucci",
         "sold": 22,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1505,6 +1531,7 @@
         "brand": "nike",
         "sold": 15,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1566,6 +1593,7 @@
         "brand": "nike",
         "sold": 36,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1627,6 +1655,7 @@
         "brand": "adidas",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1687,6 +1716,7 @@
         "brand": "gucci",
         "sold": 22,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1747,6 +1777,7 @@
         "brand": "hermes",
         "sold": 11,
         "quantity": 200,
+        "quantityPurchase": 1,
         "sizes": [
             "XS",
             "S",
@@ -1809,6 +1840,7 @@
         "brand": "zara",
         "sold": 5,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "freesize"
         ],
@@ -1866,6 +1898,7 @@
         "brand": "adidas",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1926,6 +1959,7 @@
         "brand": "zara",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -1987,6 +2021,7 @@
         "brand": "zara",
         "sold": 21,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -2041,6 +2076,7 @@
         "brand": "nike",
         "sold": 15,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -2096,6 +2132,7 @@
         "brand": "adidas",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -2145,6 +2182,7 @@
         "brand": "gucci",
         "sold": 20,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -2200,6 +2238,7 @@
         "brand": "nike",
         "sold": 15,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -2249,6 +2288,7 @@
         "brand": "nike",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -2304,6 +2344,7 @@
         "brand": "gucci",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -2338,6 +2379,7 @@
         "brand": "hermes",
         "sold": 34,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -2372,6 +2414,7 @@
         "brand": "gucci",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -2406,6 +2449,7 @@
         "brand": "hermes",
         "sold": 34,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -2440,6 +2484,7 @@
         "brand": "gucci",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -2474,6 +2519,7 @@
         "brand": "hermes",
         "sold": 34,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -2508,6 +2554,7 @@
         "brand": "glurmarket",
         "sold": 15,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -2555,6 +2602,7 @@
         "brand": "glurmarket",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -2602,6 +2650,7 @@
         "brand": "glurmarket",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -2649,6 +2698,7 @@
         "brand": "rangana",
         "sold": 18,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -2695,6 +2745,7 @@
         "brand": "rangana",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "150",
             "200",
@@ -2741,6 +2792,7 @@
         "brand": "eyeoil",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "150",
             "200",
@@ -2786,6 +2838,7 @@
         "brand": "eyeoil",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -2831,6 +2884,7 @@
         "brand": "chi",
         "sold": 15,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -2876,6 +2930,7 @@
         "brand": "chi",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "150",
@@ -2921,6 +2976,7 @@
         "brand": "eyeoil",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -2967,6 +3023,7 @@
         "brand": "persona",
         "sold": 18,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -3012,6 +3069,7 @@
         "brand": "persona",
         "sold": 12,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "50",
             "100",
@@ -3057,6 +3115,7 @@
         "brand": "persona",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -3103,6 +3162,7 @@
         "brand": "bodycare",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "150",
             "200",
@@ -3149,6 +3209,7 @@
         "brand": "american",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "200",
             "300",
@@ -3182,6 +3243,7 @@
         "brand": "purina",
         "sold": 16,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -3215,6 +3277,7 @@
         "brand": "corgi",
         "sold": 12,
         "quantity": 40,
+        "quantityPurchase": 1,
         "sizes": [
             "2",
             "3"
@@ -3260,6 +3323,7 @@
         "brand": "petoutfit",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "1",
             "2",
@@ -3307,6 +3371,7 @@
         "brand": "american",
         "sold": 24,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "200",
             "300",
@@ -3340,6 +3405,7 @@
         "brand": "purina",
         "sold": 16,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -3373,6 +3439,7 @@
         "brand": "bedpet",
         "sold": 12,
         "quantity": 40,
+        "quantityPurchase": 1,
         "sizes": [
             "2",
             "3",
@@ -3420,6 +3487,7 @@
         "brand": "petoutfit",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "1",
             "2",
@@ -3467,6 +3535,7 @@
         "brand": "bedpet",
         "sold": 12,
         "quantity": 40,
+        "quantityPurchase": 1,
         "sizes": [
             "2",
             "3",
@@ -3514,6 +3583,7 @@
         "brand": "bedpet",
         "sold": 12,
         "quantity": 40,
+        "quantityPurchase": 1,
         "sizes": [
             "2",
             "3",
@@ -3561,6 +3631,7 @@
         "brand": "germany",
         "sold": 16,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "2",
             "3",
@@ -3608,6 +3679,7 @@
         "brand": "australia",
         "sold": 16,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "2",
             "3",
@@ -3655,6 +3727,7 @@
         "brand": "sjc",
         "sold": 16,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "10",
             "11",
@@ -3695,6 +3768,7 @@
         "brand": "sjc",
         "sold": 16,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "13",
             "14",
@@ -3742,6 +3816,7 @@
         "brand": "sjc",
         "sold": 16,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "10",
             "11",
@@ -3782,6 +3857,7 @@
         "brand": "sjc",
         "sold": 16,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "35",
             "40",
@@ -3822,6 +3898,7 @@
         "brand": "sjc",
         "sold": 24,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "10",
             "11",
@@ -3868,6 +3945,7 @@
         "brand": "sjc",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [
             "10",
             "11",
@@ -3908,6 +3986,7 @@
         "brand": "sofa",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -3943,6 +4022,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -3978,6 +4058,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4019,6 +4100,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4060,6 +4142,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4095,6 +4178,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4136,6 +4220,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4177,6 +4262,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4213,6 +4299,7 @@
         "brand": "stainless",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4248,6 +4335,7 @@
         "brand": "stainless",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4283,6 +4371,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4318,6 +4407,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4353,6 +4443,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4388,6 +4479,7 @@
         "brand": "lightning",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4423,6 +4515,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4459,6 +4552,7 @@
         "brand": "wood",
         "sold": 21,
         "quantity": 64,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4495,6 +4589,7 @@
         "brand": "lightning",
         "sold": 12,
         "quantity": 88,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -4530,6 +4625,7 @@
         "brand": "lightningbed",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4577,6 +4673,7 @@
         "brand": "lightningtoys",
         "sold": 21,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4618,6 +4715,7 @@
         "brand": "lightningblanket",
         "sold": 35,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4659,6 +4757,7 @@
         "brand": "lightningclothing",
         "sold": 65,
         "quantity": 180,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4700,6 +4799,7 @@
         "brand": "lightningbed",
         "sold": 14,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4747,6 +4847,7 @@
         "brand": "lightningtoys",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4788,6 +4889,7 @@
         "brand": "lightningblanket",
         "sold": 34,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4829,6 +4931,7 @@
         "brand": "lightningclothing",
         "sold": 73,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4870,6 +4973,7 @@
         "brand": "lightningblanket",
         "sold": 65,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4912,6 +5016,7 @@
         "brand": "lightningbib",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -4972,6 +5077,7 @@
         "brand": "lightningclothing",
         "sold": 23,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -5013,6 +5119,7 @@
         "brand": "lightningblanket",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "5",
             "8",
@@ -5053,6 +5160,7 @@
         "brand": "candle",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5094,6 +5202,7 @@
         "brand": "drinks",
         "sold": 54,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5128,6 +5237,7 @@
         "brand": "kits",
         "sold": 21,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "0.5",
             "1",
@@ -5170,6 +5280,7 @@
         "brand": "clothing",
         "sold": 58,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -5224,6 +5335,7 @@
         "brand": "candle",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5265,6 +5377,7 @@
         "brand": "drinks",
         "sold": 54,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5299,6 +5412,7 @@
         "brand": "mats",
         "sold": 21,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [
             "0.5",
             "1",
@@ -5341,6 +5455,7 @@
         "brand": "clothing",
         "sold": 58,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "S",
             "M",
@@ -5394,6 +5509,7 @@
         "brand": "candle",
         "sold": 28,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5435,6 +5551,7 @@
         "brand": "drinks",
         "sold": 54,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5469,6 +5586,7 @@
         "brand": "kits",
         "sold": 21,
         "quantity": 100,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
@@ -5506,6 +5624,7 @@
         "brand": "drinks",
         "sold": 54,
         "quantity": 120,
+        "quantityPurchase": 1,
         "sizes": [
             "100",
             "200",
@@ -5540,6 +5659,7 @@
         "brand": "seiko",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5586,6 +5706,7 @@
         "brand": "seiko",
         "sold": 15,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "14",
             "16"
@@ -5632,6 +5753,7 @@
         "brand": "seiko",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5676,6 +5798,7 @@
         "brand": "apple",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5714,6 +5837,7 @@
         "brand": "smart",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5752,6 +5876,7 @@
         "brand": "sport",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5790,6 +5915,7 @@
         "brand": "apple",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5840,6 +5966,7 @@
         "brand": "fitness",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5884,6 +6011,7 @@
         "brand": "seiko",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5930,6 +6058,7 @@
         "brand": "seiko",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [
             "18",
             "20"
@@ -5974,6 +6103,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6003,6 +6133,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6032,6 +6163,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6061,6 +6193,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6089,6 +6222,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6117,6 +6251,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6146,6 +6281,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6175,6 +6311,7 @@
         "brand": "vegetables",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6204,6 +6341,7 @@
         "brand": "meat",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6232,6 +6370,7 @@
         "brand": "meat",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6260,6 +6399,7 @@
         "brand": "meat",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6288,6 +6428,7 @@
         "brand": "meat",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6317,6 +6458,7 @@
         "brand": "fruit",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6345,6 +6487,7 @@
         "brand": "fruit",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6373,6 +6516,7 @@
         "brand": "fruit",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
@@ -6401,6 +6545,7 @@
         "brand": "fruit",
         "sold": 24,
         "quantity": 80,
+        "quantityPurchase": 1,
         "sizes": [],
         "variation": [],
         "thumbImage": [
