@@ -104,6 +104,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
             brand: 'no-data',
             sold: 0,
             quantity: 0,
+            quantityPurchase: 0,
             sizes: [],
             variation: [],
             thumbImage: [],

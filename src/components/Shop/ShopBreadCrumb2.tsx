@@ -106,6 +106,7 @@ const ShopBreadCrumb2: React.FC<Props> = ({ data, productPerPage, dataType }) =>
             brand: 'no-data',
             sold: 0,
             quantity: 0,
+            quantityPurchase: 0,
             sizes: [],
             variation: [],
             thumbImage: [],

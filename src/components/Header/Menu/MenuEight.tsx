@@ -1041,11 +1041,16 @@ const MenuEight = () => {
                                         </div>
                                     </li>
                                     <li className='h-full relative'>
-                                        <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                        <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/pages') ? 'active' : ''}`}>
                                             Pages
                                         </Link>
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                             <ul className='w-full'>
+                                                <li>
+                                                    <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                        About Us
+                                                    </Link>
+                                                </li>
                                                 <li>
                                                     <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                         Contact Us
@@ -2043,6 +2048,11 @@ const MenuEight = () => {
                                             </div>
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
+                                                    <li>
+                                                        <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                            About Us
+                                                        </Link>
+                                                    </li>
                                                     <li>
                                                         <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                             Contact Us

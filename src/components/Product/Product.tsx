@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
+import { useModalCartContext } from '@/context/ModalCartContext'
 import { useWishlist } from '@/context/WishlistContext'
 import { useRouter } from 'next/navigation'
 
@@ -17,8 +18,10 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
     const percentSold = Math.floor((data.sold / data.quantity) * 100)
-    const [activeColor, setActiveColor] = useState<string | null>()
-    const { addToCart } = useCart();
+    const [activeColor, setActiveColor] = useState<string>('')
+    const [activeSize, setActiveSize] = useState<string>('')
+    const { addToCart, updateCart, cartState } = useCart();
+    const { openModalCart } = useModalCartContext()
     const { addToWishlist } = useWishlist();
     const router = useRouter()
 
@@ -27,7 +30,13 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     }
 
     const handleAddToCart = () => {
-        addToCart(data); // Truyền dữ liệu sản phẩm vào hàm addToCart
+        if (!cartState.cartArray.find(item => item.id === data.id)) {
+            addToCart({ ...data });
+            updateCart(data.id, data.quantityPurchase, activeSize, activeColor)
+        } else {
+            updateCart(data.id, data.quantityPurchase, activeSize, activeColor)
+        }
+        openModalCart()
     };
 
     const handleAddToWishlist = () => {
@@ -88,7 +97,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 {data.action === 'add to cart' ? (
                                     <div
                                         className="add-cart-btn w-full text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white"
-                                        onClick={handleAddToCart}
+                                        onClick={e => {
+                                            e.stopPropagation();
+                                            handleAddToCart()
+                                        }}
                                     >
                                         Add To Cart
                                     </div>

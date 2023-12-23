@@ -957,6 +957,11 @@ const MenuTwo = () => {
                                     <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                         <ul className='w-full'>
                                             <li>
+                                                <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                    About Us
+                                                </Link>
+                                            </li>
+                                            <li>
                                                 <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                     Contact Us
                                                 </Link>
@@ -1977,6 +1982,11 @@ const MenuTwo = () => {
                                             </div>
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
+                                                    <li>
+                                                        <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                            About Us
+                                                        </Link>
+                                                    </li>
                                                     <li>
                                                         <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                             Contact Us

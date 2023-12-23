@@ -31,6 +31,7 @@ const SearchResult = () => {
             brand: 'no-data',
             sold: 0,
             quantity: 0,
+            quantityPurchase: 0,
             sizes: [],
             variation: [],
             thumbImage: [],
@@ -62,7 +63,7 @@ const SearchResult = () => {
     const handlePageChange = (selected: number) => {
         setCurrentPage(selected);
     };
-    
+
 
     return (
         <>

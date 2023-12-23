@@ -439,6 +439,18 @@
             }
         }
     }
+
+    &.sidebar {
+        .featured-product.underwear .mySwiper .swiper-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+
+            .swiper-slide {
+                width: 100% !important;
+            }
+        }
+    }
 }
 
 .style-discount {

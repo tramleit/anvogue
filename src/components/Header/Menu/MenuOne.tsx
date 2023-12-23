@@ -10,6 +10,7 @@ import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 import useMenuMobile from '@/store/useMenuMobile';
 import { useModalCartContext } from '@/context/ModalCartContext';
+import { useCart } from '@/context/CartContext';
 
 interface Props {
     props: string;
@@ -21,6 +22,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
     const { openMenuMobile, handleMenuMobile } = useMenuMobile()
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
     const { openModalCart } = useModalCartContext()
+    const { cartState } = useCart()
 
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
@@ -952,11 +954,16 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         </div>
                                     </li>
                                     <li className='h-full relative'>
-                                        <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                        <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/pages') ? 'active' : ''}`}>
                                             Pages
                                         </Link>
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                             <ul className='w-full'>
+                                                <li>
+                                                    <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                        About Us
+                                                    </Link>
+                                                </li>
                                                 <li>
                                                     <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                         Contact Us
@@ -1018,7 +1025,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                 </div>
                                 <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
                                     <Icon.Handbag size={24} color='black' />
-                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black px-1 rounded-full">0</span>
+                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black px-1 rounded-full">{cartState.cartArray.length}</span>
                                 </div>
                             </div>
                         </div>
@@ -1979,6 +1986,11 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             </div>
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
+                                                    <li>
+                                                        <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                            About Us
+                                                        </Link>
+                                                    </li>
                                                     <li>
                                                         <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                             Contact Us
