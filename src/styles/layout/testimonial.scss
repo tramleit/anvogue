@@ -148,3 +148,14 @@
         }
     }
 }
+
+.customer-feedbacks {
+    .testimonial-item {
+        .testimonial-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--surface);
+        }
+    }
+}

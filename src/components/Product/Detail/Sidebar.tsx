@@ -136,7 +136,7 @@ const Sidebar: React.FC<Props> = ({ data, productId }) => {
                                 </div>
                             </div>
                             <div className="mt-8">
-                                <div className="heading6">You'll love this too</div>
+                                <div className="heading6">You{String.raw`'ll`} love this too</div>
                                 <div className="list">
                                     {data.slice(Number(productId), Number(productId) + 3).map((item) => (
                                         <div
