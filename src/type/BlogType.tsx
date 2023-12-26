@@ -6,6 +6,7 @@ export interface BlogType {
     title: string,
     date: string,
     author: string,
+    avatar: string,
     thumbImg: string,
     coverImg: string,
     subImg: Array<string>,

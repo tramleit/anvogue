@@ -10,3 +10,14 @@
         }
     }
 }
+
+
+// list-tags
+.list-tags {
+    .tags {
+        &.active {
+            background-color: var(--black);
+            color: var(--white);
+        }
+    }
+}

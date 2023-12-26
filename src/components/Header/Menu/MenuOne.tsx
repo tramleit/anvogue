@@ -920,7 +920,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         </div>
                                     </li>
                                     <li className='h-full relative'>
-                                        <Link href="#!" className='text-button-uppercase duration-300 h-full flex items-center justify-center'>
+                                        <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/blog') ? 'active' : ''}`}>
                                             Blog
                                         </Link>
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
