@@ -35,8 +35,7 @@
     }
 
     .compare-btn,
-    .add-wishlist-btn,
-    .quick-view-btn {
+    .add-wishlist-btn {
         &:hover {
             background-color: var(--black);
             color: var(--white);
@@ -46,6 +45,17 @@
                 transform: translateX(0);
                 opacity: 1;
                 z-index: 1;
+            }
+        }
+
+        &.active {
+            background-color: var(--red);
+
+            svg {
+                color: var(--white);
+                path {
+                    background-color: #fff;
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useWishlist } from '@/context/WishlistContext'
+import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 import { useRouter } from 'next/navigation'
 
 interface ProductProps {
@@ -21,8 +22,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
     const { addToCart, updateCart, cartState } = useCart();
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
     const { openModalCart } = useModalCartContext()
-    const { addToWishlist } = useWishlist();
+    const { openModalWishlist } = useModalWishlistContext()
+    const [isInWishlist, setIsInWishlist] = useState(wishlistState.wishlistArray.some(item => item.id === data.id));
     const router = useRouter()
 
     const handleActiveColor = (item: string) => {
@@ -40,11 +43,20 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     };
 
     const handleAddToWishlist = () => {
-        addToWishlist(data); // Truyền dữ liệu sản phẩm vào hàm addToWishlist
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (isInWishlist) {
+            removeFromWishlist(data.id);
+            setIsInWishlist(false);
+        } else {
+            // else, add to wishlist and set state to true
+            addToWishlist(data);
+            setIsInWishlist(true);
+        }
+        openModalWishlist();
     };
 
     const handleDetailProduct = (productId: string) => {
-        // Chuyển hướng đến trang shop với category được chọn
+        // redirect to shop with category selected
         router.push(`/product/default?id=${productId}`);
     };
 
@@ -66,8 +78,11 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             )}
                             <div className="list-action-right absolute top-3 right-3 max-lg:hidden">
                                 <div
-                                    className="add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative"
-                                    onClick={handleAddToWishlist}
+                                    className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ${isInWishlist ? 'active' : ''}`}
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        handleAddToWishlist()
+                                    }}
                                 >
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Add To Wishlist</div>
                                     <Icon.Heart size={18} />

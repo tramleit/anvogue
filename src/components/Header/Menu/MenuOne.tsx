@@ -10,7 +10,10 @@ import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 import useMenuMobile from '@/store/useMenuMobile';
 import { useModalCartContext } from '@/context/ModalCartContext';
+import { useModalWishlistContext } from '@/context/ModalWishlistContext';
+import { useModalSearchContext } from '@/context/ModalSearchContext';
 import { useCart } from '@/context/CartContext';
+import { useWishlist } from '@/context/WishlistContext';
 
 interface Props {
     props: string;
@@ -23,6 +26,8 @@ const MenuOne: React.FC<Props> = ({ props }) => {
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
     const { openModalCart } = useModalCartContext()
     const { cartState } = useCart()
+    const { openModalWishlist } = useModalWishlistContext()
+    const { openModalSearch } = useModalSearchContext()
 
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
@@ -1002,7 +1007,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                         </div>
                         <div className="right flex gap-12">
                             <div className="max-md:hidden search-icon flex items-center cursor-pointer relative">
-                                <Icon.MagnifyingGlass size={24} color='black' />
+                                <Icon.MagnifyingGlass size={24} color='black' onClick={openModalSearch} />
                                 <div className="line absolute bg-line w-px h-6 -right-6"></div>
                             </div>
                             <div className="list-action flex items-center gap-4">
@@ -1020,12 +1025,12 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <Link href={'#!'} className='body1 hover:underline'>Support</Link>
                                     </div>
                                 </div>
-                                <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer">
+                                <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer" onClick={openModalWishlist}>
                                     <Icon.Heart size={24} color='black' />
                                 </div>
                                 <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
                                     <Icon.Handbag size={24} color='black' />
-                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black px-1 rounded-full">{cartState.cartArray.length}</span>
+                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
                                 </div>
                             </div>
                         </div>
