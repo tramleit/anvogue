@@ -15,7 +15,7 @@ import dataTestimonial from '@/data/Testimonial.json'
 import Testimonial from '@/components/Furniture/Testimonial'
 import Footer from '@/components/Footer/Footer'
 
-export default function HomeCosmeticTwo() {
+export default function HomeToys() {
     return (
         <>
             <TopNavThree props="style-three bg-white" />

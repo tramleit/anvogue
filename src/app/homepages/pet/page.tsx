@@ -14,7 +14,7 @@ import Instagram from '@/components/Pet/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
-export default function HomeEight() {
+export default function HomePet() {
     return (
         <>
             <TopNavOne props="style-one bg-black" slogan='New customers save 10% with the code GET10' />

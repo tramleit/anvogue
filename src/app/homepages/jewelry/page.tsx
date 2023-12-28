@@ -15,7 +15,7 @@ import Instagram from '@/components/Jewelry/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
 
-export default function HomeCosmeticTwo() {
+export default function HomeJewelry() {
     return (
         <>
             <TopNavThree props="style-three bg-white" />

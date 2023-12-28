@@ -14,7 +14,7 @@ import NewsInsight from '@/components/Toys/NewsInsight'
 import Brand from '@/components/Organic/Brand'
 import Footer from '@/components/Footer/Footer'
 
-export default function HomeEleven() {
+export default function HomeOrganic() {
     return (
         <>
             <TopNavOne props="style-one bg-black" slogan='New customers save 10% with the code GET10' />

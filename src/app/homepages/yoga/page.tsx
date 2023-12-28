@@ -17,7 +17,7 @@ import Instagram from '@/components/Yoga/Instagram'
 import Brand from '@/components/Home6/Brand'
 import Footer from '@/components/Footer/Footer'
 
-export default function HomeCosmeticThree() {
+export default function HomeYoga() {
     return (
         <>
             <TopNavOne props="style-one bg-black" slogan='New customers save 10% with the code GET10' />
