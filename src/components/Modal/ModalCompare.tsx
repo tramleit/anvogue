@@ -19,16 +19,16 @@ const ModalCompare = () => {
                     onClick={(e) => { e.stopPropagation() }}
                 >
                     <div
-                        className="close-btn absolute right-6 top-6 lg:w-10 w-6 lg:h-10 h-6 rounded-full bg-surface flex items-center justify-center duration-300 cursor-pointer hover:bg-black hover:text-white"
+                        className="close-btn absolute 2xl:right-6 right-4 2xl:top-6 md:-top-4 top-3 lg:w-10 w-6 lg:h-10 h-6 rounded-full bg-surface flex items-center justify-center duration-300 cursor-pointer hover:bg-black hover:text-white"
                         onClick={closeModalCompare}
                     >
-                        <Icon.X size={14} />
+                        <Icon.X className='body1' />
                     </div>
                     <div className="container h-full flex items-center w-full">
-                        <div className="content-main flex items-center justify-between gap-10 w-full">
-                            <div className="heading5 flex-shrink-0">Compare<br />Products</div>
+                        <div className="content-main flex items-center justify-between xl:gap-10 gap-6 w-full max-md:flex-wrap">
+                            <div className="heading5 flex-shrink-0 max-md:w-full">Compare <br className='max-md:hidden' />Products</div>
                             <div className="list-product flex items-center w-full gap-4">
-                                {compareState.compareArray.map((product) => (
+                                {compareState.compareArray.slice(0, 3).map((product) => (
                                     <div key={product.id} className='item p-3 border border-line rounded-xl relative'>
                                         <div className="infor flex items-center gap-4">
                                             <div className="bg-img w-[100px] h-[100px] flex-shrink-0 rounded-lg overflow-hidden">

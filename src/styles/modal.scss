@@ -372,8 +372,8 @@
         height: 100%;
         background-color: var(--white);
         transform: translateY(100%);
-        overflow: hidden;
         transition: all ease 0.5s;
+        box-shadow: 0px 5px 18px 5px rgba(64, 72, 87, 0.15);
 
         &.open {
             transform: translateY(0);
@@ -384,6 +384,30 @@
                 svg {
                     color: var(--black);
                 }
+            }
+        }
+
+        .list-product {
+            @media (max-width: 1290px) {
+                max-width: calc(100% - 105px - 238px);
+                overflow: unset;
+                overflow-x: auto;
+                padding-top: 24px;
+                margin-top: -24px;
+            }
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        height: 320px;
+
+        .modal-compare-main {
+            .list-product {
+                max-width: calc(100%);
+                overflow: unset;
+                overflow-x: auto;
+                padding-top: 24px;
+                margin-top: -24px;
             }
         }
     }

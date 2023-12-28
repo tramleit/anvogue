@@ -60,12 +60,17 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
 
     const handleAddToCompare = () => {
         // if product existed in wishlit, remove from wishlist and set state to false
-        if (compareState.compareArray.some(item => item.id === data.id)) {
-            removeFromCompare(data.id);
+        if (compareState.compareArray.length < 3) {
+            if (compareState.compareArray.some(item => item.id === data.id)) {
+                removeFromCompare(data.id);
+            } else {
+                // else, add to wishlist and set state to true
+                addToCompare(data);
+            }
         } else {
-            // else, add to wishlist and set state to true
-            addToCompare(data);
+            alert('Compare up to 3 products')
         }
+
         openModalCompare();
     };
 
