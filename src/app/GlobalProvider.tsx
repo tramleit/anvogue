@@ -1,22 +1,31 @@
 import React from 'react'
 import { CartProvider } from '@/context/CartContext'
-import { WishlistProvider } from '@/context/WishlistContext'
 import { ModalCartProvider } from '@/context/ModalCartContext'
+import { WishlistProvider } from '@/context/WishlistContext'
 import { ModalWishlistProvider } from '@/context/ModalWishlistContext'
+import { CompareProvider } from '@/context/CompareContext'
+import { ModalCompareProvider } from '@/context/ModalCompareContext'
 import { ModalSearchProvider } from '@/context/ModalSearchContext'
+import { ModalQuickviewProvider } from '@/context/ModalQuickviewContext'
 
 const GlobalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <CartProvider>
-            <WishlistProvider>
-                <ModalCartProvider>
+            <ModalCartProvider>
+                <WishlistProvider>
                     <ModalWishlistProvider>
-                        <ModalSearchProvider>
-                            {children}
-                        </ModalSearchProvider>
+                        <CompareProvider>
+                            <ModalCompareProvider>
+                                <ModalSearchProvider>
+                                    <ModalQuickviewProvider>
+                                        {children}
+                                    </ModalQuickviewProvider>
+                                </ModalSearchProvider>
+                            </ModalCompareProvider>
+                        </CompareProvider>
                     </ModalWishlistProvider>
-                </ModalCartProvider>
-            </WishlistProvider>
+                </WishlistProvider>
+            </ModalCartProvider>
         </CartProvider>
     )
 }

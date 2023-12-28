@@ -5,6 +5,8 @@ import GlobalProvider from './GlobalProvider'
 import ModalCart from '@/components/Modal/ModalCart'
 import ModalWishlist from '@/components/Modal/ModalWishlist'
 import ModalSearch from '@/components/Modal/ModalSearch'
+import ModalQuickview from '@/components/Modal/ModalQuickview'
+import ModalCompare from '@/components/Modal/ModalCompare'
 
 const instrument = Instrument_Sans({ subsets: ['latin'] })
 
@@ -26,6 +28,8 @@ export default function RootLayout({
           <ModalCart />
           <ModalWishlist />
           <ModalSearch />
+          <ModalQuickview />
+          <ModalCompare />
         </body>
       </html>
     </GlobalProvider>

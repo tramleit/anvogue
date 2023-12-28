@@ -29,7 +29,7 @@ const ModalWishlist = () => {
                     </div>
                     <div className="list-product px-6">
                         {wishlistState.wishlistArray.map((product) => (
-                            <div key={product.id} className='item py-5 flex items-center justify-between border-b border-line'>
+                            <div key={product.id} className='item py-5 flex items-center justify-between gap-3 border-b border-line'>
                                 <div className="infor flex items-center gap-5">
                                     <div className="bg-img">
                                         <Image

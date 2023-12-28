@@ -9,7 +9,10 @@ import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useWishlist } from '@/context/WishlistContext'
 import { useModalWishlistContext } from '@/context/ModalWishlistContext'
+import { useCompare } from '@/context/CompareContext'
+import { useModalCompareContext } from '@/context/ModalCompareContext'
 import { useRouter } from 'next/navigation'
+import { useModalQuickviewContext } from '@/context/ModalQuickviewContext'
 
 interface ProductProps {
     data: ProductType
@@ -22,10 +25,12 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
     const { addToCart, updateCart, cartState } = useCart();
-    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
     const { openModalCart } = useModalCartContext()
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
     const { openModalWishlist } = useModalWishlistContext()
-    const [isInWishlist, setIsInWishlist] = useState(wishlistState.wishlistArray.some(item => item.id === data.id));
+    const { addToCompare, removeFromCompare, compareState } = useCompare();
+    const { openModalCompare } = useModalCompareContext()
+    const { openQuickview } = useModalQuickviewContext()
     const router = useRouter()
 
     const handleActiveColor = (item: string) => {
@@ -44,16 +49,29 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
 
     const handleAddToWishlist = () => {
         // if product existed in wishlit, remove from wishlist and set state to false
-        if (isInWishlist) {
+        if (wishlistState.wishlistArray.some(item => item.id === data.id)) {
             removeFromWishlist(data.id);
-            setIsInWishlist(false);
         } else {
             // else, add to wishlist and set state to true
             addToWishlist(data);
-            setIsInWishlist(true);
         }
         openModalWishlist();
     };
+
+    const handleAddToCompare = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (compareState.compareArray.some(item => item.id === data.id)) {
+            removeFromCompare(data.id);
+        } else {
+            // else, add to wishlist and set state to true
+            addToCompare(data);
+        }
+        openModalCompare();
+    };
+
+    const handleQuickviewOpen = () => {
+        openQuickview(data)
+    }
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
@@ -78,7 +96,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             )}
                             <div className="list-action-right absolute top-3 right-3 max-lg:hidden">
                                 <div
-                                    className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ${isInWishlist ? 'active' : ''}`}
+                                    className={`add-wishlist-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
                                     onClick={(e) => {
                                         e.stopPropagation()
                                         handleAddToWishlist()
@@ -87,9 +105,16 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Add To Wishlist</div>
                                     <Icon.Heart size={18} />
                                 </div>
-                                <div className="compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2">
+                                <div
+                                    className={`compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        handleAddToCompare()
+                                    }}
+                                >
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Compare Product</div>
-                                    <Icon.ArrowsCounterClockwise size={18} />
+                                    <Icon.ArrowsCounterClockwise size={18} className='compare-icon' />
+                                    <Icon.CheckCircle size={20} className='checked-icon' />
                                 </div>
                             </div>
                             <div className="product-img w-full h-full aspect-[3/4]">
@@ -106,7 +131,13 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             </div>
 
                             <div className="list-action grid grid-cols-2 gap-3 px-5 absolute w-full bottom-5 max-lg:hidden">
-                                <div className="quick-view-btn w-full text-button-uppercase py-2 text-center rounded-full duration-300 bg-white hover:bg-black hover:text-white">
+                                <div
+                                    className="quick-view-btn w-full text-button-uppercase py-2 text-center rounded-full duration-300 bg-white hover:bg-black hover:text-white"
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        handleQuickviewOpen()
+                                    }}
+                                >
                                     Quick View
                                 </div>
                                 {data.action === 'add to cart' ? (
