@@ -20,7 +20,7 @@ export default function HomeCosmeticTwo() {
     return (
         <>
             <TopNavThree props="style-three bg-white" />
-            <div id="header" className='relative w-full'>
+            <div id="header" className='w-full relative'>
                 <MenuFour props="bg-white" />
                 <BannerTop props="bg-green py-3" textColor='text-black' bgLine='bg-black' />
                 <SliderCosmeticTwo />
