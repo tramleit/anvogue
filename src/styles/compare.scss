@@ -1,0 +1,37 @@
+.compare-block {
+    .list-product {
+        .right {
+            .product-item {
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+    .compare-table {
+        .left {
+            .item {
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .right {
+            .size {
+                p {
+                    &:last-child {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:639.98px) {
+        
+    }
+}

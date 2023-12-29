@@ -11,6 +11,12 @@ const ModalCompare = () => {
     const { isModalOpen, closeModalCompare } = useModalCompareContext();
     const { compareState, removeFromCompare } = useCompare()
 
+    const handleRedirectCompare = () => {
+        if (compareState.compareArray.length < 2) {
+
+        }
+    }
+
     return (
         <>
             <div className={`modal-compare-block`}>
@@ -52,13 +58,32 @@ const ModalCompare = () => {
                                 ))}
                             </div>
                             <div className="block-button flex flex-col gap-4 flex-shrink-0">
-                                <Link href={'/compare'} onClick={closeModalCompare} className='button-main whitespace-nowrap'>Compare Products</Link>
+                                {
+                                    compareState.compareArray.length < 2 ? (
+                                        <>
+                                            <a
+                                                href='#!'
+                                                className='button-main whitespace-nowrap'
+                                                onClick={(e) => {
+                                                    e.stopPropagation()
+                                                    alert('Minimum 2 products required to compare!')
+                                                }}
+                                            >
+                                                Compare Products
+                                            </a>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Link href={'/compare'} onClick={closeModalCompare} className='button-main whitespace-nowrap'>Compare Products</Link>
+                                        </>
+                                    )
+                                }
                                 <div onClick={closeModalCompare} className="button-main whitespace-nowrap border border-black bg-white text-black">Clear All Products</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
