@@ -27,7 +27,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
     const [activeTab, setActiveTab] = useState<string | undefined>('description')
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
-    const productMain = data[Number(productId) - 1]
+    const productMain = data.find(product => product.id === productId) as ProductType
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
 
     const handleActiveColor = (item: string) => {
@@ -650,7 +650,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                     <div className="related-product md:pb-20 pb-10">
                         <div className="container">
                             <div className="heading3 text-center">Related Products</div>
-                            <div className="list-product hide-product-sold hide-color grid lg:grid-cols-4 grid-cols-2 md:gap-[30px] gap-5 md:mt-10 mt-6">
+                            <div className="list-product hide-product-sold  grid lg:grid-cols-4 grid-cols-2 md:gap-[30px] gap-5 md:mt-10 mt-6">
                                 {data.slice(Number(productId), Number(productId) + 4).map((item, index) => (
                                     <Product key={index} data={item} type='grid' />
                                 ))}

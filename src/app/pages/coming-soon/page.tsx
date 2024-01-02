@@ -34,22 +34,22 @@ const ComingSoon = () => {
                             <div className="countdown-time flex items-center gap-5 lg:mt-[60px] md:mt-10 mt-6">
                                 <div className="item flex flex-col items-center">
                                     <div className="day time heading1">{timeLeft.days}</div>
-                                    <div className='text-xs font-medium uppercase'>Days</div>
+                                    <div className='text-button-uppercase font-medium'>Days</div>
                                 </div>
                                 <span className='heading4'>:</span>
                                 <div className="item flex flex-col items-center">
                                     <div className="day time heading1">{timeLeft.hours}</div>
-                                    <div className='text-xs font-medium uppercase'>Hours</div>
+                                    <div className='text-button-uppercase font-medium'>Hours</div>
                                 </div>
                                 <span className='heading4'>:</span>
                                 <div className="item flex flex-col items-center">
                                     <div className="day time heading1">{timeLeft.minutes}</div>
-                                    <div className='text-xs font-medium uppercase'>Minutes</div>
+                                    <div className='text-button-uppercase font-medium'>Minutes</div>
                                 </div>
                                 <span className='heading4'>:</span>
                                 <div className="item flex flex-col items-center">
                                     <div className="day time heading1">{timeLeft.seconds}</div>
-                                    <div className='text-xs font-medium uppercase'>Seconds</div>
+                                    <div className='text-button-uppercase font-medium'>Seconds</div>
                                 </div>
                             </div>
                             <div className="input-block w-full h-[52px] mt-6">

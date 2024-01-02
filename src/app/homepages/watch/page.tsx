@@ -32,7 +32,9 @@ export default function HomeWatch() {
                 <Benefit props="md:py-[60px] py-8 style-watch md:mt-20 mt-10" />
                 <Instagram />
                 <Brand />
-                <Footer />
+                <div className="style-watch">
+                    <Footer />
+                </div>
             </div>
         </>
     )

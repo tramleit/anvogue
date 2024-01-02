@@ -232,6 +232,12 @@
     }
 }
 
+.style-watch {
+    .product-thumb {
+        background: rgba($color: #FFFFFF, $alpha: 0.2);
+    }
+}
+
 .list-size {
     .size-item {
         transition: all ease 0.3s;
@@ -248,6 +254,13 @@
     }
 }
 
+.show-product-sold {
+
+    .product-item .product-main .product-infor .list-color,
+    .product-item .product-main .product-infor .list-color-image {
+        top: 52px;
+    }
+}
 
 .hide-color .product-item {
     .product-main {

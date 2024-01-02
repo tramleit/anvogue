@@ -27,7 +27,7 @@ const WomenFashion: React.FC<Props> = ({ data, start, limit }) => {
                         </Link>
                     </div>
 
-                    <div className="list-product hide-product-sold hide-color grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
+                    <div className="list-product hide-product-sold  grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
                         <Link href={"/shop/breadcrumb1"} className="banner rounded-[20px] overflow-hidden relative flex items-center justify-center">
                             <div className="heading4 text-white text-center">Fashion For <br />Men</div>
                             <Image

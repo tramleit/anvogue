@@ -1,6 +1,7 @@
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuFour from '@/components/Header/Menu/MenuFour'
+import BannerTop from '@/components/Home4/BannerTop'
 import SliderSix from '@/components/Slider/SliderSix'
 import Collection from '@/components/Home6/Collection'
 import productData from '@/data/Product.json'
@@ -21,6 +22,7 @@ export default function HomeSix() {
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
                 <MenuFour props="bg-white" />
+                <BannerTop props="bg-black py-3" textColor='text-white' />
                 <SliderSix />
             </div>
             <Collection />

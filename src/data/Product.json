@@ -2543,150 +2543,6 @@
     {
         "id": "40",
         "category": "cosmetic",
-        "type": "hair",
-        "name": "Hair Treatment",
-        "gender": "women",
-        "new": true,
-        "sale": false,
-        "rate": 5,
-        "price": 10,
-        "originPrice": 14,
-        "brand": "glurmarket",
-        "sold": 15,
-        "quantity": 100,
-        "quantityPurchase": 1,
-        "sizes": [
-            "50",
-            "100",
-            "150"
-        ],
-        "variation": [
-            {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/1-2.png"
-            },
-            {
-                "color": "purple",
-                "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/1-1.png"
-            }
-        ],
-        "thumbImage": [
-            "/images/product/cosmetic/1-1.png",
-            "/images/product/cosmetic/1-3.png"
-        ],
-        "images": [
-            "/images/product/cosmetic/1-1.png",
-            "/images/product/cosmetic/1-2.png",
-            "/images/product/cosmetic/1-3.png",
-            "/images/product/cosmetic/1-4.png"
-        ],
-        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
-        "action": "quick shop",
-        "slug": "cosmetic"
-    },
-    {
-        "id": "41",
-        "category": "cosmetic",
-        "type": "hair",
-        "name": "After Sun - tan Booster",
-        "gender": "women",
-        "new": false,
-        "sale": true,
-        "rate": 5,
-        "price": 15,
-        "originPrice": 20,
-        "brand": "glurmarket",
-        "sold": 12,
-        "quantity": 100,
-        "quantityPurchase": 1,
-        "sizes": [
-            "100",
-            "200",
-            "300"
-        ],
-        "variation": [
-            {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/1-3.png"
-            },
-            {
-                "color": "purple",
-                "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/1-1.png"
-            }
-        ],
-        "thumbImage": [
-            "/images/product/cosmetic/1-2.png",
-            "/images/product/cosmetic/1-3.png"
-        ],
-        "images": [
-            "/images/product/cosmetic/1-2.png",
-            "/images/product/cosmetic/1-1.png",
-            "/images/product/cosmetic/1-3.png",
-            "/images/product/cosmetic/1-4.png"
-        ],
-        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
-        "action": "quick shop",
-        "slug": "cosmetic"
-    },
-    {
-        "id": "42",
-        "category": "cosmetic",
-        "type": "hair",
-        "name": "Tinted Moisturiser",
-        "gender": "women",
-        "new": false,
-        "sale": true,
-        "rate": 5,
-        "price": 20,
-        "originPrice": 25,
-        "brand": "glurmarket",
-        "sold": 24,
-        "quantity": 100,
-        "quantityPurchase": 1,
-        "sizes": [
-            "50",
-            "100",
-            "150"
-        ],
-        "variation": [
-            {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/1-3.png"
-            },
-            {
-                "color": "purple",
-                "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/1-1.png"
-            }
-        ],
-        "thumbImage": [
-            "/images/product/cosmetic/1-3.png",
-            "/images/product/cosmetic/1-4.png"
-        ],
-        "images": [
-            "/images/product/cosmetic/1-3.png",
-            "/images/product/cosmetic/1-4.png",
-            "/images/product/cosmetic/1-1.png",
-            "/images/product/cosmetic/1-2.png"
-        ],
-        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
-        "action": "quick shop",
-        "slug": "cosmetic"
-    },
-    {
-        "id": "43",
-        "category": "cosmetic",
         "type": "face",
         "name": "Face Treatment",
         "gender": "women",
@@ -2727,12 +2583,12 @@
             "/images/product/cosmetic/2-2.png",
             "/images/product/cosmetic/2-3.png"
         ],
-        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "description": "The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.",
         "action": "add to cart",
         "slug": "cosmetic"
     },
     {
-        "id": "44",
+        "id": "41",
         "category": "cosmetic",
         "type": "face",
         "name": "Face Tan Booster",
@@ -2958,7 +2814,7 @@
             "/images/product/cosmetic/10-2.png",
             "/images/product/cosmetic/10-1.png"
         ],
-        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "description": "The garments labelled as Committed are products that have been produced using sustainable fibres or processes, reducing their environmental impact.",
         "action": "quick shop",
         "slug": "cosmetic"
     },
@@ -3004,6 +2860,54 @@
             "/images/product/cosmetic/7-3.png",
             "/images/product/cosmetic/7-1.png",
             "/images/product/cosmetic/7-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "43",
+        "category": "cosmetic",
+        "type": "hair",
+        "name": "Hair Treatment",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 10,
+        "originPrice": 14,
+        "brand": "glurmarket",
+        "sold": 10,
+        "quantity": 100,
+        "quantityPurchase": 1,
+        "sizes": [
+            "50",
+            "100",
+            "150"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/1-2.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/1-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-3.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-2.png",
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
         "action": "quick shop",
@@ -3096,6 +3000,102 @@
         "images": [
             "/images/product/cosmetic/11-2.png",
             "/images/product/cosmetic/11-1.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "44",
+        "category": "cosmetic",
+        "type": "hair",
+        "name": "After Sun - tan Booster",
+        "gender": "women",
+        "new": true,
+        "sale": false,
+        "rate": 5,
+        "price": 15,
+        "originPrice": 20,
+        "brand": "glurmarket",
+        "sold": 12,
+        "quantity": 100,
+        "quantityPurchase": 1,
+        "sizes": [
+            "100",
+            "200",
+            "300"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/1-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/1-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/1-2.png",
+            "/images/product/cosmetic/1-3.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/1-2.png",
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "quick shop",
+        "slug": "cosmetic"
+    },
+    {
+        "id": "42",
+        "category": "cosmetic",
+        "type": "hair",
+        "name": "Tinted Moisturiser",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 20,
+        "originPrice": 25,
+        "brand": "glurmarket",
+        "sold": 12,
+        "quantity": 100,
+        "quantityPurchase": 1,
+        "sizes": [
+            "50",
+            "100",
+            "150"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/cosmetic/1-3.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/cosmetic/1-1.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png"
+        ],
+        "images": [
+            "/images/product/cosmetic/1-3.png",
+            "/images/product/cosmetic/1-4.png",
+            "/images/product/cosmetic/1-1.png",
+            "/images/product/cosmetic/1-2.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
         "action": "quick shop",
@@ -3215,7 +3215,14 @@
             "300",
             "500"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/pets/1-1.png",
+                "image": "/images/product/pets/1-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/pets/1-1.png",
             "/images/product/pets/1-2.png"
@@ -3249,7 +3256,14 @@
             "200",
             "300"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/pets/2-1.png",
+                "image": "/images/product/pets/2-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/pets/2-1.png",
             "/images/product/pets/2-2.png"
@@ -3377,7 +3391,14 @@
             "300",
             "500"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/pets/5-1.png",
+                "image": "/images/product/pets/5-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/pets/5-1.png",
             "/images/product/pets/5-2.png"
@@ -3411,7 +3432,14 @@
             "200",
             "300"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/pets/7-1.png",
+                "image": "/images/product/pets/7-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/pets/7-1.png",
             "/images/product/pets/7-2.png"
@@ -5209,7 +5237,14 @@
             "300",
             "400"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/yoga/2-1.png",
+                "image": "/images/product/yoga/2-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/yoga/2-1.png",
             "/images/product/yoga/2-2.png"
@@ -5384,7 +5419,14 @@
             "300",
             "400"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/yoga/2-3.png",
+                "image": "/images/product/yoga/2-3.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/yoga/2-3.png",
             "/images/product/yoga/2-4.png"
@@ -5558,7 +5600,14 @@
             "300",
             "400"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/yoga/6-1.png",
+                "image": "/images/product/yoga/6-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/yoga/6-2.png",
             "/images/product/yoga/6-3.png"
@@ -5631,7 +5680,14 @@
             "300",
             "400"
         ],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/yoga/6-1.png",
+                "image": "/images/product/yoga/6-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/yoga/6-1.png",
             "/images/product/yoga/6-3.png"
@@ -6105,7 +6161,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/yoga/1-1.png",
+                "image": "/images/product/yoga/1-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/1-1.png",
             "/images/product/organic/1-2.png"
@@ -6135,7 +6198,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/organic/2-3.png",
+                "image": "/images/product/organic/2-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/2-1.png",
             "/images/product/organic/2-2.png"
@@ -6165,7 +6235,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/organic/3-3.png",
+                "image": "/images/product/organic/3-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/3-1.png",
             "/images/product/organic/3-2.png"
@@ -6195,7 +6272,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/organic/2-3.png",
+                "image": "/images/product/organic/4-2.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/4-1.png",
             "/images/product/organic/4-2.png"
@@ -6223,8 +6307,16 @@
         "sold": 24,
         "quantity": 80,
         "quantityPurchase": 1,
-        "sizes": [],
-        "variation": [],
+        "sizes": [
+        ],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/organic/1-3.png",
+                "image": "/images/product/organic/5-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/5-1.png",
             "/images/product/organic/5-2.png"
@@ -6241,7 +6333,7 @@
         "id": "128",
         "category": "organic",
         "type": "vegetables",
-        "name": "purple cabbage organic",
+        "name": "green cai organic",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -6253,7 +6345,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/organic/1-3.png",
+                "image": "/images/product/organic/6-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/6-1.png",
             "/images/product/organic/6-2.png"
@@ -6271,7 +6370,7 @@
         "id": "129",
         "category": "organic",
         "type": "vegetables",
-        "name": "green cabbage organic",
+        "name": "yellow cabbage organic",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -6283,7 +6382,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/organic/1-3.png",
+                "image": "/images/product/organic/7-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/7-1.png",
             "/images/product/organic/7-2.png"
@@ -6313,7 +6419,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/organic/1-3.png",
+                "image": "/images/product/organic/8-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/8-1.png",
             "/images/product/organic/8-2.png"
@@ -6343,7 +6456,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DA4848",
+                "colorImage": "/images/product/organic/9-1.png",
+                "image": "/images/product/organic/9-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/9-1.png",
             "/images/product/organic/9-2.png"
@@ -6372,7 +6492,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DA4848",
+                "colorImage": "/images/product/organic/10-1.png",
+                "image": "/images/product/organic/10-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/10-1.png",
             "/images/product/organic/10-2.png"
@@ -6400,8 +6527,16 @@
         "sold": 24,
         "quantity": 80,
         "quantityPurchase": 1,
-        "sizes": [],
-        "variation": [],
+        "sizes": [
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DA4848",
+                "colorImage": "/images/product/organic/11-1.png",
+                "image": "/images/product/organic/11-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/11-1.png",
             "/images/product/organic/11-2.png"
@@ -6430,15 +6565,21 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/organic/12-1.png",
+                "image": "/images/product/organic/12-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/12-1.png",
             "/images/product/organic/12-2.png"
         ],
         "images": [
             "/images/product/organic/12-1.png",
-            "/images/product/organic/12-2.png",
-            "/images/product/organic/12-3.png"
+            "/images/product/organic/12-2.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio organic. Traditionally designed, they are perfect to be used in the any place where you need to store. Bring one-of-a-kind look to your interior with organic from Onita organic!",
         "action": "add to cart",
@@ -6460,7 +6601,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DA4848",
+                "colorImage": "/images/product/organic/13-1.png",
+                "image": "/images/product/organic/13-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/13-1.png",
             "/images/product/organic/13-2.png"
@@ -6489,7 +6637,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/organic/14-1.png",
+                "image": "/images/product/organic/14-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/14-1.png",
             "/images/product/organic/14-2.png"
@@ -6518,7 +6673,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/organic/15-1.png",
+                "image": "/images/product/organic/15-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/15-1.png",
             "/images/product/organic/15-2.png"
@@ -6547,7 +6709,14 @@
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [],
-        "variation": [],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DA4848",
+                "colorImage": "/images/product/organic/16-1.png",
+                "image": "/images/product/organic/16-1.png"
+            }
+        ],
         "thumbImage": [
             "/images/product/organic/16-1.png",
             "/images/product/organic/16-2.png"

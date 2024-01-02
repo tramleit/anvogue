@@ -22,7 +22,7 @@ const LookBook: React.FC<Props> = ({ data }) => {
         <>
             <div className="lookbook bg-surface xl:h-[780px] lg:h-[600px] md:h-[500px] relative">
                 <div className="container h-full">
-                    <div className="left hide-product-sold hide-color md:w-1/2 py-10 h-full flex flex-col items-center justify-center">
+                    <div className="left hide-product-sold  md:w-1/2 py-10 h-full flex flex-col items-center justify-center">
                         <div className="heading3 md:pb-10 pb-5">The Summer Look book</div>
                         <div className="w-1/2">
                             {data.slice(38, 39).map((product, index) => (

@@ -5,29 +5,55 @@ import Image from 'next/image'
 import { ProductType } from '@/type/ProductType'
 import Rate from '../Other/Rate'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { useCart } from '@/context/CartContext'
+import { useModalCartContext } from '@/context/ModalCartContext'
 
 interface Props {
     data: Array<ProductType>;
 }
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
-    const [activeColor, setActiveColor] = useState<string | null>('')
+    const [activeColor, setActiveColor] = useState<string>('')
+    const { addToCart, updateCart, cartState } = useCart()
+    const { openModalCart } = useModalCartContext()
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
     }
 
-    // Truy cập thông tin của sản phẩm thứ 50 trong mảng data
-    const productMain = data[66];
+    const handleIncreaseQuantity = () => {
+        productMain.quantityPurchase += 1
+        updateCart(productMain.id, productMain.quantityPurchase + 1, '', activeColor);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (productMain.quantityPurchase > 1) {
+            productMain.quantityPurchase -= 1
+            updateCart(productMain.id, productMain.quantityPurchase - 1, '', activeColor);
+        }
+    };
+
+    const handleAddToCart = () => {
+        if (!cartState.cartArray.find(item => item.id === productMain.id)) {
+            addToCart({ ...productMain });
+            updateCart(productMain.id, productMain.quantityPurchase, '', activeColor)
+        } else {
+            updateCart(productMain.id, productMain.quantityPurchase, '', activeColor)
+        }
+        openModalCart()
+    };
+
+    // Truy cập thông tin của sản phẩm thứ 74 trong mảng data
+    const productMain = data[74];
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
 
     return (
         <>
-            <div className="featured-product cosmetic md:mt-20 mt-10 lg:py-20 md:py-14 py-10 bg-surface">
+            <div className="featured-product cosmetic md:mt-20 mt-10 lg:py-20 md:py-14 py-10 bg-linear">
                 <div className="container flex lg:items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img md:w-1/2 md:pr-4 w-full">
                         <Image
-                            src={productMain.images[2]}
+                            src={productMain.images[0]}
                             width={1000}
                             height={1000}
                             alt='prd-img'
@@ -80,12 +106,20 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 </div>
                             </div>
                             <div className="choose-quantity flex items-center lg:justify-between gap-5 gap-y-3 mt-5">
-                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px]">
-                                    <Icon.Minus size={20} />
-                                    <div className="body1 font-semibold">1</div>
-                                    <Icon.Plus size={20} />
+                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px] flex-shrink-0">
+                                    <Icon.Minus
+                                        size={20}
+                                        onClick={handleDecreaseQuantity}
+                                        className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
+                                    />
+                                    <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
+                                    <Icon.Plus
+                                        size={20}
+                                        onClick={handleIncreaseQuantity}
+                                        className='cursor-pointer'
+                                    />
                                 </div>
-                                <div className="button-main w-full text-center bg-white text-black border border-black">Add To Cart</div>
+                                <div onClick={handleAddToCart} className="button-main w-full text-center bg-white text-black border border-black">Add To Cart</div>
                             </div>
                             <div className="button-block mt-5">
                                 <div className="button-main w-full text-center">Buy It Now</div>

@@ -26,7 +26,7 @@ export default function HomeCosmeticOne() {
                 <SliderCosmeticOne />
             </div>
             <Collection />
-            <LookBook data={productData} start={0} limit={4} />
+            <LookBook data={productData} start={8} limit={12} />
             <BuyPack />
             <AdsPhoto />
             <NewArrival data={productData} start={0} limit={8} />

@@ -27,7 +27,7 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
     const [activeSize, setActiveSize] = useState<string>('')
     const [quantity, setQuantity] = useState<{ [productId: string]: number }>({})
     const [activeTab, setActiveTab] = useState<string | undefined>()
-    const productMain = data[Number(productId) - 1]
+    const productMain = data.find(product => product.id === productId) as ProductType
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
@@ -54,8 +54,7 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
 
     const handleAddToCart = () => {
         if (!cartState.cartArray
-            .find(item => item.id === productMain.id || item.id === data[Number(productId)].id || item.id === data[Number(productId) + 1].id || item.id === data[Number(productId) + 2].id))
-        {
+            .find(item => item.id === productMain.id || item.id === data[Number(productId)].id || item.id === data[Number(productId) + 1].id || item.id === data[Number(productId) + 2].id)) {
             addToCart(productMain);
             addToCart(data[Number(productId)]);
             addToCart(data[Number(productId) + 1]);

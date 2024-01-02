@@ -99,6 +99,22 @@
             }
         }
     }
+
+    .quantity-block {
+        .disabled {
+            color: var(--secondary2);
+            cursor: default;
+        }
+    }
+}
+
+.best-sale-prd {
+    .quantity-block {
+        .disabled {
+            color: var(--secondary2);
+            cursor: default;
+        }
+    }
 }
 
 

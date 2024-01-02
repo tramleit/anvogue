@@ -20,7 +20,7 @@ const BestSellers: React.FC<Props> = ({ data, start, limit }) => {
             <div className="tab-features-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading3 text-center">Best seller Products</div>
-                    <div className="list-product hide-product-sold hide-color section-swiper-navigation style-outline style-center style-small-border mt-10">
+                    <div className="list-product hide-product-sold  section-swiper-navigation style-outline style-center style-small-border mt-10">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

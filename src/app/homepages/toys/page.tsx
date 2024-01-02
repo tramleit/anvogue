@@ -27,7 +27,7 @@ export default function HomeToys() {
             <Benefit props="py-20" />
             <Banner />
             <WeekProduct data={productData} start={0} limit={8} />
-            <FeaturedProduct data={productData} start={89} limit={94} />
+            <FeaturedProduct data={productData} start={1} limit={6} />
             <TabFeatures data={productData} start={0} limit={4} />
             <Testimonial data={dataTestimonial} limit={4} />
             <NewsInsight data={blogData} start={9} limit={12} />

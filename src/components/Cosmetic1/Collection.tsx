@@ -10,7 +10,7 @@ const Collection = () => {
                     <div className='grid sm:grid-cols-2 md:gap-[30px] gap-[16px]'>
                         <div className="left">
                             <Link href={'/shop/breadcrumb1'} className="collection-item block h-full relative md:rounded-[20px] rounded-xl overflow-hidden">
-                                <div className="bg-img h-full">
+                                <div className="bg-img h-full w-full aspect-square">
                                     <Image
                                         src={'/images/collection/body.png'}
                                         width={1000}

@@ -27,7 +27,7 @@ const FeaturedProduct: React.FC<Props> = ({ data, start, limit }) => {
                 <div className="container relative">
                     <div className="content flex items-center justify-between max-sm:flex-col gap-8 bg-surface md:p-[60px] p-10 rounded-[28px]">
                         <div className="left bg-product sm:w-1/2">
-                            {data.slice(start, limit).map((prd, index) => (
+                            {data.filter(item => item.category === 'toys-kid').slice(start, limit).map((prd, index) => (
                                 <div
                                     className={`bg-img rounded-[20px] overflow-hidden ${index === activeIndex ? 'active' : ''}`}
                                     key={prd.id}
@@ -43,21 +43,23 @@ const FeaturedProduct: React.FC<Props> = ({ data, start, limit }) => {
                                 </div>
                             ))}
                         </div>
-                        <div className="right sm:w-1/2 w-full xl:pl-[150px] xl:pr-[80px] sm:pl-[80px] sm:pr-8 px-6 hide-color hide-product-sold section-swiper-navigation style-outline style-small-border">
-                            <Swiper
-                                slidesPerView={1}
-                                spaceBetween={20}
-                                navigation
-                                modules={[Navigation, Autoplay]}
-                                className=''
-                                onSlideChange={handleSlideChange}
-                            >
-                                {data.slice(start, limit).map((prd) => (
-                                    <SwiperSlide key={prd.id} data-item={prd.id}>
-                                        <Product data={prd} type='grid' />
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
+                        <div className='right sm:w-1/2 w-full xl:pl-[150px] xl:pr-[80px] sm:pl-[80px] sm:pr-8 px-6 '>
+                            <div className=" hide-product-sold section-swiper-navigation style-outline style-small-border">
+                                <Swiper
+                                    slidesPerView={1}
+                                    spaceBetween={20}
+                                    navigation
+                                    modules={[Navigation, Autoplay]}
+                                    className=''
+                                    onSlideChange={handleSlideChange}
+                                >
+                                    {data.filter(item => item.category === 'toys-kid').slice(start, limit).map((prd) => (
+                                        <SwiperSlide key={prd.id} data-item={prd.id}>
+                                            <Product data={prd} type='grid' />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
                         </div>
                     </div>
                 </div>

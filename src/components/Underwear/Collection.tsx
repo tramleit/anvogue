@@ -23,7 +23,7 @@ const Collection = () => {
                                     alt='underwear1'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">lingerie</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap md:py-3 py-2 bg-white rounded-xl duration-500">lingerie</div>
                         </Link>
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
@@ -34,7 +34,7 @@ const Collection = () => {
                                     alt='underwear2'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">Beach Wear</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap md:py-3 py-2 bg-white rounded-xl duration-500">Beach Wear</div>
                         </Link>
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
@@ -45,7 +45,7 @@ const Collection = () => {
                                     alt='underwear3'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">Sport Active</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap md:py-3 py-2 bg-white rounded-xl duration-500">Sport Active</div>
                         </Link>
                         <Link href={'#!'} className="collection-item block relative rounded-t-full overflow-hidden">
                             <div className="bg-img">
@@ -56,7 +56,7 @@ const Collection = () => {
                                     alt='underwear4'
                                 />
                             </div>
-                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap lg:py-1.5 md:py-3 py-1 bg-white rounded-xl duration-500">Swim wear</div>
+                            <div className="collection-name heading5 text-center sm:bottom-5 bottom-3 md:w-[200px] max-md:px-4 max-md:whitespace-nowrap md:py-3 py-2 bg-white rounded-xl duration-500">Swim wear</div>
                         </Link>
                     </div>
                 </div>

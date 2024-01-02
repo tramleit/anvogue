@@ -14,7 +14,7 @@ const TrendingNow = () => {
                 <div className="container">
                     <div className="heading3 text-center">Trending Right Now
                     </div>
-                    <div className="list-trending section-swiper-navigation style-small-border style-outline mt-10">
+                    <div className="list-trending section-swiper-navigation style-small-border style-center style-outline mt-10">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

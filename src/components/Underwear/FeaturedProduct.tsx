@@ -9,6 +9,8 @@ import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
 import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
+import { useCart } from '@/context/CartContext'
+import { useModalCartContext } from '@/context/ModalCartContext'
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -18,8 +20,10 @@ interface Props {
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-    const [activeColor, setActiveColor] = useState<string | null>()
-    const [activeSize, setActiveSize] = useState<string | null>()
+    const [activeColor, setActiveColor] = useState<string>('')
+    const [activeSize, setActiveSize] = useState<string>('')
+    const { addToCart, updateCart, cartState } = useCart()
+    const { openModalCart } = useModalCartContext()
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -34,8 +38,30 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
         setThumbsSwiper(swiper);
     };
 
-    // Truy cập thông tin của sản phẩm thứ 38 trong mảng data
-    const productMain = data[38];
+    const handleIncreaseQuantity = () => {
+        productMain.quantityPurchase += 1
+        updateCart(productMain.id, productMain.quantityPurchase + 1, activeSize, activeColor);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (productMain.quantityPurchase > 1) {
+            productMain.quantityPurchase -= 1
+            updateCart(productMain.id, productMain.quantityPurchase - 1, activeSize, activeColor);
+        }
+    };
+
+    const handleAddToCart = () => {
+        if (!cartState.cartArray.find(item => item.id === productMain.id)) {
+            addToCart({ ...productMain });
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        } else {
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        }
+        openModalCart()
+    };
+
+    // Infor product 39th in data
+    const productMain = data[39];
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
 
     return (
@@ -194,12 +220,25 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 </div>
                             </div>
                             <div className="choose-quantity flex items-center lg:justify-between gap-5 gap-y-3 mt-5">
-                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px]">
-                                    <Icon.Minus size={20} />
-                                    <div className="body1 font-semibold">1</div>
-                                    <Icon.Plus size={20} />
+                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px] flex-shrink-0">
+                                    <Icon.Minus
+                                        size={20}
+                                        onClick={handleDecreaseQuantity}
+                                        className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer`}
+                                    />
+                                    <div className="body1 font-semibold">{productMain.quantityPurchase}</div>
+                                    <Icon.Plus
+                                        size={20}
+                                        onClick={handleIncreaseQuantity}
+                                        className='cursor-pointer'
+                                    />
                                 </div>
-                                <div className="button-main w-full text-center bg-white text-black border border-black">Add To Cart</div>
+                                <div
+                                    className="button-main w-full text-center bg-white text-black border border-black"
+                                    onClick={handleAddToCart}
+                                >
+                                    Add To Cart
+                                </div>
                             </div>
                             <div className="button-block mt-5">
                                 <div className="button-main w-full text-center">Buy It Now</div>

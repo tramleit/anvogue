@@ -22,7 +22,7 @@ const LookBook: React.FC<Props> = ({ data, start, limit }) => {
 
                     <div className="list-product hide-product-sold lg:w-3/4 lg:pl-[15px] grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] ">
                         {data
-                            // .filter(product => product.category === 'cosmetic')
+                            .filter(product => product.category === 'cosmetic')
                             .slice(start, limit)
                             .map((prd, index) => (
                                 <Product key={index} data={prd} type='grid' />

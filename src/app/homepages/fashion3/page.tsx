@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
 import MenuTwo from '@/components/Header/Menu/MenuTwo'

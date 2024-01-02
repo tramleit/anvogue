@@ -21,7 +21,7 @@ const SliderNine = () => {
                             loop={true}
                             pagination={{ clickable: true }}
                             modules={[Pagination, Autoplay]}
-                            className='h-full relative rounded-3xl overflow-hidden'
+                            className='h-full relative rounded-2xl overflow-hidden'
                             autoplay={{
                                 delay: 4000,
                             }}

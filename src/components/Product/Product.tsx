@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
@@ -20,8 +20,6 @@ interface ProductProps {
 }
 
 const Product: React.FC<ProductProps> = ({ data, type }) => {
-    const percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
-    const percentSold = Math.floor((data.sold / data.quantity) * 100)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
     const { addToCart, updateCart, cartState } = useCart();
@@ -82,6 +80,9 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
         // redirect to shop with category selected
         router.push(`/product/default?id=${productId}`);
     };
+
+    let percentSale = Math.floor(100 - ((data.price / data.originPrice) * 100))
+    let percentSold = Math.floor((data.sold / data.quantity) * 100)
 
     return (
         <>
@@ -165,7 +166,11 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                         <div className="product-infor mt-4 mb-7">
                             <div className="product-sold sm:pb-4 pb-2">
                                 <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
-                                    <div className={`progress-sold bg-red absolute left-0 top-0 h-full w-[${percentSold}%]`}></div>
+                                    <div
+                                        className={`progress-sold bg-red absolute left-0 top-0 h-full`}
+                                        style={{width: `${percentSold}%`}}
+                                    >
+                                    </div>
                                 </div>
                                 <div className="flex items-center justify-between gap-3 gap-y-1 flex-wrap mt-2">
                                     <div className="text-button-uppercase">

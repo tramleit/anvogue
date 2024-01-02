@@ -22,6 +22,7 @@ const Deal: React.FC<Props> = ({ data, start, limit }) => {
 
         return () => clearInterval(timer);
     }, []);
+
     return (
         <>
             <div className="tab-features-block md:pt-20 pt-10">
@@ -45,7 +46,7 @@ const Deal: React.FC<Props> = ({ data, start, limit }) => {
                         <Link href={'/shop/breadcrumb-img'} className='text-button pb-1 border-b-2 border-black'>View All Deals</Link>
                     </div>
 
-                    <div className="list-product grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
+                    <div className="list-product show-product-sold grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
                         {data.slice(start, limit).map((prd, index) => (
                             <Product key={index} data={prd} type='grid' />
                         ))}

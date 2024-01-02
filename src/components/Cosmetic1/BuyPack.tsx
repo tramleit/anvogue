@@ -1,8 +1,18 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const BuyPack = () => {
+    const router = useRouter()
+
+    const handleDetailProduct = (productId: string) => {
+        // redirect to shop with category selected
+        router.push(`/product/default?id=${productId}`);
+    };
+
     return (
         <>
             <div className="buy-pack-block md:pt-20 pt-10">
@@ -11,8 +21,8 @@ const BuyPack = () => {
                         <div className="heading3">Cosmetic Cream packs</div>
                         <div className="block mt-3">Sign up for early sale access, new in, promotions and more</div>
                         <div className="list-product mt-8">
-                            <div className='product-item pb-5 border-b border-line'>
-                                <Link href={'#!'} className="product-main flex items-center justify-between">
+                            <div className='product-item pb-5 border-b border-line cursor-pointer' onClick={() => handleDetailProduct('40')}>
+                                <div className="product-main flex items-center justify-between">
                                     <div className="left flex items-center gap-7">
                                         <Image
                                             src={'/images/product/cosmetic/1-1.png'}
@@ -28,10 +38,10 @@ const BuyPack = () => {
                                     <div className="right">
                                         <div className="text-title">$<span className='product-price'>15</span>,000</div>
                                     </div>
-                                </Link>
+                                </div>
                             </div>
-                            <div className='product-item pb-5 border-b border-line mt-5'>
-                                <Link href={'#!'} className="product-main flex items-center justify-between">
+                            <div className='product-item pb-5 border-b border-line cursor-pointer mt-5' onClick={() => handleDetailProduct('41')}>
+                                <div className="product-main flex items-center justify-between">
                                     <div className="left flex items-center gap-7">
                                         <Image
                                             src={'/images/product/cosmetic/1-2.png'}
@@ -47,10 +57,10 @@ const BuyPack = () => {
                                     <div className="right">
                                         <div className="text-title">$<span className='product-price'>10</span>,000</div>
                                     </div>
-                                </Link>
+                                </div>
                             </div>
-                            <div className='product-item pb-5 border-b border-line mt-5'>
-                                <Link href={'#!'} className="product-main flex items-center justify-between">
+                            <div className='product-item pb-5 border-b border-line cursor-pointer mt-5' onClick={() => handleDetailProduct('42')}>
+                                <div className="product-main flex items-center justify-between">
                                     <div className="left flex items-center gap-7">
                                         <Image
                                             src={'/images/product/cosmetic/1-3.png'}
@@ -66,7 +76,7 @@ const BuyPack = () => {
                                     <div className="right">
                                         <div className="text-title">$<span className='product-price'>20</span>,000</div>
                                     </div>
-                                </Link>
+                                </div>
                             </div>
                         </div>
                         <div className="block-button mt-8">
