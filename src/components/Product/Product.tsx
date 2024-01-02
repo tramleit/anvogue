@@ -162,7 +162,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 )}
                             </div>
                         </div>
-                        <div className="product-infor mt-4">
+                        <div className="product-infor mt-4 mb-7">
                             <div className="product-sold sm:pb-4 pb-2">
                                 <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
                                     <div className={`progress-sold bg-red absolute left-0 top-0 h-full w-[${percentSold}%]`}></div>
