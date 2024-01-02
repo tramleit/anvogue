@@ -57,78 +57,80 @@ const Cart = () => {
                                     <div className="progress-line"></div>
                                 </div>
                             </div>
-                            <div className="list-product sm:mt-7 mt-5">
-                                <div className="heading bg-surface bora-4 pt-4 pb-4">
-                                    <div className="flex">
-                                        <div className="w-1/2">
-                                            <div className="text-button text-center">Products</div>
-                                        </div>
-                                        <div className="w-1/12">
-                                            <div className="text-button text-center">Price</div>
-                                        </div>
-                                        <div className="w-1/6">
-                                            <div className="text-button text-center">Quantity</div>
-                                        </div>
-                                        <div className="w-1/6">
-                                            <div className="text-button text-center">Total Price</div>
+                            <div className="list-product w-full sm:mt-7 mt-5">
+                                <div className='w-full'>
+                                    <div className="heading bg-surface bora-4 pt-4 pb-4">
+                                        <div className="flex">
+                                            <div className="w-1/2">
+                                                <div className="text-button text-center">Products</div>
+                                            </div>
+                                            <div className="w-1/12">
+                                                <div className="text-button text-center">Price</div>
+                                            </div>
+                                            <div className="w-1/6">
+                                                <div className="text-button text-center">Quantity</div>
+                                            </div>
+                                            <div className="w-1/6">
+                                                <div className="text-button text-center">Total Price</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="list-product-main mt-3">
-                                    {cartState.cartArray.length < 1 ? (
-                                        <p className='text-button pt-3'>No product in cart</p>
-                                    ) : (
-                                        cartState.cartArray.map((product) => (
-                                            <div className="item flex md:mt-7 md:pb-7 mt-5 pb-5 border-b border-line" key={product.id}>
-                                                <div className="w-1/2">
-                                                    <div className="flex items-center gap-6">
-                                                        <div className="bg-img md:w-[100px] w-20 aspect-[3/4]">
-                                                            <Image
-                                                                src={product.thumbImage[0]}
-                                                                width={1000}
-                                                                height={1000}
-                                                                alt={product.name}
-                                                                className='w-full h-full object-cover rounded-lg'
+                                    <div className="list-product-main w-full mt-3">
+                                        {cartState.cartArray.length < 1 ? (
+                                            <p className='text-button pt-3'>No product in cart</p>
+                                        ) : (
+                                            cartState.cartArray.map((product) => (
+                                                <div className="item flex md:mt-7 md:pb-7 mt-5 pb-5 border-b border-line w-full" key={product.id}>
+                                                    <div className="w-1/2">
+                                                        <div className="flex items-center gap-6">
+                                                            <div className="bg-img md:w-[100px] w-20 aspect-[3/4]">
+                                                                <Image
+                                                                    src={product.thumbImage[0]}
+                                                                    width={1000}
+                                                                    height={1000}
+                                                                    alt={product.name}
+                                                                    className='w-full h-full object-cover rounded-lg'
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <div className="text-title">{product.name}</div>
+                                                                <div className="list-select mt-3"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="w-1/12 price flex items-center justify-center">
+                                                        <div className="text-title text-center">${product.price}.00</div>
+                                                    </div>
+                                                    <div className="w-1/6 flex items-center justify-center">
+                                                        <div className="quantity-block bg-surface md:p-3 p-2 flex items-center justify-between rounded-lg border border-line md:w-[100px] w-20">
+                                                            <Icon.Minus
+                                                                onClick={() => handleDecreaseQuantity(product.id)}
+                                                                className={`text-xl max-md:text-base ${productQuantity[product.id] === 1 ? 'disabled' : ''}`}
+                                                            />
+                                                            <div className="text-button quantity">{productQuantity[product.id] || 1}</div>
+                                                            <Icon.Plus
+                                                                onClick={() => handleIncreaseQuantity(product.id)}
+                                                                className='text-xl max-md:text-base'
                                                             />
                                                         </div>
-                                                        <div>
-                                                            <div className="text-title">{product.name}</div>
-                                                            <div className="list-select mt-3"></div>
+                                                    </div>
+                                                    <div className="w-1/6 flex total-price items-center justify-center">
+                                                        <div className="text-title text-center">
+                                                            <span className='quantity'>{productQuantity[product.id] || 1}</span>
+                                                            <span className='px-1'>x</span>
+                                                            <span>
+                                                                ${product.price}.00
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div className="w-1/12 price flex items-center justify-center">
-                                                    <div className="text-title text-center">${product.price}.00</div>
-                                                </div>
-                                                <div className="w-1/6 flex items-center justify-center">
-                                                    <div className="quantity-block bg-surface md:p-3 p-2 flex items-center justify-between rounded-lg border border-line md:w-[100px] w-20">
-                                                        <Icon.Minus
-                                                            onClick={() => handleDecreaseQuantity(product.id)}
-                                                            className={`text-xl max-md:text-base ${productQuantity[product.id] === 1 ? 'disabled' : ''}`}
-                                                        />
-                                                        <div className="text-button quantity">{productQuantity[product.id] || 1}</div>
-                                                        <Icon.Plus
-                                                            onClick={() => handleIncreaseQuantity(product.id)}
-                                                            className='text-xl max-md:text-base'
-                                                        />
+                                                    <div className="w-1/12 flex items-center justify-center">
+                                                        <Icon.XCircle className='text-xl max-md:text-base text-red cursor-pointer' />
                                                     </div>
                                                 </div>
-                                                <div className="w-1/6 flex total-price items-center justify-center">
-                                                    <div className="text-title text-center">
-                                                        <span className='quantity'>{productQuantity[product.id] || 1}</span>
-                                                        <span className='px-1'>x</span>
-                                                        <span>
-                                                            ${product.price}.00
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="col-1 flex items-center justify-center">
-                                                    <Icon.XCircle className='text-xl max-md:text-base text-red cursor-pointer' />
-                                                </div>
-                                            </div>
-                                        ))
-                                    )}
+                                            ))
+                                        )}
 
+                                    </div>
                                 </div>
                             </div>
                             <div className="input-block discount-code w-full h-12 sm:mt-7 mt-5">

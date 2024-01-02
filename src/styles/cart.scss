@@ -40,9 +40,14 @@
     @media (max-width: 640px) {
         .content-main {
             .list-product {
-                width: 100%;
-                max-width: max-content;
                 overflow-x: auto;
+
+                >div {
+                    width: 600px;
+                    max-width: 600px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
             }
         }
     }
