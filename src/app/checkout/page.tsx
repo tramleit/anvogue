@@ -14,6 +14,10 @@ import { useCart } from '@/context/CartContext'
 
 const Checkout = () => {
     const { cartState } = useCart();
+    let [totalCart, setTotalCart] = useState<number>(0)
+    let [discountCart, setDiscountCart] = useState<number>(0)
+
+    cartState.cartArray.map(item => totalCart += item.price * item.quantity)
 
     return (
         <>
@@ -212,38 +216,48 @@ const Checkout = () => {
                         </div>
                         <div className="right w-5/12">
                             <div className="checkout-block">
-                                <div className="heading5">Your Order</div>
-                                <div className="list-product-checkout md:mt-8 mt-5 ">
-                                    <div className="item flex items-center pb-5 border-b border-line gap-6">
-                                        <div className="bg-img w-[100px] aspect-square rounded-lg overflow-hidden">
-                                            <Image
-                                                src={'/images/product/fashion/1-1.png'}
-                                                width={500}
-                                                height={500}
-                                                alt='img'
-                                                className='w-full h-full'
-                                            />
-                                        </div>
-                                        <div>
-                                            <div className="name text-title">Contrasting sheepskin sweatshirt</div>
-                                            <div className="caption1 text-secondary mt-2">
-                                                <span className='size'>XL</span>
-                                                <span>/</span>
-                                                <span className='color'>Blue</span>
-                                            </div>
-                                        </div>
-                                        <div className="text-title">
-                                            <span className='quantity'>1</span>
-                                            <span className='px-1'>x</span>
-                                            <span>
-                                                $60.00
-                                            </span>
-                                        </div>
-                                    </div>
+                                <div className="heading5 pb-3">Your Order</div>
+                                <div className="list-product-checkout">
+                                    {cartState.cartArray.length < 1 ? (
+                                        <p className='text-button pt-3'>No product in cart</p>
+                                    ) : (
+                                        cartState.cartArray.map((product) => (
+                                            <>
+                                                <div className="item flex items-center justify-between w-full pb-5 border-b border-line gap-6 mt-5">
+                                                    <div className="bg-img w-[100px] aspect-square flex-shrink-0 rounded-lg overflow-hidden">
+                                                        <Image
+                                                            src={product.thumbImage[0]}
+                                                            width={500}
+                                                            height={500}
+                                                            alt='img'
+                                                            className='w-full h-full'
+                                                        />
+                                                    </div>
+                                                    <div className="flex items-center justify-between w-full">
+                                                        <div>
+                                                            <div className="name text-title">{product.name}</div>
+                                                            <div className="caption1 text-secondary mt-2">
+                                                                <span className='size capitalize'>{product.selectedSize || product.sizes[0]}</span>
+                                                                <span>/</span>
+                                                                <span className='color capitalize'>{product.selectedColor || product.variation[0].color}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="text-title">
+                                                            <span className='quantity'>{product.quantity}</span>
+                                                            <span className='px-1'>x</span>
+                                                            <span>
+                                                                ${product.price}.00
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ))
+                                    )}
                                 </div>
                                 <div className="discount-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Discounts</div>
-                                    <div className="text-title">-$<span className="discount">10</span><span>.00</span></div>
+                                    <div className="text-title">-$<span className="discount">{discountCart}</span><span>.00</span></div>
                                 </div>
                                 <div className="ship-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Shipping</div>
@@ -251,7 +265,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="total-cart-block pt-5 flex justify-between">
                                     <div className="heading5">Total</div>
-                                    <div className="heading5 total-cart">$280.00</div>
+                                    <div className="heading5 total-cart">${totalCart}.00</div>
                                 </div>
                             </div>
                         </div>

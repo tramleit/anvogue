@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
@@ -23,9 +23,28 @@ const MenuPet = () => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
     }
 
+    const [fixedHeader, setFixedHeader] = useState(false)
+    const [lastScrollPosition, setLastScrollPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setFixedHeader(scrollPosition > 0 && scrollPosition < lastScrollPosition);
+            setLastScrollPosition(scrollPosition);
+        };
+
+        // Gắn sự kiện cuộn khi component được mount
+        window.addEventListener('scroll', handleScroll);
+
+        // Hủy sự kiện khi component bị unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollPosition]);
+
     return (
         <>
-            <div className='header-menu style-eight relative bg-surface w-full md:h-[90px] h-[64px]'>
+            <div className={`header-menu style-eight ${fixedHeader ? ' fixed' : 'relative'} bg-surface w-full md:h-[90px] h-[64px]`}>
                 <div className="container mx-auto h-full">
                     <div className="header-main flex items-center justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
@@ -813,8 +832,8 @@ const MenuPet = () => {
                                                     </div>
                                                     <div className="recent-product pl-2.5 basis-1/3">
                                                         <div className="text-button-uppercase pb-2">Recent Products</div>
-                                                        <div className="list-product hide-product-sold hide-color grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.slice(0, 2).map((prd, index) => (
+                                                        <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
+                                                            {productData.filter(item => item.action === 'add to cart').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -993,8 +1012,8 @@ const MenuPet = () => {
                                                     </div>
                                                     <div className="recent-product pl-2.5 basis-1/3">
                                                         <div className="text-button-uppercase pb-2">Recent Products</div>
-                                                        <div className="list-product hide-product-sold hide-color grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.slice(0, 2).map((prd, index) => (
+                                                        <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
+                                                            {productData.filter(item => item.action === 'add to cart').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -1775,7 +1794,7 @@ const MenuPet = () => {
                                                     </div>
                                                     <div className="recent-product pt-3">
                                                         <div className="text-button-uppercase pb-1">Recent Products</div>
-                                                        <div className="list-product hide-product-sold hide-color grid grid-cols-2 gap-5 mt-3">
+                                                        <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
                                                             {productData.slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
@@ -1967,7 +1986,7 @@ const MenuPet = () => {
                                                     </div>
                                                     <div className="recent-product pt-4">
                                                         <div className="text-button-uppercase pb-1">Recent Products</div>
-                                                        <div className="list-product hide-product-sold hide-color grid grid-cols-2 gap-5 mt-3">
+                                                        <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
                                                             {productData.slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}

@@ -12,7 +12,7 @@ import 'swiper/css/effect-fade';
 const SliderPet = () => {
     return (
         <>
-            <div className="slider-block style-one bg-linear 2xl:h-[780px] xl:h-[740px] lg:h-[680px] md:h-[580px] sm:h-[500px] h-[420px] w-full">
+            <div className="slider-block style-one 2xl:h-[780px] xl:h-[740px] lg:h-[680px] md:h-[580px] sm:h-[500px] h-[420px] w-full md:pb-20 pb-10">
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}
@@ -20,7 +20,7 @@ const SliderPet = () => {
                         loop={true}
                         pagination={{ clickable: true }}
                         modules={[Pagination, Autoplay]}
-                        className='h-full relative '
+                        className='h-full relative'
                         autoplay={{
                             delay: 4000,
                         }}

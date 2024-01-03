@@ -73,16 +73,10 @@
         ],
         "variation": [
             {
-                "color": "green",
-                "colorCode": "#D2EF9A",
-                "colorImage": "/images/product/color/green.png",
-                "image": "/images/product/fashion/2-1.png"
-            },
-            {
-                "color": "yellow",
-                "colorCode": "#ECB018",
+                "color": "white",
+                "colorCode": "#F6EFDD",
                 "colorImage": "/images/product/color/yellow.png",
-                "image": "/images/product/fashion/2-3.png"
+                "image": "/images/product/fashion/2-1.png"
             },
             {
                 "color": "purple",
@@ -125,9 +119,9 @@
         ],
         "variation": [
             {
-                "color": "green",
-                "colorCode": "#D2EF9A",
-                "colorImage": "/images/product/color/green.png",
+                "color": "pink",
+                "colorCode": "#F4407D",
+                "colorImage": "/images/product/color/red.png",
                 "image": "/images/product/fashion/3-1.png"
             },
             {
@@ -186,8 +180,8 @@
                 "image": "/images/product/fashion/4-2.png"
             },
             {
-                "color": "yellow",
-                "colorCode": "#ECB018",
+                "color": "white",
+                "colorCode": "#F6EFDD",
                 "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/4-3.png"
             },
@@ -235,9 +229,9 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
+                "color": "black",
+                "colorCode": "#1F1F1F",
+                "colorImage": "/images/product/color/green.png",
                 "image": "/images/product/fashion/5-1.png"
             },
             {
@@ -355,8 +349,8 @@
                 "image": "/images/product/fashion/7-2.png"
             },
             {
-                "color": "yellow",
-                "colorCode": "#ECB018",
+                "color": "white",
+                "colorCode": "#F6EFDD",
                 "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/7-3.png"
             },
@@ -393,7 +387,7 @@
         "price": 24,
         "originPrice": 32,
         "brand": "adidas",
-        "sold": 13,
+        "sold": 45,
         "quantity": 100,
         "quantityPurchase": 1,
         "sizes": [
@@ -477,8 +471,8 @@
                 "image": "/images/product/fashion/9-2.png"
             },
             {
-                "color": "yellow",
-                "colorCode": "#ECB018",
+                "color": "white",
+                "colorCode": "#F6EFDD",
                 "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/9-3.png"
             }
@@ -586,8 +580,8 @@
                 "image": "/images/product/fashion/11-1.png"
             },
             {
-                "color": "yellow",
-                "colorCode": "#ECB018",
+                "color": "white",
+                "colorCode": "#F6EFDD",
                 "colorImage": "/images/product/color/yellow.png",
                 "image": "/images/product/fashion/11-3.png"
             },
@@ -685,7 +679,7 @@
         "price": 35,
         "originPrice": 45,
         "brand": "gucci",
-        "sold": 10,
+        "sold": 39,
         "quantity": 100,
         "quantityPurchase": 1,
         "sizes": [
@@ -928,7 +922,7 @@
         "price": 24,
         "originPrice": 29,
         "brand": "zara",
-        "sold": 25,
+        "sold": 41,
         "quantity": 100,
         "quantityPurchase": 1,
         "sizes": [
@@ -1113,7 +1107,7 @@
         "price": 28,
         "originPrice": 36,
         "brand": "hermes",
-        "sold": 11,
+        "sold": 46,
         "quantity": 200,
         "quantityPurchase": 1,
         "sizes": [
@@ -1176,7 +1170,7 @@
         "price": 32,
         "originPrice": 40,
         "brand": "zara",
-        "sold": 5,
+        "sold": 42,
         "quantity": 80,
         "quantityPurchase": 1,
         "sizes": [
@@ -1665,7 +1659,7 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
                 "image": "/images/product/fashion/25-1.png"
             },
@@ -1726,27 +1720,27 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/26-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/26-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/26-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/26-4.png"
             }
         ],
         "thumbImage": [
@@ -1789,27 +1783,27 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/27-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/27-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/27-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/27-4.png"
             }
         ],
         "thumbImage": [
@@ -1847,27 +1841,27 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/28-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/28-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/28-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/28-4.png"
             }
         ],
         "thumbImage": [
@@ -1908,27 +1902,27 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/29-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/29-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/29-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/29-4.png"
             }
         ],
         "thumbImage": [
@@ -1970,27 +1964,27 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/30-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/30-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/30-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/30-4.png"
             }
         ],
         "thumbImage": [
@@ -2034,19 +2028,19 @@
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/31-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/31-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/31-1.png"
             }
         ],
         "thumbImage": [
@@ -2087,21 +2081,21 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/32-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/32-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/32-3.png"
             }
         ],
         "thumbImage": [
@@ -2143,15 +2137,15 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/33-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
                 "colorImage": "/images/product/color/underwear-purple.png",
-                "image": "/images/product/fashion/25-4.png"
+                "image": "/images/product/fashion/33-4.png"
             }
         ],
         "thumbImage": [
@@ -2193,21 +2187,21 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/34-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/34-2.png"
             },
             {
                 "color": "black",
-                "colorCode": "#555",
+                "colorCode": "#1F1F1F",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/34-3.png"
             }
         ],
         "thumbImage": [
@@ -2251,13 +2245,13 @@
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/35-4.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/35-3.png"
             }
         ],
         "thumbImage": [
@@ -2299,21 +2293,21 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/color/underwear-white.png",
-                "image": "/images/product/fashion/25-1.png"
+                "image": "/images/product/fashion/36-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
                 "colorImage": "/images/product/color/underwear-red.png",
-                "image": "/images/product/fashion/25-2.png"
+                "image": "/images/product/fashion/36-2.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
                 "colorImage": "/images/product/color/underwear-black.png",
-                "image": "/images/product/fashion/25-3.png"
+                "image": "/images/product/fashion/36-3.png"
             }
         ],
         "thumbImage": [
@@ -2349,7 +2343,7 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/accessory/1.png",
                 "image": "/images/product/accessory/1.png"
             }
@@ -2377,14 +2371,14 @@
         "price": 34,
         "originPrice": 42,
         "brand": "hermes",
-        "sold": 34,
+        "sold": 21,
         "quantity": 100,
         "quantityPurchase": 1,
         "sizes": [],
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/accessory/2.png",
                 "image": "/images/product/accessory/2.png"
             }
@@ -2419,7 +2413,7 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/accessory/3.png",
                 "image": "/images/product/accessory/3.png"
             }
@@ -2454,7 +2448,7 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/accessory/4.png",
                 "image": "/images/product/accessory/4.png"
             }
@@ -2489,7 +2483,7 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/accessory/5.png",
                 "image": "/images/product/accessory/5.png"
             }
@@ -2524,7 +2518,7 @@
         "variation": [
             {
                 "color": "yellow",
-                "colorCode": "#D7D7D7",
+                "colorCode": "#ECB018",
                 "colorImage": "/images/product/accessory/6.png",
                 "image": "/images/product/accessory/6.png"
             }

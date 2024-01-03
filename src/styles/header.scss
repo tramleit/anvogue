@@ -8,6 +8,23 @@
 .header-menu {
     position: relative;
     z-index: 101;
+    transition: all ease 0.5s;
+
+    &.fixed {
+        background-color: var(--white);
+        box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.12);
+        top: 0;
+        animation: animateHeader ease 0.5s;
+    }
+}
+
+@keyframes animateHeader {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 .menu-main {

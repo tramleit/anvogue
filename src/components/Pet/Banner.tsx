@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Banner = () => {
     return (
         <>
-            <div className="banner-block md:pt-20 pt-10">
+            <div className="banner-block">
                 <div className="container">
                     <div className="list-banner grid lg:grid-cols-3 md:grid-cols-2 gap-[20px]">
                         <Link href={'/shop/breadcrumb1'} className="banner-item relative block rounded-[20px] overflow-hidden duration-500">

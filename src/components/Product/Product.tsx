@@ -22,6 +22,7 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ data, type }) => {
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
+    const [openQuickShop, setOpenQuickShop] = useState<boolean>(false)
     const { addToCart, updateCart, cartState } = useCart();
     const { openModalCart } = useModalCartContext()
     const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist();
@@ -33,6 +34,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
+    }
+
+    const handleActiveSize = (item: string) => {
+        setActiveSize(item)
     }
 
     const handleAddToCart = () => {
@@ -124,18 +129,35 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 </div>
                             </div>
                             <div className="product-img w-full h-full aspect-[3/4]">
-                                {data.thumbImage.map((img, index) => (
-                                    <Image
-                                        key={index}
-                                        src={img}
-                                        width={500}
-                                        height={500}
-                                        alt={data.name}
-                                        className='w-full h-full object-cover duration-700'
-                                    />
-                                ))}
+                                {activeColor ? (
+                                    <>
+                                        {
+                                            <Image
+                                                src={data.variation.find(item => item.color === activeColor)?.image ?? ''}
+                                                width={500}
+                                                height={500}
+                                                alt={data.name}
+                                                className='w-full h-full object-cover duration-700'
+                                            />
+                                        }
+                                    </>
+                                ) : (
+                                    <>
+                                        {
+                                            data.thumbImage.map((img, index) => (
+                                                <Image
+                                                    key={index}
+                                                    src={img}
+                                                    width={500}
+                                                    height={500}
+                                                    alt={data.name}
+                                                    className='w-full h-full object-cover duration-700'
+                                                />
+                                            ))
+                                        }
+                                    </>
+                                )}
                             </div>
-
                             <div className="list-action grid grid-cols-2 gap-3 px-5 absolute w-full bottom-5 max-lg:hidden">
                                 <div
                                     className="quick-view-btn w-full text-button-uppercase py-2 text-center rounded-full duration-300 bg-white hover:bg-black hover:text-white"
@@ -157,9 +179,44 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                         Add To Cart
                                     </div>
                                 ) : (
-                                    <div className="quick-shop-btn text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white">
-                                        Quick Shop
-                                    </div>
+                                    <>
+                                        <div
+                                            className="quick-shop-btn text-button-uppercase py-2 text-center rounded-full duration-500 bg-white hover:bg-black hover:text-white"
+                                            onClick={e => {
+                                                e.stopPropagation();
+                                                setOpenQuickShop(true)
+                                            }}
+                                        >
+                                            Quick Shop
+                                        </div>
+                                        <div
+                                            className={`quick-shop-block absolute left-5 right-5 bg-white p-5 rounded-[20px] ${openQuickShop ? 'open' : ''}`}
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                            }}
+                                        >
+                                            <div className="list-size flex items-center justify-center flex-wrap gap-2">
+                                                {data.sizes.map((item, index) => (
+                                                    <div
+                                                        className={`size-item w-10 h-10 rounded-full flex items-center justify-center text-button bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                                        key={index}
+                                                        onClick={() => handleActiveSize(item)}
+                                                    >
+                                                        {item}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            <div
+                                                className="button-main w-full text-center rounded-full py-3 mt-4"
+                                                onClick={() => {
+                                                    handleAddToCart()
+                                                    setOpenQuickShop(false)
+                                                }}
+                                            >
+                                                Add To cart
+                                            </div>
+                                        </div>
+                                    </>
                                 )}
                             </div>
                         </div>
@@ -168,7 +225,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
                                     <div
                                         className={`progress-sold bg-red absolute left-0 top-0 h-full`}
-                                        style={{width: `${percentSold}%`}}
+                                        style={{ width: `${percentSold}%` }}
                                     >
                                     </div>
                                 </div>
@@ -187,7 +244,14 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             {data.variation.length > 0 && data.action === 'add to cart' && (
                                 <div className="list-color py-2 max-md:hidden flex items-center gap-3 flex-wrap duration-500">
                                     {data.variation.map((item, index) => (
-                                        <div className={`color-item bg-${item.color} w-8 h-8 rounded-full duration-300 relative`} key={index} onClick={(e) => { e.stopPropagation() }}>
+                                        <div
+                                            key={index}
+                                            className={`color-item w-8 h-8 rounded-full duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
+                                            style={{ backgroundColor: `${item.colorCode}` }}
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                handleActiveColor(item.color)
+                                            }}>
                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
                                         </div>
                                     ))}
@@ -196,7 +260,14 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                             {data.variation.length > 0 && data.action === 'quick shop' && (
                                 <div className="list-color-image max-md:hidden flex items-center gap-3 flex-wrap duration-500">
                                     {data.variation.map((item, index) => (
-                                        <div className={`color-item w-12 h-12 rounded-xl duration-300 relative`} key={index} onClick={(e) => { e.stopPropagation() }}>
+                                        <div
+                                            className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
+                                            key={index}
+                                            onClick={(e) => {
+                                                e.stopPropagation()
+                                                handleActiveColor(item.color)
+                                            }}
+                                        >
                                             <Image
                                                 src={item.colorImage}
                                                 width={100}
@@ -230,7 +301,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                         <>
                             <div className="product-item list-type">
                                 <div className="product-main cursor-pointer flex lg:items-center sm:justify-between gap-7 max-lg:gap-5">
-                                    <div onClick={() => handleDetailProduct(data.id)} className="product-thumb bg-white relative overflow-hidden block max-sm:w-1/2">
+                                    <div onClick={() => handleDetailProduct(data.id)} className="product-thumb bg-white relative overflow-hidden rounded-2xl block max-sm:w-1/2">
                                         {data.new && (
                                             <div className="product-tag text-button-uppercase bg-green px-3 py-0.5 inline-block rounded-full absolute top-3 left-3 z-[1]">
                                                 New
@@ -241,7 +312,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                 Sale
                                             </div>
                                         )}
-                                        <div className="product-img w-full aspect-[3/4]">
+                                        <div className="product-img w-full aspect-[3/4] rounded-2xl overflow-hidden">
                                             {data.thumbImage.map((img, index) => (
                                                 <Image
                                                     key={index}
@@ -249,7 +320,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                     width={500}
                                                     height={500}
                                                     alt={data.name}
-                                                    className='w-full h-full object-cover rounded-2xl duration-700'
+                                                    className='w-full h-full object-cover duration-700'
                                                 />
                                             ))}
                                         </div>
@@ -269,7 +340,11 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                             {data.variation.length > 0 && data.action === 'add to cart' ? (
                                                 <div className="list-color max-md:hidden py-2 mt-5 mb-1 flex items-center gap-3 flex-wrap duration-300">
                                                     {data.variation.map((item, index) => (
-                                                        <div className={`color-item bg-${item.color} w-8 h-8 rounded-full duration-300 relative`} key={index}>
+                                                        <div
+                                                            key={index}
+                                                            className={`color-item w-8 h-8 rounded-full duration-300 relative`}
+                                                            style={{ backgroundColor: `${item.colorCode}` }}
+                                                        >
                                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
                                                         </div>
                                                     ))}
@@ -283,7 +358,10 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                                     <div
                                                                         className={`color-item w-12 h-12 rounded-xl duration-300 relative ${activeColor === item.color ? 'active' : ''}`}
                                                                         key={index}
-                                                                        onClick={() => handleActiveColor(item.color)}
+                                                                        onClick={(e) => {
+                                                                            e.stopPropagation()
+                                                                            handleActiveColor(item.color)
+                                                                        }}
                                                                     >
                                                                         <Image
                                                                             src={item.colorImage}

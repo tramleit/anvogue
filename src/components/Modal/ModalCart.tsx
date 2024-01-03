@@ -27,6 +27,12 @@ const ModalCart = () => {
         setActiveTab(tab)
     }
 
+    let moneyForFreeship = 200;
+    let [totalCart, setTotalCart] = useState<number>(0)
+    let [discountCart, setDiscountCart] = useState<number>(0)
+
+    cartState.cartArray.map(item => totalCart += item.price * item.quantity)
+
     return (
         <>
             <div className={`modal-cart-block`} onClick={closeModalCart}>
@@ -88,9 +94,14 @@ const ModalCart = () => {
                             </div>
                         </div>
                         <div className="heading banner mt-3 px-6">
-                            <div className="text">Buy <span className="text-button">$<span className="more-price">250</span><span>.00 </span></span><span>more to get </span><span className="text-button">freeship</span></div>
+                            <div className="text">Buy <span className="text-button">$<span className="more-price">{moneyForFreeship - totalCart > 0 ? (<>{moneyForFreeship - totalCart}</>) : (0)}</span>.00 </span>
+                                <span>more to get </span>
+                                <span className="text-button">freeship</span></div>
                             <div className="tow-bar-block mt-3">
-                                <div className="progress-line"></div>
+                                <div
+                                    className="progress-line"
+                                    style={{ width: totalCart <= moneyForFreeship ? `${(totalCart / moneyForFreeship) * 100}%` : `100%` }}
+                                ></div>
                             </div>
                         </div>
                         <div className="list-product px-6">

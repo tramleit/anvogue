@@ -128,7 +128,11 @@ const Compare = () => {
                                             <td className="w-full border border-line h-[60px] border-t-0 border-r-0 size" key={index}>
                                                 <div className='h-full flex items-center justify-center capitalize gap-2'>
                                                     {item.variation.map((colorItem, i) => (
-                                                        <span key={i} className={`w-6 h-6 rounded-full bg-${colorItem.color}`}></span>
+                                                        <span
+                                                            key={i}
+                                                            className={`w-6 h-6 rounded-full`}
+                                                            style={{backgroundColor: `${colorItem.colorCode}`}}
+                                                        ></span>
                                                     ))}
                                                 </div>
                                             </td>

@@ -13,28 +13,24 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 
 const Cart = () => {
-    const { cartState } = useCart();
-    const [productQuantity, setProductQuantity] = useState<Record<string, number>>({});
+    const { cartState, updateCart, removeFromCart } = useCart();
 
     const handleQuantityChange = (productId: string, newQuantity: number) => {
-        setProductQuantity((prevQuantity) => ({
-            ...prevQuantity,
-            [productId]: newQuantity,
-        }));
+        // Tìm sản phẩm trong giỏ hàng
+        const itemToUpdate = cartState.cartArray.find((item) => item.id === productId);
+
+        // Kiểm tra xem sản phẩm có tồn tại không
+        if (itemToUpdate) {
+            // Truyền giá trị hiện tại của selectedSize và selectedColor
+            updateCart(productId, newQuantity, itemToUpdate.selectedSize, itemToUpdate.selectedColor);
+        }
     };
 
-    const handleDecreaseQuantity = (productId: string) => {
-        const currentQuantity = productQuantity[productId] || 0;
-        const newQuantity = currentQuantity > 1 ? currentQuantity - 1 : 1;
-        handleQuantityChange(productId, newQuantity);
-    };
+    let moneyForFreeship = 200;
+    let [totalCart, setTotalCart] = useState<number>(0)
+    let [discountCart, setDiscountCart] = useState<number>(0)
 
-    const handleIncreaseQuantity = (productId: string) => {
-        const currentQuantity = productQuantity[productId] || 0;
-        const newQuantity = currentQuantity + 1;
-        handleQuantityChange(productId, newQuantity);
-    };
-
+    cartState.cartArray.map(item => totalCart += item.price * item.quantity)
 
     return (
         <>
@@ -52,9 +48,16 @@ const Cart = () => {
                                 <div className="caption1 pl-2">Your cart will expire in <span className="min text-critical fw-700">04</span><span className="text-critical fw-700">:</span><span className="sec text-critical fw-700">59</span><span> minutes! Please checkout now before your items sell out!</span></div>
                             </div>
                             <div className="heading banner mt-5">
-                                <div className="text">Buy <span className="text-button">$<span className="more-price">250</span><span>.00 </span></span><span>more to get </span><span className="text-button">freeship</span></div>
+                                <div className="text">Buy
+                                    <span className="text-button">$<span className="more-price">{moneyForFreeship - totalCart > 0 ? (<>{moneyForFreeship - totalCart}</>) : (0)}</span>.00</span>
+                                    <span>more to get </span>
+                                    <span className="text-button">freeship</span>
+                                </div>
                                 <div className="tow-bar-block mt-4">
-                                    <div className="progress-line"></div>
+                                    <div
+                                        className="progress-line"
+                                        style={{ width: totalCart <= moneyForFreeship ? `${(totalCart / moneyForFreeship) * 100}%` : `100%` }}
+                                    ></div>
                                 </div>
                             </div>
                             <div className="list-product w-full sm:mt-7 mt-5">
@@ -102,29 +105,27 @@ const Cart = () => {
                                                         <div className="text-title text-center">${product.price}.00</div>
                                                     </div>
                                                     <div className="w-1/6 flex items-center justify-center">
-                                                        <div className="quantity-block bg-surface md:p-3 p-2 flex items-center justify-between rounded-lg border border-line md:w-[100px] w-20">
+                                                        <div className="quantity-block bg-surface md:p-3 p-2 flex items-center justify-between rounded-lg border border-line md:w-[100px] flex-shrink-0 w-20">
                                                             <Icon.Minus
-                                                                onClick={() => handleDecreaseQuantity(product.id)}
-                                                                className={`text-xl max-md:text-base ${productQuantity[product.id] === 1 ? 'disabled' : ''}`}
+                                                                onClick={() => {
+                                                                    if (product.quantity > 1) {
+                                                                        handleQuantityChange(product.id, product.quantity - 1)
+                                                                    }
+                                                                }}
+                                                                className={`text-base max-md:text-sm ${product.quantity === 1 ? 'disabled' : ''}`}
                                                             />
-                                                            <div className="text-button quantity">{productQuantity[product.id] || 1}</div>
+                                                            <div className="text-button quantity">{product.quantity}</div>
                                                             <Icon.Plus
-                                                                onClick={() => handleIncreaseQuantity(product.id)}
-                                                                className='text-xl max-md:text-base'
+                                                                onClick={() => handleQuantityChange(product.id, product.quantity + 1)}
+                                                                className='text-base max-md:text-sm'
                                                             />
                                                         </div>
                                                     </div>
                                                     <div className="w-1/6 flex total-price items-center justify-center">
-                                                        <div className="text-title text-center">
-                                                            <span className='quantity'>{productQuantity[product.id] || 1}</span>
-                                                            <span className='px-1'>x</span>
-                                                            <span>
-                                                                ${product.price}.00
-                                                            </span>
-                                                        </div>
+                                                        <div className="text-title text-center">${product.quantity * product.price}.00</div>
                                                     </div>
                                                     <div className="w-1/12 flex items-center justify-center">
-                                                        <Icon.XCircle className='text-xl max-md:text-base text-red cursor-pointer' />
+                                                        <Icon.XCircle className='text-xl max-md:text-base text-red cursor-pointer hover:text-black duration-500' onClick={() => removeFromCart(product.id)} />
                                                     </div>
                                                 </div>
                                             ))
@@ -134,8 +135,8 @@ const Cart = () => {
                                 </div>
                             </div>
                             <div className="input-block discount-code w-full h-12 sm:mt-7 mt-5">
-                                <form className='w-full h-full relative' action="post">
-                                    <input type="text" placeholder='Add voucher discount' className='w-full h-full bg-surface pl-4 pr-14 rounded-lg border border-line' />
+                                <form className='w-full h-full relative'>
+                                    <input type="text" placeholder='Add voucher discount' className='w-full h-full bg-surface pl-4 pr-14 rounded-lg border border-line' required />
                                     <button className='button-main absolute top-1 bottom-1 right-1 px-5 rounded-lg flex items-center justify-center'>Apply Code
                                     </button>
                                 </form>
@@ -146,11 +147,11 @@ const Cart = () => {
                                 <div className="heading5">Order Summary</div>
                                 <div className="total-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Subtotal</div>
-                                    <div className="text-title">$<span className="total-product">250</span><span>.00</span></div>
+                                    <div className="text-title">$<span className="total-product">{totalCart}</span><span>.00</span></div>
                                 </div>
                                 <div className="discount-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Discounts</div>
-                                    <div className="text-title"> <span>-$</span><span className="discount">10</span><span>.00</span></div>
+                                    <div className="text-title"> <span>-$</span><span className="discount">{discountCart}</span><span>.00</span></div>
                                 </div>
                                 <div className="ship-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Shipping</div>
@@ -179,7 +180,7 @@ const Cart = () => {
                                 <div className="total-cart-block pt-4 pb-4 flex justify-between">
                                     <div className="heading5">Total</div>
                                     <div className="heading5">$
-                                        <span className="total-cart heading5">240</span>
+                                        <span className="total-cart heading5">{totalCart - discountCart}</span>
                                         <span className='heading5'>.00</span></div>
                                 </div>
                                 <div className="block-button flex flex-col items-center gap-y-4 mt-5">
