@@ -13,6 +13,9 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
+import { useWishlist } from '@/context/WishlistContext'
+import { useModalWishlistContext } from '@/context/ModalWishlistContext'
+import ModalSizeguide from '@/components/Modal/ModalSizeguide'
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -22,14 +25,25 @@ interface Props {
 }
 
 const Discount: React.FC<Props> = ({ data, productId }) => {
+    const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
     const [activeTab, setActiveTab] = useState<string | undefined>('description')
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist()
+    const { openModalWishlist } = useModalWishlistContext()
     const productMain = data.find(product => product.id === productId) as ProductType
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
+
+    const handleOpenSizeGuide = () => {
+        setOpenSizeGuide(true);
+    };
+
+    const handleCloseSizeGuide = () => {
+        setOpenSizeGuide(false);
+    };
 
     const handleSwiper = (swiper: SwiperCore) => {
         // Do something with the thumbsSwiper instance
@@ -64,6 +78,17 @@ const Discount: React.FC<Props> = ({ data, productId }) => {
             updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
         }
         openModalCart()
+    };
+
+    const handleAddToWishlist = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (wishlistState.wishlistArray.some(item => item.id === productMain.id)) {
+            removeFromWishlist(productMain.id);
+        } else {
+            // else, add to wishlist and set state to true
+            addToWishlist(productMain);
+        }
+        openModalWishlist();
     };
 
     const handleActiveTab = (tab: string) => {
@@ -127,8 +152,19 @@ const Discount: React.FC<Props> = ({ data, productId }) => {
                                     <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                                     <div className="heading4 mt-1">{productMain.name}</div>
                                 </div>
-                                <div className="add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                    <Icon.Heart size={20} />
+                                <div
+                                    className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
+                                    onClick={handleAddToWishlist}
+                                >
+                                    {wishlistState.wishlistArray.some(item => item.id === productMain.id) ? (
+                                        <>
+                                            <Icon.Heart size={24} weight='fill' className='text-white' />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Icon.Heart size={24} />
+                                        </>
+                                    )}
                                 </div>
                             </div>
                             <div className="flex items-center mt-3">
@@ -197,7 +233,13 @@ const Discount: React.FC<Props> = ({ data, productId }) => {
                                 <div className="choose-size mt-5">
                                     <div className="heading flex items-center justify-between">
                                         <div className="text-title">Size: <span className='text-title size'>{activeSize}</span></div>
-                                        <div className="caption1 size-guide text-red underline">Size Guide</div>
+                                        <div
+                                            className="caption1 size-guide text-red underline cursor-pointer"
+                                            onClick={handleOpenSizeGuide}
+                                        >
+                                            Size Guide
+                                        </div>
+                                        <ModalSizeguide data={productMain} isOpen={openSizeGuide} onClose={handleCloseSizeGuide} />
                                     </div>
                                     <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                         {productMain.sizes.map((item, index) => (

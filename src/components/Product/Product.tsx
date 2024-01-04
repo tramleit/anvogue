@@ -114,7 +114,15 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     }}
                                 >
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Add To Wishlist</div>
-                                    <Icon.Heart size={18} />
+                                    {wishlistState.wishlistArray.some(item => item.id === data.id) ? (
+                                        <>
+                                            <Icon.Heart size={18} weight='fill' className='text-white' />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Icon.Heart size={18} />
+                                        </>
+                                    )}
                                 </div>
                                 <div
                                     className={`compare-btn w-[32px] h-[32px] flex items-center justify-center rounded-full bg-white duration-300 relative mt-2 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}

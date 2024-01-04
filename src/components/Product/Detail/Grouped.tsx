@@ -13,6 +13,8 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
+import { useWishlist } from '@/context/WishlistContext'
+import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -22,6 +24,7 @@ interface Props {
 }
 
 const Grouped: React.FC<Props> = ({ data, productId }) => {
+    const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
@@ -31,6 +34,8 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist()
+    const { openModalWishlist } = useModalWishlistContext()
 
     const handleSwiper = (swiper: SwiperCore) => {
         // Do something with the thumbsSwiper instance
@@ -65,6 +70,17 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
             updateCart(data[Number(productId) + 2].id, quantity.id, activeSize, activeColor)
         }
         openModalCart()
+    };
+
+    const handleAddToWishlist = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (wishlistState.wishlistArray.some(item => item.id === productMain.id)) {
+            removeFromWishlist(productMain.id);
+        } else {
+            // else, add to wishlist and set state to true
+            addToWishlist(productMain);
+        }
+        openModalWishlist();
     };
 
     const handleActiveTab = (tab: string) => {
@@ -130,8 +146,19 @@ const Grouped: React.FC<Props> = ({ data, productId }) => {
                                     <div className="caption2 text-secondary font-semibold uppercase">{productMain.type}</div>
                                     <div className="heading4 mt-1">{productMain.name}</div>
                                 </div>
-                                <div className="add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                    <Icon.Heart size={20} />
+                                <div
+                                    className={`add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === productMain.id) ? 'active' : ''}`}
+                                    onClick={handleAddToWishlist}
+                                >
+                                    {wishlistState.wishlistArray.some(item => item.id === productMain.id) ? (
+                                        <>
+                                            <Icon.Heart size={24} weight='fill' className='text-white' />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Icon.Heart size={24} />
+                                        </>
+                                    )}
                                 </div>
                             </div>
                             <div className="flex items-center mt-3">

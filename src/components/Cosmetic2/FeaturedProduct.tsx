@@ -11,6 +11,8 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
+import { useWishlist } from '@/context/WishlistContext'
+import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -127,7 +129,6 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             <div className="choose-size">
                                 <div className="heading flex items-center justify-between">
                                     <div className="text-title">Volume: <span className='text-title size'>{`${activeSize}ml`}</span></div>
-                                    <div className="caption1 size-guide text-red underline">Size Guide</div>
                                 </div>
                                 <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.sizes.map((item, index) => (

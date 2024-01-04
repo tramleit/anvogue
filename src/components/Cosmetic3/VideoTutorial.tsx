@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +8,8 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 
 const VideoTutorial = () => {
+    const [openVideo, setOpenVideo] = useState<boolean>(false)
+
     return (
         <>
             <div className="video-tutorial-block relative max-sm:h-[240px]">
@@ -24,9 +26,13 @@ const VideoTutorial = () => {
                     <div className="text-content absolute top-1/2 -translate-y-1/2">
                         <div className="heading3">Night routines Skincare tutorials</div>
                         <div className="mt-3">Experience the Power of Nighttime Skincare Rituals</div>
-                        <div className="button-main inline-flex items-center gap-3 mt-8">View Now
+                        <div
+                            className="button-main play-btn inline-flex items-center gap-3 mt-8"
+                            onClick={() => setOpenVideo(true)}
+                        >
+                            View Now
                             <span>
-                                <Icon.Play size={18} color='#fff' weight='fill' />
+                                <Icon.Play size={18} color='#fff' weight='fill' className='duration-500' />
                             </span>
                         </div>
                     </div>
@@ -157,6 +163,14 @@ const VideoTutorial = () => {
                                 </Swiper>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className={`modal-video-block`} onClick={() => setOpenVideo(false)}>
+                    <div
+                        className={`modal-video-main ${openVideo ? 'open' : ''}`}
+                        onClick={(e) => { e.stopPropagation() }}
+                    >
+                        <iframe src="https://www.youtube.com/embed/CxZI6R1VKJY?si=VB9g1QxpuTyoYFls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
             </div>

@@ -50,7 +50,7 @@ const FlashSale = () => {
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day time heading1">{timeLeft.seconds}</div>
+                                <div className="day time heading1">{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</div>
                                 <div className='text-button-uppercase font-medium'>Seconds</div>
                             </div>
                         </div>

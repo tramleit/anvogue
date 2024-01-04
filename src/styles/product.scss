@@ -49,20 +49,6 @@
         }
     }
 
-    .add-wishlist-btn {
-        &.active {
-            background-color: var(--red);
-
-            svg {
-                color: var(--white);
-
-                path {
-                    background-color: #fff;
-                }
-            }
-        }
-    }
-
     .compare-btn {
         .checked-icon {
             display: none;
@@ -201,6 +187,19 @@
     }
 }
 
+.add-wishlist-btn {
+    &.active {
+        background-color: var(--red);
+
+        svg {
+            color: var(--white);
+
+            path {
+                background-color: #fff;
+            }
+        }
+    }
+}
 
 .list-color,
 .list-color-image {

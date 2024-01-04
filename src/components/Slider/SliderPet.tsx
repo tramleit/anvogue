@@ -51,7 +51,6 @@ const SliderPet = () => {
                                     <div className="text-content sm:w-1/2 w-2/3">
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                         <div className="text-display md:mt-5 mt-2">Unleash a Happy, Healthy Pet</div>
-                                        <div className="body1 text-secondary mt-4">Discover Exceptional Care and Nourishment to Enhance Your Furry Friend{String.raw`'s`} Wellbeing and Happiness</div>
                                         <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">
@@ -72,7 +71,6 @@ const SliderPet = () => {
                                     <div className="text-content sm:w-1/2 w-2/3">
                                         <div className="text-sub-display">Sale! Up To 50% Off!</div>
                                         <div className="text-display md:mt-5 mt-2">Feed Your Pet{String.raw`'s`} Appetite</div>
-                                        <div className="body1 text-secondary mt-4">Satisfy your pet{String.raw`'s`} cravings with a delectable selection of nourishing meals, enticing treats, and wholesome snacks.</div>
                                         <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3">Shop Now</Link>
                                     </div>
                                     <div className="sub-img absolute left-0 top-0 w-full h-full z-[-1]">

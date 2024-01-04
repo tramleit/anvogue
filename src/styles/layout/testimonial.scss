@@ -20,26 +20,42 @@
     }
 }
 
-.video-tutorial-block .list-video .bg-video {
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: opacity ease 1s;
-    position: absolute;
-    top: 0;
-
-    .bg-img {
+.video-tutorial-block {
+    .list-video .bg-video {
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: opacity ease 1s;
         position: absolute;
-        height: 0;
+        top: 0;
+    
+        .bg-img {
+            position: absolute;
+            height: 0;
+        }
+    
+        &.active {
+            opacity: 1;
+            visibility: visible;
+    
+            .bg-img {
+                position: relative;
+                height: 100%;
+            }
+        }
+    
+        @media (max-width: 640px) {
+            position: relative;
+        }
     }
 
-    &.active {
-        opacity: 1;
-        visibility: visible;
-
-        .bg-img {
-            position: relative;
-            height: 100%;
+    .button-main.play-btn {
+        &:hover {
+            svg {
+                path {
+                    fill: var(--black);
+                }
+            }
         }
     }
 }

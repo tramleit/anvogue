@@ -9,14 +9,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
+import { useRouter } from 'next/navigation'
 
 interface Props {
     data: Array<ProductType>;
 }
 
 const LookBook: React.FC<Props> = ({ data }) => {
+    const router = useRouter()
+
+    const handleDetailProduct = (productId: string) => {
+        // redirect to shop with category selected
+        router.push(`/product/default?id=${productId}`);
+    };
+
     // Truy cập thông tin của sản phẩm thứ 38 trong mảng data
     const productMain = data[38];
+
 
     return (
         <>
@@ -55,19 +64,19 @@ const LookBook: React.FC<Props> = ({ data }) => {
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Jacquard fluid trousers</div>
-                                        <div className="price text-center">$68.00</div>
-                                    </Link>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
+                                        <div className="text-title name">{productMain.name}</div>
+                                        <div className="price text-center">${productMain.price}.00</div>
+                                    </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[13%] left-[54%] cursor-pointer">
                                     <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Jacquard fluid trousers</div>
-                                        <div className="price text-center">$68.00</div>
-                                    </Link>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
+                                        <div className="text-title name">{productMain.name}</div>
+                                        <div className="price text-center">${productMain.price}.00</div>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -84,19 +93,19 @@ const LookBook: React.FC<Props> = ({ data }) => {
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Jacquard fluid trousers</div>
-                                        <div className="price text-center">$68.00</div>
-                                    </Link>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
+                                        <div className="text-title name">{productMain.name}</div>
+                                        <div className="price text-center">${productMain.price}.00</div>
+                                    </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[10%] left-[20%] cursor-pointer">
                                     <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Jacquard fluid trousers</div>
-                                        <div className="price text-center">$68.00</div>
-                                    </Link>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
+                                        <div className="text-title name">{productMain.name}</div>
+                                        <div className="price text-center">${productMain.price}.00</div>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -113,19 +122,19 @@ const LookBook: React.FC<Props> = ({ data }) => {
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Jacquard fluid trousers</div>
-                                        <div className="price text-center">$68.00</div>
-                                    </Link>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
+                                        <div className="text-title name">{productMain.name}</div>
+                                        <div className="price text-center">${productMain.price}.00</div>
+                                    </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[12%] left-[62%] cursor-pointer">
                                     <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Jacquard fluid trousers</div>
-                                        <div className="price text-center">$68.00</div>
-                                    </Link>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
+                                        <div className="text-title name">{productMain.name}</div>
+                                        <div className="price text-center">${productMain.price}.00</div>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>

@@ -12,7 +12,7 @@ import 'swiper/css/effect-fade';
 const SliderEleven = () => {
     return (
         <>
-            <div className="slider-block w-full">
+            <div className="slider-block style-two w-full">
                 <div className="container lg:pt-[30px] flex max-lg:flex-wrap gap-y-5 h-full w-full">
                     <div className="slider-main lg:w-2/3 w-full lg:pr-[15px] max-lg:h-[300px] max-[420px]:h-[340px]">
                         <Swiper

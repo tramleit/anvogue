@@ -12,7 +12,7 @@ import 'swiper/css/effect-fade';
 const SliderFive = () => {
     return (
         <>
-            <div className="slider-block style-one bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full">
+            <div className="slider-block style-five bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[320px] w-full">
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}

@@ -4,9 +4,10 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { countdownTime } from '@/store/countdownTime'
-
+import { useRouter } from 'next/navigation'
 const FlashSale = () => {
     const [timeLeft, setTimeLeft] = useState(countdownTime());
+    const router = useRouter()
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -15,6 +16,11 @@ const FlashSale = () => {
 
         return () => clearInterval(timer);
     }, []);
+
+    const handleDetailProduct = (productId: string) => {
+        // redirect to shop with category selected
+        router.push(`/product/default?id=${productId}`);
+    };
 
     return (
         <>
@@ -40,11 +46,11 @@ const FlashSale = () => {
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day time heading1">{timeLeft.seconds}</div>
+                                <div className="day time heading1">{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</div>
                                 <div className='text-button-uppercase font-medium'>Seconds</div>
                             </div>
                         </div>
-                        <Link href={'#!'} className='button-main lg:mt-9 md:mt-6 mt-4'>Get it now</Link>
+                        <Link href={'/shop/breadcrumb1'} className='button-main lg:mt-9 md:mt-6 mt-4'>Get it now</Link>
                     </div>
                     <div className="bg-img w-1/2 max-sm:hidden">
                         <div className="popular-product">
@@ -60,19 +66,19 @@ const FlashSale = () => {
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">Hair Treatment</div>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('49')}>
+                                        <div className="text-title name">Tinted Moisturiser</div>
                                         <div className="price text-center">$10.00</div>
-                                    </Link>
+                                    </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[25%] left-[26%] cursor-pointer">
                                     <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">After Sun - tan Booster</div>
+                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('49')}>
+                                        <div className="text-title name">Tinted Moisturiser</div>
                                         <div className="price text-center">$15.00</div>
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

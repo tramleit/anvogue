@@ -38,7 +38,7 @@ const Deal: React.FC<Props> = ({ data, start, limit }) => {
                                     <span>H : </span>
                                     <span className='minute'>{timeLeft.minutes}</span>
                                     <span>M : </span>
-                                    <span className='second'>{timeLeft.seconds}</span>
+                                    <span className='second'>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</span>
                                     <span>S</span>
                                 </div>
                             </div>

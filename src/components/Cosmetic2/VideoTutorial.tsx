@@ -6,6 +6,7 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 
 const VideoTutorial = () => {
     const [activeVideo, setActiveVideo] = useState<string>('1')
+    const [openVideo, setOpenVideo] = useState<boolean>(false)
 
     const handleActiveVideo = (item: string) => {
         setActiveVideo(item)
@@ -67,7 +68,10 @@ const VideoTutorial = () => {
                                 className='w-full h-full object-cover'
                             />
                         </div>
-                        <div className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white">
+                        <div
+                            className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white"
+                            onClick={() => setOpenVideo(true)}
+                        >
                             <Icon.Play size={30} weight='fill' />
                         </div>
                     </div>
@@ -84,7 +88,10 @@ const VideoTutorial = () => {
                                 className='w-full h-full object-cover'
                             />
                         </div>
-                        <div className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white">
+                        <div
+                            className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white"
+                            onClick={() => setOpenVideo(true)}
+                        >
                             <Icon.Play size={30} weight='fill' />
                         </div>
                     </div>
@@ -101,7 +108,10 @@ const VideoTutorial = () => {
                                 className='w-full h-full object-cover'
                             />
                         </div>
-                        <div className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white">
+                        <div
+                            className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white"
+                            onClick={() => setOpenVideo(true)}
+                        >
                             <Icon.Play size={30} weight='fill' />
                         </div>
                     </div>
@@ -118,7 +128,10 @@ const VideoTutorial = () => {
                                 className='w-full h-full object-cover'
                             />
                         </div>
-                        <div className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white">
+                        <div
+                            className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white"
+                            onClick={() => setOpenVideo(true)}
+                        >
                             <Icon.Play size={30} weight='fill' />
                         </div>
                     </div>
@@ -135,9 +148,20 @@ const VideoTutorial = () => {
                                 className='w-full h-full object-cover'
                             />
                         </div>
-                        <div className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white">
+                        <div
+                            className="btn-play absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer bg-white sm:w-20 w-16 sm:h-20 h-16 rounded-full flex items-center justify-center duration-500 hover:bg-black hover:text-white"
+                            onClick={() => setOpenVideo(true)}
+                        >
                             <Icon.Play size={30} weight='fill' />
                         </div>
+                    </div>
+                </div>
+                <div className={`modal-video-block`} onClick={() => setOpenVideo(false)}>
+                    <div
+                        className={`modal-video-main ${openVideo ? 'open' : ''}`}
+                        onClick={(e) => { e.stopPropagation() }}
+                    >
+                        <iframe src="https://www.youtube.com/embed/CxZI6R1VKJY?si=VB9g1QxpuTyoYFls" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                     </div>
                 </div>
             </div>

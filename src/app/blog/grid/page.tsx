@@ -28,8 +28,6 @@ const BlogGrid = () => {
         return isCategoryMatched
     })
 
-    console.log(filteredData);
-    
 
     if (filteredData.length === 0) {
         filteredData = [{

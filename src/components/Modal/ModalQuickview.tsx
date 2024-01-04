@@ -55,10 +55,6 @@ const ModalQuickview = () => {
 
     return (
         <>
-            {/* Nội dung của modal Quickview, sử dụng dữ liệu từ props.data */}
-            {/* Đặt các phần tử và thông tin bạn muốn hiển thị trong modal Quickview ở đây */}
-
-            {/* Nút đóng modal */}
             <div className={`modal-quickview-block`} onClick={closeQuickview}>
                 <div
                     className={`modal-quickview-main py-6 ${selectedProduct !== null ? 'open' : ''}`}

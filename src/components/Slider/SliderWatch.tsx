@@ -10,7 +10,7 @@ import 'swiper/css/bundle';
 const SliderWatch = () => {
     return (
         <>
-            <div className="slider-block style-one 2xl:h-[760px] xl:h-[720px] lg:h-[680px] md:h-[580px] sm:h-[500px] h-[420px] w-full">
+            <div className="slider-block style-two 2xl:h-[760px] xl:h-[720px] lg:h-[680px] md:h-[580px] sm:h-[500px] h-[420px] w-full">
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}

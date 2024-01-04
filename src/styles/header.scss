@@ -22,6 +22,7 @@
     0% {
         transform: translate3d(0, -100%, 0);
     }
+
     100% {
         transform: none;
     }
@@ -332,6 +333,28 @@
     }
 
     &.swiper-slide-active {
+        .slider-item {
+            animation: opacityAnimate 1s ease;
+
+            .text-content {
+
+                .text-button-uppercase,
+                .text-sub-display {
+                    animation: animateX .8s ease;
+                }
+
+                .heading1,
+                .heading2,
+                .text-display {
+                    animation: animateX 1.2s ease;
+                }
+
+                .button-main {
+                    animation: animateX 1.4s ease;
+                }
+            }
+        }
+
         .sub-img {
             img {
                 animation: ScaleImg .8s ease;
@@ -340,18 +363,109 @@
     }
 }
 
-@keyframes ScaleImg {
+.style-two {
+    .swiper-slide-active {
+        .slider-item {
+            .text-content {
+                .text-button-uppercase,
+                .text-sub-display {
+                    animation: animateY .6s ease;
+                }
+
+                .heading1,
+                .heading2,
+                .text-display {
+                    animation: animateY 0.8s ease;
+                }
+
+                .body1 {
+                    animation: animateY 1.2s ease;
+                }
+
+                .button-main {
+                    animation: animateY 1.4s ease;
+                }
+            }
+        }
+    }
+}
+
+.style-five {
+    .swiper-slide-active {
+        .slider-item {
+            .text-content {
+                .text-sub-display {
+                    animation: animateReverseX .6s ease;
+                }
+
+                .heading1,
+                .text-display {
+                    animation: animateReverseX 0.8s ease;
+                }
+
+                .button-main {
+                    animation: animateReverseX 1.1s ease;
+                }
+            }
+        }
+    }
+}
+
+@keyframes opacityAnimate {
     0% {
-        transform: scale(1.2);
         opacity: 0;
     }
 
     100% {
-        transform: scale(1);
         opacity: 1;
     }
 }
 
+@keyframes ScaleImg {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animateX {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateReverseX {
+    0% {
+        opacity: 0;
+        transform: translateX(120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateY {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .slider-toys-kid {
     .slick-list {
