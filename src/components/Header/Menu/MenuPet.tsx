@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { usePathname } from 'next/navigation';
 import Product from '@/components/Product/Product';
@@ -10,7 +11,10 @@ import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
 import useShopDepartmentPopup from '@/store/useShopDepartmentPopup';
 import useMenuMobile from '@/store/useMenuMobile';
-
+import { useModalCartContext } from '@/context/ModalCartContext';
+import { useModalWishlistContext } from '@/context/ModalWishlistContext';
+import { useModalSearchContext } from '@/context/ModalSearchContext';
+import { useCart } from '@/context/CartContext';
 
 const MenuPet = () => {
     const pathname = usePathname()
@@ -18,6 +22,18 @@ const MenuPet = () => {
     const { openShopDepartmentPopup, handleShopDepartmentPopup } = useShopDepartmentPopup()
     const { openMenuMobile, handleMenuMobile } = useMenuMobile()
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
+    const { openModalCart } = useModalCartContext()
+    const { cartState } = useCart()
+    const { openModalWishlist } = useModalWishlistContext()
+    const { openModalSearch } = useModalSearchContext()
+
+    const [searchKeyword, setSearchKeyword] = useState('');
+    const router = useRouter()
+
+    const handleSearch = (value: string) => {
+        router.push(`/search-result?query=${value}`)
+        setSearchKeyword('')
+    }
 
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
@@ -54,12 +70,24 @@ const MenuPet = () => {
                             <div className="heading4">Anvogue</div>
                         </Link>
                         <div className="form-search w-[54%] pl-8 flex items-center h-[48px] max-lg:hidden">
-                            <form action="/search-result" className='w-full flex items-center h-full'>
-                                <input type="text" className="search-input h-full px-4 w-full border border-line rounded-l-2xl" placeholder="What are you looking for today?" />
-                                <button type="submit" className="search-button button-main bg-black h-full flex items-center px-3 rounded-l-none rounded-r-2xl">
-                                    <Icon.MagnifyingGlass color='#fff' size={24} weight='bold' />
+                            <div className='w-full flex items-center h-full'>
+                                <input
+                                    type="text"
+                                    className="search-input h-full px-4 w-full border border-line rounded-l-2xl"
+                                    placeholder="What are you looking for today?"
+                                    value={searchKeyword}
+                                    onChange={(e) => setSearchKeyword(e.target.value)}
+                                    onKeyDown={(e) => e.key === 'Enter' && handleSearch(searchKeyword)}
+                                />
+                                <button
+                                    className="search-button button-main bg-black h-full flex items-center px-3 rounded-l-none rounded-r-2xl"
+                                    onClick={() => {
+                                        handleSearch(searchKeyword)
+                                    }}
+                                >
+                                    <Icon.MagnifyingGlass color='#fff' size={24} weight='bold' className='duration-300' />
                                 </button>
-                            </form>
+                            </div>
                         </div>
                         <div className="right flex gap-12">
                             <div className="list-action flex items-center gap-6">
@@ -78,14 +106,14 @@ const MenuPet = () => {
                                         <Link href={'#!'} className='body1 hover:underline'>Support</Link>
                                     </div>
                                 </div>
-                                <div className="max-md:hidden wishlist-icon flex flex-col items-center cursor-pointer">
+                                <div className="max-md:hidden wishlist-icon flex flex-col items-center cursor-pointer" onClick={openModalWishlist}>
                                     <Icon.Heart size={24} color='black' />
                                     <div className="caption1">Wishlist</div>
                                 </div>
-                                <div className="max-md:hidden cart-icon flex flex-col items-center relative cursor-pointer">
+                                <div className="max-md:hidden cart-icon flex flex-col items-center relative cursor-pointer" onClick={openModalCart}>
                                     <Icon.Handbag size={24} color='black' />
                                     <div className="caption1">Cart</div>
-                                    <span className="quantity cart-quantity absolute -right-1 -top-1.5 text-xs text-white bg-black px-1 rounded-full">0</span>
+                                    <span className="quantity cart-quantity absolute -right-1 -top-1.5 text-xs text-white bg-black w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
                                 </div>
                             </div>
                         </div>

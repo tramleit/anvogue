@@ -11,12 +11,6 @@ const ModalCompare = () => {
     const { isModalOpen, closeModalCompare } = useModalCompareContext();
     const { compareState, removeFromCompare } = useCompare()
 
-    const handleRedirectCompare = () => {
-        if (compareState.compareArray.length < 2) {
-
-        }
-    }
-
     return (
         <>
             <div className={`modal-compare-block`}>
@@ -78,7 +72,15 @@ const ModalCompare = () => {
                                         </>
                                     )
                                 }
-                                <div onClick={closeModalCompare} className="button-main whitespace-nowrap border border-black bg-white text-black">Clear All Products</div>
+                                <div
+                                    onClick={() => {
+                                        closeModalCompare()
+                                        compareState.compareArray.length = 0
+                                    }}
+                                    className="button-main whitespace-nowrap border border-black bg-white text-black"
+                                >
+                                    Clear All Products
+                                </div>
                             </div>
                         </div>
                     </div>

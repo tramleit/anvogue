@@ -11,13 +11,22 @@ import productData from '@/data/Product.json'
 import Product from '@/components/Product/Product'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
+import { useSearchParams } from 'next/navigation';
 
 const Checkout = () => {
+    const searchParams = useSearchParams()
+    let discount = searchParams.get('discount')
+    let ship = searchParams.get('ship')
+
     const { cartState } = useCart();
     let [totalCart, setTotalCart] = useState<number>(0)
-    let [discountCart, setDiscountCart] = useState<number>(0)
+    const [activePayment, setActivePayment] = useState<string>('credit-card')
 
     cartState.cartArray.map(item => totalCart += item.price * item.quantity)
+
+    const handlePayment = (item: string) => {
+        setActivePayment(item)
+    }
 
     return (
         <>
@@ -31,8 +40,8 @@ const Checkout = () => {
                     <div className="content-main flex justify-between">
                         <div className="left w-1/2">
                             <div className="login bg-surface py-3 px-4 flex justify-between rounded-lg">
-                                <div className="left flex items-center"><span className="text-on-surface-variant1 pr-4">Already have an account? </span><span className="text-button text-on-surface hover-underline pointer">Login</span></div>
-                                <div className="right"><i className="ph ph-caret-down fs-20 d-block pointer"></i></div>
+                                <div className="left flex items-center"><span className="text-on-surface-variant1 pr-4">Already have an account? </span><span className="text-button text-on-surface hover-underline cursor-pointer">Login</span></div>
+                                <div className="right"><i className="ph ph-caret-down fs-20 d-block cursor-pointer"></i></div>
                             </div>
                             <div className="form-login-block mt-3">
                                 <form className="p-5 border border-line rounded-lg">
@@ -100,16 +109,15 @@ const Checkout = () => {
                                         <div className="payment-block md:mt-10 mt-6">
                                             <div className="heading5">Choose payment Option:</div>
                                             <div className="list-payment mt-5">
-                                                <div className="type bg-surface p-5 border border-line rounded-lg">
-                                                    <input className="pointer" type="radio" id="credit" name="payment" />
-                                                    <label className="text-button pl-2 pointer" htmlFor="credit">Credit Card</label>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg ${activePayment === 'credit-card' ? 'open' : ''}`}>
+                                                    <input className="cursor-pointer" type="radio" id="credit" name="payment" checked={activePayment === 'credit-card'} onChange={() => handlePayment('credit-card')} />
+                                                    <label className="text-button pl-2 cursor-pointer" htmlFor="credit">Credit Card</label>
                                                     <div className="infor">
-                                                        <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
+                                                        <div className="text-on-surface-variant1 pt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
-                                                                {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberCredit">Card Numbers</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberCredit" placeholder="ex.1234567290" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberCredit" placeholder="ex.1234567290" />
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="dateCredit">Date</label>
@@ -117,7 +125,7 @@ const Checkout = () => {
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="ccvCredit">CCV</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvCredit" placeholder="****" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvCredit" placeholder="****" />
                                                             </div>
                                                         </div>
                                                         <div className="flex items-center gap-2 mt-3">
@@ -126,16 +134,16 @@ const Checkout = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="type bg-surface p-5 border border-line rounded-lg mt-5">
-                                                    <input className="pointer" type="radio" id="delivery" name="payment" />
-                                                    <label className="text-button pl-2 pointer" htmlFor="delivery">Cash on delivery</label>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ${activePayment === 'cash-delivery' ? 'open' : ''}`}>
+                                                    <input className="cursor-pointer" type="radio" id="delivery" name="payment" checked={activePayment === 'cash-delivery'} onChange={() => handlePayment('cash-delivery')} />
+                                                    <label className="text-button pl-2 cursor-pointer" htmlFor="delivery">Cash on delivery</label>
                                                     <div className="infor">
-                                                        <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
+                                                        <div className="text-on-surface-variant1 pt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
                                                                 {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberDelivery">Card Numbers</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberDelivery" placeholder="ex.1234567290" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberDelivery" placeholder="ex.1234567290" />
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="dateDelivery">Date</label>
@@ -143,7 +151,7 @@ const Checkout = () => {
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="ccvDelivery">CCV</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvDelivery" placeholder="****" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvDelivery" placeholder="****" />
                                                             </div>
                                                         </div>
                                                         <div className="flex items-center gap-2 mt-3">
@@ -152,16 +160,16 @@ const Checkout = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="type bg-surface p-5 border border-line rounded-lg mt-5">
-                                                    <input className="pointer" type="radio" id="apple" name="payment" />
-                                                    <label className="text-button pl-2 pointer" htmlFor="apple">Apple Pay</label>
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ${activePayment === 'apple-pay' ? 'open' : ''}`}>
+                                                    <input className="cursor-pointer" type="radio" id="apple" name="payment" checked={activePayment === 'apple-pay'} onChange={() => handlePayment('apple-pay')} />
+                                                    <label className="text-button pl-2 cursor-pointer" htmlFor="apple">Apple Pay</label>
                                                     <div className="infor">
-                                                        <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
+                                                        <div className="text-on-surface-variant1 pt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
                                                                 {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberApple">Card Numbers</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberApple" placeholder="ex.1234567290" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberApple" placeholder="ex.1234567290" />
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="dateApple">Date</label>
@@ -169,7 +177,7 @@ const Checkout = () => {
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="ccvApple">CCV</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvApple" placeholder="****" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvApple" placeholder="****" />
                                                             </div>
                                                         </div>
                                                         <div className="flex items-center gap-2 mt-3">
@@ -178,16 +186,15 @@ const Checkout = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="type bg-surface p-5 border border-line rounded-lg mt-5">
-                                                    <input className="pointer" type="radio" id="paypal" name="payment" />
-                                                    {/* <label className="pl-2 pointer" htmlFor="paypal"> <Image src="assets/images/component/paypal.svg" alt="" /></label> */}
+                                                <div className={`type bg-surface p-5 border border-line rounded-lg mt-5 ${activePayment === 'paypal' ? 'open' : ''}`}>
+                                                    <input className="cursor-pointer" type="radio" id="paypal" name="payment" checked={activePayment === 'paypal'} onChange={() => handlePayment('paypal')} />
+                                                    <label className="text-button pl-2 cursor-pointer" htmlFor="paypal">PayPal</label>
                                                     <div className="infor">
-                                                        <div className="text-on-surface-variant1 mt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
+                                                        <div className="text-on-surface-variant1 pt-4">Make your payment directly into our bank account. Your order will not be shipped until the funds have cleared in our account.</div>
                                                         <div className="row">
                                                             <div className="col-12 mt-3">
-                                                                {/* <div className="bg-img"><Image src="assets/images/component/payment.png" alt="" /></div> */}
                                                                 <label htmlFor="cardNumberPaypal">Card Numbers</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberPaypal" placeholder="ex.1234567290" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="cardNumberPaypal" placeholder="ex.1234567290" />
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="datePaypal">Date</label>
@@ -195,7 +202,7 @@ const Checkout = () => {
                                                             </div>
                                                             <div className=" mt-3">
                                                                 <label htmlFor="ccvPaypal">CCV</label>
-                                                                <input className="pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvPaypal" placeholder="****" />
+                                                                <input className="cursor-pointer border-line px-4 py-3 w-full rounded mt-2" type="text" id="ccvPaypal" placeholder="****" />
                                                             </div>
                                                         </div>
                                                         <div className="flex items-center gap-2 mt-3">
@@ -257,15 +264,15 @@ const Checkout = () => {
                                 </div>
                                 <div className="discount-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Discounts</div>
-                                    <div className="text-title">-$<span className="discount">{discountCart}</span><span>.00</span></div>
+                                    <div className="text-title">-$<span className="discount">{discount}</span><span>.00</span></div>
                                 </div>
                                 <div className="ship-block py-5 flex justify-between border-b border-line">
                                     <div className="text-title">Shipping</div>
-                                    <div className="text-title">Free</div>
+                                    <div className="text-title">{Number(ship) === 0 ? 'Free' : `$${ship}.00`}</div>
                                 </div>
                                 <div className="total-cart-block pt-5 flex justify-between">
                                     <div className="heading5">Total</div>
-                                    <div className="heading5 total-cart">${totalCart}.00</div>
+                                    <div className="heading5 total-cart">${totalCart - Number(discount) + Number(ship)}.00</div>
                                 </div>
                             </div>
                         </div>

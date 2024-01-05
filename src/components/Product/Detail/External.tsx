@@ -11,6 +11,8 @@ import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useWishlist } from '@/context/WishlistContext'
 import { useModalWishlistContext } from '@/context/ModalWishlistContext'
+import { useCompare } from '@/context/CompareContext'
+import { useModalCompareContext } from '@/context/ModalCompareContext'
 import ModalSizeguide from '@/components/Modal/ModalSizeguide'
 
 interface Props {
@@ -27,6 +29,8 @@ const External: React.FC<Props> = ({ data, productId }) => {
     const { openModalCart } = useModalCartContext()
     const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist()
     const { openModalWishlist } = useModalWishlistContext()
+    const { addToCompare, removeFromCompare, compareState } = useCompare();
+    const { openModalCompare } = useModalCompareContext()
     const productMain = data.find(product => product.id === productId) as ProductType
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
 
@@ -67,7 +71,6 @@ const External: React.FC<Props> = ({ data, productId }) => {
         }
         openModalCart()
     };
-
     const handleAddToWishlist = () => {
         // if product existed in wishlit, remove from wishlist and set state to false
         if (wishlistState.wishlistArray.some(item => item.id === productMain.id)) {
@@ -77,6 +80,22 @@ const External: React.FC<Props> = ({ data, productId }) => {
             addToWishlist(productMain);
         }
         openModalWishlist();
+    };
+
+    const handleAddToCompare = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (compareState.compareArray.length < 3) {
+            if (compareState.compareArray.some(item => item.id === productMain.id)) {
+                removeFromCompare(productMain.id);
+            } else {
+                // else, add to wishlist and set state to true
+                addToCompare(productMain);
+            }
+        } else {
+            alert('Compare up to 3 products')
+        }
+
+        openModalCompare();
     };
 
     const handleActiveTab = (tab: string) => {
@@ -204,7 +223,7 @@ const External: React.FC<Props> = ({ data, productId }) => {
                                     <div className="button-main w-full text-center">Buy It Now</div>
                                 </div>
                                 <div className="flex items-center lg:gap-20 gap-8 mt-5 pb-6 border-b border-line">
-                                    <div className="compare flex items-center gap-3 cursor-pointer">
+                                    <div className="compare flex items-center gap-3 cursor-pointer" onClick={(e) => { e.stopPropagation(); handleAddToCompare() }}>
                                         <div className="compare-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
                                             <Icon.ArrowsCounterClockwise className='heading6' />
                                         </div>

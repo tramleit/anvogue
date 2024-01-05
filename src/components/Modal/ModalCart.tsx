@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
@@ -8,8 +8,19 @@ import productData from '@/data/Product.json'
 import { ProductType } from '@/type/ProductType';
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useCart } from '@/context/CartContext'
+import { countdownTime } from '@/store/countdownTime'
 
 const ModalCart = () => {
+    const [timeLeft, setTimeLeft] = useState(countdownTime());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(countdownTime());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     const [activeTab, setActiveTab] = useState<string | undefined>('')
     const { isModalOpen, closeModalCart } = useModalCartContext();
     const { cartState, addToCart, removeFromCart, updateCart } = useCart()
@@ -89,12 +100,13 @@ const ModalCart = () => {
                         <div className="time px-6">
                             <div className=" flex items-center gap-3 px-5 py-3 bg-green rounded-lg">
                                 <p className='text-3xl'>🔥</p>
-                                <div className="caption1">Your cart will expire in <span className='text-red caption1 font-semibold'>04:48</span> minutes!<br />
+                                <div className="caption1">Your cart will expire in <span className='text-red caption1 font-semibold'>{timeLeft.minutes}:
+                                    {timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</span> minutes!<br />
                                     Please checkout now before your items sell out!</div>
                             </div>
                         </div>
                         <div className="heading banner mt-3 px-6">
-                            <div className="text">Buy <span className="text-button">$<span className="more-price">{moneyForFreeship - totalCart > 0 ? (<>{moneyForFreeship - totalCart}</>) : (0)}</span>.00 </span>
+                            <div className="text">Buy <span className="text-button"> $<span className="more-price">{moneyForFreeship - totalCart > 0 ? (<>{moneyForFreeship - totalCart}</>) : (0)}</span>.00 </span>
                                 <span>more to get </span>
                                 <span className="text-button">freeship</span></div>
                             <div className="tow-bar-block mt-3">

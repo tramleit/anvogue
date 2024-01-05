@@ -63,6 +63,7 @@ input,
 textarea {
   outline: none;
   border: 1px solid transparent;
+  transition: border-color ease 0.3s;
 }
 
 input:focus,
@@ -219,6 +220,12 @@ textarea:focus {
   &:hover {
     background-color: var(--green);
     color: var(--black);
+
+    svg {
+      path {
+        fill: var(--black);
+      }
+    }
   }
 
   &.bg-white {
