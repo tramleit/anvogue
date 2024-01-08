@@ -30,8 +30,11 @@
 
 .menu-main {
     ul li {
-        a {
+
+        a,
+        .link {
             position: relative;
+            cursor: pointer;
 
             &::before {
                 content: "";
@@ -55,16 +58,20 @@
             }
         }
 
-        >a.active::before {
+        >a.active::before,
+        >.link.active::before {
             width: 100%;
         }
 
-        &.logo a::before {
+        &.logo a::before,
+        &.logo .link::before {
             display: none;
         }
 
         &:hover {
-            >a.view-all-btn::before {
+
+            >a.view-all-btn::before,
+            >.link.view-all-btn::before {
                 background-color: var(--black);
             }
         }
@@ -80,13 +87,15 @@
         transform-origin: top center;
         box-shadow: 0px 5px 25px 0px rgba(138, 159, 168, 0.25);
 
-        li a {
+        li a,
+        li .link {
             padding: 7px 0;
             white-space: nowrap;
             display: inline-block;
         }
 
-        li:hover a {
+        li:hover a,
+        li:hover .link {
             color: var(--black);
 
             &::before {
@@ -96,7 +105,9 @@
     }
 
     >ul>li {
-        >a::before {
+
+        >a::before,
+        >.link::before {
             bottom: 24px;
             height: 2px;
         }
@@ -119,14 +130,17 @@
                 transform: scaleY(1);
             }
 
-            >a::before {
+            >a::before,
+            >.link::before {
                 width: 100%;
             }
         }
     }
 
     &.style-eight {
-        >ul>li>a::before {
+
+        >ul>li>a::before,
+        >ul>li>.link::before {
             bottom: 10px;
         }
     }
@@ -367,6 +381,7 @@
     .swiper-slide-active {
         .slider-item {
             .text-content {
+
                 .text-button-uppercase,
                 .text-sub-display {
                     animation: animateY .6s ease;

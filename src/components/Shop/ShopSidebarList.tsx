@@ -17,6 +17,8 @@ interface Props {
 
 const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) => {
     const [type, setType] = useState<string | null>(dataType)
+    const [showOnlySale, setShowOnlySale] = useState(false)
+    const [sortOption, setSortOption] = useState('');
     const [size, setSize] = useState<string | null>()
     const [color, setColor] = useState<string | null>()
     const [brand, setBrand] = useState<string | null>()
@@ -27,29 +29,49 @@ const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
     const handleType = (type: string) => {
         setType((prevType) => (prevType === type ? null : type))
+        setCurrentPage(0);
     }
+
+    const handleShowOnlySale = () => {
+        setShowOnlySale(toggleSelect => !toggleSelect)
+        setCurrentPage(0);
+    }
+
+    const handleSortChange = (option: string) => {
+        setSortOption(option);
+        setCurrentPage(0);
+    };
 
     const handleSize = (size: string) => {
         setSize((prevSize) => (prevSize === size ? null : size))
+        setCurrentPage(0);
     }
 
     const handlePriceChange = (values: number | number[]) => {
         if (Array.isArray(values)) {
             setPriceRange({ min: values[0], max: values[1] });
+            setCurrentPage(0);
         }
     };
 
     const handleColor = (color: string) => {
         setColor((prevColor) => (prevColor === color ? null : color))
+        setCurrentPage(0);
     }
 
     const handleBrand = (brand: string) => {
         setBrand((prevBrand) => (prevBrand === brand ? null : brand));
+        setCurrentPage(0);
     }
 
 
     // Filter product data by dataType
     let filteredData = data.filter(product => {
+        let isShowOnlySaleMatched = true;
+        if (showOnlySale) {
+            isShowOnlySaleMatched = product.sale
+        }
+
         let isDataTypeMatched = true;
         if (dataType) {
             isDataTypeMatched = product.type === dataType
@@ -81,8 +103,31 @@ const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) =>
             isBrandMatched = product.brand === brand;
         }
 
-        return isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
+        return isShowOnlySaleMatched && isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
     })
+
+    // Create a copy array filtered to sort
+    let sortedData = [...filteredData];
+
+    if (sortOption === 'soldQuantityHighToLow') {
+        filteredData = sortedData.sort((a, b) => b.sold - a.sold)
+    }
+
+    if (sortOption === 'discountHighToLow') {
+        filteredData = sortedData
+            .sort((a, b) => (
+                (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
+            ))
+
+    }
+
+    if (sortOption === 'priceHighToLow') {
+        filteredData = sortedData.sort((a, b) => b.price - a.price)
+    }
+
+    if (sortOption === 'priceLowToHigh') {
+        filteredData = sortedData.sort((a, b) => a.price - b.price)
+    }
 
     const totalProducts = filteredData.length
     const selectedType = type
@@ -137,6 +182,17 @@ const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
     const handlePageChange = (selected: number) => {
         setCurrentPage(selected);
+    };
+
+    const handleClearAll = () => {
+        setType(null);
+        setSize(null);
+        setColor(null);
+        setBrand(null);
+        setPriceRange({ min: 0, max: 100 });
+        setCurrentPage(0);
+        dataType = null
+        setType(dataType);
     };
 
     return (
@@ -320,7 +376,7 @@ const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                             <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
                                 <div className="left flex has-line items-center flex-wrap gap-5">
                                     <div className="choose-layout flex items-center gap-2">
-                                        <Link href={'/shop/breadcrumb1'} className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
+                                        <Link href={'/shop/breadcrumb1'} className="item three-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer">
                                             <div className='flex items-center gap-0.5'>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
@@ -336,17 +392,31 @@ const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                         </div>
                                     </div>
                                     <div className="check-sale flex items-center gap-2">
-                                        <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
+                                        <input
+                                            type="checkbox"
+                                            name="filterSale"
+                                            id="filter-sale"
+                                            className='border-line'
+                                            onChange={handleShowOnlySale}
+                                        />
                                         <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
                                     </div>
                                 </div>
                                 <div className="right flex items-center gap-3">
                                     <label htmlFor='select-filter' className="caption1 capitalize">Sort by</label>
                                     <div className="select-block relative">
-                                        <select className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line' name="select-filter" id="select-filter">
-                                            <option value="Best Selling">Best Selling</option>
-                                            <option value="Best Reviews">Best Reviews</option>
-                                            <option value="Best Discount">Best Discount</option>
+                                        <select
+                                            id="select-filter"
+                                            name="select-filter"
+                                            className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line'
+                                            onChange={(e) => { handleSortChange(e.target.value) }}
+                                            defaultValue={'Sorting'}
+                                        >
+                                            <option value="Sorting" disabled>Sorting</option>
+                                            <option value="soldQuantityHighToLow">Best Selling</option>
+                                            <option value="discountHighToLow">Best Discount</option>
+                                            <option value="priceHighToLow">Price High To Low</option>
+                                            <option value="priceLowToHigh">Price Low To High</option>
                                         </select>
                                         <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                                     </div>
@@ -390,12 +460,7 @@ const ShopSidebarList: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                             </div>
                                             <div
                                                 className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                                                onClick={() => {
-                                                    setBrand(null);
-                                                    setType(null);
-                                                    setSize(null);
-                                                    setColor(null);
-                                                }}
+                                                onClick={handleClearAll}
                                             >
                                                 <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
                                                 <span className='text-button-uppercase text-red'>Clear All</span>

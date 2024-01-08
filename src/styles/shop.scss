@@ -248,6 +248,22 @@
     }
 }
 
+.list-product-block {
+    &:has(.active.five-col) {
+        .list-product {
+            .product-item .product-thumb .list-action {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+
+                .button-main {
+                    white-space: nowrap;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
 .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }

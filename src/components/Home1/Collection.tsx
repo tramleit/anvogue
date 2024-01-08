@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { useRouter } from 'next/navigation';
+// import Fade from 'react-reveal'
 
 const Collection = () => {
     const router = useRouter()
@@ -19,7 +20,9 @@ const Collection = () => {
         <>
             <div className="collection-block md:pt-20 pt-10">
                 <div className="container">
+                    {/* <Fade bottom> */}
                     <div className="heading3 text-center">Explore Collections</div>
+                    {/* </Fade> */}
                 </div>
                 <div className="list-collection section-swiper-navigation mt-10 sm:px-5 px-4">
                     <Swiper

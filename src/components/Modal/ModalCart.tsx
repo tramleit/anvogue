@@ -38,7 +38,7 @@ const ModalCart = () => {
         setActiveTab(tab)
     }
 
-    let moneyForFreeship = 200;
+    let moneyForFreeship = 150;
     let [totalCart, setTotalCart] = useState<number>(0)
     let [discountCart, setDiscountCart] = useState<number>(0)
 

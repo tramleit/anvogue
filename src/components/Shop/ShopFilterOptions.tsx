@@ -16,6 +16,8 @@ interface Props {
 
 const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
     const [layoutCol, setLayoutCol] = useState<number | null>(4)
+    const [sortOption, setSortOption] = useState('');
+    const [showOnlySale, setShowOnlySale] = useState(false)
     const [type, setType] = useState<string | undefined>()
     const [size, setSize] = useState<string | undefined>()
     const [color, setColor] = useState<string | undefined>()
@@ -29,31 +31,51 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
         setLayoutCol(col)
     }
 
+    const handleShowOnlySale = () => {
+        setShowOnlySale(toggleSelect => !toggleSelect)
+        setCurrentPage(0);
+    }
+
+    const handleSortChange = (option: string) => {
+        setSortOption(option);
+        setCurrentPage(0);
+    };
+
     const handleType = (type: string) => {
         setType((prevType) => (prevType === type ? undefined : type))
+        setCurrentPage(0);
     }
 
     const handleSize = (size: string) => {
         setSize((prevSize) => (prevSize === size ? undefined : size))
+        setCurrentPage(0);
     }
 
     const handlePriceChange = (values: number | number[]) => {
         if (Array.isArray(values)) {
             setPriceRange({ min: values[0], max: values[1] });
+            setCurrentPage(0);
         }
     };
 
     const handleColor = (color: string) => {
         setColor((prevColor) => (prevColor === color ? undefined : color))
+        setCurrentPage(0);
     }
 
     const handleBrand = (brand: string) => {
         setBrand((prevBrand) => (prevBrand === brand ? undefined : brand));
+        setCurrentPage(0);
     }
 
 
     // Filter product data by dataType
     let filteredData = data.filter(product => {
+        let isShowOnlySaleMatched = true;
+        if (showOnlySale) {
+            isShowOnlySaleMatched = product.sale
+        }
+
         let isTypeMatched = true;
         if (type) {
             isTypeMatched = product.type === type;
@@ -79,8 +101,31 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
             isBrandMatched = product.brand === brand;
         }
 
-        return isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
+        return isShowOnlySaleMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
     })
+
+    // Create a copy array filtered to sort
+    let sortedData = [...filteredData];
+
+    if (sortOption === 'soldQuantityHighToLow') {
+        filteredData = sortedData.sort((a, b) => b.sold - a.sold)
+    }
+
+    if (sortOption === 'discountHighToLow') {
+        filteredData = sortedData
+            .sort((a, b) => (
+                (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
+            ))
+
+    }
+
+    if (sortOption === 'priceHighToLow') {
+        filteredData = sortedData.sort((a, b) => b.price - a.price)
+    }
+
+    if (sortOption === 'priceLowToHigh') {
+        filteredData = sortedData.sort((a, b) => a.price - b.price)
+    }
 
     const totalProducts = filteredData.length
     const selectedType = type
@@ -137,6 +182,15 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
         setCurrentPage(selected);
     };
 
+    const handleClearAll = () => {
+        setType(undefined);
+        setSize(undefined);
+        setColor(undefined);
+        setBrand(undefined);
+        setPriceRange({ min: 0, max: 100 });
+        setCurrentPage(0);
+    };
+
     return (
         <>
             <div className="breadcrumb-block style-img">
@@ -174,7 +228,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                             <div className="left flex items-center flex-wrap gap-5">
                                 <div className="choose-layout flex items-center gap-2">
                                     <div
-                                        className={`item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
+                                        className={`item three-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(3)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -184,7 +238,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
+                                        className={`item four-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(4)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -195,7 +249,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         </div>
                                     </div>
                                     <div
-                                        className={`item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
+                                        className={`item five-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(5)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -208,7 +262,13 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                     </div>
                                 </div>
                                 <div className="check-sale flex items-center gap-2 cursor-pointer">
-                                    <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
+                                    <input
+                                        type="checkbox"
+                                        name="filterSale"
+                                        id="filter-sale"
+                                        className='border-line'
+                                        onChange={handleShowOnlySale}
+                                    />
                                     <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
                                 </div>
                             </div>
@@ -294,11 +354,18 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                     <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                                 </div>
                                 <div className="select-block relative">
-                                    <select className='caption1 py-2 pl-3 md:pr-12 pr-8 rounded-lg border border-line' name="select-filter" id="select-filter">
-                                        <option value="Sort" disabled>Sort</option>
-                                        <option value="Best Selling">Best Selling</option>
-                                        <option value="Best Reviews">Best Reviews</option>
-                                        <option value="Best Discount">Best Discount</option>
+                                    <select
+                                        id="select-filter"
+                                        name="select-filter"
+                                        className='caption1 py-2 pl-3 md:pr-20 pr-10 rounded-lg border border-line'
+                                        onChange={(e) => { handleSortChange(e.target.value) }}
+                                        defaultValue={'Sorting'}
+                                    >
+                                        <option value="Sorting" disabled>Sorting</option>
+                                        <option value="soldQuantityHighToLow">Best Selling</option>
+                                        <option value="discountHighToLow">Best Discount</option>
+                                        <option value="priceHighToLow">Price High To Low</option>
+                                        <option value="priceLowToHigh">Price Low To High</option>
                                     </select>
                                     <Icon.CaretDown size={12} className='absolute top-1/2 -translate-y-1/2 md:right-4 right-2' />
                                 </div>
@@ -342,12 +409,7 @@ const ShopFilterOptions: React.FC<Props> = ({ data, productPerPage }) => {
                                         </div>
                                         <div
                                             className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                                            onClick={() => {
-                                                setBrand(undefined);
-                                                setType(undefined);
-                                                setSize(undefined);
-                                                setColor(undefined);
-                                            }}
+                                            onClick={handleClearAll}
                                         >
                                             <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
                                             <span className='text-button-uppercase text-red'>Clear All</span>

@@ -10,12 +10,14 @@ import 'rc-slider/assets/index.css'
 import HandlePagination from '../Other/HandlePagination';
 
 interface Props {
-    data: Array<ProductType>;
+    data: Array<ProductType>
     productPerPage: number
     dataType: string | null
+    gender: string | null
+    category: string | null
 }
 
-const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) => {
+const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gender, category }) => {
     const [showOnlySale, setShowOnlySale] = useState(false)
     const [sortOption, setSortOption] = useState('');
     const [type, setType] = useState<string | null>(dataType)
@@ -33,36 +35,52 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
     const handleSortChange = (option: string) => {
         setSortOption(option);
+        setCurrentPage(0);
     };
 
-    const handleType = (type: string) => {
+    const handleType = (type: string | null) => {
         setType((prevType) => (prevType === type ? null : type))
+        setCurrentPage(0);
     }
 
     const handleSize = (size: string) => {
         setSize((prevSize) => (prevSize === size ? null : size))
+        setCurrentPage(0);
     }
 
     const handlePriceChange = (values: number | number[]) => {
         if (Array.isArray(values)) {
             setPriceRange({ min: values[0], max: values[1] });
+            setCurrentPage(0);
         }
     };
 
     const handleColor = (color: string) => {
         setColor((prevColor) => (prevColor === color ? null : color))
+        setCurrentPage(0);
     }
 
     const handleBrand = (brand: string) => {
         setBrand((prevBrand) => (prevBrand === brand ? null : brand));
+        setCurrentPage(0);
     }
 
 
-    // Filter product data by dataType
+    // Filter product
     let filteredData = data.filter(product => {
         let isShowOnlySaleMatched = true;
         if (showOnlySale) {
             isShowOnlySaleMatched = product.sale
+        }
+
+        let isDatagenderMatched = true;
+        if (gender) {
+            isDatagenderMatched = product.gender === gender
+        }
+
+        let isDataCategoryMatched = true;
+        if (category) {
+            isDataCategoryMatched = product.category === category
         }
 
         let isDataTypeMatched = true;
@@ -96,10 +114,10 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
             isBrandMatched = product.brand === brand;
         }
 
-        return isShowOnlySaleMatched && isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
+        return isShowOnlySaleMatched && isDatagenderMatched && isDataCategoryMatched && isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched
     })
 
-    // Tạo một bản sao của mảng đã lọc để sắp xếp
+    // Create a copy array filtered to sort
     let sortedData = [...filteredData];
 
     if (sortOption === 'soldQuantityHighToLow') {
@@ -111,7 +129,6 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
             .sort((a, b) => (
                 (Math.floor(100 - ((b.price / b.originPrice) * 100))) - (Math.floor(100 - ((a.price / a.originPrice) * 100)))
             ))
-
     }
 
     if (sortOption === 'priceHighToLow') {
@@ -175,6 +192,19 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
 
     const handlePageChange = (selected: number) => {
         setCurrentPage(selected);
+    };
+
+    const handleClearAll = () => {
+        dataType = null
+        setShowOnlySale(false);
+        setSortOption('');
+        setType(null);
+        setSize(null);
+        setColor(null);
+        setBrand(null);
+        setPriceRange({ min: 0, max: 100 });
+        setCurrentPage(0);
+        handleType(null)
     };
 
     return (
@@ -358,7 +388,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                             <div className="filter-heading flex items-center justify-between gap-5 flex-wrap">
                                 <div className="left flex has-line items-center flex-wrap gap-5">
                                     <div className="choose-layout flex items-center gap-2">
-                                        <div className="item 3-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer active">
+                                        <div className="item three-col w-8 h-8 border border-line rounded flex items-center justify-center cursor-pointer active">
                                             <div className='flex items-center gap-0.5'>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
                                                 <span className='w-[3px] h-4 bg-secondary2 rounded-sm'></span>
@@ -441,12 +471,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType }) =>
                                             </div>
                                             <div
                                                 className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                                                onClick={() => {
-                                                    setBrand(null);
-                                                    setType(null);
-                                                    setSize(null);
-                                                    setColor(null);
-                                                }}
+                                                onClick={handleClearAll}
                                             >
                                                 <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
                                                 <span className='text-button-uppercase text-red'>Clear All</span>

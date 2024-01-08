@@ -18,6 +18,7 @@ interface Props {
 
 const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) => {
     const [layoutCol, setLayoutCol] = useState<number | null>(4)
+    const [showOnlySale, setShowOnlySale] = useState(false)
     const [sortOption, setSortOption] = useState('');
     const [openSidebar, setOpenSidebar] = useState(false)
     const [type, setType] = useState<string | null>(dataType)
@@ -33,39 +34,56 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
         setLayoutCol(col)
     }
 
+    const handleShowOnlySale = () => {
+        setShowOnlySale(toggleSelect => !toggleSelect)
+        setCurrentPage(0);
+    }
+
     const handleSortChange = (option: string) => {
         setSortOption(option);
+        setCurrentPage(0);
     };
 
     const handleOpenSidebar = () => {
         setOpenSidebar(toggleOpen => !toggleOpen)
+        setCurrentPage(0);
     }
 
     const handleType = (type: string) => {
         setType((prevType) => (prevType === type ? null : type))
+        setCurrentPage(0);
     }
 
     const handleSize = (size: string) => {
         setSize((prevSize) => (prevSize === size ? null : size))
+        setCurrentPage(0);
     }
 
     const handlePriceChange = (values: number | number[]) => {
         if (Array.isArray(values)) {
             setPriceRange({ min: values[0], max: values[1] });
+            setCurrentPage(0);
         }
     };
 
     const handleColor = (color: string) => {
         setColor((prevColor) => (prevColor === color ? null : color))
+        setCurrentPage(0);
     }
 
     const handleBrand = (brand: string) => {
         setBrand((prevBrand) => (prevBrand === brand ? null : brand));
+        setCurrentPage(0);
     }
 
 
-    // Filter product data by dataType
+    // Filter product
     let filteredData = data.filter(product => {
+        let isShowOnlySaleMatched = true;
+        if (showOnlySale) {
+            isShowOnlySaleMatched = product.sale
+        }
+
         let isDataTypeMatched = true;
         if (dataType) {
             isDataTypeMatched = product.type === dataType
@@ -97,10 +115,10 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
             isBrandMatched = product.brand === brand;
         }
 
-        return isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
+        return isShowOnlySaleMatched && isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched && product.category === 'fashion'
     })
 
-    // Tạo một bản sao của mảng đã lọc để sắp xếp
+    // Create a copy array filtered to sort
     let sortedData = [...filteredData];
 
     if (sortOption === 'soldQuantityHighToLow') {
@@ -178,6 +196,18 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
         setCurrentPage(selected);
     };
 
+    const handleClearAll = () => {
+        setSortOption('');
+        setType(null);
+        setSize(null);
+        setColor(null);
+        setBrand(null);
+        setPriceRange({ min: 0, max: 100 });
+        setCurrentPage(0);
+        dataType = null
+        setType(dataType);
+    };
+
     return (
         <>
             <div className="breadcrumb-block style-img">
@@ -241,7 +271,7 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                 </div>
                                 <div className="choose-layout flex items-center gap-2">
                                     <div
-                                        className={`item 3-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
+                                        className={`item three-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 3 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(3)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -251,7 +281,7 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                         </div>
                                     </div>
                                     <div
-                                        className={`item 4-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
+                                        className={`item four-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 4 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(4)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -262,7 +292,7 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                         </div>
                                     </div>
                                     <div
-                                        className={`item 5-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
+                                        className={`item five-col p-2 border border-line rounded flex items-center justify-center cursor-pointer ${layoutCol === 5 ? 'active' : ''}`}
                                         onClick={() => handleLayoutCol(5)}
                                     >
                                         <div className='flex items-center gap-0.5'>
@@ -275,8 +305,14 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                     </div>
                                 </div>
                                 <div className="check-sale flex items-center gap-2 cursor-pointer">
-                                    <input type="checkbox" name="filterSale" id="filter-sale" className='border-line' />
-                                    <label htmlFor="filter-sale" className='cation1'>Show only products on sale</label>
+                                    <input
+                                        type="checkbox"
+                                        name="filterSale"
+                                        id="filter-sale"
+                                        className='border-line'
+                                        onChange={handleShowOnlySale}
+                                    />
+                                    <label htmlFor="filter-sale" className='cation1 cursor-pointer'>Show only products on sale</label>
                                 </div>
                             </div>
                             <div className="right flex items-center gap-3">
@@ -486,12 +522,7 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                                         </div>
                                         <div
                                             className="clear-btn flex items-center px-2 py-1 gap-1 rounded-full border border-red cursor-pointer"
-                                            onClick={() => {
-                                                setBrand(null);
-                                                setType(null);
-                                                setSize(null);
-                                                setColor(null);
-                                            }}
+                                            onClick={handleClearAll}
                                         >
                                             <Icon.X color='rgb(219, 68, 68)' className='cursor-pointer' />
                                             <span className='text-button-uppercase text-red'>Clear All</span>

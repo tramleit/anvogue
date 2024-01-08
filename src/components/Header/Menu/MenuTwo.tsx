@@ -14,9 +14,12 @@ import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useModalSearchContext } from '@/context/ModalSearchContext';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
+import { useRouter } from 'next/navigation';
+
 
 const MenuTwo = () => {
     const pathname = usePathname()
+    const router = useRouter()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
     const { openMenuMobile, handleMenuMobile } = useMenuMobile()
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
@@ -47,6 +50,18 @@ const MenuTwo = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [lastScrollPosition]);
+
+    const handleGenderClick = (gender: string) => {
+        router.push(`/shop/breadcrumb1?gender=${gender}`);
+    };
+
+    const handleCategoryClick = (category: string) => {
+        router.push(`/shop/breadcrumb1?category=${category}`);
+    };
+
+    const handleTypeClick = (type: string) => {
+        router.push(`/shop/breadcrumb1?type=${type}`);
+    };
 
     return (
         <>
@@ -213,44 +228,44 @@ const MenuTwo = () => {
                                                         <div className="text-button-uppercase pb-2">For Men</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleGenderClick('men')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Starting From 50% Off
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleGenderClick('men')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Jackets | Coats
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleGenderClick('men')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Sweaters | Cardigans
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleGenderClick('men')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Hoodies | Sweatshirts
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleGenderClick('men')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -258,89 +273,44 @@ const MenuTwo = () => {
                                                         <div className="text-button-uppercase pb-2">Massimo Dutti</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('shirt')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Coats | Jackets
-                                                                </Link>
+                                                                    Shirt | Clothes
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('top')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Jackets | Overshirts
-                                                                </Link>
+                                                                    Top | Overshirts
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('t-shirt')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    T-shirts | Tops
-                                                                </Link>
+                                                                    T-shirts | Clothes
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('swimwear')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Pants | Jeans
-                                                                </Link>
+                                                                    Swimwear | Underwear
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('fashion')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-2">Beauty</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
-                                                                >
-                                                                    Tutorials
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
-                                                                >
-                                                                    Best Seller
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
-                                                                >
-                                                                    Lips
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
-                                                                >
-                                                                    Nail Polish
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
-                                                                >
-                                                                    View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -348,89 +318,134 @@ const MenuTwo = () => {
                                                         <div className="text-button-uppercase pb-2">Skincare</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Tutorials
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Best Seller
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Cream
-                                                                </Link>
+                                                                    Lips
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Serum
-                                                                </Link>
+                                                                    Nail Polish
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-2">For WoMen</div>
+                                                        <div className="text-button-uppercase pb-2">Health</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('candle')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Starting From 60% Off
-                                                                </Link>
+                                                                    Candle
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('drinks')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Dresses | Jumpsuits
-                                                                </Link>
+                                                                    Drinks
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('clothing')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    T-shirts | Sweatshirts
-                                                                </Link>
+                                                                    Clothes
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('mats')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Accessories | Jewelry
-                                                                </Link>
+                                                                    Yoga Equipment
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('yoga')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="nav-item">
+                                                        <div className="text-button-uppercase pb-2">For Women</div>
+                                                        <ul>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleGenderClick('women')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Starting From 60% Off
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('dress')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Dresses | Jumpsuits
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('t-shirt')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    T-shirts | Sweatshirts
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('accessories')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Accessories | Jewelry
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleGenderClick('women')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
+                                                                >
+                                                                    View All
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -438,44 +453,44 @@ const MenuTwo = () => {
                                                         <div className="text-button-uppercase pb-2">For Kid</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('toys-kid')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Girl | 6-14 Years
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('toys-kid')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Boy | 6-14 Years
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('toys-kid')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Baby | 1-6 Years
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('toys-kid')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Newborn | {String.raw`<`}1 Years
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('toys-kid')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -483,44 +498,44 @@ const MenuTwo = () => {
                                                         <div className="text-button-uppercase pb-2">For Home</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('furniture')}
+
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Furniture | Decor
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('furniture')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Bed | Bath Room
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('furniture')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Dining | Kitchen Room
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('furniture')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Laundry | Cleaning
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                <div
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -577,7 +592,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Breadcrumb IMG
                                                                 </Link>
@@ -585,7 +600,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Breadcrumb 1
                                                                 </Link>
@@ -593,7 +608,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Breadcrumb 2
                                                                 </Link>
@@ -601,7 +616,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Collection
                                                                 </Link>
@@ -614,7 +629,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/filter-canvas'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Filter Canvas
                                                                 </Link>
@@ -622,7 +637,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/filter-options'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Filter Options
                                                                 </Link>
@@ -630,7 +645,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/filter-dropdown'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Filter Dropdown
                                                                 </Link>
@@ -638,7 +653,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/sidebar-list'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Sidebar List
                                                                 </Link>
@@ -650,32 +665,32 @@ const MenuTwo = () => {
                                                         <ul>
                                                             <li>
                                                                 <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                    href={'/shop/default'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Default
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                    href={'/shop/default-grid'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-grid' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Default Grid
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/shop/sidebar-list'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
+                                                                    href={'/shop/default-list'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-list' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Default List
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                    href={'/shop/fullwidth'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/fullwidth' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Full Width
                                                                 </Link>
@@ -683,7 +698,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/square'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
                                                                 >
                                                                     Shop Square
                                                                 </Link>
@@ -696,7 +711,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/wishlist'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
                                                                 >
                                                                     Wish List
                                                                 </Link>
@@ -704,7 +719,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/search-result'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
                                                                 >
                                                                     Search Result
                                                                 </Link>
@@ -712,7 +727,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/cart'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
                                                                 >
                                                                     Shopping Cart
                                                                 </Link>
@@ -720,7 +735,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/login'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
                                                                 >
                                                                     Login/Register
                                                                 </Link>
@@ -728,7 +743,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/forgot-password'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
                                                                 >
                                                                     Forgot Password
                                                                 </Link>
@@ -736,7 +751,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/order-tracking'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
                                                                 >
                                                                     Order Tracking
                                                                 </Link>
@@ -744,7 +759,7 @@ const MenuTwo = () => {
                                                             <li>
                                                                 <Link
                                                                     href={'/my-account'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
+                                                                    className={`link text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
                                                                 >
                                                                     My Account
                                                                 </Link>

@@ -13,12 +13,14 @@ import { useModalCartContext } from '@/context/ModalCartContext';
 import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useModalSearchContext } from '@/context/ModalSearchContext';
 import { useCart } from '@/context/CartContext';
+import { useRouter } from 'next/navigation';
 
 interface Props {
     props: string;
 }
 
 const MenuOne: React.FC<Props> = ({ props }) => {
+    const router = useRouter()
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
     const { openMenuMobile, handleMenuMobile } = useMenuMobile()
@@ -51,6 +53,17 @@ const MenuOne: React.FC<Props> = ({ props }) => {
         };
     }, [lastScrollPosition]);
 
+    const handleGenderClick = (gender: string) => {
+        router.push(`/shop/breadcrumb1?gender=${gender}`);
+    };
+
+    const handleCategoryClick = (category: string) => {
+        router.push(`/shop/breadcrumb1?category=${category}`);
+    };
+
+    const handleTypeClick = (type: string) => {
+        router.push(`/shop/breadcrumb1?type=${type}`);
+    };
 
     return (
         <>
@@ -76,118 +89,118 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <div className="sub-menu py-3 px-5 -left-10 w-max absolute grid grid-cols-4 gap-5 bg-white rounded-b-xl">
                                             <ul>
                                                 <li>
-                                                    <Link href="/" className={`text-secondary duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                                    <Link href="/" className={`link text-secondary duration-300 ${pathname === '/' ? 'active' : ''}`}>
                                                         Home Fashion 1
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion2" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion2" className='link text-secondary duration-300'>
                                                         Home Fashion 2
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion3" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion3" className='link text-secondary duration-300'>
                                                         Home Fashion 3
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion4" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion4" className='link text-secondary duration-300'>
                                                         Home Fashion 4
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion5" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion5" className='link text-secondary duration-300'>
                                                         Home Fashion 5
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion6" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion6" className='link text-secondary duration-300'>
                                                         Home Fashion 6
                                                     </Link>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <Link href="/homepages/fashion7" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion7" className='link text-secondary duration-300'>
                                                         Home Fashion 7
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion8" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion8" className='link text-secondary duration-300'>
                                                         Home Fashion 8
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion9" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion9" className='link text-secondary duration-300'>
                                                         Home Fashion 9
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion10" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion10" className='link text-secondary duration-300'>
                                                         Home Fashion 10
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/fashion11" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/fashion11" className='link text-secondary duration-300'>
                                                         Home Fashion 11
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/underwear" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/underwear" className='link text-secondary duration-300'>
                                                         Home Underwear
                                                     </Link>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <Link href="/homepages/cosmetic1" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/cosmetic1" className='link text-secondary duration-300'>
                                                         Home Cosmetic 1
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/cosmetic2" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/cosmetic2" className='link text-secondary duration-300'>
                                                         Home Cosmetic 2
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/cosmetic3" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/cosmetic3" className='link text-secondary duration-300'>
                                                         Home Cosmetic 3
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/pet" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/pet" className='link text-secondary duration-300'>
                                                         Home Pet Store
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/jewelry" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/jewelry" className='link text-secondary duration-300'>
                                                         Home Jewelry
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/furniture" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/furniture" className='link text-secondary duration-300'>
                                                         Home Furniture
                                                     </Link>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>
-                                                    <Link href="/homepages/watch" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/watch" className='link text-secondary duration-300'>
                                                         Home Watch
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/toys" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/toys" className='link text-secondary duration-300'>
                                                         Home Toys Kid
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/yoga" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/yoga" className='link text-secondary duration-300'>
                                                         Home Yoga
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/homepages/organic" className='text-secondary duration-300'>
+                                                    <Link href="/homepages/organic" className='link text-secondary duration-300'>
                                                         Home Organic
                                                     </Link>
                                                 </li>
@@ -206,44 +219,44 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <div className="text-button-uppercase pb-2">For Men</div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('men')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Starting From 50% Off
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('men')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Jackets | Coats
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('men')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Sweaters | Cardigans
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('men')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Hoodies | Sweatshirts
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('men')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer view-all-btn`}
                                                                     >
                                                                         View All
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -251,89 +264,44 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <div className="text-button-uppercase pb-2">Massimo Dutti</div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('shirt')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Coats | Jackets
-                                                                    </Link>
+                                                                        Shirt | Clothes
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('top')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Jackets | Overshirts
-                                                                    </Link>
+                                                                        Top | Overshirts
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('t-shirt')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        T-shirts | Tops
-                                                                    </Link>
+                                                                        T-shirts | Clothes
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('swimwear')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Pants | Jeans
-                                                                    </Link>
+                                                                        Swimwear | Underwear
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('fashion')}
+                                                                        className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
-                                                                    </Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">Beauty</div>
-                                                            <ul>
-                                                                <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
-                                                                    >
-                                                                        Tutorials
-                                                                    </Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
-                                                                    >
-                                                                        Best Seller
-                                                                    </Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
-                                                                    >
-                                                                        Lips
-                                                                    </Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
-                                                                    >
-                                                                        Nail Polish
-                                                                    </Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
-                                                                    >
-                                                                        View All
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -341,89 +309,134 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <div className="text-button-uppercase pb-2">Skincare</div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Tutorials
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Best Seller
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Cream
-                                                                    </Link>
+                                                                        Lips
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Serum
-                                                                    </Link>
+                                                                        Nail Polish
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                         <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">For WoMen</div>
+                                                            <div className="text-button-uppercase pb-2">Health</div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('candle')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Starting From 60% Off
-                                                                    </Link>
+                                                                        Candle
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('drinks')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Dresses | Jumpsuits
-                                                                    </Link>
+                                                                        Drinks
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('clothing')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        T-shirts | Sweatshirts
-                                                                    </Link>
+                                                                        Clothes
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('mats')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Accessories | Jewelry
-                                                                    </Link>
+                                                                        Yoga Equipment
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('yoga')}
+                                                                        className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
-                                                                    </Link>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="nav-item">
+                                                            <div className="text-button-uppercase pb-2">For Women</div>
+                                                            <ul>
+                                                                <li>
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('women')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
+                                                                    >
+                                                                        Starting From 60% Off
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('dress')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
+                                                                    >
+                                                                        Dresses | Jumpsuits
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('t-shirt')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
+                                                                    >
+                                                                        T-shirts | Sweatshirts
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div
+                                                                        onClick={() => handleTypeClick('accessories')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
+                                                                    >
+                                                                        Accessories | Jewelry
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div
+                                                                        onClick={() => handleGenderClick('women')}
+                                                                        className={`link text-secondary duration-300 view-all-btn`}
+                                                                    >
+                                                                        View All
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -431,44 +444,44 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <div className="text-button-uppercase pb-2">For Kid</div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('toys-kid')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Girl | 6-14 Years
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('toys-kid')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Boy | 6-14 Years
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('toys-kid')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Baby | 1-6 Years
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('toys-kid')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Newborn | {String.raw`<`}1 Years
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('toys-kid')}
+                                                                        className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -476,44 +489,44 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <div className="text-button-uppercase pb-2">For Home</div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('furniture')}
+
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Furniture | Decor
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('furniture')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Bed | Bath Room
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('furniture')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Dining | Kitchen Room
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300`}
+                                                                    <div
+                                                                        onClick={() => handleCategoryClick('furniture')}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Laundry | Cleaning
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                                 <li>
-                                                                    <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 view-all-btn`}
+                                                                    <div
+                                                                        className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
-                                                                    </Link>
+                                                                    </div>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -573,7 +586,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb IMG
                                                                     </Link>
@@ -581,7 +594,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb 1
                                                                     </Link>
@@ -589,7 +602,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb 2
                                                                     </Link>
@@ -597,7 +610,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Collection
                                                                     </Link>
@@ -610,7 +623,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-canvas'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Canvas
                                                                     </Link>
@@ -618,7 +631,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-options'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Options
                                                                     </Link>
@@ -626,7 +639,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-dropdown'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Dropdown
                                                                     </Link>
@@ -634,7 +647,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/sidebar-list'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Sidebar List
                                                                     </Link>
@@ -646,32 +659,32 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <ul>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/default'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/default-grid'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-grid' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default Grid
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/sidebar-list'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/default-list'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-list' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default List
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/filter-canvas'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/fullwidth'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/fullwidth' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Full Width
                                                                     </Link>
@@ -679,7 +692,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/square'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Square
                                                                     </Link>
@@ -692,7 +705,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/wishlist'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
                                                                     >
                                                                         Wish List
                                                                     </Link>
@@ -700,7 +713,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/search-result'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
                                                                     >
                                                                         Search Result
                                                                     </Link>
@@ -708,7 +721,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/cart'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
                                                                     >
                                                                         Shopping Cart
                                                                     </Link>
@@ -716,7 +729,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/login'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
                                                                     >
                                                                         Login/Register
                                                                     </Link>
@@ -724,7 +737,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/forgot-password'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
                                                                     >
                                                                         Forgot Password
                                                                     </Link>
@@ -732,7 +745,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/order-tracking'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
                                                                     >
                                                                         Order Tracking
                                                                     </Link>
@@ -740,7 +753,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/my-account'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
                                                                     >
                                                                         My Account
                                                                     </Link>
@@ -777,7 +790,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/default'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
                                                                     >
                                                                         Products Defaults
                                                                     </Link>
@@ -785,7 +798,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products Sale
                                                                     </Link>
@@ -793,7 +806,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
                                                                     >
                                                                         Products Countdown Timer
                                                                     </Link>
@@ -801,7 +814,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grouped
                                                                     </Link>
@@ -809,7 +822,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/bought-together'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
                                                                     >
                                                                         Frequently Bought Together
                                                                     </Link>
@@ -817,7 +830,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/out-of-stock'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
                                                                     >
                                                                         Products Out Of Stock
                                                                     </Link>
@@ -825,7 +838,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/variable'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
                                                                     >
                                                                         Products Variable
                                                                     </Link>
@@ -838,7 +851,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/external'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
                                                                     >
                                                                         Products External
                                                                     </Link>
@@ -846,7 +859,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/on-sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products On Sale
                                                                     </Link>
@@ -854,7 +867,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/discount'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
                                                                     >
                                                                         Products With Discount
                                                                     </Link>
@@ -862,7 +875,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sidebar'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
                                                                     >
                                                                         Products With Sidebar
                                                                     </Link>
@@ -870,7 +883,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/fixed-price'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
                                                                     >
                                                                         Products Fixed Price
                                                                     </Link>
@@ -883,7 +896,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/default'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Products Thumbnails Left
                                                                     </Link>
@@ -891,7 +904,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sale'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Products Thumbnails Bottom
                                                                     </Link>
@@ -899,7 +912,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Products Grid 1 Scrolling
                                                                     </Link>
@@ -907,7 +920,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Products Grid 2 Scrolling
                                                                     </Link>
@@ -915,7 +928,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/variable'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Products Combined 1
                                                                     </Link>
@@ -923,7 +936,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/external'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Products Combined 2
                                                                     </Link>
@@ -950,27 +963,27 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                             <ul className='w-full'>
                                                 <li>
-                                                    <Link href="/blog/default" className={`text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
+                                                    <Link href="/blog/default" className={`link text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
                                                         Blog Default
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/blog/list" className={`text-secondary duration-300 ${pathname === '/blog/list' ? 'active' : ''}`}>
+                                                    <Link href="/blog/list" className={`link text-secondary duration-300 ${pathname === '/blog/list' ? 'active' : ''}`}>
                                                         Blog List
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/blog/grid" className={`text-secondary duration-300 ${pathname === '/blog/grid' ? 'active' : ''}`}>
+                                                    <Link href="/blog/grid" className={`link text-secondary duration-300 ${pathname === '/blog/grid' ? 'active' : ''}`}>
                                                         Blog Grid
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/blog/detail1" className={`text-secondary duration-300 ${pathname === '/blog/detail1' ? 'active' : ''}`}>
+                                                    <Link href="/blog/detail1" className={`link text-secondary duration-300 ${pathname === '/blog/detail1' ? 'active' : ''}`}>
                                                         Blog Detail 1
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/blog/detail2" className={`text-secondary duration-300 ${pathname === '/blog/detail2' ? 'active' : ''}`}>
+                                                    <Link href="/blog/detail2" className={`link text-secondary duration-300 ${pathname === '/blog/detail2' ? 'active' : ''}`}>
                                                         Blog Detail 2
                                                     </Link>
                                                 </li>
@@ -984,37 +997,37 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                             <ul className='w-full'>
                                                 <li>
-                                                    <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                    <Link href="/pages/about" className={`link text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
                                                         About Us
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                    <Link href="/pages/contact" className={`link text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                         Contact Us
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pages/store-list" className={`text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
+                                                    <Link href="/pages/store-list" className={`link text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
                                                         Store List
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pages/page-not-found" className={`text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
+                                                    <Link href="/pages/page-not-found" className={`link text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
                                                         404
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pages/faqs" className={`text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
+                                                    <Link href="/pages/faqs" className={`link text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
                                                         FAQs
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pages/coming-soon" className={`text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
+                                                    <Link href="/pages/coming-soon" className={`link text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
                                                         Coming Soon
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
+                                                    <Link href="/pages/customer-feedbacks" className={`link text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
                                                         Customer Feedbacks
                                                     </Link>
                                                 </li>
@@ -1096,114 +1109,114 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             <div className="list-nav-item w-full grid grid-cols-2 pt-2 pb-6">
                                                 <ul>
                                                     <li>
-                                                        <Link href="/" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/' ? 'active' : ''}`}>
+                                                        <Link href="/" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/' ? 'active' : ''}`}>
                                                             Home Fashion 1
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion2" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion2" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion2' ? 'active' : ''}`}>
                                                             Home Fashion 2
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion3" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion3" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion3' ? 'active' : ''}`}>
                                                             Home Fashion 3
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion4" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion4' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion4" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion4' ? 'active' : ''}`}>
                                                             Home Fashion 4
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion5" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion5' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion5" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion5' ? 'active' : ''}`}>
                                                             Home Fashion 5
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion6" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion6' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion6" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion6' ? 'active' : ''}`}>
                                                             Home Fashion 6
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion7" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion7" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion7' ? 'active' : ''}`}>
                                                             Home Fashion 7
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion8" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion8' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion8" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion8' ? 'active' : ''}`}>
                                                             Home Fashion 8
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion9" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion9' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion9" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion9' ? 'active' : ''}`}>
                                                             Home Fashion 9
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion10" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion10' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion10" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion10' ? 'active' : ''}`}>
                                                             Home Fashion 10
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/fashion11" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/fashion11' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/fashion11" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/fashion11' ? 'active' : ''}`}>
                                                             Home Fashion 11
                                                         </Link>
                                                     </li>
                                                 </ul>
                                                 <ul>
                                                     <li>
-                                                        <Link href="/homepages/underwear" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/underwear' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/underwear" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/underwear' ? 'active' : ''}`}>
                                                             Home Underwear
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/cosmetic1" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/cosmetic1' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/cosmetic1" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/cosmetic1' ? 'active' : ''}`}>
                                                             Home Cosmetic 1
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/cosmetic2" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/cosmetic2' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/cosmetic2" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/cosmetic2' ? 'active' : ''}`}>
                                                             Home Cosmetic 2
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/cosmetic3" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/cosmetic3" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/cosmetic3' ? 'active' : ''}`}>
                                                             Home Cosmetic 3
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/pet" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/pet' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/pet" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/pet' ? 'active' : ''}`}>
                                                             Home Pet Store
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/jewelry" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/jewelry' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/jewelry" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/jewelry' ? 'active' : ''}`}>
                                                             Home Jewelry
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/furniture" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/furniture' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/furniture" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/furniture' ? 'active' : ''}`}>
                                                             Home Furniture
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/watch" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/watch' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/watch" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/watch' ? 'active' : ''}`}>
                                                             Home Watch
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/toys" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/toys' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/toys" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/toys' ? 'active' : ''}`}>
                                                             Home Toys Kid
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/yoga" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/yoga" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/yoga' ? 'active' : ''}`}>
                                                             Home Yoga
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/organic" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/organic' ? 'active' : ''}`}>
+                                                        <Link href="/homepages/organic" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/organic' ? 'active' : ''}`}>
                                                             Home Organic
                                                         </Link>
                                                     </li>
@@ -1236,7 +1249,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Starting From 50% Off
                                                                 </Link>
@@ -1244,7 +1257,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Jackets | Coats
                                                                 </Link>
@@ -1252,7 +1265,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Sweaters | Cardigans
                                                                 </Link>
@@ -1260,7 +1273,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Hoodies | Sweatshirts
                                                                 </Link>
@@ -1268,7 +1281,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
                                                                 </Link>
@@ -1281,7 +1294,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Tutorials
                                                                 </Link>
@@ -1289,7 +1302,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Best Seller
                                                                 </Link>
@@ -1297,7 +1310,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Lips
                                                                 </Link>
@@ -1305,7 +1318,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Nail Polish
                                                                 </Link>
@@ -1313,7 +1326,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
                                                                 </Link>
@@ -1326,7 +1339,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Tutorials
                                                                 </Link>
@@ -1334,7 +1347,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Best Seller
                                                                 </Link>
@@ -1342,7 +1355,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Cream
                                                                 </Link>
@@ -1350,7 +1363,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Serum
                                                                 </Link>
@@ -1358,7 +1371,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
                                                                 </Link>
@@ -1371,7 +1384,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Starting From 60% Off
                                                                 </Link>
@@ -1379,7 +1392,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Dresses | Jumpsuits
                                                                 </Link>
@@ -1387,7 +1400,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     T-shirts | Sweatshirts
                                                                 </Link>
@@ -1395,7 +1408,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Accessories | Jewelry
                                                                 </Link>
@@ -1403,7 +1416,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
                                                                 </Link>
@@ -1416,7 +1429,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Girl | 6-14 Years
                                                                 </Link>
@@ -1424,7 +1437,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Boy | 6-14 Years
                                                                 </Link>
@@ -1432,7 +1445,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Baby | 1-6 Years
                                                                 </Link>
@@ -1440,7 +1453,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Newborn | {String.raw`<`}1 Years
                                                                 </Link>
@@ -1448,7 +1461,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
                                                                 </Link>
@@ -1461,7 +1474,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Furniture | Decor
                                                                 </Link>
@@ -1469,7 +1482,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Bed | Bath Room
                                                                 </Link>
@@ -1477,7 +1490,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Dining | Kitchen Room
                                                                 </Link>
@@ -1485,7 +1498,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Laundry | Cleaning
                                                                 </Link>
@@ -1493,7 +1506,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             <li>
                                                                 <Link
                                                                     href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
                                                                 </Link>
@@ -1564,7 +1577,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb-img' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb IMG
                                                                     </Link>
@@ -1572,7 +1585,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb1' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb 1
                                                                     </Link>
@@ -1580,7 +1593,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb2'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/breadcrumb2' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Breadcrumb 2
                                                                     </Link>
@@ -1588,7 +1601,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/collection'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/collection' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Collection
                                                                     </Link>
@@ -1601,7 +1614,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-canvas'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/filter-canvas' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Canvas
                                                                     </Link>
@@ -1609,7 +1622,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-options'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/filter-options' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Options
                                                                     </Link>
@@ -1617,7 +1630,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-dropdown'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/filter-dropdown' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Filter Dropdown
                                                                     </Link>
@@ -1625,7 +1638,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/sidebar-list'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/sidebar-list' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Sidebar List
                                                                     </Link>
@@ -1638,7 +1651,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Shop Default
                                                                     </Link>
@@ -1646,7 +1659,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Shop Default Grid
                                                                     </Link>
@@ -1654,7 +1667,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/sidebar-list'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Shop Default List
                                                                     </Link>
@@ -1662,7 +1675,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/filter-canvas'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Shop Full Width
                                                                     </Link>
@@ -1670,7 +1683,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/square'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Square
                                                                     </Link>
@@ -1683,7 +1696,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/wishlist'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/wishlist' ? 'active' : ''}`}
                                                                     >
                                                                         Wish List
                                                                     </Link>
@@ -1691,7 +1704,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/search-result'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/search-result' ? 'active' : ''}`}
                                                                     >
                                                                         Search Result
                                                                     </Link>
@@ -1699,7 +1712,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/cart'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/cart' ? 'active' : ''}`}
                                                                     >
                                                                         Shopping Cart
                                                                     </Link>
@@ -1707,7 +1720,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/login'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/login' ? 'active' : ''}`}
                                                                     >
                                                                         Login/Register
                                                                     </Link>
@@ -1715,7 +1728,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/forgot-password'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/forgot-password' ? 'active' : ''}`}
                                                                     >
                                                                         Forgot Password
                                                                     </Link>
@@ -1723,7 +1736,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/order-tracking'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/order-tracking' ? 'active' : ''}`}
                                                                     >
                                                                         Order Tracking
                                                                     </Link>
@@ -1731,7 +1744,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/my-account'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/my-account' ? 'active' : ''}`}
                                                                     >
                                                                         My Account
                                                                     </Link>
@@ -1777,7 +1790,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/default'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
                                                                     >
                                                                         Products Defaults
                                                                     </Link>
@@ -1785,7 +1798,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products Sale
                                                                     </Link>
@@ -1793,7 +1806,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
                                                                     >
                                                                         Products Countdown Timer
                                                                     </Link>
@@ -1801,7 +1814,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grouped
                                                                     </Link>
@@ -1809,7 +1822,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/bought-together'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
                                                                     >
                                                                         Frequently Bought Together
                                                                     </Link>
@@ -1817,7 +1830,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/out-of-stock'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
                                                                     >
                                                                         Products Out Of Stock
                                                                     </Link>
@@ -1825,7 +1838,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/variable'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
                                                                     >
                                                                         Products Variable
                                                                     </Link>
@@ -1838,7 +1851,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/external'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
                                                                     >
                                                                         Products External
                                                                     </Link>
@@ -1846,7 +1859,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/on-sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products On Sale
                                                                     </Link>
@@ -1854,7 +1867,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/discount'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
                                                                     >
                                                                         Products With Discount
                                                                     </Link>
@@ -1862,7 +1875,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sidebar'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
                                                                     >
                                                                         Products With Sidebar
                                                                     </Link>
@@ -1870,7 +1883,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/fixed-price'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
                                                                     >
                                                                         Products Fixed Price
                                                                     </Link>
@@ -1883,7 +1896,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/default'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
                                                                     >
                                                                         Products Thumbnails Left
                                                                     </Link>
@@ -1891,7 +1904,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
                                                                     >
                                                                         Products Thumbnails Bottom
                                                                     </Link>
@@ -1899,7 +1912,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grid 1 Scrolling
                                                                     </Link>
@@ -1907,7 +1920,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grid 2 Scrolling
                                                                     </Link>
@@ -1915,7 +1928,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/variable'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
                                                                     >
                                                                         Products Combined 1
                                                                     </Link>
@@ -1923,7 +1936,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/product/external'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
                                                                     >
                                                                         Products Combined 2
                                                                     </Link>
@@ -1963,27 +1976,27 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
                                                     <li>
-                                                        <Link href="/blog/default" className={`text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
+                                                        <Link href="/blog/default" className={`link text-secondary duration-300 ${pathname === '/blog/default' ? 'active' : ''}`}>
                                                             Blog Default
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/list" className={`text-secondary duration-300 ${pathname === '/blog/list' ? 'active' : ''}`}>
+                                                        <Link href="/blog/list" className={`link text-secondary duration-300 ${pathname === '/blog/list' ? 'active' : ''}`}>
                                                             Blog List
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/grid" className={`text-secondary duration-300 ${pathname === '/blog/grid' ? 'active' : ''}`}>
+                                                        <Link href="/blog/grid" className={`link text-secondary duration-300 ${pathname === '/blog/grid' ? 'active' : ''}`}>
                                                             Blog Grid
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/detail1" className={`text-secondary duration-300 ${pathname === '/blog/detail1' ? 'active' : ''}`}>
+                                                        <Link href="/blog/detail1" className={`link text-secondary duration-300 ${pathname === '/blog/detail1' ? 'active' : ''}`}>
                                                             Blog Detail 1
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/blog/detail2" className={`text-secondary duration-300 ${pathname === '/blog/detail2' ? 'active' : ''}`}>
+                                                        <Link href="/blog/detail2" className={`link text-secondary duration-300 ${pathname === '/blog/detail2' ? 'active' : ''}`}>
                                                             Blog Detail 2
                                                         </Link>
                                                     </li>
@@ -2011,37 +2024,37 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             <div className="list-nav-item w-full pt-2 pb-6">
                                                 <ul className='w-full'>
                                                     <li>
-                                                        <Link href="/pages/about" className={`text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
+                                                        <Link href="/pages/about" className={`link text-secondary duration-300 ${pathname === '/pages/about' ? 'active' : ''}`}>
                                                             About Us
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/contact" className={`text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
+                                                        <Link href="/pages/contact" className={`link text-secondary duration-300 ${pathname === '/pages/contact' ? 'active' : ''}`}>
                                                             Contact Us
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/store-list" className={`text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
+                                                        <Link href="/pages/store-list" className={`link text-secondary duration-300 ${pathname === '/pages/store-list' ? 'active' : ''}`}>
                                                             Store List
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/page-not-found" className={`text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
+                                                        <Link href="/pages/page-not-found" className={`link text-secondary duration-300 ${pathname === '/pages/page-not-found' ? 'active' : ''}`}>
                                                             404
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/faqs" className={`text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
+                                                        <Link href="/pages/faqs" className={`link text-secondary duration-300 ${pathname === '/pages/faqs' ? 'active' : ''}`}>
                                                             FAQs
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/coming-soon" className={`text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
+                                                        <Link href="/pages/coming-soon" className={`link text-secondary duration-300 ${pathname === '/pages/coming-soon' ? 'active' : ''}`}>
                                                             Coming Soon
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/pages/customer-feedbacks" className={`text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
+                                                        <Link href="/pages/customer-feedbacks" className={`link text-secondary duration-300 ${pathname === '/pages/customer-feedbacks' ? 'active' : ''}`}>
                                                             Customer Feedbacks
                                                         </Link>
                                                     </li>

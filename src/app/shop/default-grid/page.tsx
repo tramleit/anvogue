@@ -8,7 +8,7 @@ import ShopBreadCrumb1 from '@/components/Shop/ShopBreadCrumb1'
 import productData from '@/data/Product.json'
 import Footer from '@/components/Footer/Footer'
 
-export default function BreadCrumb1() {
+export default function DefaultGrid() {
     const searchParams = useSearchParams()
     let type = searchParams.get('type')
     let gender = searchParams.get('gender')
