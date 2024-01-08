@@ -963,8 +963,8 @@
             "/images/product/fashion/21-1.png"
         ],
         "images": [
-            "/images/product/fashion/21-1.png",
             "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-1.png",
             "/images/product/fashion/21-3.png",
             "/images/product/fashion/21-4.png"
         ],
@@ -1025,10 +1025,10 @@
             "/images/product/fashion/21-4.png"
         ],
         "images": [
-            "/images/product/fashion/21-1.png",
-            "/images/product/fashion/21-2.png",
             "/images/product/fashion/21-3.png",
-            "/images/product/fashion/21-4.png"
+            "/images/product/fashion/21-4.png",
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
         "action": "quick shop",
@@ -1392,10 +1392,10 @@
             "/images/product/fashion/21-3.png"
         ],
         "images": [
-            "/images/product/fashion/21-1.png",
-            "/images/product/fashion/21-2.png",
+            "/images/product/fashion/21-4.png",
             "/images/product/fashion/21-3.png",
-            "/images/product/fashion/21-4.png"
+            "/images/product/fashion/21-1.png",
+            "/images/product/fashion/21-2.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
         "action": "quick shop",
@@ -1442,8 +1442,8 @@
             "/images/product/fashion/21-5.png"
         ],
         "images": [
-            "/images/product/fashion/21-5.png",
-            "/images/product/fashion/21-6.png"
+            "/images/product/fashion/21-6.png",
+            "/images/product/fashion/21-5.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
         "action": "add to cart",

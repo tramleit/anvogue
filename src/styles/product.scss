@@ -35,7 +35,8 @@
     }
 
     .compare-btn,
-    .add-wishlist-btn {
+    .add-wishlist-btn,
+    .quick-view-btn-list {
         &:hover {
             background-color: var(--black);
             color: var(--white);
@@ -130,6 +131,23 @@
 
     &.list-type {
         .product-thumb {
+            .list-action {
+                &:has(.quick-shop-block.open) {
+                    transform: translateX(0);
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 1;
+                }
+
+                .quick-shop-block {
+                    .button-main {
+                        white-space: nowrap;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+
             &:hover {
                 .product-img img {
                     transform: scale(1.05);
