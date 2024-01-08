@@ -898,48 +898,48 @@ const MenuTwo = () => {
                                                         <ul>
                                                             <li>
                                                                 <Link
-                                                                    href={'/product/default'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                    href={'/product/thumbnail-left'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/thumbnail-left' ? 'active' : ''}`}
                                                                 >
                                                                     Products Thumbnails Left
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/product/sale'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                    href={'/product/thumbnail-bottom'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
                                                                 >
                                                                     Products Thumbnails Bottom
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/product/grouped'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                    href={'/product/one-scrolling'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/one-scrolling' ? 'active' : ''}`}
                                                                 >
                                                                     Products Grid 1 Scrolling
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/product/countdown-timer'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                    href={'/product/two-scrolling'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/two-scrolling' ? 'active' : ''}`}
                                                                 >
                                                                     Products Grid 2 Scrolling
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/product/variable'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                    href={'/product/combined-one'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/combined-one' ? 'active' : ''}`}
                                                                 >
                                                                     Products Combined 1
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link
-                                                                    href={'/product/external'}
-                                                                    className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                    href={'/product/combined-two'}
+                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/combined-two' ? 'active' : ''}`}
                                                                 >
                                                                     Products Combined 2
                                                                 </Link>

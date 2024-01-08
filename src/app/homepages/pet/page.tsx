@@ -28,7 +28,7 @@ export default function HomePet() {
             <ChooseUs />
             <Banner2 />
             <FeatureProduct data={productData} start={0} limit={4} />
-            <Benefit props="mt-20 pt-20 border-t border-line" />
+            <Benefit props="md:mt-20 mt-10 md:pt-20 pt-10 border-t border-line" />
             <Instagram />
             <Brand />
             <Footer />
