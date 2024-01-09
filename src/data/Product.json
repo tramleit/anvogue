@@ -2558,13 +2558,13 @@
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
-                "colorImage": "/images/product/color/yellow.png",
+                "colorImage": "/images/product/cosmetic/2-1.png",
                 "image": "/images/product/cosmetic/2-1.png"
             },
             {
                 "color": "red",
                 "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
+                "colorImage": "/images/product/cosmetic/2-2.png",
                 "image": "/images/product/cosmetic/2-2.png"
             }
         ],
@@ -2603,16 +2603,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/3-3.png"
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/cosmetic/3-1.png",
+                "image": "/images/product/cosmetic/3-1.png"
             },
             {
-                "color": "purple",
-                "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/3-1.png"
+                "color": "pink",
+                "colorCode": "#F4407D",
+                "colorImage": "/images/product/cosmetic/3-2.png",
+                "image": "/images/product/cosmetic/3-2.png"
             }
         ],
         "thumbImage": [
@@ -2620,8 +2620,8 @@
             "/images/product/cosmetic/3-2.png"
         ],
         "images": [
-            "/images/product/cosmetic/3-2.png",
             "/images/product/cosmetic/3-1.png",
+            "/images/product/cosmetic/3-2.png",
             "/images/product/cosmetic/3-3.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
@@ -2650,16 +2650,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/4-3.png"
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/cosmetic/4-1.png",
+                "image": "/images/product/cosmetic/4-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/4-1.png"
+                "colorImage": "/images/product/cosmetic/4-2.png",
+                "image": "/images/product/cosmetic/4-2.png"
             }
         ],
         "thumbImage": [
@@ -2696,16 +2696,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/5-3.png"
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/cosmetic/5-1.png",
+                "image": "/images/product/cosmetic/5-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/5-1.png"
+                "colorImage": "/images/product/cosmetic/5-2.png",
+                "image": "/images/product/cosmetic/5-2.png"
             }
         ],
         "thumbImage": [
@@ -2744,14 +2744,14 @@
             {
                 "color": "red",
                 "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/9-2.png"
+                "colorImage": "/images/product/cosmetic/9-1.png",
+                "image": "/images/product/cosmetic/9-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/9-1.png"
+                "colorImage": "/images/product/cosmetic/9-2.png",
+                "image": "/images/product/cosmetic/9-2.png"
             }
         ],
         "thumbImage": [
@@ -2790,14 +2790,14 @@
             {
                 "color": "red",
                 "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/10-2.png"
+                "colorImage": "/images/product/cosmetic/10-1.png",
+                "image": "/images/product/cosmetic/10-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/10-1.png"
+                "colorImage": "/images/product/cosmetic/10-2.png",
+                "image": "/images/product/cosmetic/10-2.png"
             }
         ],
         "thumbImage": [
@@ -2836,13 +2836,7 @@
             {
                 "color": "green",
                 "colorCode": "#D2EF9A",
-                "colorImage": "/images/product/color/green.png",
-                "image": "/images/product/cosmetic/7-2.png"
-            },
-            {
-                "color": "purple",
-                "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
+                "colorImage": "/images/product/cosmetic/7-1.png",
                 "image": "/images/product/cosmetic/7-1.png"
             }
         ],
@@ -2881,16 +2875,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/1-2.png"
-            },
-            {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
+                "colorImage": "/images/product/cosmetic/1-1.png",
                 "image": "/images/product/cosmetic/1-1.png"
+            },
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/cosmetic/1-3.png",
+                "image": "/images/product/cosmetic/1-3.png"
             }
         ],
         "thumbImage": [
@@ -2929,15 +2923,15 @@
         ],
         "variation": [
             {
-                "color": "yellow",
-                "colorCode": "#ECB018",
-                "colorImage": "/images/product/color/yellow.png",
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/cosmetic/12-1.png",
                 "image": "/images/product/cosmetic/12-1.png"
             },
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
+                "color": "pink",
+                "colorCode": "#F4407D",
+                "colorImage": "/images/product/cosmetic/12-2.png",
                 "image": "/images/product/cosmetic/12-2.png"
             }
         ],
@@ -2975,16 +2969,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/11-2.png"
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/cosmetic/11-1.png",
+                "image": "/images/product/cosmetic/11-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/11-1.png"
+                "colorImage": "/images/product/cosmetic/11-2.png",
+                "image": "/images/product/cosmetic/11-2.png"
             }
         ],
         "thumbImage": [
@@ -3023,14 +3017,14 @@
             {
                 "color": "red",
                 "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/1-3.png"
+                "colorImage": "/images/product/cosmetic/1-2.png",
+                "image": "/images/product/cosmetic/1-2.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/1-1.png"
+                "colorImage": "/images/product/cosmetic/1-3.png",
+                "image": "/images/product/cosmetic/1-3.png"
             }
         ],
         "thumbImage": [
@@ -3071,14 +3065,14 @@
             {
                 "color": "red",
                 "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
+                "colorImage": "/images/product/cosmetic/1-3.png",
                 "image": "/images/product/cosmetic/1-3.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/1-1.png"
+                "colorImage": "/images/product/cosmetic/1-4.png",
+                "image": "/images/product/cosmetic/1-4.png"
             }
         ],
         "thumbImage": [
@@ -3117,16 +3111,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/6-3.png"
+                "color": "pink",
+                "colorCode": "#F4407D",
+                "colorImage": "/images/product/cosmetic/6-1.png",
+                "image": "/images/product/cosmetic/6-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/6-1.png"
+                "colorImage": "/images/product/cosmetic/6-2.png",
+                "image": "/images/product/cosmetic/6-2.png"
             }
         ],
         "thumbImage": [
@@ -3164,16 +3158,16 @@
         ],
         "variation": [
             {
-                "color": "red",
-                "colorCode": "#DB4444",
-                "colorImage": "/images/product/color/red.png",
-                "image": "/images/product/cosmetic/8-3.png"
+                "color": "white",
+                "colorCode": "#F6EFDD",
+                "colorImage": "/images/product/cosmetic/8-1.png",
+                "image": "/images/product/cosmetic/8-1.png"
             },
             {
                 "color": "purple",
                 "colorCode": "#8684D4",
-                "colorImage": "/images/product/color/purple.png",
-                "image": "/images/product/cosmetic/8-1.png"
+                "colorImage": "/images/product/cosmetic/8-2.png",
+                "image": "/images/product/cosmetic/8-2.png"
             }
         ],
         "thumbImage": [
@@ -3891,7 +3885,7 @@
                 "color": "silver",
                 "colorCode": "#a1a2af",
                 "colorImage": "/images/product/jewelry/4-1.png",
-                "image": "/images/product/jewelry/4-2.png"
+                "image": "/images/product/jewelry/4-1.png"
             }
         ],
         "thumbImage": [
@@ -4490,15 +4484,15 @@
     {
         "id": "87",
         "category": "furniture",
-        "type": "lightning",
-        "name": "sofa lightning",
+        "type": "lighting",
+        "name": "sofa lighting",
         "gender": "both",
         "new": false,
         "sale": true,
         "rate": 5,
         "price": 110,
         "originPrice": 129,
-        "brand": "lightning",
+        "brand": "lighting",
         "sold": 21,
         "quantity": 64,
         "quantityPurchase": 1,
@@ -4600,15 +4594,15 @@
     {
         "id": "88",
         "category": "furniture",
-        "type": "lightning",
-        "name": "bed lightning",
+        "type": "lighting",
+        "name": "bed lighting",
         "gender": "both",
         "new": true,
         "sale": false,
         "rate": 5,
         "price": 100,
         "originPrice": 119,
-        "brand": "lightning",
+        "brand": "lighting",
         "sold": 12,
         "quantity": 88,
         "quantityPurchase": 1,
@@ -4637,7 +4631,7 @@
         "id": "89",
         "category": "toys-kid",
         "type": "bed",
-        "name": "bed lightning",
+        "name": "bed lighting",
         "gender": "men",
         "new": true,
         "sale": false,
@@ -4685,7 +4679,7 @@
         "id": "90",
         "category": "toys-kid",
         "type": "toy",
-        "name": "toys lightning",
+        "name": "toys lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -4727,7 +4721,7 @@
         "id": "91",
         "category": "toys-kid",
         "type": "blanket",
-        "name": "blanket lightning",
+        "name": "blanket lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -4769,7 +4763,7 @@
         "id": "92",
         "category": "toys-kid",
         "type": "clothing",
-        "name": "clothing lightning",
+        "name": "clothing lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -4811,7 +4805,7 @@
         "id": "93",
         "category": "toys-kid",
         "type": "bed",
-        "name": "bed lightning",
+        "name": "bed lighting",
         "gender": "men",
         "new": false,
         "sale": true,
@@ -4859,7 +4853,7 @@
         "id": "94",
         "category": "toys-kid",
         "type": "toy",
-        "name": "toys lightning",
+        "name": "toys lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -4901,7 +4895,7 @@
         "id": "95",
         "category": "toys-kid",
         "type": "blanket",
-        "name": "blanket lightning",
+        "name": "blanket lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -4943,7 +4937,7 @@
         "id": "96",
         "category": "toys-kid",
         "type": "clothing",
-        "name": "clothing lightning",
+        "name": "clothing lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -4985,7 +4979,7 @@
         "id": "97",
         "category": "toys-kid",
         "type": "blanket",
-        "name": "blanket lightning",
+        "name": "blanket lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5028,7 +5022,7 @@
         "id": "98",
         "category": "toys-kid",
         "type": "bib",
-        "name": "bib lightning",
+        "name": "bib lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5089,7 +5083,7 @@
         "id": "99",
         "category": "toys-kid",
         "type": "clothing",
-        "name": "clothing lightning",
+        "name": "clothing lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5131,7 +5125,7 @@
         "id": "100",
         "category": "toys-kid",
         "type": "blanket",
-        "name": "blanket lightning",
+        "name": "blanket lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5172,7 +5166,7 @@
         "id": "101",
         "category": "yoga",
         "type": "candle",
-        "name": "candle lightning",
+        "name": "candle lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5214,7 +5208,7 @@
         "id": "102",
         "category": "yoga",
         "type": "drinks",
-        "name": "drinks lightning",
+        "name": "drinks lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5256,7 +5250,7 @@
         "id": "103",
         "category": "yoga",
         "type": "kits",
-        "name": "kits lightning",
+        "name": "kits lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5299,7 +5293,7 @@
         "id": "104",
         "category": "yoga",
         "type": "clothing",
-        "name": "clothing lightning",
+        "name": "clothing lighting",
         "gender": "women",
         "new": true,
         "sale": false,
@@ -5354,7 +5348,7 @@
         "id": "105",
         "category": "yoga",
         "type": "candle",
-        "name": "candle lightning",
+        "name": "candle lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -5396,7 +5390,7 @@
         "id": "106",
         "category": "yoga",
         "type": "drinks",
-        "name": "drinks lightning",
+        "name": "drinks lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -5438,7 +5432,7 @@
         "id": "107",
         "category": "yoga",
         "type": "mats",
-        "name": "mats lightning",
+        "name": "mats lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -5481,7 +5475,7 @@
         "id": "108",
         "category": "yoga",
         "type": "clothing",
-        "name": "clothing lightning",
+        "name": "clothing lighting",
         "gender": "women",
         "new": false,
         "sale": true,
@@ -5535,7 +5529,7 @@
         "id": "109",
         "category": "yoga",
         "type": "candle",
-        "name": "candle lightning",
+        "name": "candle lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -5577,7 +5571,7 @@
         "id": "110",
         "category": "yoga",
         "type": "drinks",
-        "name": "drinks lightning",
+        "name": "drinks lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -5619,7 +5613,7 @@
         "id": "111",
         "category": "yoga",
         "type": "kits",
-        "name": "kits lightning",
+        "name": "kits lighting",
         "gender": "both",
         "new": false,
         "sale": true,
@@ -5657,7 +5651,7 @@
         "id": "112",
         "category": "yoga",
         "type": "drinks",
-        "name": "drinks lightning",
+        "name": "drinks lighting",
         "gender": "both",
         "new": true,
         "sale": false,
@@ -5719,12 +5713,12 @@
                 "color": "red",
                 "colorCode": "#DA4848",
                 "colorImage": "/images/product/watch/1-1.png",
-                "image": "/images/product/watch/1-2.png"
+                "image": "/images/product/watch/1-1.png"
             },
             {
                 "color": "blue",
                 "colorCode": "#4856DA",
-                "colorImage": "/images/product/watch/1-1.png",
+                "colorImage": "/images/product/watch/1-2.png",
                 "image": "/images/product/watch/1-2.png"
             }
         ],
@@ -5735,8 +5729,8 @@
         "images": [
             "/images/product/watch/1-1.png",
             "/images/product/watch/1-2.png",
-            "/images/product/watch/1-3.png",
-            "/images/product/watch/1-4.png"
+            "/images/product/watch/2-1.png",
+            "/images/product/watch/2-2.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio watch. Traditionally designed, they are perfect to be used in the any place where you need to store. Bring one-of-a-kind look to your interior with watch from Onita watch!",
         "action": "add to cart",
@@ -5766,12 +5760,12 @@
                 "color": "red",
                 "colorCode": "#DA4848",
                 "colorImage": "/images/product/watch/2-2.png",
-                "image": "/images/product/watch/2-1.png"
+                "image": "/images/product/watch/2-2.png"
             },
             {
                 "color": "blue",
                 "colorCode": "#4856DA",
-                "colorImage": "/images/product/watch/2-2.png",
+                "colorImage": "/images/product/watch/2-1.png",
                 "image": "/images/product/watch/2-1.png"
             }
         ],
@@ -5812,14 +5806,14 @@
             {
                 "color": "red",
                 "colorCode": "#DA4848",
-                "colorImage": "/images/product/watch/3-1.png",
+                "colorImage": "/images/product/watch/3-2.png",
                 "image": "/images/product/watch/3-2.png"
             },
             {
-                "color": "blue",
-                "colorCode": "#4856DA",
+                "color": "silver",
+                "colorCode": "#a1a2af",
                 "colorImage": "/images/product/watch/3-1.png",
-                "image": "/images/product/watch/3-2.png"
+                "image": "/images/product/watch/3-1.png"
             }
         ],
         "thumbImage": [
@@ -5857,8 +5851,8 @@
             {
                 "color": "black",
                 "colorCode": "#555",
-                "colorImage": "/images/product/watch/4-2.png",
-                "image": "/images/product/watch/4-2.png"
+                "colorImage": "/images/product/watch/4-1.png",
+                "image": "/images/product/watch/4-1.png"
             }
         ],
         "thumbImage": [
@@ -5896,8 +5890,8 @@
             {
                 "color": "black",
                 "colorCode": "#555",
-                "colorImage": "/images/product/watch/4-2.png",
-                "image": "/images/product/watch/5-2.png"
+                "colorImage": "/images/product/watch/5-1.png",
+                "image": "/images/product/watch/5-1.png"
             }
         ],
         "thumbImage": [
@@ -5935,8 +5929,8 @@
             {
                 "color": "black",
                 "colorCode": "#555",
-                "colorImage": "/images/product/watch/4-2.png",
-                "image": "/images/product/watch/6-2.png"
+                "colorImage": "/images/product/watch/6-1.png",
+                "image": "/images/product/watch/6-1.png"
             }
         ],
         "thumbImage": [
@@ -5991,12 +5985,13 @@
             }
         ],
         "thumbImage": [
-            "/images/product/watch/4-1.png",
-            "/images/product/watch/4-2.png"
+            "/images/product/watch/7-1.png",
+            "/images/product/watch/7-2.png"
         ],
         "images": [
-            "/images/product/watch/4-1.png",
-            "/images/product/watch/4-2.png"
+            "/images/product/watch/7-1.png",
+            "/images/product/watch/7-2.png",
+            "/images/product/watch/7-3.png"
         ],
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio watch. Traditionally designed, they are perfect to be used in the any place where you need to store. Bring one-of-a-kind look to your interior with watch from Onita watch!",
         "action": "quick shop",
@@ -6157,10 +6152,10 @@
         "sizes": [],
         "variation": [
             {
-                "color": "yellow",
-                "colorCode": "#ECB018",
-                "colorImage": "/images/product/yoga/1-1.png",
-                "image": "/images/product/yoga/1-1.png"
+                "color": "green",
+                "colorCode": "#D2EF9A",
+                "colorImage": "/images/product/organic/1-1.png",
+                "image": "/images/product/organic/1-1.png"
             }
         ],
         "thumbImage": [
@@ -6301,8 +6296,7 @@
         "sold": 24,
         "quantity": 80,
         "quantityPurchase": 1,
-        "sizes": [
-        ],
+        "sizes": [],
         "variation": [
             {
                 "color": "green",
@@ -6521,8 +6515,7 @@
         "sold": 24,
         "quantity": 80,
         "quantityPurchase": 1,
-        "sizes": [
-        ],
+        "sizes": [],
         "variation": [
             {
                 "color": "red",

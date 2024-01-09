@@ -40,7 +40,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
 
     return (
         <>
-            <div className="featured-product underwear md:pt-20 pt-14">
+            <div className="featured-product underwear style-watch md:pt-20 pt-14">
                 <div className="container flex lg:items-center justify-between gap-y-6 flex-wrap">
                     <div className="list-img md:w-1/2 md:pr-4 w-full">
                         <Swiper
@@ -178,8 +178,9 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             </div>
                             <div className="choose-size mt-5">
                                 <div className="heading flex items-center justify-between">
-                                    <div className="text-title text-white">Size: <span className='text-title size'>{activeSize}</span></div>
-                                    <div className="caption1 size-guide text-red underline">Size Guide</div>
+                                    <div className="text-title text-white">Size: 
+                                        <span className='text-title size pl-1'>{activeSize ? `${activeSize}mm` : ''}</span>
+                                    </div>
                                 </div>
                                 <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.sizes.map((item, index) => (

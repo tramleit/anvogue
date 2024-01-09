@@ -6,8 +6,15 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { useRouter } from 'next/navigation';
 
 const Category = () => {
+    const router = useRouter()
+
+    const handleTypeClick = (type: string) => {
+        router.push(`/shop/breadcrumb1?type=${type}`);
+    };
+
     return (
         <>
             <div className="trending-block style-six md:pt-20 pt-10">
@@ -40,7 +47,7 @@ const Category = () => {
                             className='h-full'
                         >
                             <SwiperSlide>
-                                <Link href={'/shop/breadcrumb1'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('smart')}>
                                     <div className="bg-img rounded-full bg-surface1 border-surface2 border-2 overflow-hidden">
                                         <Image
                                             src={'/images/collection/category-watch1.png'}
@@ -53,10 +60,10 @@ const Category = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6 text-white'>Smart watch</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'/shop/breadcrumb1'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('luxury')}>
                                     <div className="bg-img rounded-full bg-surface1 border-surface2 border-2 overflow-hidden">
                                         <Image
                                             src={'/images/collection/category-watch2.png'}
@@ -69,10 +76,10 @@ const Category = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6 text-white'>Luxury</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'/shop/breadcrumb1'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('classic')}>
                                     <div className="bg-img rounded-full bg-surface1 border-surface2 border-2 overflow-hidden">
                                         <Image
                                             src={'/images/collection/category-watch3.png'}
@@ -85,10 +92,10 @@ const Category = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6 text-white'>Classic</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'/shop/breadcrumb1'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('fitness')}>
                                     <div className="bg-img rounded-full bg-surface1 border-surface2 border-2 overflow-hidden">
                                         <Image
                                             src={'/images/collection/category-watch4.png'}
@@ -101,10 +108,10 @@ const Category = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6 text-white'>Fitness</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'/shop/breadcrumb1'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('apple')}>
                                     <div className="bg-img rounded-full bg-surface1 border-surface2 border-2 overflow-hidden">
                                         <Image
                                             src={'/images/collection/category-watch5.png'}
@@ -117,10 +124,10 @@ const Category = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6 text-white'>Apple watch</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'/shop/breadcrumb1'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('sport')}>
                                     <div className="bg-img rounded-full bg-surface1 border-surface2 border-2 overflow-hidden">
                                         <Image
                                             src={'/images/collection/category-watch3.png'}
@@ -133,7 +140,7 @@ const Category = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6 text-white'>Sport</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>

@@ -13,6 +13,7 @@ interface Props {
 }
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
+    const [activeSize, setActiveSize] = useState<string>('')
     const [activeColor, setActiveColor] = useState<string>('')
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
@@ -21,24 +22,28 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
         setActiveColor(item)
     }
 
+    const handleActiveSize = (item: string) => {
+        setActiveSize(item)
+    }
+
     const handleIncreaseQuantity = () => {
         productMain.quantityPurchase += 1
-        updateCart(productMain.id, productMain.quantityPurchase + 1, '', activeColor);
+        updateCart(productMain.id, productMain.quantityPurchase + 1, activeSize, activeColor);
     };
 
     const handleDecreaseQuantity = () => {
         if (productMain.quantityPurchase > 1) {
             productMain.quantityPurchase -= 1
-            updateCart(productMain.id, productMain.quantityPurchase - 1, '', activeColor);
+            updateCart(productMain.id, productMain.quantityPurchase - 1, activeSize, activeColor);
         }
     };
 
     const handleAddToCart = () => {
         if (!cartState.cartArray.find(item => item.id === productMain.id)) {
             addToCart({ ...productMain });
-            updateCart(productMain.id, productMain.quantityPurchase, '', activeColor)
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
         } else {
-            updateCart(productMain.id, productMain.quantityPurchase, '', activeColor)
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
         }
         openModalCart()
     };
@@ -82,7 +87,6 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             <div className="choose-size">
                                 <div className="heading flex items-center justify-between">
                                     <div className="text-title">Color: <span className='text-title size'>{`${activeColor}`}</span></div>
-                                    <div className="caption1 size-guide text-red underline">Size Guide</div>
                                 </div>
                                 <div className="list-color flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.variation.map((item, index) => (
@@ -101,6 +105,24 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">
                                                 {item.color}
                                             </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="choose-size mt-5">
+                                <div className="heading flex items-center justify-between">
+                                    <div className="text-title">Size:
+                                        <span className='text-title size pl-1'>{activeSize ? `${activeSize}mm` : ''}</span>
+                                    </div>
+                                </div>
+                                <div className="list-size flex items-center gap-2 flex-wrap mt-3">
+                                    {productMain.sizes.map((item, index) => (
+                                        <div
+                                            className={`size-item w-12 h-12 flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
+                                            key={index}
+                                            onClick={() => handleActiveSize(item)}
+                                        >
+                                            {item}
                                         </div>
                                     ))}
                                 </div>

@@ -6,8 +6,15 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { useRouter } from 'next/navigation';
 
 const Collection = () => {
+    const router = useRouter()
+
+    const handleCategoryClick = (category: string) => {
+        router.push(`/shop/breadcrumb1?category=${category}`);
+    };
+
     return (
         <>
             <div className="trending-block style-six md:pt-20 pt-10">
@@ -42,7 +49,7 @@ const Collection = () => {
                             className='h-full'
                         >
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/food.png'}
@@ -55,10 +62,10 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Food</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/outfit.png'}
@@ -71,10 +78,10 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Outfits</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/bed.png'}
@@ -87,10 +94,10 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Beds</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/toys.png'}
@@ -103,10 +110,10 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Toys</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/supplements.png'}
@@ -119,10 +126,10 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Supplements</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/pharmacy.png'}
@@ -135,10 +142,10 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Pharmacy</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                     <div className="bg-img rounded-[32px] overflow-hidden">
                                         <Image
                                             src={'/images/collection/ring.png'}
@@ -151,7 +158,7 @@ const Collection = () => {
                                     <div className="trending-name text-center mt-5 duration-500">
                                         <span className='heading6'>Ring</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>

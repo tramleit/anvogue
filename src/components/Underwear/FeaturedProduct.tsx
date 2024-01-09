@@ -11,8 +11,6 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
-import { useWishlist } from '@/context/WishlistContext'
-import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 import ModalSizeguide from '../Modal/ModalSizeguide'
 
 SwiperCore.use([Navigation, Thumbs]);

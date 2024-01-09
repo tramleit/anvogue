@@ -129,3 +129,18 @@
         }
     }
 }
+
+.featured-product.style-watch {
+    .list-action .choose-size {
+        .size-item {
+            background-color: var(--black);
+            color: var(--white);
+
+            &.active {
+                background-color: var(--white);
+                color: var(--black);
+                border-color: var(--white);
+            }
+        }
+    }
+}
