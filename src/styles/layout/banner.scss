@@ -40,6 +40,15 @@
             }
         }
     }
+
+    &.bg-green {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            background-color: var(--green);
+            color: var(--black);
+        }
+    }
 }
 
 .tab-features-block .banner {

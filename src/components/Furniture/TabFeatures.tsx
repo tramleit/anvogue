@@ -69,7 +69,7 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product grid grid-cols-4 gap-[30px] hide-product-sold section-swiper-navigation  mt-10">
+                    <div className="list-product grid lg:grid-cols-4 grid-cols-2 md:gap-[30px] gap-5 hide-product-sold section-swiper-navigation  md:mt-10 mt-6">
                         {filteredProducts.slice(start, limit).map((prd, index) => (
                             <Product key={index} data={prd} type='grid' />
                         ))}

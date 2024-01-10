@@ -27,22 +27,22 @@ const FlashSale = () => {
                         </div>
                         <div className="countdown-time flex items-center gap-5 max-sm:gap-[18px]">
                             <div className="item flex flex-col items-center">
-                                <div className="day time heading1">{timeLeft.days}</div>
+                                <div className="days time heading1">{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</div>
                                 <div className='text-button-uppercase font-medium'>Days</div>
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day time heading1">{timeLeft.hours}</div>
+                                <div className="hours time heading1">{timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}</div>
                                 <div className='text-button-uppercase font-medium'>Hours</div>
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day time heading1">{timeLeft.minutes}</div>
+                                <div className="minutes time heading1">{timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}</div>
                                 <div className='text-button-uppercase font-medium'>Minutes</div>
                             </div>
                             <span className='heading4'>:</span>
                             <div className="item flex flex-col items-center">
-                                <div className="day time heading1">{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</div>
+                                <div className="seconds time heading1">{timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds}</div>
                                 <div className='text-button-uppercase font-medium'>Seconds</div>
                             </div>
                         </div>

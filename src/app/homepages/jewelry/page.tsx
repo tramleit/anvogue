@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
-import MenuFour from '@/components/Header/Menu/MenuFour'
+import MenuJewelry from '@/components/Header/Menu/MenuJewelry'
 import BannerTop from '@/components/Home3/BannerTop'
 import SliderJewelry from '@/components/Slider/SliderJewelry'
 import Quote from '@/components/Jewelry/Quote'
@@ -20,7 +20,7 @@ export default function HomeJewelry() {
         <>
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
-                <MenuFour props="bg-white" />
+                <MenuJewelry props="bg-white" />
                 <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white' />
                 <SliderJewelry />
             </div>

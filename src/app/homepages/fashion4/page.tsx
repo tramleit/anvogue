@@ -29,7 +29,7 @@ export default function HomeFour() {
             <Banner />
             <Benefit props="md:pt-20 pt-10" />
             <Testimonial data={testimonialData} limit={6} />
-            <Newsletter props="bg-black mt-20" />
+            <Newsletter props="bg-black md:mt-20 mt-10" />
             <Instagram />
             <Brand />
             <Footer />

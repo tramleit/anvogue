@@ -12,7 +12,7 @@ import HandlePagination from '../Other/HandlePagination';
 interface Props {
     data: Array<ProductType>
     productPerPage: number
-    dataType: string | null
+    dataType: string | null | undefined
     gender: string | null
     category: string | null
 }
@@ -20,7 +20,7 @@ interface Props {
 const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gender, category }) => {
     const [showOnlySale, setShowOnlySale] = useState(false)
     const [sortOption, setSortOption] = useState('');
-    const [type, setType] = useState<string | null>(dataType)
+    const [type, setType] = useState<string | null | undefined>(dataType)
     const [size, setSize] = useState<string | null>()
     const [color, setColor] = useState<string | null>()
     const [brand, setBrand] = useState<string | null>()
@@ -116,6 +116,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
 
         return isShowOnlySaleMatched && isDatagenderMatched && isDataCategoryMatched && isDataTypeMatched && isTypeMatched && isSizeMatched && isColorMatched && isBrandMatched && isPriceRangeMatched
     })
+    
 
     // Create a copy array filtered to sort
     let sortedData = [...filteredData];
@@ -481,7 +482,7 @@ const ShopBreadCrumb1: React.FC<Props> = ({ data, productPerPage, dataType, gend
                                 }
                             </div>
 
-                            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] mt-7">
+                            <div className="list-product hide-product-sold grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] max-sm:gap-y-0 mt-7">
                                 {currentProducts.map((item) => (
                                     item.id === 'no-data' ? (
                                         <div key={item.id} className="no-data-product">No products match the selected criteria.</div>

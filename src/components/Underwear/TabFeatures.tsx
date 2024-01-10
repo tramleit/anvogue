@@ -40,7 +40,7 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
 
     return (
         <>
-            <div className="tab-features-block style-underwear py-20 bg-surface mt-20">
+            <div className="tab-features-block style-underwear md:py-20 py-10 bg-surface md:mt-20 mt-10">
                 <div className="container">
                     <div className="heading flex flex-col items-center text-center">
                         <div className="menu-tab flex items-center gap-2 p-1 bg-white rounded-2xl">
@@ -68,7 +68,7 @@ const TabFeatures: React.FC<Props> = ({ data, start, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product hide-product-sold  grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
+                    <div className="list-product hide-product-sold  grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] max-sm:gap-y-0 md:mt-10 mt-6">
                         {filteredProducts.slice(start, limit).map((prd, index) => (
                             <Product key={index} data={prd} type='grid' />
                         ))}

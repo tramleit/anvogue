@@ -19,7 +19,7 @@ const Collection = () => {
             <div className="collection-block md:pt-20 pt-10">
                 <div className="container">
                     <div className="heading3 text-center">Explore Collections</div>
-                    <div className="list-collection section-swiper-navigation style-outline style-center style-small-border mt-10">
+                    <div className="list-collection section-swiper-navigation style-outline style-center style-small-border md:mt-10 mt-6">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

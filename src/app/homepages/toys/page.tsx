@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
-import MenuFour from '@/components/Header/Menu/MenuFour'
+import MenuToys from '@/components/Header/Menu/MenuToys'
 import SliderToysKid from '@/components/Slider/SliderToysKid'
 import BannerTop from '@/components/Home3/BannerTop'
 import Benefit from '@/components/Toys/Benefit'
@@ -20,7 +20,7 @@ export default function HomeToys() {
         <>
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
-                <MenuFour props="bg-white" />
+                <MenuToys props="bg-white" />
                 <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white' />
                 <SliderToysKid />
             </div>

@@ -9,6 +9,14 @@
         visibility: visible;
         transform: translateY(0);
     }
+
+    @media (max-width: 1490px) {
+        right: 16px;
+    }
+
+    @media (max-width: 767.98px) {
+        top: 56px !important;
+    }
 }
 
 .modal-video-block,

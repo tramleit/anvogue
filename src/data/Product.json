@@ -4044,7 +4044,7 @@
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
-                "colorImage": "/images/product/furniture/6-3.png",
+                "colorImage": "/images/product/furniture/1-2.png",
                 "image": "/images/product/furniture/1-2.png"
             }
         ],
@@ -4080,14 +4080,14 @@
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
-                "colorImage": "/images/product/furniture/6-3.png",
-                "image": "/images/product/furniture/2-2.png"
+                "colorImage": "/images/product/furniture/2-4.png",
+                "image": "/images/product/furniture/2-4.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
-                "colorImage": "/images/product/furniture/4-3.png",
-                "image": "/images/product/furniture/2-4.png"
+                "colorImage": "/images/product/furniture/2-2.png",
+                "image": "/images/product/furniture/2-2.png"
             }
         ],
         "thumbImage": [
@@ -4122,13 +4122,13 @@
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
-                "colorImage": "/images/product/furniture/6-3.png",
+                "colorImage": "/images/product/furniture/3-1.png",
                 "image": "/images/product/furniture/3-1.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
-                "colorImage": "/images/product/furniture/4-3.png",
+                "colorImage": "/images/product/furniture/3-3.png",
                 "image": "/images/product/furniture/3-3.png"
             }
         ],
@@ -4200,14 +4200,14 @@
             {
                 "color": "yellow",
                 "colorCode": "#ECB018",
-                "colorImage": "/images/product/furniture/6-3.png",
-                "image": "/images/product/furniture/3-2.png"
+                "colorImage": "/images/product/furniture/3-4.png",
+                "image": "/images/product/furniture/3-4.png"
             },
             {
                 "color": "black",
                 "colorCode": "#555",
-                "colorImage": "/images/product/furniture/4-3.png",
-                "image": "/images/product/furniture/3-4.png"
+                "colorImage": "/images/product/furniture/3-2.png",
+                "image": "/images/product/furniture/3-2.png"
             }
         ],
         "thumbImage": [
@@ -4630,7 +4630,7 @@
     {
         "id": "89",
         "category": "toys-kid",
-        "type": "bed",
+        "type": "pad",
         "name": "bed lighting",
         "gender": "men",
         "new": true,
@@ -4804,7 +4804,7 @@
     {
         "id": "93",
         "category": "toys-kid",
-        "type": "bed",
+        "type": "pad",
         "name": "bed lighting",
         "gender": "men",
         "new": false,
@@ -5292,7 +5292,7 @@
     {
         "id": "104",
         "category": "yoga",
-        "type": "clothing",
+        "type": "clothes",
         "name": "clothing lighting",
         "gender": "women",
         "new": true,
@@ -5474,7 +5474,7 @@
     {
         "id": "108",
         "category": "yoga",
-        "type": "clothing",
+        "type": "clothes",
         "name": "clothing lighting",
         "gender": "women",
         "new": false,
@@ -6715,5 +6715,193 @@
         "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio organic. Traditionally designed, they are perfect to be used in the any place where you need to store. Bring one-of-a-kind look to your interior with organic from Onita organic!",
         "action": "add to cart",
         "slug": "organic"
+    },
+    {
+        "id": "139",
+        "category": "fashion",
+        "type": "sweater",
+        "name": "silver sweater",
+        "gender": "men",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 26,
+        "originPrice": 32,
+        "brand": "zara",
+        "sold": 16,
+        "quantity": 64,
+        "quantityPurchase": 1,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "variation": [
+            {
+                "color": "grey",
+                "colorCode": "#F6EFDD",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/37-1.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/37-2.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/37-1.png",
+            "/images/product/fashion/37-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/37-1.png",
+            "/images/product/fashion/37-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "quick shop",
+        "slug": "fashion"
+    },
+    {
+        "id": "140",
+        "category": "fashion",
+        "type": "sweater",
+        "name": "silver sweater",
+        "gender": "men",
+        "new": true,
+        "sale": false,
+        "rate": 5,
+        "price": 32,
+        "originPrice": 40,
+        "brand": "nike",
+        "sold": 26,
+        "quantity": 64,
+        "quantityPurchase": 1,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "variation": [
+            {
+                "color": "red",
+                "colorCode": "#DB4444",
+                "colorImage": "/images/product/color/red.png",
+                "image": "/images/product/fashion/38-1.png"
+            },
+            {
+                "color": "purple",
+                "colorCode": "#8684D4",
+                "colorImage": "/images/product/color/purple.png",
+                "image": "/images/product/fashion/38-2.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/38-1.png",
+            "/images/product/fashion/38-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/38-1.png",
+            "/images/product/fashion/38-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "add to cart",
+        "slug": "fashion"
+    },
+    {
+        "id": "141",
+        "category": "fashion",
+        "type": "outerwear",
+        "name": "women office outerwear",
+        "gender": "women",
+        "new": false,
+        "sale": true,
+        "rate": 5,
+        "price": 26,
+        "originPrice": 32,
+        "brand": "zara",
+        "sold": 16,
+        "quantity": 64,
+        "quantityPurchase": 1,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "variation": [
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/39-1.png"
+            },
+            {
+                "color": "grey",
+                "colorCode": "#F6EFDD",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/39-2.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/39-1.png",
+            "/images/product/fashion/39-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/39-1.png",
+            "/images/product/fashion/39-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "quick shop",
+        "slug": "fashion"
+    },
+    {
+        "id": "142",
+        "category": "fashion",
+        "type": "outerwear",
+        "name": "men outerwear",
+        "gender": "men",
+        "new": true,
+        "sale": false,
+        "rate": 5,
+        "price": 32,
+        "originPrice": 40,
+        "brand": "nike",
+        "sold": 26,
+        "quantity": 64,
+        "quantityPurchase": 1,
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "variation": [
+            {
+                "color": "black",
+                "colorCode": "#1F1F1F",
+                "colorImage": "/images/product/color/green.png",
+                "image": "/images/product/fashion/40-1.png"
+            },
+            {
+                "color": "yellow",
+                "colorCode": "#ECB018",
+                "colorImage": "/images/product/color/yellow.png",
+                "image": "/images/product/fashion/40-2.png"
+            }
+        ],
+        "thumbImage": [
+            "/images/product/fashion/40-1.png",
+            "/images/product/fashion/40-2.png"
+        ],
+        "images": [
+            "/images/product/fashion/40-1.png",
+            "/images/product/fashion/40-2.png"
+        ],
+        "description": "Keep your home organized, yet elegant with storage cabinets by Onita Patio Furniture. Traditionally designed, they are perfect to be used in the any place where you need to store.",
+        "action": "add to cart",
+        "slug": "fashion"
     }
 ]

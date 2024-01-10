@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
-import MenuFour from '@/components/Header/Menu/MenuFour'
+import MenuCosmeticOne from '@/components/Header/Menu/MenuCosmeticOne'
 import SliderCosmeticOne from '@/components/Slider/SliderCosmeticOne'
 import BannerTop from '@/components/Home3/BannerTop'
 import Collection from '@/components/Cosmetic1/Collection'
@@ -21,7 +21,7 @@ export default function HomeCosmeticOne() {
         <>
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
-                <MenuFour props="bg-white" />
+                <MenuCosmeticOne props="bg-white" />
                 <BannerTop props="bg-green py-3" textColor='text-black' bgLine='bg-black' />
                 <SliderCosmeticOne />
             </div>

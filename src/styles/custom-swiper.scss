@@ -134,6 +134,10 @@
     left: 64px;
     bottom: 0;
     top: unset;
+
+    @media (max-width: 639.98px) {
+        left: 48px;
+    }
 }
 
 .section-swiper-navigation.style-outline {

@@ -41,68 +41,68 @@ const Brand = () => {
                             }}
                         >
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center h-[40px]">
+                                <div className="brand-item relative flex items-center justify-center h-[36px]">
                                     <Image
                                         src={'/images/brand/1.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
-                                        className='h-full w-auto duration-500 relative'
+                                        className='h-full w-auto duration-500 relative object-cover'
                                     />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center h-[40px]">
+                                <div className="brand-item relative flex items-center justify-center h-[36px]">
                                     <Image
                                         src={'/images/brand/2.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
-                                        className='h-full w-auto duration-500 relative'
+                                        className='h-full w-auto duration-500 relative object-cover'
                                     />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center h-[40px]">
+                                <div className="brand-item relative flex items-center justify-center h-[36px]">
                                     <Image
                                         src={'/images/brand/3.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
-                                        className='h-full w-auto duration-500 relative'
+                                        className='h-full w-auto duration-500 relative object-cover'
                                     />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center h-[40px]">
+                                <div className="brand-item relative flex items-center justify-center h-[36px]">
                                     <Image
                                         src={'/images/brand/4.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
-                                        className='h-full w-auto duration-500 relative'
+                                        className='h-full w-auto duration-500 relative object-cover'
                                     />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center h-[40px]">
+                                <div className="brand-item relative flex items-center justify-center h-[36px]">
                                     <Image
                                         src={'/images/brand/5.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
-                                        className='h-full w-auto duration-500 relative'
+                                        className='h-full w-auto duration-500 relative object-cover'
                                     />
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="brand-item relative flex items-center justify-center h-[40px]">
+                                <div className="brand-item relative flex items-center justify-center h-[36px]">
                                     <Image
                                         src={'/images/brand/6.png'}
                                         width={300}
                                         height={300}
                                         alt='1'
-                                        className='h-full w-auto duration-500 relative'
+                                        className='h-full w-auto duration-500 relative object-cover'
                                     />
                                 </div>
                             </SwiperSlide>

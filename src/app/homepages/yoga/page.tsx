@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
-import MenuTwo from '@/components/Header/Menu/MenuTwo'
+import MenuYoga from '@/components/Header/Menu/MenuYoga'
 import SliderYoga from '@/components/Slider/SliderYoga'
 import productData from '@/data/Product.json'
 import BestSeller from '@/components/Yoga/BestSeller'
@@ -22,19 +22,19 @@ export default function HomeYoga() {
         <>
             <TopNavOne props="style-one bg-black" slogan='New customers save 10% with the code GET10' />
             <div id="header" className='relative w-full'>
-                <MenuTwo />
+                <MenuYoga />
                 <SliderYoga />
             </div>
             <BestSeller data={productData} start={0} limit={6} />
             <Banner />
             <TabFeatures data={productData} start={0} limit={4} />
-            <Benefit props="py-10 bg-surface mt-20" />
+            <Benefit props="py-10 bg-surface md:mt-20 mt-10" />
             <WhyChooseUs />
             <FlashSale />
             <NewsInsight data={blogData} start={12} limit={15} />
             <Testimonial data={dataTestimonial} start={0} limit={6} />
             <Instagram />
-            <Brand/>
+            <Brand />
             <Footer />
         </>
     )

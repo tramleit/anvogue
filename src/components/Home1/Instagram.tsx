@@ -16,7 +16,7 @@ const Instagram = () => {
                         <div className="heading3 text-center">Anvogue On Instagram</div>
                         <div className="text-center mt-3">#Anvougetheme</div>
                     </div>
-                    <div className="list-instagram mt-10">
+                    <div className="list-instagram md:mt-10 mt-6">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

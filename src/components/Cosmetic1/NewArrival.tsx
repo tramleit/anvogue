@@ -41,7 +41,7 @@ const NewArrival: React.FC<Props> = ({ data, start, limit }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="list-product hide-product-sold  section-swiper-navigation style-outline style-center style-small-border mt-10">
+                    <div className="list-product hide-product-sold  section-swiper-navigation style-outline style-center style-small-border md:mt-10 mt-6">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

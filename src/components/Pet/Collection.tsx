@@ -21,7 +21,7 @@ const Collection = () => {
                 <div className="container">
                     <div className="heading3 text-center">Shop By Categories
                     </div>
-                    <div className="list-trending section-swiper-navigation style-small-border style-outline mt-10">
+                    <div className="list-trending section-swiper-navigation style-small-border style-outline md:mt-10 mt-6">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

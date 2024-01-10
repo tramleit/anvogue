@@ -171,17 +171,17 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                         Offer ends in:</div>
                                     <div className="countdown-time flex items-center lg:gap-5 gap-3 max-[400px]:justify-between max-[400px]:w-full">
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="days heading6 text-center">{timeLeft.days}</div>
+                                            <div className="days heading6 text-center">{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</div>
                                             <div className="caption1 text-center">Days</div>
                                         </div>
                                         <div className="heading5">:</div>
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="hours heading6 text-center">{timeLeft.hours}</div>
+                                            <div className="hours heading6 text-center">{timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours}</div>
                                             <div className="caption1 text-center">Hours</div>
                                         </div>
                                         <div className="heading5">:</div>
                                         <div className="item w-[60px] h-[60px] flex flex-col items-center justify-center border border-red rounded-lg">
-                                            <div className="mins heading6 text-center">{timeLeft.minutes}</div>
+                                            <div className="mins heading6 text-center">{timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes}</div>
                                             <div className="caption1 text-center">Mins</div>
                                         </div>
                                         <div className="heading5">:</div>

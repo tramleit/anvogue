@@ -178,7 +178,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             </div>
                             <div className="choose-size mt-5">
                                 <div className="heading flex items-center justify-between">
-                                    <div className="text-title text-white">Size: 
+                                    <div className="text-title text-white">Size:
                                         <span className='text-title size pl-1'>{activeSize ? `${activeSize}mm` : ''}</span>
                                     </div>
                                 </div>
@@ -195,7 +195,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 </div>
                             </div>
                             <div className="choose-quantity flex items-center lg:justify-between gap-5 gap-y-3 mt-5">
-                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px]">
+                                <div className="quantity-block md:p-3 p-2 flex items-center justify-between rounded-lg border border-line w-[140px]">
                                     <Icon.Minus size={20} className='text-white' />
                                     <div className="body1 font-semibold text-white">1</div>
                                     <Icon.Plus size={20} className='text-white' />

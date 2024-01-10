@@ -25,7 +25,7 @@ const BestSellers: React.FC<Props> = ({ data, start, limit }) => {
                 <div className="container">
                     <div className="heading flex items-center justify-between gap-5 flex-wrap">
                         <div className="heading3">Best Sellers</div>
-                        <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl mt-6">
+                        <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl">
                             {['top', 't-shirt', 'dress', 'sets', 'shirt'].map((type) => (
                                 <div
                                     key={type}
@@ -39,7 +39,7 @@ const BestSellers: React.FC<Props> = ({ data, start, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product hide-product-sold  grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
+                    <div className="list-product hide-product-sold  grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] max-sm:gap-y-0 md:mt-10 mt-6">
                         {filteredProducts.slice(start, limit).map((prd, index) => (
                             <Product key={index} data={prd} type='grid' />
                         ))}

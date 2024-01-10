@@ -58,7 +58,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
 
     return (
         <>
-            <div className="best-sale-prd bg-surface py-20 mt-20">
+            <div className="best-sale-prd bg-surface md:py-20 py-10 md:mt-20 mt-10">
                 <div className="container flex justify-between gap-y-6 flex-wrap">
                     <div className="list-img lg:w-2/3 w-full">
                         <Swiper
@@ -178,7 +178,7 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                 </div>
                             </div>
                             <div className="choose-quantity flex items-center lg:justify-between gap-5 gap-y-3 mt-5">
-                                <div className="quantity-block md:p-3 p-1 flex items-center justify-between rounded-lg border border-line w-[140px] flex-shrink-0">
+                                <div className="quantity-block md:p-3 p-2 flex items-center justify-between rounded-lg border border-line w-[140px] flex-shrink-0">
                                     <Icon.Minus
                                         size={20}
                                         onClick={handleDecreaseQuantity}

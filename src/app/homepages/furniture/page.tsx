@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavThree from '@/components/Header/TopNav/TopNavThree'
-import MenuFour from '@/components/Header/Menu/MenuFour'
+import MenuFurniture from '@/components/Header/Menu/MenuFurniture'
 import MenuCategory from '@/components/Furniture/MenuCategory'
 import SliderFurniture from '@/components/Slider/SliderFurniture'
 import BannerTop from '@/components/Home3/BannerTop'
@@ -21,7 +21,7 @@ export default function HomeFurniture() {
         <>
             <TopNavThree props="style-three bg-white" />
             <div id="header" className='relative w-full'>
-                <MenuFour props="bg-white" />
+                <MenuFurniture props="bg-white" />
                 <MenuCategory />
                 <BannerTop props="bg-green py-3" textColor='text-black' bgLine='bg-black' />
                 <SliderFurniture />
@@ -30,7 +30,7 @@ export default function HomeFurniture() {
             <FeatureProduct data={productData} start={0} limit={4} />
             <FlashSale />
             <TabFeatures data={productData} start={0} limit={8} />
-            <Benefit props="py-20" />
+            <Benefit props="md:py-20 py-10" />
             <Testimonial data={dataTestimonial} limit={4} />
             <Instagram />
             <Brand />

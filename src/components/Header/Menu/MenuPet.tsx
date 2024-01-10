@@ -107,7 +107,7 @@ const MenuPet = () => {
                                     <Icon.User size={24} color='black' onClick={handleLoginPopup} />
                                     <div className="caption1" onClick={handleLoginPopup}>Account</div>
                                     <div
-                                        className={`login-popup absolute top-[74px] -left-40px w-[320px] p-7 rounded-xl bg-white box-shadow-small 
+                                        className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-small 
                                             ${openLoginPopup ? 'open' : ''}`}
                                     >
                                         <Link href={'/login'} className="button-main w-full text-center">Login</Link>
@@ -328,11 +328,11 @@ const MenuPet = () => {
                                                 <div className="flex justify-between py-8">
                                                     <div className="nav-link basis-2/3 grid grid-cols-4 gap-y-8">
                                                         <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">For Men</div>
+                                                            <div className="text-button-uppercase pb-2">Sale & Offer</div>
                                                             <ul>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleGenderClick('men')}
+                                                                        onClick={() => handleCategoryClick('pet')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
                                                                         Starting From 50% Off
@@ -340,31 +340,31 @@ const MenuPet = () => {
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleGenderClick('men')}
+                                                                        onClick={() => handleTypeClick('bed')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Jackets | Coats
+                                                                        Pet Bed
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleGenderClick('men')}
+                                                                        onClick={() => handleTypeClick('pet')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Sweaters | Cardigans
+                                                                        Pet Sale Off
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleGenderClick('men')}
+                                                                        onClick={() => handleTypeClick('food')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Hoodies | Sweatshirts
+                                                                        Pet Food
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleGenderClick('men')}
+                                                                        onClick={() => handleCategoryClick('pet')}
                                                                         className={`link text-secondary duration-300 cursor-pointer view-all-btn`}
                                                                     >
                                                                         View All
@@ -373,43 +373,43 @@ const MenuPet = () => {
                                                             </ul>
                                                         </div>
                                                         <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">Massimo Dutti</div>
+                                                            <div className="text-button-uppercase pb-2">Dog</div>
                                                             <ul>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('shirt')}
+                                                                        onClick={() => handleTypeClick('food')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Shirt | Clothes
+                                                                        Dog Food
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('top')}
+                                                                        onClick={() => handleTypeClick('outfit')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Top | Overshirts
+                                                                        Dog Outfit
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('t-shirt')}
+                                                                        onClick={() => handleTypeClick('bed')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        T-shirts | Clothes
+                                                                        Dog Bed
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('swimwear')}
+                                                                        onClick={() => handleTypeClick('pet')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Swimwear | Underwear
+                                                                        Dog Sale off
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('fashion')}
+                                                                        onClick={() => handleCategoryClick('pet')}
                                                                         className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
@@ -418,43 +418,43 @@ const MenuPet = () => {
                                                             </ul>
                                                         </div>
                                                         <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">Skincare</div>
+                                                            <div className="text-button-uppercase pb-2">Cat</div>
                                                             <ul>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        onClick={() => handleTypeClick('ring')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Tutorials
+                                                                        Cat Ring 
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        onClick={() => handleTypeClick('food')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Best Seller
+                                                                        Cat Food
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        onClick={() => handleTypeClick('bed')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Lips
+                                                                        Cat Bed
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        onClick={() => handleTypeClick('pet')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Nail Polish
+                                                                        Cat Sale Off
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('cosmetic')}
+                                                                        onClick={() => handleCategoryClick('pet')}
                                                                         className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
@@ -463,178 +463,43 @@ const MenuPet = () => {
                                                             </ul>
                                                         </div>
                                                         <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">Health</div>
+                                                            <div className="text-button-uppercase pb-2">New product</div>
                                                             <ul>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('candle')}
+                                                                        onClick={() => handleTypeClick('pet')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Candle
+                                                                        Pet Sale Off
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('drinks')}
+                                                                        onClick={() => handleTypeClick('bed')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Drinks
+                                                                        Bed For Pet
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('clothing')}
+                                                                        onClick={() => handleTypeClick('food')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Clothes
+                                                                        Food For pet
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleTypeClick('mats')}
+                                                                        onClick={() => handleTypeClick('outfit')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Yoga Equipment
+                                                                        Outfit For Pet
                                                                     </div>
                                                                 </li>
                                                                 <li>
                                                                     <div
-                                                                        onClick={() => handleCategoryClick('yoga')}
-                                                                        className={`link text-secondary duration-300 view-all-btn`}
-                                                                    >
-                                                                        View All
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">For Women</div>
-                                                            <ul>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleGenderClick('women')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Starting From 60% Off
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleTypeClick('dress')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Dresses | Jumpsuits
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleTypeClick('t-shirt')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        T-shirts | Sweatshirts
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleTypeClick('accessories')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Accessories | Jewelry
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleGenderClick('women')}
-                                                                        className={`link text-secondary duration-300 view-all-btn`}
-                                                                    >
-                                                                        View All
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">For Kid</div>
-                                                            <ul>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('toys-kid')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Girl | 6-14 Years
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('toys-kid')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Boy | 6-14 Years
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('toys-kid')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Baby | 1-6 Years
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('toys-kid')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Newborn | {String.raw`<`}1 Years
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('toys-kid')}
-                                                                        className={`link text-secondary duration-300 view-all-btn`}
-                                                                    >
-                                                                        View All
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className="nav-item">
-                                                            <div className="text-button-uppercase pb-2">For Home</div>
-                                                            <ul>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('furniture')}
-
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Furniture | Decor
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('furniture')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Bed | Bath Room
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('furniture')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Dining | Kitchen Room
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
-                                                                        onClick={() => handleCategoryClick('furniture')}
-                                                                        className={`link text-secondary duration-300 cursor-pointer`}
-                                                                    >
-                                                                        Laundry | Cleaning
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div
+                                                                        onClick={() => handleCategoryClick('cosmetic')}
                                                                         className={`link text-secondary duration-300 view-all-btn`}
                                                                     >
                                                                         View All
@@ -644,36 +509,21 @@ const MenuPet = () => {
                                                         </div>
                                                     </div>
                                                     <div className="banner-ads pl-2.5 basis-1/3">
-                                                        <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden">
+                                                        <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer" onClick={() => handleCategoryClick('pet')}>
                                                             <div className="text-content py-14 pl-8 relative z-[1]">
                                                                 <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                                <div className="heading6 mt-2">Dive into Savings <br />on Swimwear</div>
+                                                                <div className="heading6 mt-2">20% off <br />Pet Collection</div>
                                                                 <div className="body1 mt-3 text-secondary">
                                                                     Starting at <span className='text-red'>$59.99</span>
                                                                 </div>
+                                                                <div className="button-main mt-5">Shop Now</div>
                                                             </div>
                                                             <Image
-                                                                src={'/images/slider/bg2-2.png'}
-                                                                width={200}
-                                                                height={100}
+                                                                src={'/images/header/bg-feature-pet.png'}
+                                                                width={1000}
+                                                                height={800}
                                                                 alt='bg-img'
-                                                                className='basis-1/3 absolute right-0 top-0'
-                                                            />
-                                                        </div>
-                                                        <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden mt-8">
-                                                            <div className="text-content py-14 pl-8 relative z-[1]">
-                                                                <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                                <div className="heading6 mt-2">20% off <br />accessories</div>
-                                                                <div className="body1 mt-3 text-secondary">
-                                                                    Starting at <span className='text-red'>$59.99</span>
-                                                                </div>
-                                                            </div>
-                                                            <Image
-                                                                src={'/images/header/bg-feature.png'}
-                                                                width={200}
-                                                                height={100}
-                                                                alt='bg-img'
-                                                                className='basis-1/3 absolute right-0 top-0'
+                                                                className='absolute left-0 top-0 w-full h-full object-cover'
                                                             />
                                                         </div>
                                                     </div>
@@ -873,7 +723,7 @@ const MenuPet = () => {
                                                     <div className="recent-product pl-2.5 basis-1/3">
                                                         <div className="text-button-uppercase pb-2">Recent Products</div>
                                                         <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.filter(item => item.action === 'add to cart').slice(0, 2).map((prd, index) => (
+                                                            {productData.filter(item => item.action === 'add to cart' && item.category === 'pet').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -1053,7 +903,7 @@ const MenuPet = () => {
                                                     <div className="recent-product pl-2.5 basis-1/3">
                                                         <div className="text-button-uppercase pb-2">Recent Products</div>
                                                         <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.filter(item => item.action === 'add to cart').slice(0, 2).map((prd, index) => (
+                                                            {productData.filter(item => item.action === 'add to cart' && item.category === 'pet').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -1324,307 +1174,202 @@ const MenuPet = () => {
                                             <div className="list-nav-item w-full pt-3 pb-12">
                                                 <div className="nav-link grid grid-cols-2 gap-5 gap-y-6">
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Men</div>
+                                                        <div className="text-button-uppercase pb-1">Sale & Offer</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('pet')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Starting From 50% Off
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('bed')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Jackets | Coats
-                                                                </Link>
+                                                                    Pet Bed
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('pet')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Sweaters | Cardigans
-                                                                </Link>
+                                                                    Pet Sale Off
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('food')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Hoodies | Sweatshirts
-                                                                </Link>
+                                                                    Pet Food
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('pet')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">Beauty</div>
+                                                        <div className="text-button-uppercase pb-1">Dog</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('food')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Tutorials
-                                                                </Link>
+                                                                    Dog Food
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('outfit')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Best Seller
-                                                                </Link>
+                                                                    Dog Outfit
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('bed')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Lips
-                                                                </Link>
+                                                                    Dog Bed
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('pet')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Nail Polish
-                                                                </Link>
+                                                                    Dog Sale off
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('pet')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">Skincare</div>
+                                                        <div className="text-button-uppercase pb-1">Cat</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('ring')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Tutorials
-                                                                </Link>
+                                                                    Cat Ring
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('food')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Best Seller
-                                                                </Link>
+                                                                    Cat Food
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('bed')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Cream
-                                                                </Link>
+                                                                    Cat Bed
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('pet')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Serum
-                                                                </Link>
+                                                                    Cat Sale Off
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('pet')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For WoMen</div>
+                                                        <div className="text-button-uppercase pb-1">New product</div>
                                                         <ul>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('pet')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Starting From 60% Off
-                                                                </Link>
+                                                                    Pet Sale Off
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('bed')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Dresses | Jumpsuits
-                                                                </Link>
+                                                                    Bed For Pet
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('food')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    T-shirts | Sweatshirts
-                                                                </Link>
+                                                                    Food For pet
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
+                                                                <div
+                                                                    onClick={() => handleTypeClick('outfit')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Accessories | Jewelry
-                                                                </Link>
+                                                                    Outfit For Pet
+                                                                </div>
                                                             </li>
                                                             <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
+                                                                <div
+                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Kid</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Girl | 6-14 Years
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Boy | 6-14 Years
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Baby | 1-6 Years
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Newborn | {String.raw`<`}1 Years
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
-                                                                >
-                                                                    View All
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Home</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Furniture | Decor
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb1'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Bed | Bath Room
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb2'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Dining | Kitchen Room
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/collection'}
-                                                                    className={`text-secondary duration-300`}
-                                                                >
-                                                                    Laundry | Cleaning
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/shop/breadcrumb-img'}
-                                                                    className={`text-secondary duration-300 view-all-btn`}
-                                                                >
-                                                                    View All
-                                                                </Link>
+                                                                </div>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                                 <div className="banner-ads grid sm:grid-cols-2 items-center gap-6 pt-6">
-                                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden">
+                                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden" onClick={() => handleCategoryClick('pet')}>
                                                         <div className="text-content py-14 pl-8 relative z-[1]">
                                                             <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                            <div className="heading6 mt-2">Dive into Savings <br />on Swimwear</div>
-                                                            <div className="body1 mt-3 text-secondary">
+                                                            <div className="heading6 mt-2">20% off <br />Pet Collection</div>
+                                                            <div className="body1 mt-2 text-secondary">
                                                                 Starting at <span className='text-red'>$59.99</span>
                                                             </div>
+                                                            <div className="button-main mt-4">Shop Now</div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/slider/bg2-2.png'}
-                                                            width={200}
-                                                            height={100}
+                                                            src={'/images/header/bg-feature-pet.png'}
+                                                            width={1000}
+                                                            height={800}
                                                             alt='bg-img'
-                                                            className='basis-1/3 absolute right-0 top-0'
-                                                        />
-                                                    </div>
-                                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden">
-                                                        <div className="text-content py-14 pl-8 relative z-[1]">
-                                                            <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                            <div className="heading6 mt-2">20% off <br />accessories</div>
-                                                            <div className="body1 mt-3 text-secondary">
-                                                                Starting at <span className='text-red'>$59.99</span>
-                                                            </div>
-                                                        </div>
-                                                        <Image
-                                                            src={'/images/header/bg-feature.png'}
-                                                            width={200}
-                                                            height={100}
-                                                            alt='bg-img'
-                                                            className='basis-1/3 absolute right-0 top-0'
+                                                            className='absolute left-0 top-0 w-full h-full object-cover'
                                                         />
                                                     </div>
                                                 </div>
@@ -1730,32 +1475,32 @@ const MenuPet = () => {
                                                             <ul>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb-img'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/default'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/breadcrumb1'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/default-grid'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-grid' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default Grid
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/sidebar-list'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/default-list'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/default-list' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Default List
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/shop/filter-canvas'}
-                                                                        className={`text-secondary duration-300`}
+                                                                        href={'/shop/fullwidth'}
+                                                                        className={`link text-secondary duration-300 cursor-pointer ${pathname === '/shop/fullwidth' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Full Width
                                                                     </Link>
@@ -1763,7 +1508,7 @@ const MenuPet = () => {
                                                                 <li>
                                                                     <Link
                                                                         href={'/shop/square'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/shop/square' ? 'active' : ''}`}
                                                                     >
                                                                         Shop Square
                                                                     </Link>
@@ -1835,7 +1580,7 @@ const MenuPet = () => {
                                                     <div className="recent-product pt-3">
                                                         <div className="text-button-uppercase pb-1">Recent Products</div>
                                                         <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.slice(0, 2).map((prd, index) => (
+                                                            {productData.filter(item => item.action === 'add to cart' && item.category === 'pet').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -1970,53 +1715,53 @@ const MenuPet = () => {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div className="nav-item">
+                                                        <div className="nav-item col-span-2">
                                                             <div className="text-button-uppercase pb-1">Products Layout</div>
                                                             <ul>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/product/default'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
+                                                                        href={'/product/thumbnail-left'}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/thumbnail-left' ? 'active' : ''}`}
                                                                     >
                                                                         Products Thumbnails Left
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/product/sale'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
+                                                                        href={'/product/thumbnail-bottom'}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
                                                                     >
                                                                         Products Thumbnails Bottom
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/product/grouped'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
+                                                                        href={'/product/one-scrolling'}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/one-scrolling' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grid 1 Scrolling
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/product/countdown-timer'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
+                                                                        href={'/product/two-scrolling'}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/two-scrolling' ? 'active' : ''}`}
                                                                     >
                                                                         Products Grid 2 Scrolling
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/product/variable'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
+                                                                        href={'/product/combined-one'}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/combined-one' ? 'active' : ''}`}
                                                                     >
                                                                         Products Combined 1
                                                                     </Link>
                                                                 </li>
                                                                 <li>
                                                                     <Link
-                                                                        href={'/product/external'}
-                                                                        className={`text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
+                                                                        href={'/product/combined-two'}
+                                                                        className={`link text-secondary duration-300 ${pathname === '/product/combined-two' ? 'active' : ''}`}
                                                                     >
                                                                         Products Combined 2
                                                                     </Link>
@@ -2027,7 +1772,7 @@ const MenuPet = () => {
                                                     <div className="recent-product pt-4">
                                                         <div className="text-button-uppercase pb-1">Recent Products</div>
                                                         <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.slice(0, 2).map((prd, index) => (
+                                                            {productData.filter(item => item.action === 'add to cart' && item.category === 'pet').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>

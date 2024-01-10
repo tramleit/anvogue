@@ -42,7 +42,7 @@ const Banner = () => {
                                 <div className="button-main mt-5">Shop Now</div>
                             </div>
                         </Link>
-                        <Link href={'/shop/breadcrumb1'} className="banner-item relative block rounded-[20px] overflow-hidden duration-500">
+                        <Link href={'/shop/breadcrumb1'} className="banner-item relative block rounded-[20px] overflow-hidden duration-500 max-lg:hidden">
                             <div className="banner-img w-full h-full">
                                 <Image
                                     src={'/images/banner/26.png'}

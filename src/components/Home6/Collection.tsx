@@ -23,7 +23,7 @@ const Collection = () => {
                         <div className="heading3">Explore Collections</div>
                         <Link href={'/shop/collection'} className='text-button pb-1 border-b-2 border-black'>View All Collection</Link>
                     </div>
-                    <div className="list-collection mt-10">
+                    <div className="list-collection md:mt-10 mt-6">
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}

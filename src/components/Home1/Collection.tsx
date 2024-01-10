@@ -24,7 +24,7 @@ const Collection = () => {
                     <div className="heading3 text-center">Explore Collections</div>
                     {/* </Fade> */}
                 </div>
-                <div className="list-collection section-swiper-navigation mt-10 sm:px-5 px-4">
+                <div className="list-collection section-swiper-navigation md:mt-10 mt-6 sm:px-5 px-4">
                     <Swiper
                         spaceBetween={12}
                         slidesPerView={2}

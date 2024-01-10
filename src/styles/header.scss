@@ -92,6 +92,7 @@
             padding: 7px 0;
             white-space: nowrap;
             display: inline-block;
+            text-transform: capitalize;
         }
 
         li:hover a,
@@ -100,6 +101,24 @@
 
             &::before {
                 width: 100%;
+            }
+        }
+    }
+
+    .mega-menu {
+        .banner-ads {
+            .banner-ads-item {
+                cursor: pointer;
+
+                img {
+                    transition: 0.7s;
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
             }
         }
     }
@@ -177,6 +196,11 @@
         >ul>li {
             transition: all ease 0.4s;
             opacity: 0;
+        }
+
+        .view-all-btn {
+            display: inline-block;
+            padding-bottom: 6px;
         }
     }
 

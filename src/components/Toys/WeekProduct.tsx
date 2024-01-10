@@ -26,8 +26,8 @@ const WeekProduct: React.FC<Props> = ({ data, start, limit }) => {
                 <div className="container">
                     <div className="heading flex items-center justify-between gap-5 flex-wrap">
                         <div className="heading3">This week’s highlights</div>
-                        <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl mt-6">
-                            {['bed', 'clothing', 'toy', 'blanket'].map((type) => (
+                        <div className="menu-tab flex items-center gap-2 p-1 bg-surface rounded-2xl">
+                            {['pad', 'clothing', 'toy', 'blanket'].map((type) => (
                                 <div
                                     key={type}
                                     className={`tab-item text-secondary text-button-uppercase py-2 px-5 cursor-pointer duration-500 hover:text-black 
@@ -40,12 +40,12 @@ const WeekProduct: React.FC<Props> = ({ data, start, limit }) => {
                         </div>
                     </div>
 
-                    <div className="list-product hide-product-sold grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] mt-10">
+                    <div className="list-product hide-product-sold grid lg:grid-cols-4 grid-cols-2 sm:gap-[30px] gap-[20px] max-sm:gap-y-0 md:mt-10 mt-6">
                         {filteredProducts.slice(start, limit).map((prd, index) => (
                             <Product key={index} data={prd} type='grid' />
                         ))}
                     </div>
-                    <div className="block-button flex items-center justify-center w-full mt-10">
+                    <div className="block-button flex items-center justify-center w-full md:mt-10 mt-6">
                         <Link href={'/shop/breadcrumb-img'} className='button-main text-center'>View All Products</Link>
                     </div>
                 </div>
