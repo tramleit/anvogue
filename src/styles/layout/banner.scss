@@ -1,8 +1,22 @@
-.banner-block .banner-item {
-    &:hover {
-        .banner-img img {
-            opacity: 0.9;
-            transform: scale(1.07);
+.banner-block {
+    .banner-item {
+        &:hover {
+            .banner-img img {
+                opacity: 0.9;
+                transform: scale(1.07);
+            }
+        }
+    }
+
+    .banner-ads-item {
+        img {
+            transition: 0.5s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
         }
     }
 }

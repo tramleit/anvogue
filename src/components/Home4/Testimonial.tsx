@@ -56,7 +56,7 @@ const Testimonial: React.FC<Props> = ({ data, limit }) => {
                                 />
                             </div>
                         ))}
-                        <Link href={'#!'} className="text-button-uppercase font-medium text-center underline pt-5 inline-block">Shop the bikini top</Link>
+                        <Link href={'/shop/breadcrumb-img'} className="text-button-uppercase font-medium text-center underline pt-5 inline-block">Shop the bikini top</Link>
                     </div>
                 </div>
             </div>

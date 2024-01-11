@@ -1,18 +1,20 @@
 .menu-tab {
-    max-width: max-content;
-    width: 100%;
-    overflow-x: auto;
-
     .tab-item {
         white-space: nowrap;
         border-radius: 16px;
         cursor: pointer;
 
         &.active {
-            background-color: var(--white);
             color: var(--black);
+            background-color: var(--white);
             box-shadow: 0px 2px 2px 0px rgba(28, 36, 51, 0.10);
         }
+    }
+
+    @media (max-width: 767.98px) {
+        max-width: max-content;
+        width: 100%;
+        overflow-x: auto;
     }
 }
 
@@ -30,13 +32,13 @@
 
     &.style-watch {
         .menu-tab {
-                .tab-item {
-                    &.active {
-                        background: var(--surface1);
-                        color: var(--white);
-                    }
+            .tab-item {
+                &.active {
+                    background: var(--surface1);
+                    color: var(--white);
                 }
             }
+        }
     }
 }
 

@@ -575,19 +575,13 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                                 </div>
                                             </div>
                                             <div className="mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
-                                            <div className="action flex justify-between mt-3">
-                                                <div className="left flex items-center gap-4">
+                                            <div className="action mt-3">
+                                                <div className="flex items-center gap-4">
                                                     <div className="like-btn flex items-center gap-1 cursor-pointer">
                                                         <Icon.HandsClapping size={18} />
                                                         <div className="text-button">20</div>
                                                     </div>
-                                                    <div className="hide-rep-btn flex items-center gap-1 cursor-pointer">
-                                                        <Icon.Chat size={18} />
-                                                        <div className="text-button">Hide Replies</div>
-                                                    </div>
-                                                </div>
-                                                <div className="right">
-                                                    <div className="reply-btn text-button text-secondary">Reply</div>
+                                                    <Link href={'#form-review'} className="reply-btn text-button text-secondary cursor-pointer hover:text-black">Reply</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -621,19 +615,13 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                                 </div>
                                             </div>
                                             <div className="mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
-                                            <div className="action flex justify-between mt-3">
-                                                <div className="left flex items-center gap-4">
+                                            <div className="action mt-3">
+                                                <div className="flex items-center gap-4">
                                                     <div className="like-btn flex items-center gap-1 cursor-pointer">
                                                         <Icon.HandsClapping size={18} />
                                                         <div className="text-button">20</div>
                                                     </div>
-                                                    <div className="hide-rep-btn flex items-center gap-1 cursor-pointer">
-                                                        <Icon.Chat size={18} />
-                                                        <div className="text-button">Hide Replies</div>
-                                                    </div>
-                                                </div>
-                                                <div className="right">
-                                                    <div className="reply-btn text-button text-secondary">Reply</div>
+                                                    <Link href={'#form-review'} className="reply-btn text-button text-secondary cursor-pointer hover:text-black">Reply</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -667,19 +655,13 @@ const OutOfStock: React.FC<Props> = ({ data, productId }) => {
                                                 </div>
                                             </div>
                                             <div className="mt-3">I can{String.raw`'t`} get enough of the fashion pieces from this brand. They have a great selection for every occasion and the prices are reasonable. The shipping is fast and the items always arrive in perfect condition.</div>
-                                            <div className="action flex justify-between mt-3">
-                                                <div className="left flex items-center gap-4">
+                                            <div className="action mt-3">
+                                                <div className="flex items-center gap-4">
                                                     <div className="like-btn flex items-center gap-1 cursor-pointer">
                                                         <Icon.HandsClapping size={18} />
                                                         <div className="text-button">20</div>
                                                     </div>
-                                                    <div className="hide-rep-btn flex items-center gap-1 cursor-pointer">
-                                                        <Icon.Chat size={18} />
-                                                        <div className="text-button">Hide Replies</div>
-                                                    </div>
-                                                </div>
-                                                <div className="right">
-                                                    <div className="reply-btn text-button text-secondary">Reply</div>
+                                                    <Link href={'#form-review'} className="reply-btn text-button text-secondary cursor-pointer hover:text-black">Reply</Link>
                                                 </div>
                                             </div>
                                         </div>

@@ -44,7 +44,7 @@ const FlashSale = () => {
                                 <div className='text-button-uppercase font-medium'>Seconds</div>
                             </div>
                         </div>
-                        <Link href={'#!'} className='button-main lg:mt-9 md:mt-6 mt-4'>Get it now</Link>
+                        <Link href={'/shop/breadcrumb-img'} className='button-main lg:mt-9 md:mt-6 mt-4'>Get it now</Link>
                     </div>
                     <div className="bg-img absolute right-0 top-0 bottom-0 pl-6 w-1/2 h-full max-sm:hidden">
                         <Image

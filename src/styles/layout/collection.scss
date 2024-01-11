@@ -24,3 +24,17 @@
 .collection-block.style-six .list-collection .swiper {
     overflow: unset;
 }
+
+.trending-block {
+    .trending-item {
+        .bg-img img {
+            transition: all ease 0.5s;
+        }
+
+        &:hover {
+            .bg-img img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

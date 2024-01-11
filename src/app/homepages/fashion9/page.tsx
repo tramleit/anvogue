@@ -27,7 +27,7 @@ export default function HomeNine() {
             <Deal data={productData} start={0} limit={4} />
             <Banner />
             <TabFeatures data={productData} start={0} limit={8} />
-            <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-[32px]" />
+            <Benefit props="md:mt-20 mt-10 py-10 px-2.5 bg-surface rounded-[32px]" />
             <NewsInsight data={blogData} start={0} limit={3} />
             <Brand />
             <Footer />

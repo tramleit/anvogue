@@ -6,8 +6,16 @@ import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { useRouter } from 'next/navigation';
+
 
 const TrendingNow = () => {
+    const router = useRouter()
+
+    const handleTypeClick = (type: string) => {
+        router.push(`/shop/breadcrumb1?type=${type}`);
+    };
+
     return (
         <>
             <div className="trending-block style-nine md:pt-20 pt-10">
@@ -42,7 +50,7 @@ const TrendingNow = () => {
                             className='h-full'
                         >
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('t-shirt')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/1.png'}
@@ -53,12 +61,12 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Clothing</span>
+                                        <span className='heading6'>t-shirt</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('sweater')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/2.png'}
@@ -69,12 +77,12 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Tops</span>
+                                        <span className='heading6'>sweater</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('top')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/4.png'}
@@ -85,12 +93,12 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Sweaters</span>
+                                        <span className='heading6'>top</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('dress')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/5.png'}
@@ -101,12 +109,12 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Dresses</span>
+                                        <span className='heading6'>dress</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('swimwear')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/6.png'}
@@ -117,12 +125,12 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Bottoms</span>
+                                        <span className='heading6'>swimwear</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('outerwear')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/7.png'}
@@ -133,12 +141,12 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Shoes</span>
+                                        <span className='heading6'>outerwear</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link href={'#!'} className="trending-item block relative">
+                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('shirt')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/8.png'}
@@ -149,9 +157,9 @@ const TrendingNow = () => {
                                         />
                                     </div>
                                     <div className="trending-name bg-white absolute bottom-5 left-1/2 -translate-x-1/2 w-[140px] h-10 rounded-xl flex items-center justify-center duration-500 hover:bg-black hover:text-white">
-                                        <span className='heading6'>Shirt</span>
+                                        <span className='heading6'>shirt</span>
                                     </div>
-                                </Link>
+                                </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>

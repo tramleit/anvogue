@@ -24,7 +24,7 @@ export default function HomeTwo() {
             <WhatNewOne data={productData} start={0} limit={4} />
             <Banner />
             <TabFeatures data={productData} start={8} limit={16} />
-            <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-3xl" />
+            <Benefit props="md:mt-20 mt-10 py-10 px-2.5 bg-surface rounded-3xl" />
             <Instagram />
             <Brand />
             <Footer />

@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
-import MenuEleven from '@/components/Header/Menu/MenuEleven'
+import MenuOrganic from '@/components/Header/Menu/MenuOrganic'
 import SliderOrganic from '@/components/Slider/SliderOrganic'
 import Category from '@/components/Organic/Category'
 import Banner from '@/components/Organic/Banner'
@@ -19,7 +19,7 @@ export default function HomeOrganic() {
         <>
             <TopNavOne props="style-one bg-black" slogan='New customers save 10% with the code GET10' />
             <div id="header" className='relative w-full'>
-                <MenuEleven />
+                <MenuOrganic />
                 <SliderOrganic />
             </div>
             <Category />

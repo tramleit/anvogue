@@ -20,7 +20,7 @@ const LookBook: React.FC<Props> = ({ data, start, limit }) => {
                         <Link href={'/shop/breadcrumb-img'} className='text-button pb-1 border-b-2 border-black duration-300 hover:border-green'>Shop Now</Link>
                     </div>
 
-                    <div className="list-product hide-product-sold lg:w-3/4 lg:pl-[15px] grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] max-sm:gap-y-0 ">
+                    <div className="list-product hide-product-sold lg:w-3/4 lg:pl-[15px] grid lg:grid-cols-3 grid-cols-2 sm:gap-[30px] gap-[20px] ">
                         {data
                             .filter(product => product.category === 'cosmetic')
                             .slice(start, limit)

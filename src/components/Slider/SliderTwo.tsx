@@ -11,7 +11,7 @@ import 'swiper/css/effect-fade';
 const SliderTwo = () => {
     return (
         <>
-            <div className={`slider-block style-two bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[360px] w-full`}>
+            <div className={`slider-block style-two bg-linear xl:h-[860px] lg:h-[800px] md:h-[580px] sm:h-[500px] h-[350px] max-[420px]:h-[400px] w-full`}>
                 <div className="slider-main h-full w-full">
                     <Swiper
                         spaceBetween={0}

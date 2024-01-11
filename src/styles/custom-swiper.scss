@@ -48,6 +48,10 @@
     border: 1px solid transparent;
     transition: all ease 0.5s;
     border-radius: 50%;
+
+    @media (max-width: 767.98px) {
+        padding: 6px;
+    }
 }
 
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {

@@ -7,7 +7,7 @@ const Banner = () => {
         <>
             <div className="banner-block md:pt-20 pt-10">
                 <div className="container">
-                    <div className="list-banner grid md:grid-cols-3 lg:gap-[30px] gap-[20px]">
+                    <div className="list-banner grid lg:grid-cols-3 md:grid-cols-2 lg:gap-[30px] gap-[20px]">
                         <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500">
                             <div className="banner-img w-full rounded-2xl overflow-hidden">
                                 <Image
@@ -38,7 +38,7 @@ const Banner = () => {
                                 <div className="caption1 font-semibold text-black relative inline-block pb-1 border-b-2 border-black duration-500 mt-2">Shop Now</div>
                             </div>
                         </Link>
-                        <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500">
+                        <Link href={'/shop/breadcrumb-img'} className="banner-item relative block duration-500 max-lg:hidden">
                             <div className="banner-img w-full rounded-2xl overflow-hidden">
                                 <Image
                                     src={'/images/banner/12.png'}

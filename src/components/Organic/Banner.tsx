@@ -29,7 +29,7 @@ const Banner = () => {
                             width={1000}
                             height={1000}
                             alt='bg-img'
-                            className='absolute left-0 top-0 w-full h-full object-cover'
+                            className='absolute left-0 top-0 w-full h-full object-cover duration-500'
                         />
                     </div>
                     <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer" onClick={() => handleCategoryClick('organic')}>
@@ -45,7 +45,7 @@ const Banner = () => {
                             width={1000}
                             height={1000}
                             alt='bg-img'
-                            className='absolute left-0 top-0 w-full h-full object-cover'
+                            className='absolute left-0 top-0 w-full h-full object-cover duration-500'
                         />
                     </div>
                     <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden block cursor-pointer" onClick={() => handleCategoryClick('organic')}>
@@ -61,7 +61,7 @@ const Banner = () => {
                             width={1000}
                             height={1000}
                             alt='bg-img'
-                            className='absolute left-0 top-0 w-full h-full object-cover'
+                            className='absolute left-0 top-0 w-full h-full object-cover duration-500'
                         />
                     </div>
                 </div>

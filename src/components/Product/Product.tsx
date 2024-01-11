@@ -11,8 +11,8 @@ import { useWishlist } from '@/context/WishlistContext'
 import { useModalWishlistContext } from '@/context/ModalWishlistContext'
 import { useCompare } from '@/context/CompareContext'
 import { useModalCompareContext } from '@/context/ModalCompareContext'
-import { useRouter } from 'next/navigation'
 import { useModalQuickviewContext } from '@/context/ModalQuickviewContext'
+import { useRouter } from 'next/navigation'
 
 interface ProductProps {
     data: ProductType
@@ -228,7 +228,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                 )}
                             </div>
                         </div>
-                        <div className="product-infor mt-4 mb-7">
+                        <div className="product-infor mt-4 lg:mb-7">
                             <div className="product-sold sm:pb-4 pb-2">
                                 <div className="progress bg-line h-1.5 w-full rounded-full overflow-hidden relative">
                                     <div

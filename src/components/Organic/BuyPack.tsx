@@ -1,8 +1,43 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { useCart } from '@/context/CartContext'
+import { useModalCartContext } from '@/context/ModalCartContext'
+import productData from '@/data/Product.json'
+import { ProductType } from '@/type/ProductType'
 
 const BuyPack = () => {
+    const router = useRouter()
+    const { addToCart, updateCart, cartState } = useCart();
+    const { openModalCart } = useModalCartContext()
+
+    const handleAddToCart = () => {
+        if (!cartState.cartArray.find(item => item.id === '123')) {
+            addToCart(productData.find(item => item.id === '123') as ProductType)
+            updateCart('123', 1, '', '')
+        }
+
+        if (!cartState.cartArray.find(item => item.id === '124')) {
+            addToCart(productData.find(item => item.id === '124') as ProductType)
+            updateCart('124', 1, '', '')
+        }
+
+        if (!cartState.cartArray.find(item => item.id === '125')) {
+            addToCart(productData.find(item => item.id === '125') as ProductType)
+            updateCart('125', 1, '', '')
+        }
+
+        openModalCart()
+    };
+
+    const handleDetailProduct = (productId: string) => {
+        // redirect to shop with category selected
+        router.push(`/product/default?id=${productId}`);
+    };
+
     return (
         <>
             <div className="buy-pack-block md:py-20 py-10 md:mt-20 mt-10 relative">
@@ -24,7 +59,7 @@ const BuyPack = () => {
                         <div className="main-content text-white lg:pr-[84px] sm:pr-12 w-full">
                             <div className="list-product md:mt-10 mt-6">
                                 <div className='product-item pb-5 border-b border-line'>
-                                    <Link href={'#!'} className="product-main flex items-center justify-between">
+                                    <div className="product-main flex items-center justify-between cursor-pointer" onClick={() => handleDetailProduct('123')}>
                                         <div className="left flex items-center gap-7">
                                             <Image
                                                 src={'/images/product/organic/1-1.png'}
@@ -39,12 +74,12 @@ const BuyPack = () => {
                                             </div>
                                         </div>
                                         <div className="right">
-                                            <div className="text-title">$<span className='product-price'>15</span>,000/Kg</div>
+                                            <div className="text-title">$<span className='product-price'>4</span>,000/Kg</div>
                                         </div>
-                                    </Link>
+                                    </div>
                                 </div>
                                 <div className='product-item pb-5 border-b border-line mt-5'>
-                                    <Link href={'#!'} className="product-main flex items-center justify-between">
+                                    <div className="product-main flex items-center justify-between cursor-pointer" onClick={() => handleDetailProduct('124')}>
                                         <div className="left flex items-center gap-7">
                                             <Image
                                                 src={'/images/product/organic/2-1.png'}
@@ -59,12 +94,12 @@ const BuyPack = () => {
                                             </div>
                                         </div>
                                         <div className="right">
-                                            <div className="text-title">$<span className='product-price'>10</span>,000/Kg</div>
+                                            <div className="text-title">$<span className='product-price'>3</span>,000/Kg</div>
                                         </div>
-                                    </Link>
+                                    </div>
                                 </div>
                                 <div className='product-item pb-5 border-b border-line mt-5'>
-                                    <Link href={'#!'} className="product-main flex items-center justify-between">
+                                    <div className="product-main flex items-center justify-between cursor-pointer" onClick={() => handleDetailProduct('125')}>
                                         <div className="left flex items-center gap-7">
                                             <Image
                                                 src={'/images/product/organic/3-1.png'}
@@ -79,13 +114,18 @@ const BuyPack = () => {
                                             </div>
                                         </div>
                                         <div className="right">
-                                            <div className="text-title">$<span className='product-price'>20</span>,000/Kg</div>
+                                            <div className="text-title">$<span className='product-price'>4</span>,000/Kg</div>
                                         </div>
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
                             <div className="block-button mt-8">
-                                <div className="button-main bg-green text-black w-full text-center">45$ / add set to cart</div>
+                                <div
+                                    className="button-main bg-green text-black w-full text-center"
+                                    onClick={handleAddToCart}
+                                >
+                                    11$ / add set to cart
+                                </div>
                             </div>
                         </div>
                         <div className="popular-product sm:pl-4 max-sm:pb-6">
@@ -101,28 +141,28 @@ const BuyPack = () => {
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
+                                    <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={() => handleDetailProduct('123')}>
                                         <div className="text-title name">green cabbage</div>
                                         <div className="price text-center">$10.00</div>
-                                    </Link>
+                                    </div>
                                 </div>
                                 <div className="dots absolute top-[40%] left-[15%] cursor-pointer">
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">green cabbage</div>
+                                    <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={() => handleDetailProduct('124')}>
+                                        <div className="text-title name">purple cabbage</div>
                                         <div className="price text-center">$10.00</div>
-                                    </Link>
+                                    </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[25%] left-[62%] cursor-pointer">
                                     <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                        <div className="text-title name">purple cabbage</div>
+                                    <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={() => handleDetailProduct('125')}>
+                                        <div className="text-title name">green cabbage</div>
                                         <div className="price text-center">$15.00</div>
-                                    </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

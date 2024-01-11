@@ -8,6 +8,10 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useModalQuickviewContext } from '@/context/ModalQuickviewContext';
 import { useCart } from '@/context/CartContext';
 import { useModalCartContext } from '@/context/ModalCartContext';
+import { useWishlist } from '@/context/WishlistContext';
+import { useModalWishlistContext } from '@/context/ModalWishlistContext';
+import { useCompare } from '@/context/CompareContext'
+import { useModalCompareContext } from '@/context/ModalCompareContext'
 import Rate from '../Other/Rate';
 
 const ModalQuickview = () => {
@@ -16,6 +20,10 @@ const ModalQuickview = () => {
     const [activeSize, setActiveSize] = useState<string>('')
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
+    const { addToWishlist, removeFromWishlist, wishlistState } = useWishlist()
+    const { openModalWishlist } = useModalWishlistContext()
+    const { addToCompare, removeFromCompare, compareState } = useCompare();
+    const { openModalCompare } = useModalCompareContext()
     const percentSale = selectedProduct && Math.floor(100 - ((selectedProduct.price / selectedProduct.originPrice) * 100))
 
     const handleActiveColor = (item: string) => {
@@ -51,6 +59,36 @@ const ModalQuickview = () => {
             openModalCart()
             closeQuickview()
         }
+    };
+
+    const handleAddToWishlist = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (selectedProduct) {
+            if (wishlistState.wishlistArray.some(item => item.id === selectedProduct.id)) {
+                removeFromWishlist(selectedProduct.id);
+            } else {
+                // else, add to wishlist and set state to true
+                addToWishlist(selectedProduct);
+            }
+        }
+        openModalWishlist();
+    };
+
+    const handleAddToCompare = () => {
+        // if product existed in wishlit, remove from wishlist and set state to false
+        if (selectedProduct) {
+            if (compareState.compareArray.length < 3) {
+                if (compareState.compareArray.some(item => item.id === selectedProduct.id)) {
+                    removeFromCompare(selectedProduct.id);
+                } else {
+                    // else, add to wishlist and set state to true
+                    addToCompare(selectedProduct);
+                }
+            } else {
+                alert('Compare up to 3 products')
+            }
+        }
+        openModalCompare();
     };
 
     return (
@@ -92,8 +130,19 @@ const ModalQuickview = () => {
                                         <div className="caption2 text-secondary font-semibold uppercase">{selectedProduct?.type}</div>
                                         <div className="heading4 mt-1">{selectedProduct?.name}</div>
                                     </div>
-                                    <div className="add-wishlist-btn w-12 h-12 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
-                                        <Icon.Heart size={20} />
+                                    <div
+                                        className={`add-wishlist-btn w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-lg duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === selectedProduct?.id) ? 'active' : ''}`}
+                                        onClick={handleAddToWishlist}
+                                    >
+                                        {wishlistState.wishlistArray.some(item => item.id === selectedProduct?.id) ? (
+                                            <>
+                                                <Icon.Heart size={20} weight='fill' className='text-red' />
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Icon.Heart size={20} />
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                                 <div className="flex items-center mt-3">
@@ -174,8 +223,10 @@ const ModalQuickview = () => {
                                         <div className="button-main w-full text-center">Buy It Now</div>
                                     </div>
                                     <div className="flex items-center flex-wrap lg:gap-20 gap-8 gap-y-4 mt-5">
-                                        <div className="compare flex items-center gap-3 cursor-pointer">
-                                            <div className="compare-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white">
+                                        <div className="compare flex items-center gap-3 cursor-pointer" onClick={handleAddToCompare}>
+                                            <div
+                                                className="compare-btn md:w-12 md:h-12 w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-xl duration-300 hover:bg-black hover:text-white"
+                                            >
                                                 <Icon.ArrowsCounterClockwise className='heading6' />
                                             </div>
                                             <span>Compare</span>

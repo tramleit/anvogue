@@ -11,16 +11,26 @@ import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
+import ModalSizeguide from '../Modal/ModalSizeguide'
 
 interface Props {
     data: Array<ProductType>;
 }
 
 const BestSaleProduct: React.FC<Props> = ({ data }) => {
+    const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
+
+    const handleOpenSizeGuide = () => {
+        setOpenSizeGuide(true);
+    };
+
+    const handleCloseSizeGuide = () => {
+        setOpenSizeGuide(false);
+    };
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -163,7 +173,13 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                             <div className="choose-size mt-5">
                                 <div className="heading flex items-center justify-between">
                                     <div className="text-title">Size: <span className='text-title size'>{activeSize}</span></div>
-                                    <div className="caption1 size-guide text-red underline">Size Guide</div>
+                                    <div
+                                        className="caption1 size-guide text-red underline cursor-pointer"
+                                        onClick={handleOpenSizeGuide}
+                                    >
+                                        Size Guide
+                                    </div>
+                                    <ModalSizeguide data={productMain} isOpen={openSizeGuide} onClose={handleCloseSizeGuide} />
                                 </div>
                                 <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                     {productMain.sizes.map((item, index) => (

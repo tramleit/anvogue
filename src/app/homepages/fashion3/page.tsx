@@ -29,7 +29,7 @@ export default function HomeThree() {
             <Collection props="md:pt-20 pt-10" />
             <FlashSale />
             <NewsInsight data={blogData} start={0} limit={3} />
-            <Benefit props="mt-20 py-10 px-2.5 bg-surface rounded-3xl" />
+            <Benefit props="md:mt-20 mt-10 py-10 px-2.5 bg-surface rounded-3xl" />
             <Instagram />
             <Brand />
             <Footer />

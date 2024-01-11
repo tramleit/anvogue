@@ -1,6 +1,6 @@
 import React from 'react'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
-import MenuFour from '@/components/Header/Menu/MenuFour'
+import MenuWatch from '@/components/Header/Menu/MenuWatch'
 import SliderWatch from '@/components/Slider/SliderWatch'
 import Category from '@/components/Watch/Category'
 import TabFeature from '@/components/Watch/TabFeature'
@@ -20,7 +20,7 @@ export default function HomeWatch() {
             <div className="bg-black style-watch">
                 <TopNavOne props="style-one bg-black" slogan='New customers save 10% with the code GET10' />
                 <div id="header" className='relative w-full'>
-                    <MenuFour props="bg-green" />
+                    <MenuWatch props="bg-green" />
                     <SliderWatch />
                 </div>
                 <Category />

@@ -1,8 +1,18 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const PopularProduct = () => {
+    const router = useRouter()
+
+    const handleDetailProduct = (productId: string) => {
+        // redirect to shop with category selected
+        router.push(`/product/default?id=${productId}`);
+    };
+
     return (
         <>
             <div className="popular-product md:pt-20 pt-10">
@@ -19,19 +29,19 @@ const PopularProduct = () => {
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                <div className="text-title name">Jacquard fluid trousers</div>
-                                <div className="price text-center">$68.00</div>
-                            </Link>
+                            <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('3')}>
+                                <div className="text-title name">Off-The-Shoulder</div>
+                                <div className="price text-center">$32.00</div>
+                            </div>
                         </div>
                         <div className="dots bottom-dot absolute bottom-[12%] left-[62%] cursor-pointer">
                             <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                <div className="text-title name">Jacquard fluid trousers</div>
-                                <div className="price text-center">$68.00</div>
-                            </Link>
+                            <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('3')}>
+                                <div className="text-title name">Off-The-Shoulder</div>
+                                <div className="price text-center">$32.00</div>
+                            </div>
                         </div>
                     </div>
                     <div className="item relative overflow-hidden">
@@ -46,19 +56,19 @@ const PopularProduct = () => {
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                <div className="text-title name">Jacquard fluid trousers</div>
-                                <div className="price text-center">$68.00</div>
-                            </Link>
+                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('13')}>
+                                <div className="text-title name">Mesh Shirt</div>
+                                <div className="price text-center">$35.00</div>
+                            </div>
                         </div>
                         <div className="dots bottom-dot absolute bottom-[15%] left-[25%] cursor-pointer">
                             <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                <div className="text-title name">Jacquard fluid trousers</div>
-                                <div className="price text-center">$68.00</div>
-                            </Link>
+                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('13')}>
+                                <div className="text-title name">Mesh Shirt</div>
+                                <div className="price text-center">$35.00</div>
+                            </div>
                         </div>
                     </div>
                     <div className="item relative overflow-hidden">
@@ -73,19 +83,19 @@ const PopularProduct = () => {
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                <div className="text-title name">Jacquard fluid trousers</div>
-                                <div className="price text-center">$68.00</div>
-                            </Link>
+                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('21')}>
+                                <div className="text-title name">T-Shirt Pockets</div>
+                                <div className="price text-center">$19.00</div>
+                            </div>
                         </div>
                         <div className="dots bottom-dot absolute bottom-[10%] left-[70%] cursor-pointer">
                             <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <Link href={'#!'} className="product-infor bg-white rounded-2xl p-4">
-                                <div className="text-title name">Jacquard fluid trousers</div>
-                                <div className="price text-center">$68.00</div>
-                            </Link>
+                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('21')}>
+                                <div className="text-title name">T-Shirt Pockets</div>
+                                <div className="price text-center">$19.00</div>
+                            </div>
                         </div>
                     </div>
                 </div>
