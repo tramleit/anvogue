@@ -16,6 +16,16 @@
         width: 100%;
         overflow-x: auto;
     }
+
+    &.style-pet {
+        .tab-item {
+            &.active {
+                color: var(--white);
+                background-color: var(--black);
+                box-shadow: 0px 2px 2px 0px rgba(28, 36, 51, 0.10);
+            }
+        }
+    }
 }
 
 .tab-features-block {

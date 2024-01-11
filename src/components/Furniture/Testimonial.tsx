@@ -15,7 +15,7 @@ interface Props {
 const Testimonial: React.FC<Props> = ({ data, limit }) => {
     return (
         <>
-            <div className="testimonial-block">
+            <div className="testimonial-block mt-20">
                 <div className="container">
                     <div className="content bg-surface overflow-hidden xl:-mx-5 rounded-3xl md:py-[60px] py-8">
                         <div className="heading3 text-center">Happy Clients</div>

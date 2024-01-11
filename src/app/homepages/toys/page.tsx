@@ -24,7 +24,7 @@ export default function HomeToys() {
                 <BannerTop props="bg-black py-3" textColor='text-white' bgLine='bg-white' />
                 <SliderToysKid />
             </div>
-            <Benefit props="py-20" />
+            <Benefit props="md:py-20 py-10" />
             <Banner />
             <WeekProduct data={productData} start={0} limit={8} />
             <FeaturedProduct data={productData} start={1} limit={6} />

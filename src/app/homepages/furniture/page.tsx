@@ -30,7 +30,7 @@ export default function HomeFurniture() {
             <FeatureProduct data={productData} start={0} limit={4} />
             <FlashSale />
             <TabFeatures data={productData} start={0} limit={8} />
-            <Benefit props="md:py-20 py-10" />
+            <Benefit props="md:pt-20 pt-10" />
             <Testimonial data={dataTestimonial} limit={4} />
             <Instagram />
             <Brand />

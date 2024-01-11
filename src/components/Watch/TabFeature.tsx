@@ -5,6 +5,7 @@ import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+import { motion } from 'framer-motion'
 import 'swiper/css/bundle';
 
 interface Props {
@@ -31,11 +32,16 @@ const TabFeature: React.FC<Props> = ({ data, start, limit }) => {
                             {['men', 'women'].map((gender) => (
                                 <div
                                     key={gender}
-                                    className={`tab-item text-secondary2 heading5 py-2 px-5 cursor-pointer duration-500 hover:text-white 
+                                    className={`tab-item relative text-secondary2 heading5 py-2 px-5 cursor-pointer duration-500 hover:text-white 
                                         ${activeTab === gender ? 'active' : ''}`}
                                     onClick={() => handleTabClick(gender)}
                                 >
-                                    Watch For {gender}
+                                    {activeTab === gender && (
+                                        <motion.div layoutId='active-pill' className='absolute inset-0 rounded-2xl bg-surface1'></motion.div>
+                                    )}
+                                    <span className='relative heading5 z-[1]'>
+                                        Watch For {gender}
+                                    </span>
                                 </div>
                             ))}
                         </div>

@@ -30,7 +30,7 @@ export default function HomeCosmeticOne() {
             <BuyPack />
             <AdsPhoto />
             <NewArrival data={productData} start={0} limit={8} />
-            <Benefit props="py-20" />
+            <Benefit props="md:py-20 py-10" />
             <Testimonial />
             <Newsletter props="bg-transparent" />
             <Instagram />

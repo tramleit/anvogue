@@ -30,7 +30,7 @@ export default function HomeCosmeticTwo() {
             <VideoTutorial />
             <FeaturedProduct data={productData} />
             <FlashSale />
-            <Benefit props="py-20" />
+            <Benefit props="md:py-20 py-10" />
             <NewsInsight data={blogData} start={6} limit={9} />
             <Instagram />
             <Brand />
