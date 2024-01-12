@@ -440,13 +440,14 @@ const MenuFurniture: React.FC<Props> = ({ props }) => {
                                                             </div>
                                                             <div className="button-main mt-5">Shop Now</div>
                                                         </div>
-                                                        <Image
+                                                        {/* <Image
                                                             src={'/images/other/bg-feature-furniture.png'}
                                                             width={1000}
                                                             height={800}
                                                             alt='bg-img'
                                                             className='absolute left-0 top-0 w-full h-full object-cover'
-                                                        />
+                                                        /> */}
+                                                        <img className='absolute left-0 top-0 w-full h-full object-cover' src="/images/other/bg-feature-furniture.png" alt="" />
                                                     </div>
                                                 </div>
                                             </div>
