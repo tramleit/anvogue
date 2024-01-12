@@ -441,7 +441,7 @@ const MenuJewelry: React.FC<Props> = ({ props }) => {
                                                             <div className="button-main mt-5">Shop Now</div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/header/bg-feature-jewelry.png'}
+                                                            src={'/images/other/bg-feature-jewelry.png'}
                                                             width={1000}
                                                             height={800}
                                                             alt='bg-img'
@@ -1313,7 +1313,7 @@ const MenuJewelry: React.FC<Props> = ({ props }) => {
                                                             <div className="button-main mt-5">Shop Now</div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/header/bg-feature-jewelry.png'}
+                                                            src={'/images/other/bg-feature-jewelry.png'}
                                                             width={1000}
                                                             height={900}
                                                             alt='bg-img'

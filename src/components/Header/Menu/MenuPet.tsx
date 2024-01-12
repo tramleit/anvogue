@@ -425,7 +425,7 @@ const MenuPet = () => {
                                                                         onClick={() => handleTypeClick('ring')}
                                                                         className={`link text-secondary duration-300 cursor-pointer`}
                                                                     >
-                                                                        Cat Ring 
+                                                                        Cat Ring
                                                                     </div>
                                                                 </li>
                                                                 <li>
@@ -519,7 +519,7 @@ const MenuPet = () => {
                                                                 <div className="button-main mt-5">Shop Now</div>
                                                             </div>
                                                             <Image
-                                                                src={'/images/header/bg-feature-pet.png'}
+                                                                src={'/images/other/bg-feature-pet.png'}
                                                                 width={1000}
                                                                 height={800}
                                                                 alt='bg-img'
@@ -1365,7 +1365,7 @@ const MenuPet = () => {
                                                             <div className="button-main mt-4">Shop Now</div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/header/bg-feature-pet.png'}
+                                                            src={'/images/other/bg-feature-pet.png'}
                                                             width={1000}
                                                             height={800}
                                                             alt='bg-img'

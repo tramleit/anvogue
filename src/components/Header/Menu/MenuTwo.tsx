@@ -566,7 +566,7 @@ const MenuTwo = () => {
                                                             </div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/header/bg-feature.png'}
+                                                            src={'/images/other/bg-feature.png'}
                                                             width={200}
                                                             height={100}
                                                             alt='bg-img'
@@ -1542,7 +1542,7 @@ const MenuTwo = () => {
                                                             </div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/header/bg-feature.png'}
+                                                            src={'/images/other/bg-feature.png'}
                                                             width={200}
                                                             height={100}
                                                             alt='bg-img'

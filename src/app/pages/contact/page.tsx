@@ -30,7 +30,7 @@ const ContactUs = () => {
                                         <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="email" type="email" placeholder="Your Email *" required />
                                     </div>
                                     <div className="message sm:col-span-2">
-                                        <textarea className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="email" rows={3} placeholder="Your Message *" required />
+                                        <textarea className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="message" rows={3} placeholder="Your Message *" required />
                                     </div>
                                 </div>
                                 <div className="block-button md:mt-6 mt-4">
