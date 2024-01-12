@@ -309,15 +309,15 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                     <div className="flex items-center gap-1 mt-3">
                                         <div className="text-title">SKU:</div>
-                                        <div className="text-title text-secondary">53453412</div>
+                                        <div className="text-secondary">53453412</div>
                                     </div>
                                     <div className="flex items-center gap-1 mt-3">
                                         <div className="text-title">Categories:</div>
-                                        <div className="text-title text-secondary">{productMain.category}, {productMain.gender}</div>
+                                        <div className="text-secondary">{productMain.category}, {productMain.gender}</div>
                                     </div>
                                     <div className="flex items-center gap-1 mt-3">
                                         <div className="text-title">Tag:</div>
-                                        <div className="text-title text-secondary">{productMain.type}</div>
+                                        <div className="text-secondary">{productMain.type}</div>
                                     </div>
                                 </div>
                                 <div className="list-payment mt-7">
