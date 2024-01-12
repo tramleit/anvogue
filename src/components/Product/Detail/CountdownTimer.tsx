@@ -286,6 +286,101 @@ const CountdownTimer: React.FC<Props> = ({ data, productId }) => {
                                         <span>Share Products</span>
                                     </div>
                                 </div>
+                                <div className="more-infor mt-6">
+                                    <div className="flex items-center gap-4 flex-wrap">
+                                        <div className="flex items-center gap-1">
+                                            <Icon.ArrowClockwise className='body1' />
+                                            <div className="text-title">Delivery & Return</div>
+                                        </div>
+                                        <div className="flex items-center gap-1">
+                                            <Icon.Question className='body1' />
+                                            <div className="text-title">Ask A Question</div>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-1 mt-3">
+                                        <Icon.Timer className='body1' />
+                                        <div className="text-title">Estimated Delivery:</div>
+                                        <div className="text-secondary">14 January - 18 January</div>
+                                    </div>
+                                    <div className="flex items-center gap-1 mt-3">
+                                        <Icon.Eye className='body1' />
+                                        <div className="text-title">38</div>
+                                        <div className="text-secondary">people viewing this product right now!</div>
+                                    </div>
+                                    <div className="flex items-center gap-1 mt-3">
+                                        <div className="text-title">SKU:</div>
+                                        <div className="text-title text-secondary">53453412</div>
+                                    </div>
+                                    <div className="flex items-center gap-1 mt-3">
+                                        <div className="text-title">Categories:</div>
+                                        <div className="text-title text-secondary">{productMain.category}, {productMain.gender}</div>
+                                    </div>
+                                    <div className="flex items-center gap-1 mt-3">
+                                        <div className="text-title">Tag:</div>
+                                        <div className="text-title text-secondary">{productMain.type}</div>
+                                    </div>
+                                </div>
+                                <div className="list-payment mt-7">
+                                    <div className="main-content lg:pt-8 pt-6 lg:pb-6 pb-4 sm:px-4 px-3 border border-line rounded-xl relative max-md:w-2/3 max-sm:w-full">
+                                        <div className="heading6 px-5 bg-white absolute -top-[14px] left-1/2 -translate-x-1/2 whitespace-nowrap">Guranteed safe checkout</div>
+                                        <div className="list grid grid-cols-6">
+                                            <div className="item flex items-center justify-center lg:px-3 px-1">
+                                                <Image
+                                                    src={'/images/payment/Frame-0.png'}
+                                                    width={500}
+                                                    height={450}
+                                                    alt='payment'
+                                                    className='w-full'
+                                                />
+                                            </div>
+                                            <div className="item flex items-center justify-center lg:px-3 px-1">
+                                                <Image
+                                                    src={'/images/payment/Frame-1.png'}
+                                                    width={500}
+                                                    height={450}
+                                                    alt='payment'
+                                                    className='w-full'
+                                                />
+                                            </div>
+                                            <div className="item flex items-center justify-center lg:px-3 px-1">
+                                                <Image
+                                                    src={'/images/payment/Frame-2.png'}
+                                                    width={500}
+                                                    height={450}
+                                                    alt='payment'
+                                                    className='w-full'
+                                                />
+                                            </div>
+                                            <div className="item flex items-center justify-center lg:px-3 px-1">
+                                                <Image
+                                                    src={'/images/payment/Frame-3.png'}
+                                                    width={500}
+                                                    height={450}
+                                                    alt='payment'
+                                                    className='w-full'
+                                                />
+                                            </div>
+                                            <div className="item flex items-center justify-center lg:px-3 px-1">
+                                                <Image
+                                                    src={'/images/payment/Frame-4.png'}
+                                                    width={500}
+                                                    height={450}
+                                                    alt='payment'
+                                                    className='w-full'
+                                                />
+                                            </div>
+                                            <div className="item flex items-center justify-center lg:px-3 px-1">
+                                                <Image
+                                                    src={'/images/payment/Frame-5.png'}
+                                                    width={500}
+                                                    height={450}
+                                                    alt='payment'
+                                                    className='w-full'
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="get-it mt-6">
                                 <div className="heading5">Get it today</div>

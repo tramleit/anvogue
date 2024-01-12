@@ -399,12 +399,12 @@
         .desc-block {
             .tab-item {
                 svg {
-                    transition: all ease 0.2s;
+                    transition: all ease 0.3s;
                 }
 
                 &.active {
                     svg {
-                        transform: rotate(90deg);
+                        transform: rotate(180deg);
                     }
                 }
             }
