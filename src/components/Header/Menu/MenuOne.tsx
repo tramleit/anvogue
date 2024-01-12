@@ -534,7 +534,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <div className="banner-ads pl-2.5 basis-1/3">
+                                                    <div className="banner-ads-block pl-2.5 basis-1/3">
                                                         <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer" onClick={() => handleTypeClick('swimwear')}>
                                                             <div className="text-content py-14 pl-8 relative z-[1]">
                                                                 <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
@@ -1517,7 +1517,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div className="banner-ads grid sm:grid-cols-2 items-center gap-6 pt-6">
+                                                <div className="banner-ads-block grid sm:grid-cols-2 items-center gap-6 pt-6">
                                                     <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden" onClick={() => handleTypeClick('swimwear')}>
                                                         <div className="text-content py-14 pl-8 relative z-[1]">
                                                             <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
