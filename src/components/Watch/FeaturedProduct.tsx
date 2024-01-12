@@ -9,6 +9,8 @@ import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
 import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import SwiperCore from 'swiper/core';
+import { useCart } from '@/context/CartContext'
+import { useModalCartContext } from '@/context/ModalCartContext'
 
 SwiperCore.use([Navigation, Thumbs]);
 
@@ -18,8 +20,10 @@ interface Props {
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-    const [activeColor, setActiveColor] = useState<string | null>()
-    const [activeSize, setActiveSize] = useState<string | null>()
+    const [activeColor, setActiveColor] = useState<string>('')
+    const [activeSize, setActiveSize] = useState<string>('')
+    const { addToCart, updateCart, cartState } = useCart()
+    const { openModalCart } = useModalCartContext()
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -32,6 +36,28 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
     const handleSwiper = (swiper: SwiperCore) => {
         // Do something with the thumbsSwiper instance
         setThumbsSwiper(swiper);
+    };
+
+    const handleIncreaseQuantity = () => {
+        productMain.quantityPurchase += 1
+        updateCart(productMain.id, productMain.quantityPurchase + 1, activeSize, activeColor);
+    };
+
+    const handleDecreaseQuantity = () => {
+        if (productMain.quantityPurchase > 1) {
+            productMain.quantityPurchase -= 1
+            updateCart(productMain.id, productMain.quantityPurchase - 1, activeSize, activeColor);
+        }
+    };
+
+    const handleAddToCart = () => {
+        if (!cartState.cartArray.find(item => item.id === productMain.id)) {
+            addToCart({ ...productMain });
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        } else {
+            updateCart(productMain.id, productMain.quantityPurchase, activeSize, activeColor)
+        }
+        openModalCart()
     };
 
     // Truy cập thông tin của sản phẩm thứ 38 trong mảng data
@@ -195,12 +221,20 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                                 </div>
                             </div>
                             <div className="choose-quantity flex items-center lg:justify-between gap-5 gap-y-3 mt-5">
-                                <div className="quantity-block md:p-3 p-2 flex items-center justify-between rounded-lg border border-line w-[140px]">
-                                    <Icon.Minus size={20} className='text-white' />
-                                    <div className="body1 font-semibold text-white">1</div>
-                                    <Icon.Plus size={20} className='text-white' />
+                                <div className="quantity-block md:p-3 p-2 flex items-center justify-between rounded-lg border border-line w-[140px] flex-shrink-0">
+                                    <Icon.Minus
+                                        size={20}
+                                        onClick={handleDecreaseQuantity}
+                                        className={`${productMain.quantityPurchase === 1 ? 'disabled' : ''} cursor-pointer text-white`}
+                                    />
+                                    <div className="body1 font-semibold text-white">{productMain.quantityPurchase}</div>
+                                    <Icon.Plus
+                                        size={20}
+                                        onClick={handleIncreaseQuantity}
+                                        className='cursor-pointer text-white'
+                                    />
                                 </div>
-                                <div className="button-main w-full text-center border border-line">Add To Cart</div>
+                                <div className="button-main w-full text-center border border-line" onClick={handleAddToCart}>Add To Cart</div>
                             </div>
                             <div className="button-block mt-5">
                                 <div className="button-main w-full text-center bg-white text-black">Buy It Now</div>

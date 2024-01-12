@@ -143,4 +143,11 @@
             }
         }
     }
+
+    .button-block .button-main {
+        &:hover {
+            background-color: var(--green);
+            color: var(--black);
+        }
+    }
 }
