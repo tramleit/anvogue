@@ -7,6 +7,10 @@ import ModalWishlist from '@/components/Modal/ModalWishlist'
 import ModalSearch from '@/components/Modal/ModalSearch'
 import ModalQuickview from '@/components/Modal/ModalQuickview'
 import ModalCompare from '@/components/Modal/ModalCompare'
+import CountdownTimeType from '@/type/CountdownType'
+import { countdownTime } from '@/store/countdownTime'
+
+const serverTimeLeft: CountdownTimeType = countdownTime();
 
 const instrument = Instrument_Sans({ subsets: ['latin'] })
 
@@ -25,7 +29,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={instrument.className}>
           {children}
-          <ModalCart />
+          <ModalCart serverTimeLeft={serverTimeLeft} />
           <ModalWishlist />
           <ModalSearch />
           <ModalQuickview />

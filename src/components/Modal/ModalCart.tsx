@@ -9,9 +9,10 @@ import { ProductType } from '@/type/ProductType';
 import { useModalCartContext } from '@/context/ModalCartContext'
 import { useCart } from '@/context/CartContext'
 import { countdownTime } from '@/store/countdownTime'
+import CountdownTimeType from '@/type/CountdownType';
 
-const ModalCart = () => {
-    const [timeLeft, setTimeLeft] = useState(countdownTime());
+const ModalCart = ({ serverTimeLeft }: { serverTimeLeft: CountdownTimeType }) => {
+    const [timeLeft, setTimeLeft] = useState(serverTimeLeft);
 
     useEffect(() => {
         const timer = setInterval(() => {
