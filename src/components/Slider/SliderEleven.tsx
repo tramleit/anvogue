@@ -92,7 +92,7 @@ const SliderEleven = () => {
                             </SwiperSlide>
                         </Swiper>
                     </div>
-                    <div className="banner-ads lg:w-1/3 lg:pl-[15px] w-full max-lg:grid sm:grid-cols-2 gap-5">
+                    <div className="banner-ads-block lg:w-1/3 lg:pl-[15px] w-full max-lg:grid sm:grid-cols-2 gap-5">
                         <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer" onClick={() => handleTypeClick('swimwear')}>
                             <div className="text-content relative z-[1] py-12 pl-8">
                                 <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
