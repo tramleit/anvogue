@@ -39,6 +39,7 @@ const SliderEight = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg8-1'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderEight = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg8-2'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -79,6 +81,7 @@ const SliderEight = () => {
                                             width={2000}
                                             height={2000}
                                             alt='bg8-3'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>

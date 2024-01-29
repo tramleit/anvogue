@@ -35,6 +35,7 @@ const FlashSale = () => {
                             width={2000}
                             height={1600}
                             alt='bg-img'
+                            priority={true}
                             className='w-full object-cover'
                         />
                     </div>

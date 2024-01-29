@@ -38,6 +38,7 @@ const SliderSeven = () => {
                                             width={670}
                                             height={936}
                                             alt='bg7-1'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>
@@ -57,6 +58,7 @@ const SliderSeven = () => {
                                             width={670}
                                             height={936}
                                             alt='bg2-2'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>
@@ -76,6 +78,7 @@ const SliderSeven = () => {
                                             width={670}
                                             height={936}
                                             alt='bg2-3'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>

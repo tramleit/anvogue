@@ -39,6 +39,7 @@ const SliderFurniture = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-furniture3'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderFurniture = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-furniture2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -79,6 +81,7 @@ const SliderFurniture = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-furniture1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

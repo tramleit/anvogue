@@ -12,6 +12,7 @@ const ChooseUs = () => {
                             width={1200}
                             height={1200}
                             alt='bg-img'
+                            priority={true}
                             className='w-full'
                         />
                     </div>

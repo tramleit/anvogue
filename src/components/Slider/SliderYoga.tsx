@@ -37,6 +37,7 @@ const SliderYoga = () => {
                                             width={2560}
                                             height={1080}
                                             alt='yoga3'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -57,6 +58,7 @@ const SliderYoga = () => {
                                             width={2560}
                                             height={1080}
                                             alt='yoga2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -77,6 +79,7 @@ const SliderYoga = () => {
                                             width={2560}
                                             height={1080}
                                             alt='yoga1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

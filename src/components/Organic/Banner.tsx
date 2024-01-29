@@ -29,6 +29,7 @@ const Banner = () => {
                             width={1000}
                             height={1000}
                             alt='bg-img'
+                            priority={true}
                             className='absolute left-0 top-0 w-full h-full object-cover duration-500'
                         />
                     </div>
@@ -45,6 +46,7 @@ const Banner = () => {
                             width={1000}
                             height={1000}
                             alt='bg-img'
+                            priority={true}
                             className='absolute left-0 top-0 w-full h-full object-cover duration-500'
                         />
                     </div>
@@ -61,6 +63,7 @@ const Banner = () => {
                             width={1000}
                             height={1000}
                             alt='bg-img'
+                            priority={true}
                             className='absolute left-0 top-0 w-full h-full object-cover duration-500'
                         />
                     </div>

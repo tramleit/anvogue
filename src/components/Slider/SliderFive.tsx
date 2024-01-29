@@ -39,6 +39,7 @@ const SliderFive = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg5-1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderFive = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg5-2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

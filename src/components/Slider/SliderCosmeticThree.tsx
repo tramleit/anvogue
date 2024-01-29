@@ -39,6 +39,7 @@ const SliderCosmeticThree = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-cos3-1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderCosmeticThree = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-cos3-2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -79,6 +81,7 @@ const SliderCosmeticThree = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-cos3-3'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

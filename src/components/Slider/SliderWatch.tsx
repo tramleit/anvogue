@@ -38,6 +38,7 @@ const SliderWatch = () => {
                                             width={3000}
                                             height={2000}
                                             alt='watch1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderWatch = () => {
                                             width={3000}
                                             height={2000}
                                             alt='watch2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -80,6 +82,7 @@ const SliderWatch = () => {
                                             width={3000}
                                             height={2000}
                                             alt='watch3'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

@@ -12,6 +12,7 @@ const AdsPhoto = () => {
                             width={2000}
                             height={1000}
                             alt='before'
+                            priority={true}
                             className='w-full h-full object-cover'
                         />
                         <div className="tag absolute top-5 left-5 heading5 px-6 py-3 rounded-[30px] bg-surface2 text-white">Before</div>
@@ -22,6 +23,7 @@ const AdsPhoto = () => {
                             width={2000}
                             height={1000}
                             alt='after'
+                            priority={true}
                             className='w-full h-full object-cover'
                         />
                         <div className="tag absolute top-5 right-5 heading5 px-6 py-3 rounded-[30px] bg-surface2 text-white">After</div>

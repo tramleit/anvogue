@@ -58,6 +58,7 @@ const FeaturedProduct: React.FC<Props> = ({ data }) => {
                             width={1000}
                             height={1000}
                             alt='prd-img'
+                            priority={true}
                             className='w-full lg:aspect-square object-cover rounded-[20px]'
                         />
                     </div>

@@ -141,6 +141,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                             width={1000}
                                             height={1000}
                                             alt='prd-img'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -150,6 +151,7 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                             width={1000}
                                             height={1000}
                                             alt='prd-img'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

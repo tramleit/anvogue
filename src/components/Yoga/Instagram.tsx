@@ -20,6 +20,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full aspect-square duration-500 relative object-cover'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
@@ -32,6 +33,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full duration-500 relative'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
@@ -44,6 +46,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full duration-500 relative'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
@@ -56,6 +59,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full duration-500 relative'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
@@ -68,6 +72,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full duration-500 relative'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
@@ -80,6 +85,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full duration-500 relative'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">
@@ -92,6 +98,7 @@ const Instagram = () => {
                             width={3000}
                             height={3000}
                             alt='1'
+                            priority={true}
                             className='h-full w-full duration-500 relative'
                         />
                         <div className="icon w-12 h-12 bg-white hover:bg-black duration-500 flex items-center justify-center rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[1]">

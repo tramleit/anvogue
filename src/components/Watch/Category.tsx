@@ -54,6 +54,7 @@ const Category = () => {
                                             width={1000}
                                             height={1000}
                                             alt='outerwear'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -70,6 +71,7 @@ const Category = () => {
                                             width={1000}
                                             height={1000}
                                             alt='swimwear'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -86,6 +88,7 @@ const Category = () => {
                                             width={1000}
                                             height={1000}
                                             alt='clothes'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -102,6 +105,7 @@ const Category = () => {
                                             width={1000}
                                             height={1000}
                                             alt='sets'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -118,6 +122,7 @@ const Category = () => {
                                             width={1000}
                                             height={1000}
                                             alt='accessories'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -134,6 +139,7 @@ const Category = () => {
                                             width={1000}
                                             height={1000}
                                             alt='lingerie'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>

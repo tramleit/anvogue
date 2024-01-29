@@ -39,6 +39,7 @@ const SliderOne = () => {
                                             width={670}
                                             height={936}
                                             alt='bg1-1'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>
@@ -58,6 +59,7 @@ const SliderOne = () => {
                                             width={670}
                                             height={936}
                                             alt='bg1-2'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>
@@ -77,6 +79,7 @@ const SliderOne = () => {
                                             width={670}
                                             height={936}
                                             alt='bg1-3'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>

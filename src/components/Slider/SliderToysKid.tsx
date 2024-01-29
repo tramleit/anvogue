@@ -35,6 +35,7 @@ const SliderToysKid = () => {
                                     width={2000}
                                     height={2000}
                                     alt='bg'
+                                    priority={true}
                                     className='absolute top-0 left-0 w-full h-full object-cover'
                                 />
                                 <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-[70px] flex flex-col items-center justify-center z-[1]">
@@ -48,6 +49,7 @@ const SliderToysKid = () => {
                                         width={3000}
                                         height={2000}
                                         alt='bg-toys1'
+                                        priority={true}
                                         className='w-full h-full object-cover z-[1] relative'
                                     />
                                 </div>
@@ -58,6 +60,7 @@ const SliderToysKid = () => {
                                     width={2000}
                                     height={2000}
                                     alt='bg'
+                                    priority={true}
                                     className='absolute top-0 left-0 w-full h-full object-cover'
                                 />
                                 <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-[70px] flex flex-col items-center justify-center z-[1]">
@@ -71,6 +74,7 @@ const SliderToysKid = () => {
                                         width={3000}
                                         height={2000}
                                         alt='bg-toys2'
+                                        priority={true}
                                         className='w-full h-full object-cover z-[1] relative'
                                     />
                                 </div>
@@ -81,6 +85,7 @@ const SliderToysKid = () => {
                                     width={2000}
                                     height={2000}
                                     alt='bg'
+                                    priority={true}
                                     className='absolute top-0 left-0 w-full h-full object-cover'
                                 />
                                 <div className="text-content sm:w-1/3 max-sm:pt-10 max-sm:pb-[70px] flex flex-col items-center justify-center z-[1]">
@@ -94,6 +99,7 @@ const SliderToysKid = () => {
                                         width={3000}
                                         height={2000}
                                         alt='bg-toys3'
+                                        priority={true}
                                         className='w-full h-full object-cover z-[1] relative'
                                     />
                                 </div>

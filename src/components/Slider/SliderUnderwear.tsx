@@ -15,6 +15,7 @@ const SliderUnderwear = () => {
                             width={2000}
                             height={1936}
                             alt='bg-underwear1'
+                            priority={true}
                             className='w-full'
                         />
                     </div>
@@ -31,6 +32,7 @@ const SliderUnderwear = () => {
                             width={2000}
                             height={1936}
                             alt='bg-underwear2'
+                            priority={true}
                             className='w-full'
                         />
                     </div>

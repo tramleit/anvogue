@@ -39,6 +39,7 @@ const SliderSix = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg6-1'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderSix = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg6-2'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -79,6 +81,7 @@ const SliderSix = () => {
                                             width={2000}
                                             height={2000}
                                             alt='bg6-3'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>

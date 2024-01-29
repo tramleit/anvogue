@@ -38,6 +38,7 @@ const SliderOrganic = () => {
                                             width={4000}
                                             height={3000}
                                             alt='organic1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -59,6 +60,7 @@ const SliderOrganic = () => {
                                             width={4000}
                                             height={3000}
                                             alt='organic2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -80,6 +82,7 @@ const SliderOrganic = () => {
                                             width={4000}
                                             height={3000}
                                             alt='organic3'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

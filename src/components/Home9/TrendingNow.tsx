@@ -50,13 +50,14 @@ const TrendingNow = () => {
                             className='h-full'
                         >
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('t-shirt')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('t-shirt')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/1.png'}
                                             width={1000}
                                             height={1000}
                                             alt='outerwear'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -66,13 +67,14 @@ const TrendingNow = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('sweater')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('sweater')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/2.png'}
                                             width={1000}
                                             height={1000}
                                             alt='swimwear'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -82,13 +84,14 @@ const TrendingNow = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('top')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('top')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/4.png'}
                                             width={1000}
                                             height={1000}
                                             alt='clothes'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -98,13 +101,14 @@ const TrendingNow = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('dress')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('dress')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/5.png'}
                                             width={1000}
                                             height={1000}
                                             alt='sets'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -114,13 +118,14 @@ const TrendingNow = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('swimwear')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('swimwear')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/6.png'}
                                             width={1000}
                                             height={1000}
                                             alt='accessories'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -130,13 +135,14 @@ const TrendingNow = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('outerwear')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('outerwear')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/7.png'}
                                             width={1000}
                                             height={1000}
                                             alt='lingerie'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -146,13 +152,14 @@ const TrendingNow = () => {
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div className="trending-item block relative cursor-pointer"  onClick={() => handleTypeClick('shirt')}>
+                                <div className="trending-item block relative cursor-pointer" onClick={() => handleTypeClick('shirt')}>
                                     <div className="bg-img rounded-2xl overflow-hidden">
                                         <Image
                                             src={'/images/avatar/8.png'}
                                             width={1000}
                                             height={1000}
                                             alt='lingerie'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>

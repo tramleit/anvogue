@@ -108,6 +108,7 @@ const ModalQuickview = () => {
                                             width={1500}
                                             height={2000}
                                             alt={item}
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

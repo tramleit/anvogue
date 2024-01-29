@@ -47,6 +47,7 @@ const SliderEleven = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg11-1'
+                                            priority={true}
                                             className='w-full h-full'
                                         />
                                     </div>
@@ -66,6 +67,7 @@ const SliderEleven = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg11-2'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -85,6 +87,7 @@ const SliderEleven = () => {
                                             width={2000}
                                             height={2000}
                                             alt='bg11-3'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -106,6 +109,7 @@ const SliderEleven = () => {
                                 width={200}
                                 height={100}
                                 alt='bg-img'
+                                priority={true}
                                 className='basis-1/3 absolute right-0 top-0'
                             />
                         </div>
@@ -122,6 +126,7 @@ const SliderEleven = () => {
                                 width={200}
                                 height={100}
                                 alt='bg-img'
+                                priority={true}
                                 className='basis-1/3 absolute right-0 top-0'
                             />
                         </div>

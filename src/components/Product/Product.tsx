@@ -145,6 +145,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                 width={500}
                                                 height={500}
                                                 alt={data.name}
+                                                priority={true}
                                                 className='w-full h-full object-cover duration-700'
                                             />
                                         }
@@ -158,6 +159,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                     src={img}
                                                     width={500}
                                                     height={500}
+                                                    priority={true}
                                                     alt={data.name}
                                                     className='w-full h-full object-cover duration-700'
                                                 />
@@ -281,6 +283,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                 width={100}
                                                 height={100}
                                                 alt='color'
+                                                priority={true}
                                                 className='rounded-xl w-full h-full object-cover'
                                             />
                                             <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">{item.color}</div>
@@ -327,6 +330,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                     src={img}
                                                     width={500}
                                                     height={500}
+                                                    priority={true}
                                                     alt={data.name}
                                                     className='w-full h-full object-cover duration-700'
                                                 />
@@ -405,6 +409,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                                                             width={100}
                                                                             height={100}
                                                                             alt='color'
+                                                                            priority={true}
                                                                             className='rounded-xl'
                                                                         />
                                                                         <div className="tag-action bg-black text-white caption2 capitalize px-1.5 py-0.5 rounded-sm">

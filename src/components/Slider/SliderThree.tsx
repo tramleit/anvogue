@@ -38,6 +38,7 @@ const SliderThree = () => {
                                             width={1000}
                                             height={2000}
                                             alt='bg3-1'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>
@@ -57,6 +58,7 @@ const SliderThree = () => {
                                             width={1000}
                                             height={2000}
                                             alt='bg3-2'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>
@@ -76,6 +78,7 @@ const SliderThree = () => {
                                             width={1000}
                                             height={2000}
                                             alt='bg1-3'
+                                            priority={true}
                                         />
                                     </div>
                                 </div>

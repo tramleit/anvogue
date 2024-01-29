@@ -13,6 +13,7 @@ const Banner = () => {
                             width={2000}
                             height={1300}
                             alt='banner1'
+                            priority={true}
                             className='duration-1000'
                         />
                     </div>
@@ -28,6 +29,7 @@ const Banner = () => {
                             width={2000}
                             height={1300}
                             alt='banner2'
+                            priority={true}
                             className='duration-1000'
                         />
                     </div>

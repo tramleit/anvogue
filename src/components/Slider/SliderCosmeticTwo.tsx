@@ -40,6 +40,7 @@ const SliderCosmeticTwo = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-cos2-1'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -61,6 +62,7 @@ const SliderCosmeticTwo = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-cos2-2'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
@@ -82,6 +84,7 @@ const SliderCosmeticTwo = () => {
                                             width={2560}
                                             height={1080}
                                             alt='bg-cos2-3'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>

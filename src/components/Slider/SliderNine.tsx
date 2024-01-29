@@ -39,6 +39,7 @@ const SliderNine = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg9-1'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -57,6 +58,7 @@ const SliderNine = () => {
                                             width={2000}
                                             height={1936}
                                             alt='bg9-2'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>
@@ -75,6 +77,7 @@ const SliderNine = () => {
                                             width={2000}
                                             height={2000}
                                             alt='bg9-3'
+                                            priority={true}
                                             className='w-full'
                                         />
                                     </div>

@@ -23,6 +23,7 @@ const PopularProduct = () => {
                             width={1000}
                             height={1000}
                             alt='product'
+                            priority={true}
                             className='lg:h-[150%] sm:h-[130%] object-cover lg:-mt-[150px] sm:-mt-[40px]'
                         />
                         <div className="dots absolute top-[38%] left-[45%] cursor-pointer">
@@ -50,13 +51,14 @@ const PopularProduct = () => {
                             width={1000}
                             height={1000}
                             alt='product'
+                            priority={true}
                             className='lg:h-[150%] sm:h-[130%] object-cover lg:-mt-[150px] sm:-mt-[40px]'
                         />
                         <div className="dots absolute top-[30%] left-[70%] cursor-pointer">
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('13')}>
+                            <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('13')}>
                                 <div className="text-title name">Mesh Shirt</div>
                                 <div className="price text-center">$35.00</div>
                             </div>
@@ -65,7 +67,7 @@ const PopularProduct = () => {
                             <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('13')}>
+                            <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('13')}>
                                 <div className="text-title name">Mesh Shirt</div>
                                 <div className="price text-center">$35.00</div>
                             </div>
@@ -77,13 +79,14 @@ const PopularProduct = () => {
                             width={1000}
                             height={1000}
                             alt='product'
+                            priority={true}
                             className='w-full'
                         />
                         <div className="dots absolute top-[34%] left-[35%] cursor-pointer">
                             <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('21')}>
+                            <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('21')}>
                                 <div className="text-title name">T-Shirt Pockets</div>
                                 <div className="price text-center">$19.00</div>
                             </div>
@@ -92,7 +95,7 @@ const PopularProduct = () => {
                             <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                 <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                             </div>
-                            <div className="product-infor bg-white rounded-2xl p-4"  onClick={() => handleDetailProduct('21')}>
+                            <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('21')}>
                                 <div className="text-title name">T-Shirt Pockets</div>
                                 <div className="price text-center">$19.00</div>
                             </div>

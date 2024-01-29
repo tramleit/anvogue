@@ -22,6 +22,7 @@ const PageNotFound = () => {
                             width={2000}
                             height={2000}
                             alt='bg-img'
+                            priority={true}
                             className='sm:w-1/2 w-3/4'
                         />
                         <div className="text-content sm:w-1/2 w-full flex items-center justify-center sm:pl-10">

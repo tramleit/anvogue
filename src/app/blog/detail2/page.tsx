@@ -380,6 +380,7 @@ const BlogDetailTwo = () => {
                                             width={500}
                                             height={500}
                                             alt='avatar'
+                                            priority={true}
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
