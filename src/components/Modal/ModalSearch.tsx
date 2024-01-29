@@ -37,7 +37,6 @@ const ModalSearch = () => {
                         <input
                             type="text"
                             placeholder='Searching...'
-                            priority={true}
                             className='text-button-lg h-14 rounded-2xl border border-line w-full pl-6 pr-12'
                             value={searchKeyword}
                             onChange={(e) => setSearchKeyword(e.target.value)}
