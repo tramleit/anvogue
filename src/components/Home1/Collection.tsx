@@ -20,9 +20,7 @@ const Collection = () => {
         <>
             <div className="collection-block md:pt-20 pt-10">
                 <div className="container">
-                    {/* <Fade bottom> */}
                     <div className="heading3 text-center">Explore Collections</div>
-                    {/* </Fade> */}
                 </div>
                 <div className="list-collection section-swiper-navigation md:mt-10 mt-6 sm:px-5 px-4">
                     <Swiper
