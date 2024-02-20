@@ -70,11 +70,11 @@ const MenuTwo = () => {
                     <div className="header-main flex justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
                             <i className="icon-category text-2xl"></i>
-                        </div>
+                        </div>  
                         <Link href={'/'} className='flex items-center'>
                             <div className="heading4">Anvogue</div>
                         </Link>
-                        <div className="menu-main h-full max-lg:hidden">
+                        <div className="menu-main h-full max-lg:hidden">    
                             <ul className='flex items-center gap-8 h-full'>
                                 <li className='h-full relative'>
                                     <Link
