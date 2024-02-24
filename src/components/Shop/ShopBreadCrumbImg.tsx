@@ -337,7 +337,7 @@ const ShopBreadCrumbImg: React.FC<Props> = ({ data, productPerPage, dataType }) 
                         </div>
 
                         <div
-                            className={`sidebar style-dropdown bg-white grid grid-cols-4 gap-[30px] ${openSidebar ? 'open' : ''}`}
+                            className={`sidebar style-dropdown bg-white grid md:grid-cols-4 grid-cols-2 md:gap-[30px] gap-6 ${openSidebar ? 'open' : ''}`}
                         >
                             <div className="filter-type">
                                 <div className="heading6">Products Type</div>
