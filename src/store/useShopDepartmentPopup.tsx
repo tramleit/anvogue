@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const useShopDepartmentPopup = () => {
     const [openShopDepartmentPopup, setOpenShopDepartmentPopup] = useState(false)
@@ -8,14 +8,14 @@ const useShopDepartmentPopup = () => {
     }
 
     // Check if the click event occurs outside the ShopDepartmentPopup.
-    const handleClickOutsideShopDepartmentPopup: EventListener = (event) => {
+    const handleClickOutsideShopDepartmentPopup = useCallback((event: Event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openShopDepartmentPopup && !targetElement.closest('.shop-department-popup')) {
             setOpenShopDepartmentPopup(false)
         }
-    }
+    }, [openShopDepartmentPopup])
 
     useEffect(() => {
         // Add a global click event to track clicks outside the ShopDepartmentPopup.
@@ -25,8 +25,8 @@ const useShopDepartmentPopup = () => {
         return () => {
             document.removeEventListener('click', handleClickOutsideShopDepartmentPopup);
         };
-    }, [openShopDepartmentPopup])
-    
+    }, [handleClickOutsideShopDepartmentPopup, openShopDepartmentPopup])
+
     return {
         openShopDepartmentPopup,
         handleShopDepartmentPopup,

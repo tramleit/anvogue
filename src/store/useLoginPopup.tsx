@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 const useLoginPopup = () => {
     const [openLoginPopup, setOpenLoginPopup] = useState(false)
@@ -8,14 +8,14 @@ const useLoginPopup = () => {
     }
 
     // Check if the click event occurs outside the popup.
-    const handleClickOutsideLoginPopup: EventListener = (event) => {
+    const handleClickOutsideLoginPopup = useCallback((event: Event) => {
         // Cast event.target to Element to use the closest method.
         const targetElement = event.target as Element;
 
         if (openLoginPopup && !targetElement.closest('.login-popup')) {
             setOpenLoginPopup(false)
         }
-    }
+    }, [openLoginPopup])
 
     useEffect(() => {
         // Add a global click event to track clicks outside the popup.
@@ -25,8 +25,8 @@ const useLoginPopup = () => {
         return () => {
             document.removeEventListener('click', handleClickOutsideLoginPopup);
         };
-    }, [openLoginPopup])
-    
+    }, [handleClickOutsideLoginPopup, openLoginPopup])
+
     return {
         openLoginPopup,
         handleLoginPopup,
