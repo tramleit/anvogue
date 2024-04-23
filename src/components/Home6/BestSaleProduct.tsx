@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import Product from '../Product/Product'
 import { ProductType } from '@/type/ProductType'
@@ -12,17 +12,28 @@ import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
 import ModalSizeguide from '../Modal/ModalSizeguide'
+import { useSwiper } from 'swiper/react';
 
 interface Props {
     data: Array<ProductType>;
 }
 
+// declare global {
+//     interface Window {
+//         swiper: any;
+//     }
+// }
+
+// let swiper: any;
+
 const BestSaleProduct: React.FC<Props> = ({ data }) => {
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
+    const [indexSlide, setIndexSlide] = useState<number>(0)
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
+    const swiperRef: any = useRef();
 
     const handleOpenSizeGuide = () => {
         setOpenSizeGuide(true);
@@ -34,6 +45,19 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
+
+        // Find variation with selected color
+        const foundColor = productMain.variation.find((variation) => variation.color === item);
+        // If found, slide next to img
+        if (foundColor) {
+            const index = productMain.images.indexOf(foundColor.image);
+
+            if (index !== -1) {
+                swiperRef.current?.slideTo(index);
+                setIndexSlide(index)
+            }
+        }
+
     }
 
     const handleActiveSize = (item: string) => {
@@ -89,6 +113,9 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
                                 },
                             }}
                             className='h-full'
+                            onSwiper={(swiper) => {
+                                swiperRef.current = swiper
+                            }}
                         >
                             <SwiperSlide>
                                 <Image
