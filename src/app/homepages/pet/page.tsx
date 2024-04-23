@@ -13,6 +13,7 @@ import Benefit from '@/components/Home1/Benefit'
 import Instagram from '@/components/Pet/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomePet() {
     return (
@@ -32,6 +33,7 @@ export default function HomePet() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

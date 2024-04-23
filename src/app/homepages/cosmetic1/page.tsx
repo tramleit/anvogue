@@ -4,6 +4,7 @@ import MenuCosmeticOne from '@/components/Header/Menu/MenuCosmeticOne'
 import SliderCosmeticOne from '@/components/Slider/SliderCosmeticOne'
 import BannerTop from '@/components/Home3/BannerTop'
 import Collection from '@/components/Cosmetic1/Collection'
+import CommunityStory from '@/components/Cosmetic1/CommunityStory'
 import LookBook from '@/components/Cosmetic1/LookBook'
 import productData from '@/data/Product.json'
 import BuyPack from '@/components/Cosmetic1/BuyPack'
@@ -15,6 +16,7 @@ import Testimonial from '@/components/Cosmetic1/Testimonial'
 import Instagram from '@/components/Cosmetic1/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeCosmeticOne() {
     return (
@@ -26,6 +28,7 @@ export default function HomeCosmeticOne() {
                 <SliderCosmeticOne />
             </div>
             <Collection />
+            <CommunityStory />
             <LookBook data={productData} start={8} limit={12} />
             <BuyPack />
             <AdsPhoto />
@@ -36,6 +39,7 @@ export default function HomeCosmeticOne() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

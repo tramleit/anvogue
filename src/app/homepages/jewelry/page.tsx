@@ -14,6 +14,7 @@ import Benefit from '@/components/Jewelry/Benefit'
 import Instagram from '@/components/Jewelry/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeJewelry() {
     return (
@@ -34,6 +35,7 @@ export default function HomeJewelry() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

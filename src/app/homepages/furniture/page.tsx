@@ -15,6 +15,7 @@ import Testimonial from '@/components/Furniture/Testimonial'
 import Instagram from '@/components/Furniture/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeFurniture() {
     return (
@@ -35,6 +36,7 @@ export default function HomeFurniture() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

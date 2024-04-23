@@ -15,6 +15,7 @@ import Benefit from '@/components/Home1/Benefit'
 import Instagram from '@/components/Home6/Instagram'
 import Brand from '@/components/Home6/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeSix() {
     return (
@@ -35,6 +36,7 @@ export default function HomeSix() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

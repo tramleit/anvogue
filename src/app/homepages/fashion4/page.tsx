@@ -14,6 +14,7 @@ import Newsletter from '@/components/Home4/Newsletter'
 import Instagram from '@/components/Home3/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeFour() {
     return (
@@ -33,6 +34,7 @@ export default function HomeFour() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

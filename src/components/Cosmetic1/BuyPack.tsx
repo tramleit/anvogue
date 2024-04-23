@@ -129,6 +129,10 @@ const BuyPack = () => {
                                 <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('43')}>
                                     <div className="text-title name">Hair Treatment</div>
                                     <div className="price text-center">$10.00</div>
+                                    <div
+                                        className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                        View
+                                    </div>
                                 </div>
                             </div>
                             <div className="dots bottom-dot absolute bottom-[28%] left-[62%] cursor-pointer">
@@ -138,6 +142,10 @@ const BuyPack = () => {
                                 <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('44')}>
                                     <div className="text-title name">After Sun - tan Booster</div>
                                     <div className="price text-center">$15.00</div>
+                                    <div
+                                        className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                        View
+                                    </div>
                                 </div>
                             </div>
                         </div>

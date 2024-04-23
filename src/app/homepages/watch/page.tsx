@@ -13,6 +13,7 @@ import PopularProduct from '@/components/Watch/PopularProduct'
 import Instagram from '@/components/Watch/Instagram'
 import Brand from '@/components/Home6/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeWatch() {
     return (
@@ -36,6 +37,7 @@ export default function HomeWatch() {
                     <Footer />
                 </div>
             </div>
+            <ModalNewsletter />
         </>
     )
 }

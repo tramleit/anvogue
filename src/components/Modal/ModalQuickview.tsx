@@ -13,8 +13,10 @@ import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useCompare } from '@/context/CompareContext'
 import { useModalCompareContext } from '@/context/ModalCompareContext'
 import Rate from '../Other/Rate';
+import ModalSizeguide from './ModalSizeguide';
 
 const ModalQuickview = () => {
+    const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const { selectedProduct, closeQuickview } = useModalQuickviewContext()
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
@@ -25,6 +27,14 @@ const ModalQuickview = () => {
     const { addToCompare, removeFromCompare, compareState } = useCompare();
     const { openModalCompare } = useModalCompareContext()
     const percentSale = selectedProduct && Math.floor(100 - ((selectedProduct.price / selectedProduct.originPrice) * 100))
+
+    const handleOpenSizeGuide = () => {
+        setOpenSizeGuide(true);
+    };
+
+    const handleCloseSizeGuide = () => {
+        setOpenSizeGuide(false);
+    };
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
@@ -191,7 +201,13 @@ const ModalQuickview = () => {
                                     <div className="choose-size mt-5">
                                         <div className="heading flex items-center justify-between">
                                             <div className="text-title">Size: <span className='text-title size'>{activeSize}</span></div>
-                                            <div className="caption1 size-guide text-red underline">Size Guide</div>
+                                            <div
+                                                className="caption1 size-guide text-red underline cursor-pointer"
+                                                onClick={handleOpenSizeGuide}
+                                            >
+                                                Size Guide
+                                            </div>
+                                            <ModalSizeguide data={selectedProduct} isOpen={openSizeGuide} onClose={handleCloseSizeGuide} />
                                         </div>
                                         <div className="list-size flex items-center gap-2 flex-wrap mt-3">
                                             {selectedProduct?.sizes.map((item, index) => (

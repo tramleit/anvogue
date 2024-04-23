@@ -72,11 +72,16 @@
     }
 
     .product-thumb {
+        .banner-sale-auto {
+            position: absolute;
+        }
+
         .list-action {
             opacity: 0;
             visibility: hidden;
             transform: translateY(100px);
             transition: all ease 0.4s;
+            z-index: 1;
 
             .quick-shop-block {
                 bottom: -100%;

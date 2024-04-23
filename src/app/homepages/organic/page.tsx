@@ -13,6 +13,7 @@ import blogData from '@/data/Blog.json'
 import NewsInsight from '@/components/Toys/NewsInsight'
 import Brand from '@/components/Organic/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeOrganic() {
     return (
@@ -31,6 +32,7 @@ export default function HomeOrganic() {
             <Benefit props="md:pb-20 pb-10" />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

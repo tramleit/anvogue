@@ -17,6 +17,7 @@ import Instagram from '@/components/Underwear/Instagram'
 import Brand from '@/components/Underwear/Brand'
 import Benefit from '@/components/Underwear/Benefit'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeUnderwear() {
     return (
@@ -38,6 +39,7 @@ export default function HomeUnderwear() {
             <Instagram />
             <Benefit props="py-[60px]" />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

@@ -33,6 +33,10 @@ const PopularProduct = () => {
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('3')}>
                                 <div className="text-title name">Off-The-Shoulder</div>
                                 <div className="price text-center">$32.00</div>
+                                <div
+                                    className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                    View
+                                </div>
                             </div>
                         </div>
                         <div className="dots bottom-dot absolute bottom-[12%] left-[62%] cursor-pointer">
@@ -42,6 +46,10 @@ const PopularProduct = () => {
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('3')}>
                                 <div className="text-title name">Off-The-Shoulder</div>
                                 <div className="price text-center">$32.00</div>
+                                <div
+                                    className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                    View
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,6 +69,10 @@ const PopularProduct = () => {
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('13')}>
                                 <div className="text-title name">Mesh Shirt</div>
                                 <div className="price text-center">$35.00</div>
+                                <div
+                                    className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                    View
+                                </div>
                             </div>
                         </div>
                         <div className="dots bottom-dot absolute bottom-[15%] left-[25%] cursor-pointer">
@@ -70,6 +82,10 @@ const PopularProduct = () => {
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('13')}>
                                 <div className="text-title name">Mesh Shirt</div>
                                 <div className="price text-center">$35.00</div>
+                                <div
+                                    className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                    View
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,6 +105,10 @@ const PopularProduct = () => {
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('21')}>
                                 <div className="text-title name">T-Shirt Pockets</div>
                                 <div className="price text-center">$19.00</div>
+                                <div
+                                    className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                    View
+                                </div>
                             </div>
                         </div>
                         <div className="dots bottom-dot absolute bottom-[10%] left-[70%] cursor-pointer">
@@ -98,6 +118,10 @@ const PopularProduct = () => {
                             <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct('21')}>
                                 <div className="text-title name">T-Shirt Pockets</div>
                                 <div className="price text-center">$19.00</div>
+                                <div
+                                    className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                    View
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -14,6 +14,7 @@ import NewsInsight from '@/components/Toys/NewsInsight'
 import dataTestimonial from '@/data/Testimonial.json'
 import Testimonial from '@/components/Furniture/Testimonial'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeToys() {
     return (
@@ -32,6 +33,7 @@ export default function HomeToys() {
             <Testimonial data={dataTestimonial} limit={4} />
             <NewsInsight data={blogData} start={9} limit={12} />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

@@ -16,6 +16,7 @@ import Testimonial from '@/components/Yoga/Testimonial'
 import Instagram from '@/components/Yoga/Instagram'
 import Brand from '@/components/Home6/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeYoga() {
     return (
@@ -36,6 +37,7 @@ export default function HomeYoga() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

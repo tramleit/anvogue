@@ -8,7 +8,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css'
 
 interface Props {
-    data: ProductType;
+    data: ProductType | null;
     isOpen: boolean;
     onClose: () => void;
 }
@@ -98,11 +98,10 @@ const ModalSizeguide: React.FC<Props> = ({ data, isOpen, onClose }) => {
                     </div>
                     <div className="heading6 mt-8">suggests for you:</div>
                     <div className="list-size flex items-center gap-2 flex-wrap mt-3">
-                        {data.sizes.map((item, index) => (
+                        {data?.sizes.map((item, index) => (
                             <div
                                 className={`size-item w-12 h-12 flex items-center justify-center text-button rounded-full bg-white border border-line ${activeSize === item ? 'active' : ''}`}
                                 key={index}
-                            // onClick={() => handleActiveSize(item)}
                             >
                                 {item}
                             </div>

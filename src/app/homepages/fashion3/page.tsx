@@ -15,7 +15,7 @@ import NewsInsight from '@/components/Home3/NewsInsight'
 import Instagram from '@/components/Home3/Instagram'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
-
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 export default function HomeThree() {
     return (
         <>
@@ -33,6 +33,7 @@ export default function HomeThree() {
             <Instagram />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

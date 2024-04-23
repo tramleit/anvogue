@@ -35,9 +35,13 @@ const Lookbook = () => {
                                     <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
                                     </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
-                                        <div className="text-title name">gold necklace</div>
+                                    <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('69')}>
+                                        <div className="text-title name">silver necklace</div>
                                         <div className="price text-center">$60.00</div>
+                                        <div
+                                            className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                            View
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="dots absolute top-[42%] left-[32%] cursor-pointer">
@@ -47,6 +51,10 @@ const Lookbook = () => {
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">golden ring</div>
                                         <div className="price text-center">$50.00</div>
+                                        <div
+                                            className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                            View
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[20%] left-[58%] cursor-pointer">
@@ -56,6 +64,10 @@ const Lookbook = () => {
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">Ruby Ring</div>
                                         <div className="price text-center">$40.00</div>
+                                        <div
+                                            className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                            View
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -74,6 +86,10 @@ const Lookbook = () => {
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">Snake Ring</div>
                                         <div className="price text-center">$45.00</div>
+                                        <div
+                                            className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                            View
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="dots absolute top-[29%] left-[30%] cursor-pointer">
@@ -83,6 +99,10 @@ const Lookbook = () => {
                                     <div className="product-infor bg-white rounded-2xl p-4 cursor-pointer" onClick={()=> handleDetailProduct('66')}>
                                         <div className="text-title name">Golden Ring</div>
                                         <div className="price text-center">$48.00</div>
+                                        <div
+                                            className="text-center underline mt-1 text-button-uppercase duration-300 text-secondary2 hover:text-black">
+                                            View
+                                        </div>
                                     </div>
                                 </div>
                             </div>

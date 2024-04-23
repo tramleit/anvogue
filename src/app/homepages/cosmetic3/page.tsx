@@ -14,6 +14,7 @@ import Benefit from '@/components/Cosmetic3/Benefit'
 import VideoTutorial from '@/components/Cosmetic3/VideoTutorial'
 import Newsletter from '@/components/Cosmetic3/Newsletter'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeCosmeticThree() {
     return (
@@ -34,6 +35,7 @@ export default function HomeCosmeticThree() {
             <VideoTutorial />
             <Newsletter props="bg-transparent" />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

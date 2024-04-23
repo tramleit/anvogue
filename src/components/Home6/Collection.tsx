@@ -27,6 +27,7 @@ const Collection = () => {
                         <Swiper
                             spaceBetween={12}
                             slidesPerView={2}
+                            loop={true}
                             scrollbar={{
                                 hide: false,
                             }}
@@ -128,7 +129,7 @@ const Collection = () => {
                         </Swiper>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

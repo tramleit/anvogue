@@ -13,6 +13,7 @@ import NewsInsight from '@/components/Home3/NewsInsight'
 import Brand from '@/components/Home1/Brand'
 import Newsletter from '@/components/Home10/Newsletter'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeEleven() {
     return (
@@ -31,6 +32,7 @@ export default function HomeEleven() {
             <Brand />
             <Newsletter />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }

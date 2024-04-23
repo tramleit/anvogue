@@ -14,6 +14,7 @@ import blogData from '@/data/Blog.json'
 import NewsInsight from '@/components/Home3/NewsInsight'
 import Brand from '@/components/Home1/Brand'
 import Footer from '@/components/Footer/Footer'
+import ModalNewsletter from '@/components/Modal/ModalNewsletter'
 
 export default function HomeNine() {
     return (
@@ -31,6 +32,7 @@ export default function HomeNine() {
             <NewsInsight data={blogData} start={0} limit={3} />
             <Brand />
             <Footer />
+            <ModalNewsletter />
         </>
     )
 }
