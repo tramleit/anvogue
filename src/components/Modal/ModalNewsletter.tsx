@@ -45,8 +45,8 @@ const ModalNewsletter = () => {
                         </div>
                         <div className="right lg:w-1/2 sm:w-3/5 w-full bg-white sm:pt-10 sm:pl-10 max-sm:p-6 relative">
                             <div
-                                className="close-newsletter-btn w-10 h-10 flex items-center justify-center border border-line rounded-full absolute right-5 top-5 cursor-pointer">
-                                <Icon.X weight='bold' className='text-xl' onClick={() => setOpen(false)} />
+                                className="close-newsletter-btn w-10 h-10 flex items-center justify-center border border-line rounded-full absolute right-5 top-5 cursor-pointer" onClick={() => setOpen(false)}>
+                                <Icon.X weight='bold' className='text-xl' />
                             </div>
                             <div className="heading5 pb-5">You May Also Like</div>
                             <div className="list flex flex-col gap-5 overflow-x-auto">

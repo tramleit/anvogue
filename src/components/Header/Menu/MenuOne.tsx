@@ -206,6 +206,11 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                         Home Organic
                                                     </Link>
                                                 </li>
+                                                <li>
+                                                    <Link href="/homepages/marketplace" className='text-secondary duration-300'>
+                                                        Home Marketplace
+                                                    </Link>
+                                                </li>
                                             </ul>
                                         </div>
                                     </li>
@@ -1221,6 +1226,11 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                                     <li>
                                                         <Link href="/homepages/organic" className={`nav-item-mobile link text-secondary duration-300 ${pathname === '/homepages/organic' ? 'active' : ''}`}>
                                                             Home Organic
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/homepages/marketplace" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/marketplace' ? 'active' : ''}`}>
+                                                            Home Marketplace
                                                         </Link>
                                                     </li>
                                                 </ul>

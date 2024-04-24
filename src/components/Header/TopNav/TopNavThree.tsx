@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Link from 'next/link';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 
@@ -7,6 +9,11 @@ interface Props {
 }
 
 const TopNavThree: React.FC<Props> = ({ props }) => {
+    const [isOpenLanguage, setIsOpenLanguage] = useState(false)
+    const [isOpenCurrence, setIsOpenCurrence] = useState(false)
+    const [language, setLanguage] = useState('English')
+    const [currence, setCurrence] = useState('USD')
+
     return (
         <>
             <div className={`top-nav md:h-[44px] h-[30px] border-b border-line ${props}`}>
@@ -37,21 +44,43 @@ const TopNavThree: React.FC<Props> = ({ props }) => {
                             </ul>
                         </div>
                         <div className="right-content flex items-center gap-5 max-md:hidden">
-                            <div className="choose-language flex items-center gap-1.5">
-                                <select name="language" id="chooseLanguage" className='caption2'>
-                                    <option value="English">English</option>
-                                    <option value="Espana">Espana</option>
-                                    <option value="France">France</option>
-                                </select>
-                                <Icon.CaretDown size={12} color='#1F1F1F' />
+                            <div
+                                className="choose-type choose-language flex items-center gap-1.5"
+                                onClick={() => {
+                                    setIsOpenLanguage(!isOpenLanguage)
+                                    setIsOpenCurrence(false)
+                                }}
+                            >
+                                <div className="select relative">
+                                    <p className="selected caption2">{language}</p>
+                                    <ul className={`list-option bg-white ${isOpenLanguage ? 'open' : ''}`}>
+                                        {
+                                            ['English', 'Espana', 'France'].map(item => (
+                                                <li className="caption2" onClick={() => setLanguage(item)}>{item}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                                <Icon.CaretDown size={12} />
                             </div>
-                            <div className="choose-currency flex items-center gap-1.5 pr-5 border-r border-line">
-                                <select name="currency" id="chooseCurrency" className='caption2'>
-                                    <option value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="GBP">GBP</option>
-                                </select>
-                                <Icon.CaretDown size={12} color='#1F1F1F' />
+                            <div
+                                className="choose-type choose-currency flex items-center gap-1.5"
+                                onClick={() => {
+                                    setIsOpenCurrence(!isOpenCurrence)
+                                    setIsOpenLanguage(false)
+                                }}
+                            >
+                                <div className="select relative">
+                                    <p className="selected caption2">{currence}</p>
+                                    <ul className={`list-option bg-white ${isOpenCurrence ? 'open' : ''}`}>
+                                        {
+                                            ['USD', 'EUR', 'GBP'].map(item => (
+                                                <li className="caption2" onClick={() => setCurrence(item)}>{item}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                                <Icon.CaretDown size={12} />
                             </div>
                             <Link href={'https://www.facebook.com/'} target='_blank'>
                                 <i className="icon-facebook text-black"></i>

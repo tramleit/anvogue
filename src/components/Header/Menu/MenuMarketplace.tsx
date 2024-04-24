@@ -9,16 +9,16 @@ import { usePathname } from 'next/navigation';
 import Product from '@/components/Product/Product';
 import productData from '@/data/Product.json'
 import useLoginPopup from '@/store/useLoginPopup';
-import useShopDepartmentPopup from '@/store/useShopDepartmentPopup';
+import useSubMenuDepartment from '@/store/useSubMenuDepartment';
 import useMenuMobile from '@/store/useMenuMobile';
 import { useModalCartContext } from '@/context/ModalCartContext';
 import { useModalWishlistContext } from '@/context/ModalWishlistContext';
 import { useCart } from '@/context/CartContext';
 
-const MenuEleven = () => {
+const MenuMarketplace = () => {
     const pathname = usePathname()
     const { openLoginPopup, handleLoginPopup } = useLoginPopup()
-    const { openShopDepartmentPopup, handleShopDepartmentPopup } = useShopDepartmentPopup()
+    const { openSubMenuDepartment, handleSubMenuDepartment } = useSubMenuDepartment()
     const { openMenuMobile, handleMenuMobile } = useMenuMobile()
     const [openSubNavMobile, setOpenSubNavMobile] = useState<number | null>(null)
     const { openModalCart } = useModalCartContext()
@@ -71,33 +71,25 @@ const MenuEleven = () => {
     return (
         <>
             <div className={`${fixedHeader ? ' fixed' : 'relative'} header-menu bg-white w-full top-0 z-10 duration-500`}>
-                <div className={`header-menu style-eigh bg-white w-full md:h-[74px] h-[56px]`}>
+                <div className={`header-menu-main style-marketplace relative bg-[#263587] w-full md:h-[74px] h-[56px]`}>
                     <div className="container mx-auto h-full">
                         <div className="header-main flex items-center justify-between h-full">
                             <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
-                                <i className="icon-category text-2xl"></i>
+                                <Icon.List className="text-white text-2xl"/>
                             </div>
                             <Link href={'/'} className='flex items-center'>
-                                <div className="heading4">Anvogue</div>
+                                <div className="heading4 text-white">Anvogue</div>
                             </Link>
                             <div className="form-search w-2/3 pl-8 flex items-center h-[44px] max-lg:hidden">
-                                <div className="category-block relative h-full">
-                                    <div className="category-btn bg-black relative flex items-center gap-6 py-2 px-4 h-full rounded-l w-fit cursor-pointer">
-                                        <div className="text-button text-white whitespace-nowrap">All Categories</div>
-                                        <Icon.CaretDown color='#ffffff' />
-                                    </div>
-                                </div>
                                 <div className='w-full flex items-center h-full'>
-                                    <input
-                                        type="text"
-                                        className="search-input h-full px-4 w-full border border-line"
+                                    <input className="search-input h-full px-4 w-full border border-line"
                                         placeholder="What are you looking for today?"
                                         value={searchKeyword}
                                         onChange={(e) => setSearchKeyword(e.target.value)}
                                         onKeyDown={(e) => e.key === 'Enter' && handleSearch(searchKeyword)}
                                     />
                                     <button
-                                        className="search-button button-main bg-black h-full flex items-center px-7 rounded-none rounded-r"
+                                        className="search-button button-main bg-red text-white h-full flex items-center px-7 rounded-none rounded-r"
                                         onClick={() => {
                                             handleSearch(searchKeyword)
                                         }}
@@ -109,7 +101,7 @@ const MenuEleven = () => {
                             <div className="right flex gap-12">
                                 <div className="list-action flex items-center gap-4">
                                     <div className="user-icon flex items-center justify-center cursor-pointer">
-                                        <Icon.User size={24} color='black' onClick={handleLoginPopup} />
+                                        <Icon.User weight='bold' size={24} color='white' onClick={handleLoginPopup} />
                                         <div
                                             className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-small 
                                                 ${openLoginPopup ? 'open' : ''}`}
@@ -123,11 +115,11 @@ const MenuEleven = () => {
                                         </div>
                                     </div>
                                     <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer" onClick={openModalWishlist}>
-                                        <Icon.Heart size={24} color='black' />
+                                        <Icon.Heart weight='bold' size={24} color='white' />
                                     </div>
                                     <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
-                                        <Icon.Handbag size={24} color='black' />
-                                        <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
+                                        <Icon.Handbag weight='bold' size={24} color='white' />
+                                        <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-red w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
                                     </div>
                                 </div>
                             </div>
@@ -135,51 +127,96 @@ const MenuEleven = () => {
                     </div>
                 </div>
 
-                <div className="top-nav-menu relative bg-white border-t border-b border-line h-[44px] max-lg:hidden z-10">
+                <div className="top-nav-menu relative bg-white border-b border-line h-[44px] max-lg:hidden z-10">
                     <div className="container h-full">
                         <div className="top-nav-menu-main flex items-center justify-between h-full">
                             <div className="left flex items-center h-full">
                                 <div className="menu-department-block relative h-full">
                                     <div
-                                        className="menu-department-btn bg-black relative flex items-center sm:gap-5 gap-4 px-4 h-full w-fit cursor-pointer"
-                                        onClick={handleShopDepartmentPopup}
+                                        className="menu-department-btn relative flex items-center sm:gap-24 gap-4 h-full w-fit cursor-pointer"
+                                        onClick={handleSubMenuDepartment}
                                     >
-                                        <div className="text-button-uppercase text-white whitespace-nowrap">Shop By Department</div>
-                                        <Icon.CaretDown color='#ffffff' className='text-xl max-sm:text-base' />
+                                        <div className="flex items-center gap-3">
+                                            <Icon.List className='text-xl max-sm:text-base' />
+                                            <div className="text-button whitespace-nowrap">Department</div>
+                                        </div>
+                                        <Icon.CaretDown className='text-xl max-sm:text-base' />
                                     </div>
                                     <div
-                                        className={`sub-menu-department shop-department-popup box-shadow-small absolute top-[44px] left-0 right-0 h-max bg-white rounded-b-2xl ${openShopDepartmentPopup ? 'open' : ''}`}
+                                        className={`sub-menu-department style-marketplace absolute top-[84px] left-0 right-0 px-[26px] py-[5px] bg-surface rounded-xl border border-line ${openSubMenuDepartment ? 'open' : ''}`}
                                     >
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Men’s Clothing</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Women’s Clothing</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Accessories</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Bags & Backpacks</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Shoes</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Jewelry</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Watches</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Beauty & Care</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Pets</Link>
-                                        </div>
-                                        <div className="item block">
-                                            <Link href={'/shop/breadcrumb-img'} className='py-1.5 whitespace-nowrap inline-block'>Kids & Baby</Link>
-                                        </div>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.DesktopTower className="text-xl" />
+                                                <span className='name'>Clothing</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.DeviceTabletCamera className="text-xl" />
+                                                <span className='name'>Tablet & iPad </span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.Printer className="text-xl" />
+                                                <span className='name'>Printer & Cameras</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.DeviceMobileSpeaker className="text-xl" />
+                                                <span className='name'>Smart Phones</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.Keyboard className="text-xl" />
+                                                <span className='name'>Keyboard & Mouse</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.GameController className="text-xl" />
+                                                <span className='name'>Video Games</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.PersonArmsSpread className="text-xl" />
+                                                <span className='name'>Sport & Outdoor</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap border-b border-line w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.Watch className="text-xl" />
+                                                <span className='name'>Smart Watch</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
+                                        <Link href='/shop/breadcrumb-img'
+                                            className="item py-3 whitespace-nowrap w-full flex items-center justify-between">
+                                            <span className="flex items-center gap-2">
+                                                <Icon.Headphones className="text-xl" />
+                                                <span className='name'>Headphone</span>
+                                            </span>
+                                            <Icon.CaretRight />
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="menu-main style-eight h-full pl-12 max-lg:hidden">
@@ -322,7 +359,7 @@ const MenuEleven = () => {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/homepages/marketplace" className='text-secondary duration-300'>
+                                                        <Link href="/homepages/marketplace" className={`text-secondary duration-300 ${pathname === '/homepages/marketplace' ? 'active' : ''}`}>
                                                             Home Marketplace
                                                         </Link>
                                                     </li>
@@ -338,11 +375,11 @@ const MenuEleven = () => {
                                                     <div className="flex justify-between py-8">
                                                         <div className="nav-link basis-2/3 grid grid-cols-4 gap-y-8">
                                                             <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">For Men</div>
+                                                                <div className="text-button-uppercase pb-2">Sale & Offer</div>
                                                                 <ul>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleGenderClick('men')}
+                                                                            onClick={() => handleCategoryClick('organic')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
                                                                             Starting From 50% Off
@@ -350,31 +387,31 @@ const MenuEleven = () => {
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('outerwear')}
+                                                                            onClick={() => handleTypeClick('vegetables')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Outerwear | Coats
+                                                                            organic vegetables
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('sweater')}
+                                                                            onClick={() => handleTypeClick('fruit')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Sweaters | Cardigans
+                                                                            organic fruits
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('shirt')}
+                                                                            onClick={() => handleTypeClick('meat')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Shirt | Sweatshirts
+                                                                            organic meat
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleGenderClick('men')}
+                                                                            onClick={() => handleCategoryClick('organic')}
                                                                             className={`link text-secondary duration-300 cursor-pointer view-all-btn`}
                                                                         >
                                                                             View All
@@ -383,43 +420,43 @@ const MenuEleven = () => {
                                                                 </ul>
                                                             </div>
                                                             <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">Massimo Dutti</div>
+                                                                <div className="text-button-uppercase pb-2">Vegetables</div>
                                                                 <ul>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('shirt')}
+                                                                            onClick={() => handleTypeClick('vegetables')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Shirt | Clothes
+                                                                            Cabbages
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('top')}
+                                                                            onClick={() => handleTypeClick('vegetables')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Top | Overshirts
+                                                                            Tubers
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('t-shirt')}
+                                                                            onClick={() => handleTypeClick('vegetables')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            T-shirts | Clothes
+                                                                            Spinach
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('swimwear')}
+                                                                            onClick={() => handleTypeClick('vegetables')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Swimwear | Underwear
+                                                                            Celery
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleCategoryClick('fashion')}
+                                                                            onClick={() => handleTypeClick('vegetables')}
                                                                             className={`link text-secondary duration-300 view-all-btn`}
                                                                         >
                                                                             View All
@@ -428,43 +465,43 @@ const MenuEleven = () => {
                                                                 </ul>
                                                             </div>
                                                             <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">Skincare</div>
+                                                                <div className="text-button-uppercase pb-2">Fruits</div>
                                                                 <ul>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('face')}
+                                                                            onClick={() => handleTypeClick('fruit')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Faces Skin
+                                                                            organic Orange
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('eye')}
+                                                                            onClick={() => handleTypeClick('fruit')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Eyes Makeup
+                                                                            japan Banana
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('lip')}
+                                                                            onClick={() => handleTypeClick('fruit')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Lip Polish
+                                                                            Chinese apple
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('hair')}
+                                                                            onClick={() => handleTypeClick('fruit')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Hair Care
+                                                                            Dragon Fruit
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleCategoryClick('cosmetic')}
+                                                                            onClick={() => handleTypeClick('fruit')}
                                                                             className={`link text-secondary duration-300 view-all-btn`}
                                                                         >
                                                                             View All
@@ -473,179 +510,43 @@ const MenuEleven = () => {
                                                                 </ul>
                                                             </div>
                                                             <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">Health</div>
+                                                                <div className="text-button-uppercase pb-2">New product</div>
                                                                 <ul>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('candle')}
+                                                                            onClick={() => handleTypeClick('meat')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Cented Candle
+                                                                            clean Pork
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('drinks')}
+                                                                            onClick={() => handleTypeClick('meat')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Health Drinks
+                                                                            kobe beef
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('clothes')}
+                                                                            onClick={() => handleTypeClick('meat')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Yoga Clothes
+                                                                            frozen chicken
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleTypeClick('mats')}
+                                                                            onClick={() => handleTypeClick('meat')}
                                                                             className={`link text-secondary duration-300 cursor-pointer`}
                                                                         >
-                                                                            Yoga Equipment
+                                                                            raw salman
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div
-                                                                            onClick={() => handleCategoryClick('yoga')}
-                                                                            className={`link text-secondary duration-300 view-all-btn`}
-                                                                        >
-                                                                            View All
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">For Women</div>
-                                                                <ul>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleGenderClick('women')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Starting From 60% Off
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('dress')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Dresses | Jumpsuits
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('t-shirt')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            T-shirts | Sweatshirts
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('accessories')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Accessories | Jewelry
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleGenderClick('women')}
-                                                                            className={`link text-secondary duration-300 view-all-btn`}
-                                                                        >
-                                                                            View All
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">For Kid</div>
-                                                                <ul>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('bed')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Kids Bed
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('toy')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Boy{String.raw`'s`} Toy
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('blanket')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Baby Blanket
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('clothing')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Newborn Clothing
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleCategoryClick('toys-kid')}
-                                                                            className={`link text-secondary duration-300 view-all-btn`}
-                                                                        >
-                                                                            View All
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div className="nav-item">
-                                                                <div className="text-button-uppercase pb-2">For Home</div>
-                                                                <ul>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleCategoryClick('furniture')}
-
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Furniture | Decor
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('table')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Table | Living Room
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('chair')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Chair | Work Room
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleTypeClick('lighting')}
-                                                                            className={`link text-secondary duration-300 cursor-pointer`}
-                                                                        >
-                                                                            Lighting | Bed Room
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div
-                                                                            onClick={() => handleCategoryClick('furniture')}
+                                                                            onClick={() => handleTypeClick('meat')}
                                                                             className={`link text-secondary duration-300 view-all-btn`}
                                                                         >
                                                                             View All
@@ -655,36 +556,21 @@ const MenuEleven = () => {
                                                             </div>
                                                         </div>
                                                         <div className="banner-ads-block pl-2.5 basis-1/3">
-                                                            <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer" onClick={() => handleTypeClick('swimwear')}>
+                                                            <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer" onClick={() => handleCategoryClick('organic')}>
                                                                 <div className="text-content py-14 pl-8 relative z-[1]">
                                                                     <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                                    <div className="heading6 mt-2">Dive into Savings <br />on Swimwear</div>
+                                                                    <div className="heading6 mt-2">Dive into Savings <br />on organic</div>
                                                                     <div className="body1 mt-3 text-secondary">
                                                                         Starting at <span className='text-red'>$59.99</span>
                                                                     </div>
+                                                                    <div className="button-main mt-5">Shop Now</div>
                                                                 </div>
                                                                 <Image
-                                                                    src={'/images/slider/bg2-2.png'}
-                                                                    width={200}
-                                                                    height={100}
+                                                                    src={'/images/other/bg-feature-organic.png'}
+                                                                    width={1000}
+                                                                    height={800}
                                                                     alt='bg-img'
-                                                                    className='basis-1/3 absolute right-0 top-0 duration-700'
-                                                                />
-                                                            </div>
-                                                            <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden cursor-pointer mt-8" onClick={() => handleTypeClick('accessories')}>
-                                                                <div className="text-content py-14 pl-8 relative z-[1]">
-                                                                    <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                                    <div className="heading6 mt-2">20% off <br />accessories</div>
-                                                                    <div className="body1 mt-3 text-secondary">
-                                                                        Starting at <span className='text-red'>$59.99</span>
-                                                                    </div>
-                                                                </div>
-                                                                <Image
-                                                                    src={'/images/other/bg-feature.png'}
-                                                                    width={200}
-                                                                    height={100}
-                                                                    alt='bg-img'
-                                                                    className='basis-1/3 absolute right-0 top-0 duration-700'
+                                                                    className='absolute left-0 top-0 w-full h-full object-cover'
                                                                 />
                                                             </div>
                                                         </div>
@@ -884,7 +770,7 @@ const MenuEleven = () => {
                                                         <div className="recent-product pl-2.5 basis-1/3">
                                                             <div className="text-button-uppercase pb-2">Recent Products</div>
                                                             <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                                {productData.filter(item => item.action === 'add to cart').slice(0, 2).map((prd, index) => (
+                                                                {productData.filter(item => item.action === 'add to cart' && item.category === 'organic').slice(0, 2).map((prd, index) => (
                                                                     <Product key={index} data={prd} type='grid' />
                                                                 ))}
                                                             </div>
@@ -1064,7 +950,7 @@ const MenuEleven = () => {
                                                         <div className="recent-product pl-2.5 basis-1/3">
                                                             <div className="text-button-uppercase pb-2">Recent Products</div>
                                                             <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                                {productData.filter(item => item.action === 'add to cart').slice(0, 2).map((prd, index) => (
+                                                                {productData.filter(item => item.action === 'add to cart' && item.category === 'organic').slice(0, 2).map((prd, index) => (
                                                                     <Product key={index} data={prd} type='grid' />
                                                                 ))}
                                                             </div>
@@ -1178,7 +1064,7 @@ const MenuEleven = () => {
                             </div>
                             <div className="form-search relative mt-2">
                                 <Icon.MagnifyingGlass size={20} className='absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer' />
-                                <input type="text" placeholder='What are you looking for?' className=' h-12 rounded-lg border border-line text-sm w-full pl-10 pr-4' />
+                                <input placeholder='What are you looking for?' className=' h-12 rounded-lg border border-line text-sm w-full pl-10 pr-4' />
                             </div>
                             <div className="list-nav mt-6">
                                 <ul>
@@ -1186,11 +1072,11 @@ const MenuEleven = () => {
                                         className={`${openSubNavMobile === 1 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(1)}
                                     >
-                                        <a href={'#!'} className={`text-xl font-semibold flex items-center justify-between`}>Demo
+                                        <Link href={'#!'} className={`text-xl font-semibold flex items-center justify-between`}>Demo
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
-                                        </a>
+                                        </Link>
                                         <div className="sub-nav-mobile">
                                             <div
                                                 className="back-btn flex items-center gap-3"
@@ -1326,11 +1212,11 @@ const MenuEleven = () => {
                                         className={`${openSubNavMobile === 2 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(2)}
                                     >
-                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Features
+                                        <Link href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Features
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
-                                        </a>
+                                        </Link>
                                         <div className="sub-nav-mobile">
                                             <div
                                                 className="back-btn flex items-center gap-3"
@@ -1342,11 +1228,11 @@ const MenuEleven = () => {
                                             <div className="list-nav-item w-full pt-3 pb-12">
                                                 <div className="nav-link grid grid-cols-2 gap-5 gap-y-6">
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Men</div>
+                                                        <div className="text-button-uppercase pb-1">Sale & Offer</div>
                                                         <ul>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleGenderClick('men')}
+                                                                    onClick={() => handleCategoryClick('organic')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
                                                                     Starting From 50% Off
@@ -1354,31 +1240,76 @@ const MenuEleven = () => {
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('outerwear')}
+                                                                    onClick={() => handleTypeClick('vegetables')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Outerwear | Coats
+                                                                    organic vegetables
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('sweater')}
+                                                                    onClick={() => handleTypeClick('fruit')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Sweaters | Cardigans
+                                                                    organic fruits
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('shirt')}
+                                                                    onClick={() => handleTypeClick('meat')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Shirt | Sweatshirts
+                                                                    organic meat
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleGenderClick('men')}
+                                                                    onClick={() => handleCategoryClick('organic')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer view-all-btn`}
+                                                                >
+                                                                    View All
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="nav-item">
+                                                        <div className="text-button-uppercase pb-1">Vegetables</div>
+                                                        <ul>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('vegetables')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Cabbages
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('vegetables')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Tubers
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('vegetables')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Spinach
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('vegetables')}
+                                                                    className={`link text-secondary duration-300 cursor-pointer`}
+                                                                >
+                                                                    Celery
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div
+                                                                    onClick={() => handleTypeClick('vegetables')}
                                                                     className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
@@ -1387,43 +1318,43 @@ const MenuEleven = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">Skincare</div>
+                                                        <div className="text-button-uppercase pb-1">Fruits</div>
                                                         <ul>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('face')}
+                                                                    onClick={() => handleTypeClick('fruit')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Faces Skin
+                                                                    organic Orange
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('eye')}
+                                                                    onClick={() => handleTypeClick('fruit')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Eyes Makeup
+                                                                    japan Banana
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('lip')}
+                                                                    onClick={() => handleTypeClick('fruit')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Lip Polish
+                                                                    Chinese apple
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('hair')}
+                                                                    onClick={() => handleTypeClick('fruit')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Hair Care
+                                                                    Dragon Fruit
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleCategoryClick('cosmetic')}
+                                                                    onClick={() => handleTypeClick('fruit')}
                                                                     className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
@@ -1432,178 +1363,43 @@ const MenuEleven = () => {
                                                         </ul>
                                                     </div>
                                                     <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">Health</div>
+                                                        <div className="text-button-uppercase pb-1">New product</div>
                                                         <ul>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('candle')}
+                                                                    onClick={() => handleTypeClick('meat')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Cented Candle
+                                                                    clean Pork
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('drinks')}
+                                                                    onClick={() => handleTypeClick('meat')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Health Drinks
+                                                                    kobe beef
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('clothes')}
+                                                                    onClick={() => handleTypeClick('meat')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Yoga Clothes
+                                                                    frozen chicken
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleTypeClick('mats')}
+                                                                    onClick={() => handleTypeClick('meat')}
                                                                     className={`link text-secondary duration-300 cursor-pointer`}
                                                                 >
-                                                                    Yoga Equipment
+                                                                    raw salman
                                                                 </div>
                                                             </li>
                                                             <li>
                                                                 <div
-                                                                    onClick={() => handleCategoryClick('yoga')}
-                                                                    className={`link text-secondary duration-300 view-all-btn`}
-                                                                >
-                                                                    View All
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Women</div>
-                                                        <ul>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleGenderClick('women')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Starting From 60% Off
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('dress')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Dresses | Jumpsuits
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('t-shirt')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    T-shirts | Sweatshirts
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('accessories')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Accessories | Jewelry
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleGenderClick('women')}
-                                                                    className={`link text-secondary duration-300 view-all-btn`}
-                                                                >
-                                                                    View All
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Kid</div>
-                                                        <ul>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('bed')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Kids Bed
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('toy')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Boy{String.raw`'s`} Toy
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('blanket')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Baby Blanket
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('clothing')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Newborn Clothing
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleCategoryClick('toys-kid')}
-                                                                    className={`link text-secondary duration-300 view-all-btn`}
-                                                                >
-                                                                    View All
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-1">For Home</div>
-                                                        <ul>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleCategoryClick('furniture')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Furniture | Decor
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('table')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Table | Living Room
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('chair')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Chair | Work Room
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleTypeClick('lighting')}
-                                                                    className={`link text-secondary duration-300 cursor-pointer`}
-                                                                >
-                                                                    Lighting | Bed Room
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div
-                                                                    onClick={() => handleCategoryClick('furniture')}
+                                                                    onClick={() => handleTypeClick('meat')}
                                                                     className={`link text-secondary duration-300 view-all-btn`}
                                                                 >
                                                                     View All
@@ -1613,36 +1409,21 @@ const MenuEleven = () => {
                                                     </div>
                                                 </div>
                                                 <div className="banner-ads-block grid sm:grid-cols-2 items-center gap-6 pt-6">
-                                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden" onClick={() => handleTypeClick('swimwear')}>
+                                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden" onClick={() => handleCategoryClick('organic')}>
                                                         <div className="text-content py-14 pl-8 relative z-[1]">
                                                             <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                            <div className="heading6 mt-2">Dive into Savings <br />on Swimwear</div>
+                                                            <div className="heading6 mt-2">20% off <br />orgainc</div>
                                                             <div className="body1 mt-3 text-secondary">
                                                                 Starting at <span className='text-red'>$59.99</span>
                                                             </div>
+                                                            <div className="button-main mt-5">Shop Now</div>
                                                         </div>
                                                         <Image
-                                                            src={'/images/slider/bg2-2.png'}
-                                                            width={200}
-                                                            height={100}
+                                                            src={'/images/other/bg-feature-organic.png'}
+                                                            width={1000}
+                                                            height={900}
                                                             alt='bg-img'
-                                                            className='basis-1/3 absolute right-0 top-0'
-                                                        />
-                                                    </div>
-                                                    <div className="banner-ads-item bg-linear rounded-2xl relative overflow-hidden" onClick={() => handleTypeClick('accessories')}>
-                                                        <div className="text-content py-14 pl-8 relative z-[1]">
-                                                            <div className="text-button-uppercase text-white bg-red px-2 py-0.5 inline-block rounded-sm">Save $10</div>
-                                                            <div className="heading6 mt-2">20% off <br />accessories</div>
-                                                            <div className="body1 mt-3 text-secondary">
-                                                                Starting at <span className='text-red'>$59.99</span>
-                                                            </div>
-                                                        </div>
-                                                        <Image
-                                                            src={'/images/other/bg-feature.png'}
-                                                            width={200}
-                                                            height={100}
-                                                            alt='bg-img'
-                                                            className='basis-1/3 absolute right-0 top-0'
+                                                            className='absolute left-0 top-0 w-full h-full object-cover'
                                                         />
                                                     </div>
                                                 </div>
@@ -1653,11 +1434,11 @@ const MenuEleven = () => {
                                         className={`${openSubNavMobile === 3 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(3)}
                                     >
-                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Shop
+                                        <Link href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Shop
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
-                                        </a>
+                                        </Link>
                                         <div className="sub-nav-mobile">
                                             <div
                                                 className="back-btn flex items-center gap-3"
@@ -1853,7 +1634,7 @@ const MenuEleven = () => {
                                                     <div className="recent-product pt-3">
                                                         <div className="text-button-uppercase pb-1">Recent Products</div>
                                                         <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.slice(0, 2).map((prd, index) => (
+                                                            {productData.filter(item => item.action === 'add to cart' && item.category === 'organic').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -1866,11 +1647,11 @@ const MenuEleven = () => {
                                         className={`${openSubNavMobile === 4 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(4)}
                                     >
-                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Product
+                                        <Link href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Product
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
-                                        </a>
+                                        </Link>
                                         <div className="sub-nav-mobile">
                                             <div
                                                 className="back-btn flex items-center gap-3"
@@ -2045,7 +1826,7 @@ const MenuEleven = () => {
                                                     <div className="recent-product pt-4">
                                                         <div className="text-button-uppercase pb-1">Recent Products</div>
                                                         <div className="list-product hide-product-sold  grid grid-cols-2 gap-5 mt-3">
-                                                            {productData.slice(0, 2).map((prd, index) => (
+                                                            {productData.filter(item => item.action === 'add to cart' && item.category === 'organic').slice(0, 2).map((prd, index) => (
                                                                 <Product key={index} data={prd} type='grid' />
                                                             ))}
                                                         </div>
@@ -2058,11 +1839,11 @@ const MenuEleven = () => {
                                         className={`${openSubNavMobile === 5 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(5)}
                                     >
-                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Blog
+                                        <Link href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Blog
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
-                                        </a>
+                                        </Link>
                                         <div className="sub-nav-mobile">
                                             <div
                                                 className="back-btn flex items-center gap-3"
@@ -2106,11 +1887,11 @@ const MenuEleven = () => {
                                         className={`${openSubNavMobile === 6 ? 'open' : ''}`}
                                         onClick={() => handleOpenSubNavMobile(6)}
                                     >
-                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Pages
+                                        <Link href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>Pages
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
-                                        </a>
+                                        </Link>
                                         <div className="sub-nav-mobile">
                                             <div
                                                 className="back-btn flex items-center gap-3"
@@ -2170,4 +1951,4 @@ const MenuEleven = () => {
     )
 }
 
-export default MenuEleven
+export default MenuMarketplace

@@ -70,11 +70,11 @@ const MenuTwo = () => {
                     <div className="header-main flex justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
                             <i className="icon-category text-2xl"></i>
-                        </div>  
+                        </div>
                         <Link href={'/'} className='flex items-center'>
                             <div className="heading4">Anvogue</div>
                         </Link>
-                        <div className="menu-main h-full max-lg:hidden">    
+                        <div className="menu-main h-full max-lg:hidden">
                             <ul className='flex items-center gap-8 h-full'>
                                 <li className='h-full relative'>
                                     <Link
@@ -211,6 +211,11 @@ const MenuTwo = () => {
                                             <li>
                                                 <Link href="/homepages/organic" className='text-secondary duration-300'>
                                                     Home Organic
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/homepages/marketplace" className='text-secondary duration-300'>
+                                                    Home Marketplace
                                                 </Link>
                                             </li>
                                         </ul>
@@ -1220,6 +1225,11 @@ const MenuTwo = () => {
                                                     <li>
                                                         <Link href="/homepages/organic" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/organic' ? 'active' : ''}`}>
                                                             Home Organic
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/homepages/marketplace" className={`nav-item-mobile text-secondary duration-300 ${pathname === '/homepages/marketplace' ? 'active' : ''}`}>
+                                                            Home Marketplace
                                                         </Link>
                                                     </li>
                                                 </ul>

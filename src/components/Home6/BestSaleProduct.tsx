@@ -18,19 +18,10 @@ interface Props {
     data: Array<ProductType>;
 }
 
-// declare global {
-//     interface Window {
-//         swiper: any;
-//     }
-// }
-
-// let swiper: any;
-
 const BestSaleProduct: React.FC<Props> = ({ data }) => {
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
-    const [indexSlide, setIndexSlide] = useState<number>(0)
     const { addToCart, updateCart, cartState } = useCart()
     const { openModalCart } = useModalCartContext()
     const swiperRef: any = useRef();
@@ -54,10 +45,8 @@ const BestSaleProduct: React.FC<Props> = ({ data }) => {
 
             if (index !== -1) {
                 swiperRef.current?.slideTo(index);
-                setIndexSlide(index)
             }
         }
-
     }
 
     const handleActiveSize = (item: string) => {

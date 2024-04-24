@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
@@ -40,6 +40,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
     const { openModalCompare } = useModalCompareContext()
     const productMain = data.find(product => product.id === productId) as ProductType
     const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
+    const swiperRef: any = useRef();
 
     const handleOpenSizeGuide = () => {
         setOpenSizeGuide(true);
@@ -56,6 +57,19 @@ const Default: React.FC<Props> = ({ data, productId }) => {
 
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
+
+        // Find variation with selected color
+        const foundColor = productMain.variation.find((variation) => variation.color === item);
+        // If found, slide next to img
+        if (foundColor) {
+            const index = productMain.images.indexOf(foundColor.image);
+
+            if (index !== -1) {
+                swiperRef.current?.slideTo(index);
+                console.log(swiperRef);
+                
+            }
+        }
     }
 
     const handleActiveSize = (item: string) => {
@@ -122,6 +136,9 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                     <div className="container flex justify-between gap-y-6 flex-wrap">
                         <div className="list-img md:w-1/2 md:pr-[45px] w-full">
                             <Swiper
+                                // onSwiper={(swiper) => {
+                                //     swiperRef.current = swiper
+                                // }}
                                 slidesPerView={1}
                                 spaceBetween={0}
                                 thumbs={{ swiper: thumbsSwiper }}
@@ -143,7 +160,12 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                                 ))}
                             </Swiper>
                             <Swiper
-                                onSwiper={handleSwiper}
+                                onSwiper={(swiper) => {
+                                    console.log(swiper);
+                                    
+                                    handleSwiper(swiper)
+                                    swiperRef.current = swiper
+                                }}
                                 spaceBetween={0}
                                 slidesPerView={4}
                                 freeMode={true}

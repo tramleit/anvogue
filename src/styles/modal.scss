@@ -422,6 +422,24 @@
             }
         }
 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+
+            td,
+            th {
+                border: 1px solid #d6d6d6;
+                text-align: left;
+                padding: 8px;
+                text-align: center;
+            }
+
+            tr:nth-child(even) {
+                background-color: #eeeeee;
+            }
+        }
+
         @media (max-width: 1200px) {
             width: calc(100vw - 120px);
         }
@@ -481,8 +499,24 @@
     }
 }
 
-.modal-wishlist-block {
+.modal-newsletter {
     z-index: 102;
+}
+
+.modal-quickview-block {
+    z-index: 103;
+}
+
+.modal-wishlist-block {
+    z-index: 104;
+}
+
+.modal-cart-block {
+    z-index: 104;
+}
+
+.modal-sizeguide-block {
+    z-index: 104;
 }
 
 .modal-compare-block {
