@@ -125,8 +125,8 @@ const ModalQuickview = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="right w-full px-6">
-                            <div className="heading pb-6 flex items-center justify-between relative">
+                        <div className="right w-full px-4">
+                            <div className="heading pb-6 px-4 flex items-center justify-between relative">
                                 <div className="heading5">Quick View</div>
                                 <div
                                     className="close-btn absolute right-0 top-0 w-6 h-6 rounded-full bg-surface flex items-center justify-center duration-300 cursor-pointer hover:bg-black hover:text-white"
@@ -135,14 +135,14 @@ const ModalQuickview = () => {
                                     <Icon.X size={14} />
                                 </div>
                             </div>
-                            <div className="product-infor">
+                            <div className="product-infor px-4">
                                 <div className="flex justify-between">
                                     <div>
                                         <div className="caption2 text-secondary font-semibold uppercase">{selectedProduct?.type}</div>
                                         <div className="heading4 mt-1">{selectedProduct?.name}</div>
                                     </div>
                                     <div
-                                        className={`add-wishlist-btn w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-lg duration-300 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === selectedProduct?.id) ? 'active' : ''}`}
+                                        className={`add-wishlist-btn w-10 h-10 flex items-center justify-center border border-line cursor-pointer rounded-lg duration-300 flex-shrink-0 hover:bg-black hover:text-white ${wishlistState.wishlistArray.some(item => item.id === selectedProduct?.id) ? 'active' : ''}`}
                                         onClick={handleAddToWishlist}
                                     >
                                         {wishlistState.wishlistArray.some(item => item.id === selectedProduct?.id) ? (
@@ -222,7 +222,7 @@ const ModalQuickview = () => {
                                         </div>
                                     </div>
                                     <div className="text-title mt-5">Quantity:</div>
-                                    <div className="choose-quantity flex items-center flex-wrap lg:justify-between gap-5 mt-3">
+                                    <div className="choose-quantity flex items-center max-xl:flex-wrap lg:justify-between gap-5 mt-3">
                                         <div className="quantity-block md:p-3 max-md:py-1.5 max-md:px-3 flex items-center justify-between rounded-lg border border-line sm:w-[180px] w-[120px] flex-shrink-0">
                                             <Icon.Minus
                                                 onClick={handleDecreaseQuantity}

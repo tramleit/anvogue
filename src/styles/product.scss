@@ -208,6 +208,47 @@
             }
         }
     }
+
+    &.style-marketplace {
+        overflow: hidden;
+        cursor: pointer;
+
+        .add-wishlist-btn,
+        .quick-view-btn,
+        .add-cart-btn,
+        .compare-btn {
+            transform: translateX(50px);
+
+            &:hover {
+                background-color: var(--black);
+                color: var(--white);
+            }
+        }
+
+        &:hover {
+            .list-action {
+
+                .add-wishlist-btn,
+                .quick-view-btn,
+                .add-cart-btn,
+                .compare-btn {
+                    transform: translateX(0);
+                }
+
+                .compare-btn {
+                    transition: all 0.3s ease, transform 0.3s ease 0.06s;
+                }
+
+                .quick-view-btn {
+                    transition: all 0.3s ease, transform 0.3s ease 0.12s;
+                }
+
+                .add-cart-btn {
+                    transition: all 0.3s ease, transform 0.3s ease 0.18s;
+                }
+            }
+        }
+    }
 }
 
 .add-wishlist-btn {

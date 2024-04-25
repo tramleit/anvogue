@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import productData from '@/data/Product.json'
 import { useModalQuickviewContext } from '@/context/ModalQuickviewContext';
+import Image from 'next/image';
 
 const ModalNewsletter = () => {
     const [open, setOpen] = useState<boolean>(false)
@@ -50,18 +51,18 @@ const ModalNewsletter = () => {
                             </div>
                             <div className="heading5 pb-5">You May Also Like</div>
                             <div className="list flex flex-col gap-5 overflow-x-auto">
-                                {productData.slice(11, 16).map(item => (
+                                {productData.slice(11, 16).map((item, index) => (
                                     <>
                                         <div
                                             className='product-item item pb-5 flex items-center justify-between gap-3 border-b border-line'
-                                            key={item.id}
+                                            key={index}
                                         >
                                             <div
                                                 className="infor flex items-center gap-5 cursor-pointer"
                                                 onClick={() => handleDetailProduct(item.id)}
                                             >
                                                 <div className="bg-img">
-                                                    <img src={item.thumbImage[0]} alt={item.name}
+                                                    <Image width={5000} height={5000} src={item.thumbImage[0]} alt={item.name}
                                                         className='w-[100px] aspect-square flex-shrink-0 rounded-lg' />
                                                 </div>
                                                 <div className=''>

@@ -14,6 +14,7 @@ import { useModalCompareContext } from '@/context/ModalCompareContext'
 import { useModalQuickviewContext } from '@/context/ModalQuickviewContext'
 import { useRouter } from 'next/navigation'
 import Marquee from 'react-fast-marquee'
+import Rate from '../Other/Rate'
 
 interface ProductProps {
     data: ProductType
@@ -133,7 +134,7 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     }}
                                 >
                                     <div className="tag-action bg-black text-white caption2 px-1.5 py-0.5 rounded-sm">Compare Product</div>
-                                    <Icon.ArrowsCounterClockwise size={18} className='compare-icon' />
+                                    <Icon.Repeat size={18} className='compare-icon' />
                                     <Icon.CheckCircle size={20} className='checked-icon' />
                                 </div>
                             </div>
@@ -505,6 +506,70 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                 </>
             )
             }
+
+            {type === 'marketplace' ? (
+                <div className="product-item style-marketplace p-4 border border-line rounded-2xl" onClick={() => handleDetailProduct(data.id)}>
+                    <div className="bg-img relative w-full">
+                        <Image className='w-full aspect-square' width={5000} height={5000} src={data.thumbImage[0]} alt="img" />
+                        <div className="list-action flex flex-col gap-1 absolute top-0 right-0">
+                            <span
+                                className={`add-wishlist-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300 ${wishlistState.wishlistArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                    handleAddToWishlist()
+                                }}
+                            >
+                                {wishlistState.wishlistArray.some(item => item.id === data.id) ? (
+                                    <>
+                                        <Icon.Heart size={18} weight='fill' className='text-white' />
+                                    </>
+                                ) : (
+                                    <>
+                                        <Icon.Heart size={18} />
+                                    </>
+                                )}
+                            </span>
+                            <span
+                                className={`compare-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300 ${compareState.compareArray.some(item => item.id === data.id) ? 'active' : ''}`}
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                    handleAddToCompare()
+                                }}
+                            >
+                                <Icon.Repeat size={18} className='compare-icon' />
+                                <Icon.CheckCircle size={20} className='checked-icon' />
+                            </span>
+                            <span
+                                className="quick-view-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300"
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                    handleQuickviewOpen()
+                                }}
+                            >
+                                <Icon.Eye />
+                            </span>
+                            <span
+                                className="add-cart-btn w-8 h-8 bg-white flex items-center justify-center rounded-full box-shadow-small duration-300"
+                                onClick={e => {
+                                    e.stopPropagation();
+                                    handleAddToCart()
+                                }}
+                            >
+                                <Icon.ShoppingBagOpen />
+                            </span>
+                        </div>
+                    </div>
+                    <div className="product-infor mt-4">
+                        <span className="text-title">{data.name}</span>
+                        <div className="flex gap-0.5 mt-1">
+                            <Rate currentRate={data.rate} size={16} />
+                        </div>
+                        <span className="text-title inline-block mt-1">${data.price}.00</span>
+                    </div>
+                </div>
+            ) : (
+                <></>
+            )}
         </>
     )
 }

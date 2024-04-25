@@ -37,29 +37,6 @@ const MenuMarketplace = () => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
     }
 
-    const [fixedHeader, setFixedHeader] = useState(false)
-    const [lastScrollPosition, setLastScrollPosition] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            setFixedHeader(scrollPosition > 0 && scrollPosition < lastScrollPosition);
-            setLastScrollPosition(scrollPosition);
-        };
-
-        // Gắn sự kiện cuộn khi component được mount
-        window.addEventListener('scroll', handleScroll);
-
-        // Hủy sự kiện khi component bị unmount
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [lastScrollPosition]);
-
-    const handleGenderClick = (gender: string) => {
-        router.push(`/shop/breadcrumb1?gender=${gender}`);
-    };
-
     const handleCategoryClick = (category: string) => {
         router.push(`/shop/breadcrumb1?category=${category}`);
     };
@@ -70,7 +47,7 @@ const MenuMarketplace = () => {
 
     return (
         <>
-            <div className={`${fixedHeader ? ' fixed' : 'relative'} header-menu bg-white w-full top-0 z-10 duration-500`}>
+            <div className={`header-menu bg-white w-full top-0 z-10 duration-500`}>
                 <div className={`header-menu-main style-marketplace relative bg-[#263587] w-full md:h-[74px] h-[56px]`}>
                     <div className="container mx-auto h-full">
                         <div className="header-main flex items-center justify-between h-full">
@@ -82,7 +59,7 @@ const MenuMarketplace = () => {
                             </Link>
                             <div className="form-search w-2/3 pl-8 flex items-center h-[44px] max-lg:hidden">
                                 <div className='w-full flex items-center h-full'>
-                                    <input className="search-input h-full px-4 w-full border border-line"
+                                    <input className="search-input h-full px-4 w-full border border-line rounded-l"
                                         placeholder="What are you looking for today?"
                                         value={searchKeyword}
                                         onChange={(e) => setSearchKeyword(e.target.value)}

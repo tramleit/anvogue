@@ -38,8 +38,12 @@ const Default: React.FC<Props> = ({ data, productId }) => {
     const { openModalWishlist } = useModalWishlistContext()
     const { addToCompare, removeFromCompare, compareState } = useCompare();
     const { openModalCompare } = useModalCompareContext()
-    const productMain = data.find(product => product.id === productId) as ProductType
-    const percentSale = Math.floor(100 - ((productMain.price / productMain.originPrice) * 100))
+    let productMain = data.find(product => product.id === productId) as ProductType
+    if (productMain === undefined) {
+        productMain = data[0]
+    }
+
+    const percentSale = Math.floor(100 - ((productMain?.price / productMain?.originPrice) * 100))
     const swiperRef: any = useRef();
 
     const handleOpenSizeGuide = () => {
@@ -67,7 +71,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
             if (index !== -1) {
                 swiperRef.current?.slideTo(index);
                 console.log(swiperRef);
-                
+
             }
         }
     }
@@ -162,7 +166,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                             <Swiper
                                 onSwiper={(swiper) => {
                                     console.log(swiper);
-                                    
+
                                     handleSwiper(swiper)
                                     swiperRef.current = swiper
                                 }}
