@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -9,7 +10,7 @@ const BannerBelow = () => {
                     <Link href='/shop/breadcrumb-img'
                         className="banner-item relative py-[53.5px] px-10 bg-[#848EFF] block duration-500 rounded-2xl overflow-hidden">
                         <div className="banner-img w-[173px] absolute top-1/2 -translate-y-1/2 right-14">
-                            <img src='/images/banner/marketplace4.png' className='w-full duration-500' alt='img' />
+                            <Image width={5000} height={5000} src='/images/banner/marketplace4.png' className='w-full duration-500' alt='img' />
                         </div>
                         <div className="banner-content relative">
                             <div className="heading5 text-white">Super Sale <br />Apple Watch</div>
@@ -22,7 +23,7 @@ const BannerBelow = () => {
                     <Link href='/shop/breadcrumb-img'
                         className="banner-item relative py-[53.5px] px-10 bg-[#E7514A] block duration-500 rounded-2xl overflow-hidden">
                         <div className="banner-img w-1/2 absolute top-1/2 -translate-y-1/2 right-10">
-                            <img src='/images/banner/marketplace5.png' className='w-full duration-500' alt='img' />
+                            <Image width={5000} height={5000} src='/images/banner/marketplace5.png' className='w-full duration-500' alt='img' />
                         </div>
                         <div className="banner-content relative">
                             <div className="heading5 text-white">Deals Good <br />Iphone 15 pro</div>
