@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
@@ -17,14 +17,12 @@ interface Props {
 
 const LookBook: React.FC<Props> = ({ data }) => {
     const router = useRouter()
+    const [prd, setPrd] = useState('28')
 
     const handleDetailProduct = (productId: string) => {
         // redirect to shop with category selected
         router.push(`/product/default?id=${productId}`);
     };
-
-    // Truy cập thông tin của sản phẩm thứ 38 trong mảng data
-    const productMain = data[38];
 
 
     return (
@@ -34,7 +32,7 @@ const LookBook: React.FC<Props> = ({ data }) => {
                     <div className="left hide-product-sold  md:w-1/2 py-10 h-full flex flex-col items-center justify-center">
                         <div className="heading3 md:pb-10 pb-5">The Summer Look book</div>
                         <div className="w-1/2">
-                            {data.slice(38, 39).map((product, index) => (
+                            {data.slice(Number(prd), Number(prd) + 1).map((product, index) => (
                                 <Product key={index} data={product} type='grid' />
                             ))}
                         </div>
@@ -61,21 +59,13 @@ const LookBook: React.FC<Props> = ({ data }) => {
                                     className='h-full w-full object-cover'
                                 />
                                 <div className="dots absolute top-[40%] left-[60%] cursor-pointer">
-                                    <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
+                                    <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center" onClick={() => setPrd('28')}>
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
-                                    </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
-                                        <div className="text-title name">{productMain.name}</div>
-                                        <div className="price text-center">${productMain.price}.00</div>
                                     </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[13%] left-[54%] cursor-pointer">
-                                    <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
+                                    <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center" onClick={() => setPrd('29')}>
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
-                                    </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
-                                        <div className="text-title name">{productMain.name}</div>
-                                        <div className="price text-center">${productMain.price}.00</div>
                                     </div>
                                 </div>
                             </div>
@@ -90,21 +80,13 @@ const LookBook: React.FC<Props> = ({ data }) => {
                                     className='h-full w-full object-cover'
                                 />
                                 <div className="dots absolute top-[38%] left-[45%] cursor-pointer">
-                                    <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
+                                    <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center" onClick={() => setPrd('30')}>
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
-                                    </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
-                                        <div className="text-title name">{productMain.name}</div>
-                                        <div className="price text-center">${productMain.price}.00</div>
                                     </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[10%] left-[20%] cursor-pointer">
-                                    <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
+                                    <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center" onClick={() => setPrd('31')}>
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
-                                    </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
-                                        <div className="text-title name">{productMain.name}</div>
-                                        <div className="price text-center">${productMain.price}.00</div>
                                     </div>
                                 </div>
                             </div>
@@ -119,21 +101,13 @@ const LookBook: React.FC<Props> = ({ data }) => {
                                     className='h-full w-full object-cover'
                                 />
                                 <div className="dots absolute top-[42%] left-[50%] cursor-pointer">
-                                    <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center">
+                                    <div className="top-dot w-8 h-8 rounded-full bg-outline flex items-center justify-center" onClick={() => setPrd('32')}>
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
-                                    </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
-                                        <div className="text-title name">{productMain.name}</div>
-                                        <div className="price text-center">${productMain.price}.00</div>
                                     </div>
                                 </div>
                                 <div className="dots bottom-dot absolute bottom-[12%] left-[62%] cursor-pointer">
-                                    <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center">
+                                    <div className="w-8 h-8 rounded-full bg-outline flex items-center justify-center" onClick={() => setPrd('33')}>
                                         <span className="bg-white w-3 h-3 rounded-full duration-300"></span>
-                                    </div>
-                                    <div className="product-infor bg-white rounded-2xl p-4" onClick={() => handleDetailProduct(productMain.id)}>
-                                        <div className="text-title name">{productMain.name}</div>
-                                        <div className="price text-center">${productMain.price}.00</div>
                                     </div>
                                 </div>
                             </div>
