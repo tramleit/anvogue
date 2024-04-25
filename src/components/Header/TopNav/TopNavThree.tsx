@@ -55,8 +55,8 @@ const TopNavThree: React.FC<Props> = ({ props }) => {
                                     <p className="selected caption2">{language}</p>
                                     <ul className={`list-option bg-white ${isOpenLanguage ? 'open' : ''}`}>
                                         {
-                                            ['English', 'Espana', 'France'].map(item => (
-                                                <li className="caption2" onClick={() => setLanguage(item)}>{item}</li>
+                                            ['English', 'Espana', 'France'].map((item, index) => (
+                                                <li key={index} className="caption2" onClick={() => setLanguage(item)}>{item}</li>
                                             ))
                                         }
                                     </ul>
@@ -74,8 +74,8 @@ const TopNavThree: React.FC<Props> = ({ props }) => {
                                     <p className="selected caption2">{currence}</p>
                                     <ul className={`list-option bg-white ${isOpenCurrence ? 'open' : ''}`}>
                                         {
-                                            ['USD', 'EUR', 'GBP'].map(item => (
-                                                <li className="caption2" onClick={() => setCurrence(item)}>{item}</li>
+                                            ['USD', 'EUR', 'GBP'].map((item, index) => (
+                                                <li key={index} className="caption2" onClick={() => setCurrence(item)}>{item}</li>
                                             ))
                                         }
                                     </ul>
