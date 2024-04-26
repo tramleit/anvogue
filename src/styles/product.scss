@@ -457,6 +457,10 @@
             visibility: visible;
         }
 
+        .swiper {
+            height: 100%;
+        }
+
         .swiper-button-next,
         .swiper-button-prev {
             &::after {
