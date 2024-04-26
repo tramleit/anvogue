@@ -3,6 +3,7 @@
     visibility: hidden;
     transform: translateY(30px);
     transition: all ease 0.4s;
+    z-index: 11;
 
     &.open {
         opacity: 1;
