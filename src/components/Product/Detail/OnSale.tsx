@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
@@ -29,6 +29,9 @@ interface Props {
 }
 
 const OnSale: React.FC<Props> = ({ data, productId }) => {
+    const swiperRef: any = useRef();
+    const [photoIndex, setPhotoIndex] = useState(0)
+    const [openPopupImg, setOpenPopupImg] = useState(false)
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
     const [activeColor, setActiveColor] = useState<string>('')
@@ -146,6 +149,10 @@ const OnSale: React.FC<Props> = ({ data, productId }) => {
                             {productMain.images.map((item, index) => (
                                 <SwiperSlide
                                     key={index}
+                                    onClick={() => {
+                                        swiperRef.current?.slideTo(index);
+                                        setOpenPopupImg(true)
+                                    }}
                                 >
                                     <Image
                                         src={item}
@@ -157,6 +164,47 @@ const OnSale: React.FC<Props> = ({ data, productId }) => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+                        <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
+                            <span
+                                className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
+                                onClick={() => {
+                                    setOpenPopupImg(false)
+                                }}
+                            >
+                                <Icon.X className="text-3xl text-white" />
+                            </span>
+                            <Swiper
+                                spaceBetween={0}
+                                slidesPerView={1}
+                                modules={[Navigation, Thumbs]}
+                                navigation={true}
+                                loop={true}
+                                className="popupSwiper"
+                                onSwiper={(swiper) => {
+                                    swiperRef.current = swiper
+                                }}
+                            >
+                                {productMain.images.map((item, index) => (
+                                    <SwiperSlide
+                                        key={index}
+                                        onClick={() => {
+                                            setOpenPopupImg(false)
+                                        }}
+                                    >
+                                        <Image
+                                            src={item}
+                                            width={1000}
+                                            height={1000}
+                                            alt='prd-img'
+                                            className='w-full aspect-[3/4] object-cover rounded-xl'
+                                            onClick={(e) => {
+                                                e.stopPropagation(); // prevent
+                                            }}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                     <div className="container flex justify-between gap-y-6 flex-wrap md:py-20 py-10">
                         <div className="desc-tab md:w-1/2 w-full lg:pr-[30px] md:pr-4">

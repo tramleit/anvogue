@@ -27,6 +27,9 @@ interface Props {
 }
 
 const Default: React.FC<Props> = ({ data, productId }) => {
+    const swiperRef: any = useRef();
+    const [photoIndex, setPhotoIndex] = useState(0)
+    const [openPopupImg, setOpenPopupImg] = useState(false)
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
     const [activeColor, setActiveColor] = useState<string>('')
@@ -44,7 +47,6 @@ const Default: React.FC<Props> = ({ data, productId }) => {
     }
 
     const percentSale = Math.floor(100 - ((productMain?.price / productMain?.originPrice) * 100))
-    const swiperRef: any = useRef();
 
     const handleOpenSizeGuide = () => {
         setOpenSizeGuide(true);
@@ -62,18 +64,16 @@ const Default: React.FC<Props> = ({ data, productId }) => {
     const handleActiveColor = (item: string) => {
         setActiveColor(item)
 
-        // Find variation with selected color
-        const foundColor = productMain.variation.find((variation) => variation.color === item);
-        // If found, slide next to img
-        if (foundColor) {
-            const index = productMain.images.indexOf(foundColor.image);
+        // // Find variation with selected color
+        // const foundColor = productMain.variation.find((variation) => variation.color === item);
+        // // If found, slide next to img
+        // if (foundColor) {
+        //     const index = productMain.images.indexOf(foundColor.image);
 
-            if (index !== -1) {
-                swiperRef.current?.slideTo(index);
-                console.log(swiperRef);
-
-            }
-        }
+        //     if (index !== -1) {
+        //         swiperRef.current?.slideTo(index);
+        //     }
+        // }
     }
 
     const handleActiveSize = (item: string) => {
@@ -133,6 +133,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
         setActiveTab(tab)
     }
 
+
     return (
         <>
             <div className="product-detail default">
@@ -140,9 +141,6 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                     <div className="container flex justify-between gap-y-6 flex-wrap">
                         <div className="list-img md:w-1/2 md:pr-[45px] w-full">
                             <Swiper
-                                // onSwiper={(swiper) => {
-                                //     swiperRef.current = swiper
-                                // }}
                                 slidesPerView={1}
                                 spaceBetween={0}
                                 thumbs={{ swiper: thumbsSwiper }}
@@ -152,6 +150,10 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                                 {productMain.images.map((item, index) => (
                                     <SwiperSlide
                                         key={index}
+                                        onClick={() => {
+                                            swiperRef.current?.slideTo(index);
+                                            setOpenPopupImg(true)
+                                        }}
                                     >
                                         <Image
                                             src={item}
@@ -165,10 +167,7 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                             </Swiper>
                             <Swiper
                                 onSwiper={(swiper) => {
-                                    console.log(swiper);
-
                                     handleSwiper(swiper)
-                                    swiperRef.current = swiper
                                 }}
                                 spaceBetween={0}
                                 slidesPerView={4}
@@ -191,6 +190,47 @@ const Default: React.FC<Props> = ({ data, productId }) => {
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
+                            <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
+                                <span
+                                    className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
+                                    onClick={() => {
+                                        setOpenPopupImg(false)
+                                    }}
+                                >
+                                    <Icon.X className="text-3xl text-white" />
+                                </span>
+                                <Swiper
+                                    spaceBetween={0}
+                                    slidesPerView={1}
+                                    modules={[Navigation, Thumbs]}
+                                    navigation={true}
+                                    loop={true}
+                                    className="popupSwiper"
+                                    onSwiper={(swiper) => {
+                                        swiperRef.current = swiper
+                                    }}
+                                >
+                                    {productMain.images.map((item, index) => (
+                                        <SwiperSlide
+                                            key={index}
+                                            onClick={() => {
+                                                setOpenPopupImg(false)
+                                            }}
+                                        >
+                                            <Image
+                                                src={item}
+                                                width={1000}
+                                                height={1000}
+                                                alt='prd-img'
+                                                className='w-full aspect-[3/4] object-cover rounded-xl'
+                                                onClick={(e) => {
+                                                    e.stopPropagation(); // prevent
+                                                }}
+                                            />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
                         </div>
                         <div className="product-infor md:w-1/2 w-full lg:pl-[15px] md:pl-2">
                             <div className="flex justify-between">

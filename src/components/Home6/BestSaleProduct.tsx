@@ -19,6 +19,8 @@ interface Props {
 }
 
 const BestSaleProduct: React.FC<Props> = ({ data }) => {
+    const [photoIndex, setPhotoIndex] = useState(0)
+    const [openPopupImg, setOpenPopupImg] = useState(false)
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')

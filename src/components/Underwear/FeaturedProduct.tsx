@@ -20,6 +20,8 @@ interface Props {
 }
 
 const FeaturedProduct: React.FC<Props> = ({ data }) => {
+    const [photoIndex, setPhotoIndex] = useState(0)
+    const [openPopupImg, setOpenPopupImg] = useState(false)
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
     const [activeColor, setActiveColor] = useState<string>('')

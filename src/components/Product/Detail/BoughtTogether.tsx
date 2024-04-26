@@ -1,11 +1,14 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
 import Product from '../Product'
 import Rate from '@/components/Other/Rate'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Thumbs, Scrollbar } from 'swiper/modules';
+import 'swiper/css/bundle';
 import * as Icon from "@phosphor-icons/react/dist/ssr";
 import { useCart } from '@/context/CartContext'
 import { useModalCartContext } from '@/context/ModalCartContext'
@@ -21,6 +24,9 @@ interface Props {
 }
 
 const BoughtTogether: React.FC<Props> = ({ data, productId }) => {
+    const swiperRef: any = useRef();
+    const [photoIndex, setPhotoIndex] = useState(0)
+    const [openPopupImg, setOpenPopupImg] = useState(false)
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
@@ -119,9 +125,54 @@ const BoughtTogether: React.FC<Props> = ({ data, productId }) => {
                                     width={1000}
                                     height={1000}
                                     alt='prd-img'
-                                    className='w-full aspect-[3/4] object-cover rounded-[20px]'
+                                    className='w-full aspect-[3/4] object-cover rounded-[20px] cursor-pointer'
+                                    onClick={() => {
+                                        swiperRef.current?.slideTo(index);
+                                        setOpenPopupImg(true)
+                                    }}
                                 />
                             ))}
+                            <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
+                                <span
+                                    className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
+                                    onClick={() => {
+                                        setOpenPopupImg(false)
+                                    }}
+                                >
+                                    <Icon.X className="text-3xl text-white" />
+                                </span>
+                                <Swiper
+                                    spaceBetween={0}
+                                    slidesPerView={1}
+                                    modules={[Navigation, Thumbs]}
+                                    navigation={true}
+                                    loop={true}
+                                    className="popupSwiper"
+                                    onSwiper={(swiper) => {
+                                        swiperRef.current = swiper
+                                    }}
+                                >
+                                    {productMain.images.map((item, index) => (
+                                        <SwiperSlide
+                                            key={index}
+                                            onClick={() => {
+                                                setOpenPopupImg(false)
+                                            }}
+                                        >
+                                            <Image
+                                                src={item}
+                                                width={1000}
+                                                height={1000}
+                                                alt='prd-img'
+                                                className='w-full aspect-[3/4] object-cover rounded-xl'
+                                                onClick={(e) => {
+                                                    e.stopPropagation(); // prevent
+                                                }}
+                                            />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
                         </div>
                         <div className="product-infor md:w-1/2 w-full lg:pl-[15px] md:pl-2">
                             <div className="flex justify-between">

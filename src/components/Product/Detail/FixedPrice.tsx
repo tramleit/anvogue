@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProductType } from '@/type/ProductType'
@@ -27,6 +27,9 @@ interface Props {
 }
 
 const FixedPrice: React.FC<Props> = ({ data, productId }) => {
+    const swiperRef: any = useRef();
+    const [photoIndex, setPhotoIndex] = useState(0)
+    const [openPopupImg, setOpenPopupImg] = useState(false)
     const [openSizeGuide, setOpenSizeGuide] = useState<boolean>(false)
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
@@ -119,7 +122,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                 <div className="featured-product underwear">
                     <div className="container md:pt-20 pt-10">
                         <div className="list-img grid md:grid-rows-2 md:grid-cols-3 grid-cols-2 lg:gap-[30px] gap-4 w-full">
-                            <div className="bg-img md:row-span-2 row-span-1 col-span-1 max-md:aspect-[3/4] lg:rounded-[20px] rounded-xl overflow-hidden">
+                            <div
+                                className="bg-img md:row-span-2 row-span-1 col-span-1 max-md:aspect-[3/4] lg:rounded-[20px] rounded-xl overflow-hidden cursor-pointer"
+                                onClick={() => {
+                                    swiperRef.current?.slideTo(0);
+                                    setOpenPopupImg(true)
+                                }}
+                            >
                                 <Image
                                     src={productMain.images[0]}
                                     width={1000}
@@ -128,7 +137,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                     className='w-full h-full object-cover'
                                 />
                             </div>
-                            <div className="bg-img md:row-span-2 row-span-1 col-span-1 max-md:aspect-[3/4] lg:rounded-[20px] rounded-xl overflow-hidden">
+                            <div
+                                className="bg-img md:row-span-2 row-span-1 col-span-1 max-md:aspect-[3/4] lg:rounded-[20px] rounded-xl overflow-hidden cursor-pointer"
+                                onClick={() => {
+                                    swiperRef.current?.slideTo(1);
+                                    setOpenPopupImg(true)
+                                }}
+                            >
                                 <Image
                                     src={productMain.images[1]}
                                     width={1000}
@@ -139,7 +154,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                             </div>
                             {productMain.images[3] && (
                                 <>
-                                    <div className="bg-img row-span-1 md:col-span-1 col-span-2 aspect-[5/3] lg:rounded-[20px] rounded-xl overflow-hidden">
+                                    <div
+                                        className="bg-img row-span-1 md:col-span-1 col-span-2 aspect-[5/3] lg:rounded-[20px] rounded-xl overflow-hidden cursor-pointer"
+                                        onClick={() => {
+                                            swiperRef.current?.slideTo(2);
+                                            setOpenPopupImg(true)
+                                        }}
+                                    >
                                         <Image
                                             src={productMain.images[2]}
                                             width={1000}
@@ -149,7 +170,13 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                             className='w-full h-full object-cover'
                                         />
                                     </div>
-                                    <div className="bg-img row-span-1 md:col-span-1 col-span-2 aspect-[5/3] lg:rounded-[20px] rounded-xl overflow-hidden">
+                                    <div
+                                        className="bg-img row-span-1 md:col-span-1 col-span-2 aspect-[5/3] lg:rounded-[20px] rounded-xl overflow-hidden cursor-pointer"
+                                        onClick={() => {
+                                            swiperRef.current?.slideTo(3);
+                                            setOpenPopupImg(true)
+                                        }}
+                                    >
                                         <Image
                                             src={productMain.images[3]}
                                             width={1000}
@@ -161,6 +188,47 @@ const FixedPrice: React.FC<Props> = ({ data, productId }) => {
                                     </div>
                                 </>
                             )}
+                            <div className={`popup-img ${openPopupImg ? 'open' : ''}`}>
+                                <span
+                                    className="close-popup-btn absolute top-4 right-4 z-[2] cursor-pointer"
+                                    onClick={() => {
+                                        setOpenPopupImg(false)
+                                    }}
+                                >
+                                    <Icon.X className="text-3xl text-white" />
+                                </span>
+                                <Swiper
+                                    spaceBetween={0}
+                                    slidesPerView={1}
+                                    modules={[Navigation, Thumbs]}
+                                    navigation={true}
+                                    loop={true}
+                                    className="popupSwiper"
+                                    onSwiper={(swiper) => {
+                                        swiperRef.current = swiper
+                                    }}
+                                >
+                                    {productMain.images.map((item, index) => (
+                                        <SwiperSlide
+                                            key={index}
+                                            onClick={() => {
+                                                setOpenPopupImg(false)
+                                            }}
+                                        >
+                                            <Image
+                                                src={item}
+                                                width={1000}
+                                                height={1000}
+                                                alt='prd-img'
+                                                className='w-full aspect-[3/4] object-cover rounded-xl'
+                                                onClick={(e) => {
+                                                    e.stopPropagation(); // prevent
+                                                }}
+                                            />
+                                        </SwiperSlide>
+                                    ))}
+                                </Swiper>
+                            </div>
                         </div>
                     </div>
                     <div className="container flex justify-between gap-y-6 flex-wrap md:py-20 py-10">
