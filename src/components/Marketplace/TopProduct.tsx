@@ -29,7 +29,7 @@ const TopProduct = () => {
                             <Image width={5000} height={5000} className="w-full h-full object-cover" src="/images/product/phone/1.png" alt="" />
                         </div>
                         <div className="product-infor">
-                            <span className="caption2 uppercase block">UMINO</span>
+                            <span className="caption2 uppercase block">ANVOGUE</span>
                             <span className="caption2 mt-2">Apple iPhone 12 Pro Max 128GB - Unlocked</span>
                             <div className="flex gap-0.5 mt-2">
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
@@ -50,7 +50,7 @@ const TopProduct = () => {
                             <Image width={5000} height={5000} className="w-full h-full object-cover" src="/images/product/watch/1.png" alt="" />
                         </div>
                         <div className="product-infor">
-                            <span className="caption2 uppercase block">UMINO</span>
+                            <span className="caption2 uppercase block">ANVOGUE</span>
                             <span className="caption2 mt-2">Logitech Watch Aluminum Case -Pride Edition</span>
                             <div className="flex gap-0.5 mt-2">
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
@@ -71,7 +71,7 @@ const TopProduct = () => {
                             <Image width={5000} height={5000} className="w-full h-full object-cover" src="/images/product/ipad/1.png" alt="" />
                         </div>
                         <div className="product-infor">
-                            <span className="caption2 uppercase block">UMINO</span>
+                            <span className="caption2 uppercase block">ANVOGUE</span>
                             <span className="caption2 mt-2">Apple iPad Air 4 10.9-inch Wi-Fi 256GB Blue</span>
                             <div className="flex gap-0.5 mt-2">
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
@@ -92,7 +92,7 @@ const TopProduct = () => {
                             <Image width={5000} height={5000} className="w-full h-full object-cover" src="/images/product/watch/2.png" alt="" />
                         </div>
                         <div className="product-infor">
-                            <span className="caption2 uppercase block">UMINO</span>
+                            <span className="caption2 uppercase block">ANVOGUE</span>
                             <span className="caption2 mt-2">Apple Watch Aluminum Case with Sport Loop</span>
                             <div className="flex gap-0.5 mt-2">
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
@@ -113,7 +113,7 @@ const TopProduct = () => {
                             <Image width={5000} height={5000} className="w-full h-full object-cover" src="/images/product/phone/4.png" alt="" />
                         </div>
                         <div className="product-infor">
-                            <span className="caption2 uppercase block">UMINO</span>
+                            <span className="caption2 uppercase block">ANVOGUE</span>
                             <span className="caption2 mt-2">Samsung Galaxy S21 FE 8GB/128GB - White</span>
                             <div className="flex gap-0.5 mt-2">
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
@@ -134,7 +134,7 @@ const TopProduct = () => {
                             <Image width={5000} height={5000} className="w-full h-full object-cover" src="/images/product/phone/6.png" alt="" />
                         </div>
                         <div className="product-infor">
-                            <span className="caption2 uppercase block">UMINO</span>
+                            <span className="caption2 uppercase block">ANVOGUE</span>
                             <span className="caption2 mt-2">Apple iPhone 13 Pro Max 128GB - Unlocked</span>
                             <div className="flex gap-0.5 mt-2">
                                 <Icon.Star weight='fill' className="text-sm text-yellow" />
