@@ -247,6 +247,26 @@ const Product: React.FC<ProductProps> = ({ data, type }) => {
                                     </>
                                 )}
                             </div>
+                            <div className="list-action-icon flex items-center justify-center gap-2 absolute w-full bottom-3 z-[1] lg:hidden">
+                                <div
+                                    className="quick-view-btn w-9 h-9 flex items-center justify-center rounded-lg duration-300 bg-white hover:bg-black hover:text-white"
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        handleQuickviewOpen()
+                                    }}
+                                >
+                                    <Icon.Eye className='text-lg' />
+                                </div>
+                                <div
+                                    className="add-cart-btn w-9 h-9 flex items-center justify-center rounded-lg duration-300 bg-white hover:bg-black hover:text-white"
+                                    onClick={e => {
+                                        e.stopPropagation();
+                                        handleAddToCart()
+                                    }}
+                                >
+                                    <Icon.ShoppingBagOpen className='text-lg' />
+                                </div>
+                            </div>
                         </div>
                         <div className="product-infor mt-4 lg:mb-7">
                             <div className="product-sold sm:pb-4 pb-2">

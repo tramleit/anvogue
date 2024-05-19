@@ -50,7 +50,7 @@ const ModalNewsletter = () => {
                                 <Icon.X weight='bold' className='text-xl' />
                             </div>
                             <div className="heading5 pb-5">You May Also Like</div>
-                            <div className="list flex flex-col gap-5 overflow-x-auto">
+                            <div className="list flex flex-col gap-5 overflow-x-auto sm:pr-6">
                                 {productData.slice(11, 16).map((item, index) => (
                                     <>
                                         <div
@@ -61,7 +61,7 @@ const ModalNewsletter = () => {
                                                 className="infor flex items-center gap-5 cursor-pointer"
                                                 onClick={() => handleDetailProduct(item.id)}
                                             >
-                                                <div className="bg-img">
+                                                <div className="bg-img flex-shrink-0">
                                                     <Image width={5000} height={5000} src={item.thumbImage[0]} alt={item.name}
                                                         className='w-[100px] aspect-square flex-shrink-0 rounded-lg' />
                                                 </div>

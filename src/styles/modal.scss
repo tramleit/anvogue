@@ -65,6 +65,16 @@
                     width: calc(100% - 42px);
                     height: -webkit-fill-available;
                 }
+
+                @media (max-width: 639.98px) {
+                    .product-item {
+
+                        &:last-child,
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                }
             }
         }
 

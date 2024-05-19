@@ -106,7 +106,7 @@ const Instagram = () => {
                         </div>
                     </Link>
                 </div>
-            </div >
+            </div>
         </>
     )
 }

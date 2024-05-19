@@ -52,7 +52,7 @@ const MenuMarketplace = () => {
                     <div className="container mx-auto h-full">
                         <div className="header-main flex items-center justify-between h-full">
                             <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
-                                <Icon.List className="text-white text-2xl"/>
+                                <Icon.List className="text-white text-2xl" />
                             </div>
                             <Link href={'/'} className='flex items-center'>
                                 <div className="heading4 text-white">Anvogue</div>
@@ -94,7 +94,7 @@ const MenuMarketplace = () => {
                                     <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer" onClick={openModalWishlist}>
                                         <Icon.Heart weight='bold' size={24} color='white' />
                                     </div>
-                                    <div className="max-md:hidden cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
+                                    <div className="cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
                                         <Icon.Handbag weight='bold' size={24} color='white' />
                                         <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-red w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
                                     </div>
